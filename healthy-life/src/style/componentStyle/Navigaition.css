@@ -1,0 +1,38 @@
+.mainNavBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #D7DDD2;
+}
+
+.mainNavBox ul {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 12px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: darkgray;
+  cursor: pointer;
+}
+
+.mainNavBox ul li:hover {
+  color: darkgray;
+}
+
+
+@media (max-width: 500px) {
+  span{
+    font-size: 10px;
+  }
+}
