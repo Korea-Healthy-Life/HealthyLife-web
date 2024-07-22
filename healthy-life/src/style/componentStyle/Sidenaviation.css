@@ -5,9 +5,10 @@
 
 .sideNav {
   display: flex;
-  float: right;
   width:50px;
-  height: ;
+  height: 100%;
+  position: fixed;
+  right: 0;
   background-color: #D7DDD2;
   z-index: 20;
 }
