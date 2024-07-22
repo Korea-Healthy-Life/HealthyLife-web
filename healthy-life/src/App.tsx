@@ -11,7 +11,7 @@ import Home from './views/home/Home';
 function App() {
   return (
     <>
-    {/* <Header /> */}
+    <Header />
     <Sidenavigation />
     <Navigaition />
       <Home />   
