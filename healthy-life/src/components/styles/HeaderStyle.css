@@ -1,0 +1,39 @@
+
+.button1 {
+  position: absolute;
+  right: 100px;
+  color: black;
+    
+}
+
+.button1 a {
+  color: black;
+}
+
+
+
+.logo {
+  text-align: center;
+  font-size: 40px;
+}
+
+
+
+.button2 {
+  position: absolute;
+  right: 100px;
+  
+  
+}
+
+.button2 a {
+  color: black;
+}
+
+
+
+.button2 input {
+  border-radius: 5%;
+  border: 1px solid purple;
+}
+
