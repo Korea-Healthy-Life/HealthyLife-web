@@ -12,15 +12,12 @@ import Main2 from './components/main2/Main2';
 function App() {
   return (
     <>
-    <Header />
-    <Navigaition />
-    <Main2/>
     <Sidenavigation />
     <Header />
     <Navigaition />
-      <Home />   
+    <Home />   
+    <Main2/>
     <Routes>
-
     </Routes> 
     <Footer />
     </>
