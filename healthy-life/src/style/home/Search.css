@@ -9,23 +9,32 @@
 .searchForm {
   display: flex;
   align-items: center;
-  width: 50%;
+  justify-content: space-around;
+  width: 40%;
   height: 30px;
   border: 2px solid #D7DDD2;
   border-radius: 20px;
 }
 
 .searchForm .searchInput{
-  width: 70%;
-  font-size: 15px;
+  width: 80%;
+  font-size: 12px;
   border: none;
   display: flex;
   align-items: center;
+  text-align: center;
+  padding: 5px;
 }
 
-.searchForm label {
-  margin-left: 10px;
-  width: 20%;
+.searchInput:focus {
+
+}
+
+.searchForm button {
+  right: 0;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .searchContainer {
@@ -51,7 +60,13 @@
 }
 
 .searchContainer ul {
+  margin-top: 15px;
+}
+.searchContainer li {
   list-style: none;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: left;
 }
 
 .searchContainer h5 {

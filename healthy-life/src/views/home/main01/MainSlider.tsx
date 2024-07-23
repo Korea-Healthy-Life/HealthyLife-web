@@ -22,7 +22,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
 
   return (
     <div className='slider'>
-      <button className="prev" onClick={handlePrevClick}>&#10094;</button>
+        <button className="prev" onClick={handlePrevClick}>&#10094;</button>
         
       <div className='sliderImagesContainer'>
         {visibleImages.map((image, index) => (

@@ -16,6 +16,7 @@ function App() {
     <Navigaition />
     <Main2/>
     <Sidenavigation />
+    <Header />
     <Navigaition />
       <Home />   
     <Routes>
