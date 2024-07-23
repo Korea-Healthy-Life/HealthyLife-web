@@ -4,7 +4,9 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/home/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 
-
+// classname = lowcamelcase로 작성
+// css => style 폴더안에
+//  App 건들지 말고 view/Home.tsx에 작성
 
 export default function Header() {
   const [search, setSearch] = useState<string>('');

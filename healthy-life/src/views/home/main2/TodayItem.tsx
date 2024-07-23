@@ -30,10 +30,12 @@ const TodayItem: React.FC<todayItemSliderProps> =({images}) => {
           </div>
         ))}
       </div>
+
       <div>
-        <button onClick={handlePrevClick}>이전</button>
-        <button onClick={handleNextClick}>다음</button>
+        <button className='prev' onClick={handlePrevClick}>이전</button>
+        <button className='next' onClick={handleNextClick}>다음</button>
       </div>
+      
     </div>
   )
 }

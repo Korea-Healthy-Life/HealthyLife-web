@@ -1,20 +1,10 @@
-.best-item{
-  display: flex;
-  flex-direction: row;
-}
 
-
-.to-day-item{
-  display: flex;
-  flex-direction: row;
-}
-
-.Banner{
+.banner{
   width: max-content;
   height: 400px;
 }
 
-.Banner-Image{
+.bannerImage{
   height: 400px;
   width: 100%;
 }

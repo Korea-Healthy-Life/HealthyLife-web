@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../../../style/home/main2.css'
 
 interface bestItemSliderProps {
   images: string[];
@@ -18,25 +19,26 @@ export default function BestItem(images: bestItemSliderProps )  {
     }
 
 
-    const visibleImages = images.images.slice(currentIndex, currentIndex + 5);
-    if(visibleImages.length < 5) {
-      visibleImages.push(...images.images.slice(0, 5 - visibleImages.length));
+    const visibleImages = images.images.slice(currentIndex, currentIndex + 3);
+    if(visibleImages.length < 3) {
+      visibleImages.push(...images.images.slice(0, 3 - visibleImages.length));
     }
 
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <div style={{display: 'flex', overflow: 'hidden', width: '80%'}}>
+    <div className='bestItemSlider'>
+      <button className='prevButton' onClick={handlePrevClick}>이전</button>
+
+      <div className='bestItemImagesContainer'>
         {visibleImages.map((image, index) => (
-          <div key={index} style={{flex: '0 0 20%'}}>
-            <img src={image} alt={`Slide ${index}`} style={{width: '100%', height: 'auto'}} />
+          <div key={index} className='bestItemImage'>
+            <img src={image} alt={`Slide ${index}`}  />
           </div>
         ))}
       </div>
-      <div>
-        <button onClick={handlePrevClick}>이전</button>
-        <button onClick={handleNextClick}>다음</button>
-      </div>
+      
+        <button className='nextButton' onClick={handleNextClick}>다음</button>
+      
     </div>
   )
 }
