@@ -15,9 +15,9 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
-  const visibleImages = images.slice(currentIndex, currentIndex + 3);
-  if (visibleImages.length < 3) {
-    visibleImages.push(...images.slice(0, 3 - visibleImages.length));
+  const visibleImages = images.slice(currentIndex, currentIndex + 4);
+  if (visibleImages.length < 4) {
+    visibleImages.push(...images.slice(0, 4 - visibleImages.length));
   }
 
   return (

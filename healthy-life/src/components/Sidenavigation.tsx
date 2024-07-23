@@ -5,6 +5,7 @@ import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import KeyboardArrowUpTwoToneIcon from '@mui/icons-material/KeyboardArrowUpTwoTone';
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
+import { Link } from 'react-router-dom';
 
 
 export default function Sidenavigator() {
@@ -12,7 +13,7 @@ export default function Sidenavigator() {
   return (
     <div className='sideNav'>
       <ul>
-        <li><AccessTimeTwoToneIcon/></li>
+        <li><Link to={'/crrent'}><AccessTimeTwoToneIcon/></Link></li>
         <li><ShoppingBagTwoToneIcon/></li>
         <li><FavoriteTwoToneIcon/></li>
         <li><KeyboardArrowUpTwoToneIcon/></li>
