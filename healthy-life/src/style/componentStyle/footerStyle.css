@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.footerContainer {
+  padding: 20px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(215, 221, 210, 0.5);
+  color:  rgb(143, 143, 143);
+} 
+
+.footerContainer ul {
+  list-style: none;
+}
