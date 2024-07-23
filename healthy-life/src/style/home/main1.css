@@ -1,8 +1,6 @@
 .slider {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  position: relative;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -19,7 +17,6 @@
 }
 
 .prev, .next {
-  display: flex;
     cursor: pointer;
     width: auto;
     padding: 10px;
@@ -41,7 +38,6 @@
   display: flex;
   font-size: 12px;
   position: relative;
-  left: ;
 }
 
 
