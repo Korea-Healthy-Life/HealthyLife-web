@@ -7,7 +7,7 @@ import Navigaition from './components/navigation/Navigaition';
 import Footer from './components/Footer';
 import Sidenavigation from './components/Sidenavigation';
 import Home from './views/home/Home';
-import Main2 from './components/main2/Main2';
+import Main2 from './views/home/main2/Main2';
 
 function App() {
   return (
