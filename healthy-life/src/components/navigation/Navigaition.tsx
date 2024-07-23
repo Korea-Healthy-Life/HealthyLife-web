@@ -4,6 +4,8 @@ import SubNav from './SubNav';
 import { Link } from 'react-router-dom';
 
 export default function Navigaitor() {
+
+  
   const handleNav = (e: React.MouseEvent<HTMLUListElement>) => {
     
   };

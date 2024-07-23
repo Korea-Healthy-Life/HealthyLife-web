@@ -28,3 +28,10 @@
   border-bottom: 1px solid #ccc;
   margin: 0 auto;
 }
+
+@media (max-width: 500px) {
+  .sideNav li{
+    font-size: 10px;
+    width: 100px;
+  }
+}

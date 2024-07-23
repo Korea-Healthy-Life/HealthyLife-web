@@ -11,8 +11,8 @@ import Home from './views/home/Home';
 function App() {
   return (
     <>
-    <Header />
     <Sidenavigation />
+    <Header />
     <Navigaition />
       <Home />   
     <Routes>
