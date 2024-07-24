@@ -17,7 +17,8 @@ const images = [    'https://via.placeholder.com/800x400?text=Image+1',
 
 export default function TodayItemApp() {
   return (
-    <div>
+    <div className='todayItem'>
+      <h3>오늘의 아이템</h3>
       <TodayItem images={images}/>
     </div>
   )

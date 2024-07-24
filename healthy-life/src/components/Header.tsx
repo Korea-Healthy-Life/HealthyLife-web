@@ -20,7 +20,7 @@ export default function Header() {
 
 
   return (
-    <header>
+    <header className='header'>
   
   <p className='button1'>
     <a href="#">로그인|</a>
@@ -31,7 +31,7 @@ export default function Header() {
       
     <br />
     
-    <a className= "logo" href="#">logo</a>
+    <p className= 'logo'><a href="#">logo</a> </p>
           
 
 

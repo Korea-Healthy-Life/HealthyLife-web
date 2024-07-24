@@ -43,6 +43,54 @@
 
 .bestItem h3 {
   display: flex;
-  font-size: 12px;
+  font-size: 30px;
   position: relative;
+}
+
+
+
+.todayItemSlider{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+
+}
+
+
+.todayItemImagesContainer{
+  display: flex;
+  text-align: center;
+}
+
+
+.todayItemImage img{
+  width: 65%;
+}
+
+
+.todayItem{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.todayItem h3{
+  display: flex;
+  font-size: 30px;
+  position: relative;
+}
+
+
+
+.banner{
+  margin-right: 0;
+}
+
+
+.banner img{
+  width: 100%;
+  height: 400px;
 }

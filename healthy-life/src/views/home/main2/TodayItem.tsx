@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../../../style/home/main2.css'
 
 interface todayItemSliderProps{
   images: string[]
@@ -17,24 +18,24 @@ const TodayItem: React.FC<todayItemSliderProps> =({images}) => {
   }
 
 
-  const visibleImages = images.slice(currentIndex, currentIndex + 5);
-  if(visibleImages.length < 5){
-    visibleImages.push(...images.slice(0, 5 -visibleImages.length));
+  const visibleImages = images.slice(currentIndex, currentIndex + 4);
+  if(visibleImages.length < 4){
+    visibleImages.push(...images.slice(0, 4 -visibleImages.length));
   }
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <div style={{display: 'flex', overflow: 'hidden', width: '80%'}}>
+    <div className='todayItemSlider'>
+        <button className='prevButton' onClick={handlePrevClick}>&#10094;</button>
+      <div className='todayItemImagesContainer'>
         {visibleImages.map((image, index) => (
-          <div key={index} style={{flex: '0 0 20%'}}>
-            <img src={image} alt={`slide ${index}`} style={{width: '100%', height: 'auto'}}/>
+          <div key={index} className='todayItemImage'>
+            <img src={image} alt={`slide ${index}`}/>
           </div>
         ))}
       </div>
 
-      <div>
-        <button className='prev' onClick={handlePrevClick}>이전</button>
-        <button className='next' onClick={handleNextClick}>다음</button>
-      </div>
+      
+        <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
+      
       
     </div>
   )
