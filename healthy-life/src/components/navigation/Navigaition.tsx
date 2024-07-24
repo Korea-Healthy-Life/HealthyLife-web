@@ -3,17 +3,18 @@ import '../../style/componentStyle/Navigaition.css'
 import SubNav from './SubNav';
 import { Link } from 'react-router-dom';
 
-export default function Navigaitor() {
+interface SubNavs {
+  category: string;
+}
 
-  
-  const handleNav = (e: React.MouseEvent<HTMLUListElement>) => {
-    
-  };
+export default function Navigaitor() {
+  const [subNav, SetSubNav] = useState<SubNavs>(); 
+
 
   return (
     <div>
-      <div className='mainNavBox' >
-        <ul onClick={handleNav}>
+      <div className='mainNavBox'>
+        <ul>
         <li><Link to='/all'>전체상품</Link></li> 
         <li><Link to='/best'>BEST.ITEM</Link></li> 
         <li><Link to='/recommend'>체질추천상품</Link></li> 
@@ -21,7 +22,11 @@ export default function Navigaitor() {
         <li><Link to='/calculator'>체지방계산기</Link></li> 
         </ul>
       </div>
-      <SubNav />
+      <div 
+      className='subNav'
+      
+      >
+      </div>
     </div>
   )
 }
