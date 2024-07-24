@@ -1,6 +1,6 @@
 import React from 'react'
 import BestItem from './BestItem'
-
+import '../../../style/home/main2.css'
 const images = ['https://via.placeholder.com/800x400?text=Image+1',
   'https://via.placeholder.com/800x400?text=Image+2',
   'https://via.placeholder.com/800x400?text=Image+3',
@@ -15,7 +15,8 @@ const images = ['https://via.placeholder.com/800x400?text=Image+1',
 
 export default function BestItemApp() {
   return (
-    <div>
+    <div className='bestItem'>
+      <h3>Best.Item</h3>
       <BestItem images={images} />
     </div>
   )

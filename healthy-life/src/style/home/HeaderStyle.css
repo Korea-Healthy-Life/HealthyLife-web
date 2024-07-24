@@ -1,3 +1,7 @@
+.header{
+  margin-bottom: 40px;
+}
+
 
 .button1 {
   position: absolute;
@@ -17,6 +21,10 @@
   font-size: 40px;
 }
 
+
+.logo :hover{
+  color: black;
+}
 
 
 .button2 {
