@@ -1,15 +1,15 @@
 import React from 'react'
 import MainApp from './banner/MainApp'
-import Search from './search/Search'
 import Main2 from './main2/Main2'
 import NewItem from './newItem/NewItem'
+import SearchApp from './search/SearchApp'
 
 export default function Home() {
   return (
     <div>
       
         <MainApp />
-        <Search />
+        <SearchApp />
         <NewItem />
         <Main2/>
     </div>

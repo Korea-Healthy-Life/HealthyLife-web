@@ -27,10 +27,17 @@ a:hover {
   cursor: pointer;
 }
 
-.mainNavBox ul li:hover {
+.mainNavBox li:hover {
   color: darkgray;
 }
 
+.mainNavBox li:hover .subNav {
+  display: block;
+}
+
+.subNav {
+  display: none;
+}
 
 @media (max-width: 500px) {
   span{
