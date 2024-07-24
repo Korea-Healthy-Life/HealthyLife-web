@@ -9,31 +9,31 @@
 .searchForm {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  text-align: center;
   width: 40%;
   height: 30px;
   border: 2px solid #D7DDD2;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 .searchForm .searchInput{
-  width: 80%;
+  width: 70%;
   font-size: 12px;
-  border: none;
-  display: flex;
-  align-items: center;
+  display: inline-block;
   text-align: center;
-  padding: 5px;
-}
-
-.searchInput:focus {
-
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  margin: 0 auto;
 }
 
 .searchForm button {
-  right: 0;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   border: none;
+
   background-color: rgba(0, 0, 0, 0);
 }
 

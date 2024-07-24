@@ -51,7 +51,7 @@ export default function Search() {
   useEffect(() => {
     localStorage.setItem('searches', JSON.stringify(searches));
   }, [searches]);
-
+  
   return (
     <div className='search'>
       <form className='searchForm'>
