@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/home/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
+
 
 // classname = lowcamelcase로 작성
 // css => style 폴더안에
@@ -33,16 +34,14 @@ export default function Header() {
     
     <p className= 'logo'><a href="#">logo</a> </p>
           
-
-
-
-
-
     
 
 
   <div className='button2'>
-  <input type="text" placeholder='제품검색' value={search} onChange={InputChangeHandler}  size={40}/>
+  <form action='submit' className='productSearch'>
+  <input type="text" placeholder='제품검색' value={search} onChange={InputChangeHandler}/>
+  
+  </form>
   <a href="#"><AccountCircle /></a>
   <a href="#"><LocalGroceryStoreIcon /></a>
   
