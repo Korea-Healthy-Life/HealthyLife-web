@@ -14,6 +14,10 @@ const Banner: React.FC<bannerImage> = ({bannerImages})=> {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? bannerImages.length -1 : prevIndex -1));
   }
 
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === bannerImages.length -1 ? 0 : prevIndex + 1))
+  }
+
 
   const visibleImages = bannerImages.slice(currentIndex, currentIndex +1);
   if(visibleImages.length < 1){
@@ -28,9 +32,10 @@ const Banner: React.FC<bannerImage> = ({bannerImages})=> {
       <button className='prevButton' onClick={handlePrevClick}>&#10094;</button>
       {visibleImages.map((image, index) => (
       <img className='bannerImagesljw' key={index} src={image} alt={`slide ${index}`} />
-      
       ))}
 
+      
+      <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
   
 
     </div>
