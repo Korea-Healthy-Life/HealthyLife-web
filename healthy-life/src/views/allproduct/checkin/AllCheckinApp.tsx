@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import Checkin from "./Checkin";
 
 function AllCheckinApp() {
   return (
@@ -11,10 +12,10 @@ function AllCheckinApp() {
       </div>
 
       <ul>
-        <li></li>
+        
       </ul>
     </div>
-  )
+  );
 }
 
-export default AllCheckinApp
+export default AllCheckinApp;

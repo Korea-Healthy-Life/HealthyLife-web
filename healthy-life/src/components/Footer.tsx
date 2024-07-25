@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/componentStyle/footerStyle.css'
 export default function Footer() {
   return (
+    <div className='container'>
     <div className='footerContainer'>
       <h5>Healthy-life<br />company</h5>
       <div className='companyInformation'>
@@ -22,7 +23,8 @@ export default function Footer() {
           <li><strong>토요일 일요일 공휴일 휴무</strong></li>
         </ul>
       </div>
-      <p>COPYRIGHT (C) 2024 Healthy-Life ALL RIGHTS REVERVED /</p>
+    </div>
+    <p>COPYRIGHT (C) 2024 Healthy-Life ALL RIGHTS REVERVED /</p>
     </div>
   )
 }
