@@ -9,7 +9,6 @@ export default function MainApp() {
     banner01,
     banner02,
   ];
-
   return (
     <div className='images'>
       <MainBanner images={images} />
