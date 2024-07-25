@@ -1,18 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import SaladProductsLayout from './SaladProductsLayout';
+import Pagination from './Pagination';
+import { saladProducts } from './SaladProductsLayout';
+import '../../../style/home/salad.css'
+
 
 export default function Salad() {
-  return (
-    <div><div>
-    <h3>닭가슴살/육류</h3>
-    <div>
-      <button>닭가슴살</button>
-      <button>달걀</button>
-      <button>소고기</button>
-    </div>
+  const [currentPage, setCurrentPage] = useState(1);
+  const saladProductsPerPage = 9;
+  const totalPages = Math.ceil(saladProducts.length/ saladProductsPerPage);
 
-    <ul>
-      
-    </ul>
-  </div></div>
+  const handlePrevious = () =>  {
+    setCurrentPage((prevPage) => Math.max(prevPage -1, 1));
+    
+  };
+
+  
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages ));
+  };
+
+  const startIndex = (currentPage -1) * saladProductsPerPage;
+  const selectedProducts = saladProducts.slice(startIndex, startIndex +saladProductsPerPage);
+
+
+  return (
+    <div style={{padding: '16px'}}>
+
+      <SaladProductsLayout saladProducts= {selectedProducts}/>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPrevious={handlePrevious}
+        onNext={handleNext}
+        />
+
+
+    </div>
   )
 }

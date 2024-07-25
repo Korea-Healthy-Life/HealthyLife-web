@@ -5,7 +5,7 @@
 
 .button1 {
   position: absolute;
-  right: 70px;
+  right: 200px;
   color: black;
     
 }
@@ -31,8 +31,7 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin-right: 70px;  
-  
+  margin-right: 200px;
 }
 
 
@@ -44,7 +43,7 @@
 
 
 .button2 input {
-
+  
   border: 1px solid black;
   size: 50%;
 }
