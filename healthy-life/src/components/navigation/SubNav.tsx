@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import Checkin from '../../views/allproduct/checkin/Checkin'
 import Luchbox from '../../views/allproduct/Luchbox'
 import Snack from '../../views/allproduct/Snack'
 import Drink from '../../views/allproduct/Drink'
-import Salad from '../../views/allproduct/Salad'
+import Salad from '../../views/allproduct/salad/Salad'
 import Vegan from '../../views/allproduct/Vegan'
 import LowerSugar from '../../views/allproduct/LowerSugar'
 import SeaFood from '../../views/allproduct/SeaFood'
-import Nuts from '../../views/allproduct/Nuts'
+import Nuts from '../../views/allproduct/nuts/Nuts'
 import  '../../style/componentStyle/SubNav.css'
+import AllCheckinApp from '../../views/allproduct/checkin/AllCheckinApp'
 
 export default function SubNav() {
   return (
@@ -29,7 +29,7 @@ export default function SubNav() {
       </div>  
         <Routes>
         {/* <span >닭가슴살/육류</span> */}
-        <Route path="/checkin" element={<Checkin />} />
+        <Route path="/checkin" element={<AllCheckinApp />} />
         {/* <span>도시락</span> */}
         <Route path="/lunchbox" element={<Luchbox />} />
         {/* <span>간식</span> */}

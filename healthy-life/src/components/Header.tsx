@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import '../style/home/HeaderStyle.css'
+import '../style/componentStyle/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 

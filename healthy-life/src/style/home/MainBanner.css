@@ -1,8 +1,6 @@
 .banner01 {
-  position: relative;
   width: 85%;
-  overflow: hidden;
-  margin: auto;
+  margin: 0 auto;
   min-width: 100%;
 }
   
