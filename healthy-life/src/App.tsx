@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Navigaition from './components/navigation/Navigaition';
+import Navigation from './components/navigation/Navigation';
 
 import Footer from './components/Footer';
 import Sidenavigation from './components/Sidenavigation';
@@ -13,7 +13,7 @@ function App() {
     <>
     <Sidenavigation />
     <Header />
-    <Navigaition />
+    <Navigation />
     <Home />   
     <Routes>
     </Routes> 

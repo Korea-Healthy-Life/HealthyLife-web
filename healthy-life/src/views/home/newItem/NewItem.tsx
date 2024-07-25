@@ -1,5 +1,5 @@
 import React from 'react'
-import MainSlider from './MainSlider';
+import MainSlider from './NewItemSlider';
 import product01 from '../../../assets/images/product01.jpg';
 import product02 from '../../../assets/images/product02.jpg';
 import product03 from '../../../assets/images/product03.jpg';
@@ -10,7 +10,7 @@ import product07 from '../../../assets/images/product07.jpg';
 import product08 from '../../../assets/images/product08.jpg';
 import '../../../style/home/main1.css';
 
-export default function Main1() {
+export default function NewItem() {
   const images = [
     product01,
     product05,

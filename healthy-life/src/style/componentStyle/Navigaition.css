@@ -3,7 +3,8 @@
   align-items: center;
   width: 100%;
   height: 50px;
-  background-color: #D7DDD2;
+  background-color: #b5bbb0;
+  margin-top: 35px;
 }
 
 .mainNavBox ul {
@@ -26,10 +27,9 @@ a:hover {
   cursor: pointer;
 }
 
-.mainNavBox ul li:hover {
+.mainNavBox li:hover {
   color: darkgray;
 }
-
 
 @media (max-width: 500px) {
   span{

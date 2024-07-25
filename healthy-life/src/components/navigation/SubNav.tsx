@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import Checkin from '../../views/allproduct/Checkin'
+import Checkin from '../../views/allproduct/checkin/Checkin'
 import Luchbox from '../../views/allproduct/Luchbox'
 import Snack from '../../views/allproduct/Snack'
 import Drink from '../../views/allproduct/Drink'
