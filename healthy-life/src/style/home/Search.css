@@ -13,21 +13,27 @@
   text-align: center;
   width: 40%;
   height: 30px;
-  border: 2px solid #D7DDD2;
+  border: 2px solid #555f57;
   border-radius: 20px;
   margin: 0 auto;
 }
 
-.searchForm .searchInput{
+.searchForm Input{
   width: 70%;
   font-size: 12px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-align: center;
   border: none;
   background-color: rgba(0, 0, 0, 0);
   outline: none;
   margin: 0 auto;
 }
+
+.searchForm:hover{
+  border-color: #D7DDD2;
+  box-shadow: 10px, 15px, 7px #4c4c4b;
+} 
 
 .searchForm button {
   display: flex;
