@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function AllCheckinApp() {
   return (
@@ -11,10 +11,12 @@ function AllCheckinApp() {
       </div>
 
       <ul>
-        <li></li>
+        <li>
+          <img src="" alt="" />
+        </li>
       </ul>
     </div>
-  )
+  );
 }
 
-export default AllCheckinApp
+export default AllCheckinApp;

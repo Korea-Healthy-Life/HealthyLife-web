@@ -33,7 +33,7 @@ const Navigation:React.FC = () => {
       <div 
       
       >
-        <ul>
+        <ul className='subNav'>
         <li onMouseEnter={()=> handleMouseEnter('nav')}
         onMouseLeave={handleMouseLeave}>
         {activeMenu === 'nav' && (<SubNav />)}
