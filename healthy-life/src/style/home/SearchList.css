@@ -1,18 +1,50 @@
 .searchContainer {
   display: flex;
   justify-content: space-around;
-  border: 1px solid #ccc;
+  width: 38%;
+  height: 200px;
   overflow: hidden;
+  margin: 0 auto;
+
 }
 
-ul {
+.searchContainer ul {
   list-style: none;
   width: 100%;
-  background-color: #ccc;
   color: #000;
+}
+
+.searchContainer ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .line {
   height: 200px;
-  border: 1px solid #555f57;
+  border: 1.5px solid #555f57;
+  border-radius: 10px;
 }
+
+.currentSearch {
+  text-align: center;
+  width: 200px;
+
+}
+
+.popularSearch {
+  text-align: center;
+  width: 200px;
+}
+
+
+@media (max-width: 500px) {
+  .line{
+    height: 150px;
+  }
+  .currentSearch,.popularSearch {
+    font-size: 12px;
+  }
+  
+}
+

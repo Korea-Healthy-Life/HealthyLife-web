@@ -62,8 +62,9 @@ export default function SearchApp() {
 
   return (
     <div>
-    <div>
+    <div className='SearchAppInputDiv'>
       <input 
+      className='SearchAppInput' 
       type="text" 
       value={inputValue}
       placeholder='검색어를 입력해주세요.'

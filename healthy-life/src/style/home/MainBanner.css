@@ -1,30 +1,18 @@
 .banner01 {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
-  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
 }
   
-  .banner02 .images {
-    width: 90%;
-    vertical-align: middle;
-    display: flex;
-  }
+.banner02 .images {
+  width: 90%;
+  vertical-align: middle;
+  display: flex;
+}
   
-  .prevClick, .nextClick {
-    /* display: flex; */
-    cursor: pointer;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    user-select: none;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-
 .bannerImages {
   display: flex;
 }
@@ -40,17 +28,13 @@
 }
 
 .prevClick, .nextClick {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
   padding: 16px;
-  margin-top: -22px;
   color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 .nextClick {
