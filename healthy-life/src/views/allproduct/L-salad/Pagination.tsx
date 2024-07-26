@@ -1,4 +1,6 @@
-interface PaginationProps {
+import React from 'react'
+
+interface paginationProps {
   currentPage: number;
   totalProducts: number;
   saladProductsPerPage: number;
@@ -6,7 +8,7 @@ interface PaginationProps {
 
 }
 
-const Pagination: React.FC<PaginationProps> = ({currentPage, totalProducts, saladProductsPerPage, paginate}) =>{
+const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, saladProductsPerPage, paginate}) =>{
     const pageNumbers = [];
     const totalPages  = Math.ceil(totalProducts / saladProductsPerPage);
     const maxPageGroup = Math.ceil(currentPage / 3);
