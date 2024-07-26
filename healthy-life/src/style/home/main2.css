@@ -43,7 +43,7 @@
 
 .bestItem h3 {
   display: flex;
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
 }
 
@@ -80,7 +80,7 @@
 
 .todayItem h3{
   display: flex;
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
 }
 

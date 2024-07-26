@@ -1,24 +1,50 @@
 interface PaginationProps {
   currentPage: number;
-  totalPages: number;
-  onPrevious: () => void;
-  onNext: () => void;
+  totalProducts: number;
+  saladProductsPerPage: number;
+  paginate: (pageNumber: number) => void;
+
 }
 
-const Pagination: React.FC<PaginationProps> = ({currentPage, totalPages, onPrevious, onNext}) =>{
+const Pagination: React.FC<PaginationProps> = ({currentPage, totalProducts, saladProductsPerPage, paginate}) =>{
+    const pageNumbers = [];
+    const totalPages  = Math.ceil(totalProducts / saladProductsPerPage);
+    const maxPageGroup = Math.ceil(currentPage / 3);
+    const currentPageGroup = Math.ceil(currentPage / 3);
+    const startPage = (currentPageGroup - 1) * 3 + 1;
+    const endPage = Math.min(currentPageGroup * 3, totalPages);
+
+    for (let i = startPage; i <= endPage; i++){
+      pageNumbers.push(i);
+    }
+
 
   return(
-    <div className="pagination" style={{ display: 'flex', justifyContent: 'center', marginTop: '16px' }}>
-
-  <button onClick={onPrevious} disabled={currentPage === 1}>
+    <nav>
+    <div className="pagination">
+    {startPage > 1 && (
+      <div className="pageItem">
+      <button onClick={() => paginate(startPage -3)} className="pageLink">
         Previous
       </button>
-      <span style={{ margin: '0 16px' }}>{currentPage} / {totalPages}</span>
-      <button onClick={onNext} disabled={currentPage === totalPages}>
-        Next
-      </button>
+      </div>)}
+
+      {pageNumbers.map(number => (
+        <div key={number} className={`pageItem ${number === currentPage ? 'active' : ''}`}>
+          <button onClick={() => paginate(number)} className="pageLink">{number}</button>
+        </div>
+      ))}
+
+      {endPage < totalPages && (
+        <div className="pageItem">
+          <button onClick={() => paginate(startPage + 3)} className="pageLink">Next</button>
+
+        </div>
+      )}
+
 
     </div>
+    </nav>
   )
 
 }
