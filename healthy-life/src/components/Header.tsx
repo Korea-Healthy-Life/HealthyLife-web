@@ -32,7 +32,7 @@ export default function Header() {
       
     <br />
     
-    <p className= 'logo'><a href="#">logo</a> </p>
+    <p className= 'logo'><a href="#">Logo</a> </p>
           
     
 
