@@ -8,7 +8,7 @@ interface SearchPops {
   toggleSearch: (id: number) => void;
   deleteSearch: (id: number) => void;
 }
-
+  
 export default function SearchList({
   searchs,
   toggleSearch,

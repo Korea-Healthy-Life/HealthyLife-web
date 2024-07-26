@@ -25,13 +25,16 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   }, [images.length]);
 
 
-  const visibleImages = images.slice(currentIndex, currentIndex + 5);
-  if (visibleImages.length < 5) {
-    visibleImages.push(...images.slice(0, 5 - visibleImages.length));
+  const visibleImages = images.slice(currentIndex, currentIndex + 1);
+  if (visibleImages.length < 1) {
+    visibleImages.push(...images.slice(0, 1 - visibleImages.length));
   }
   
   return (
     <div className='banner01'>
+      <button className="prevClick" onClick={handlePrevClick}>
+        &#10094;
+      </button>
       <div className='bannerImages'>
         {visibleImages.map((image, index) => (
           <div key={index} className='banner02'>
@@ -40,9 +43,6 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
         ))}
       </div>
       <div>
-      <button className="prevClick" onClick={handlePrevClick}>
-        &#10094;
-      </button>
       <button className="nextClick" onClick={handleNextClick}>
         &#10095;
       </button>
