@@ -8,7 +8,7 @@ import '../../../style/home/salad.css'
 export default function Salad() {
   const [currentPage, setCurrentPage] = useState(1);
   const saladProductsPerPage = 9;
-  const totalPages = Math.ceil(saladProducts.length/ saladProductsPerPage);
+  const totalPages = Math.ceil(saladProducts.length/ saladProductsPerPage);  //2
 
   const handlePrevious = () =>  {
     setCurrentPage((prevPage) => Math.max(prevPage -1, 1));
