@@ -12,10 +12,10 @@ export default function Search({search, toggleSearch, deleteSearch}: SearchProps
 
   return (
       <div>
-      <li 
+      <span 
       onChange={()=> toggleSearch(search.id)}>
         {search.text}
-      </li>
+      </span>
       <button onClick={() => deleteSearch(search.id)}>X</button>
       </div>
   )
