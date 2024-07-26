@@ -7,7 +7,7 @@ import Salad from '../../views/allproduct/salad/Salad'
 import Vegan from '../../views/allproduct/Vegan'
 import LowerSugar from '../../views/allproduct/j-lowersugar/LowerSugar'
 import SeaFood from '../../views/allproduct/SeaFood'
-import Nuts from '../../views/allproduct/nuts-j/Nuts'
+import Nuts from '../../views/allproduct/j-nuts/Nuts'
 import  '../../style/componentStyle/SubNav.css'
 import AllCheckinApp from '../../views/allproduct/j-checkin/AllCheckinApp'
 
