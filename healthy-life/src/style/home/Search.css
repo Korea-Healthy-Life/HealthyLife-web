@@ -27,7 +27,6 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
   outline: none;
-  margin: 0 auto;
 }
 
 .searchForm:hover{
@@ -35,7 +34,7 @@
   box-shadow: 10px, 15px, 7px #4c4c4b;
 } 
 
-.searchForm button {
+button {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -43,41 +42,6 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.searchContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: 50%;
-  height: 100%;
-}
-
-
-.searchContainer .currentSearch,.popularSearch {
-  margin: 0 auto;
-  padding: 10px;
-  width: 100%;
-}
-
-.line {
-  margin-top: 20px;
-  border: 2px solid #555f57;
-  border-radius: 10px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.searchContainer ul {
-  margin-top: 15px;
-}
-.searchContainer li {
-  list-style: none;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  text-align: left;
-}
-
-.searchContainer h5 {
-  display: flex;
-  justify-content: center;
+.searchButton {
+  float: right;
 }
