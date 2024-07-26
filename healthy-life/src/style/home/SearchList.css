@@ -8,6 +8,8 @@
 ul {
   list-style: none;
   width: 100%;
+  background-color: #ccc;
+  color: #000;
 }
 
 .line {

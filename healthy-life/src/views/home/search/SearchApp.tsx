@@ -61,8 +61,8 @@ export default function SearchApp() {
     }, [searchs]);
 
   return (
-    <div className='search'>
-    <div className='searchForm'>
+    <div>
+    <div>
       <input 
       type="text" 
       value={inputValue}
