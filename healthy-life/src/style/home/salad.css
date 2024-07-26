@@ -1,8 +1,11 @@
 .saladProductFlexBox{
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 5px;
   justify-content: center;
+  margin-top: 20px ;
+  width: 60%;
+  margin-left: 20%;
 }
 
 
@@ -10,11 +13,18 @@
 .saladProductFlexBoxChild{
   flex: 1 1 calc(33.333% - 16px);
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  padding: 16px;
   text-align: center;
+  margin-left: 5px ;
+  margin-right: 5px ;
+  margin-top: 20px;
+  margin-bottom: 90px;
 }
 
+
+.saladProductFlexBoxChild img{
+  margin: 0px;
+  padding: 0px;
+}
 
 .pagination{
   display: flex;
