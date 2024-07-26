@@ -1,0 +1,18 @@
+.searchContainer {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  background-color: #ccc;
+  color: #000;
+}
+
+.line {
+  height: 200px;
+  border: 1px solid #555f57;
+}

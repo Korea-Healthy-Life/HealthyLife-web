@@ -1,69 +1,80 @@
-import React, { ChangeEvent, useRef, useState } from 'react'
-import Search from './Search';
+import React, { useEffect, useRef, useState } from 'react'
+import '../../../style/home/Search.css'
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import SearchList from './SearchList';
 import '../../../style/home/Search.css'
 
+
 export interface Searchs {
   id: number;
-  title: string;
-  isCompleted: boolean;
+  text: string;
+  completed: boolean;
+}
+
+const laodSearchs = (): Searchs[] => {
+  const stroedSearchs = localStorage.getItem('searchs');
+  return stroedSearchs ? JSON.parse(stroedSearchs) : [];
 }
 
 export default function SearchApp() {
   const [searchs, setSearchs] = useState<Searchs[]>([]);
-  const [searchsInput, setSearchInput] = useState({
-    title: ""})
+  const [inputValue, setInputValue] = useState<string>('')
 
-    const nextId = useRef(1);
+  // 검색창 입력시 id value 값 할당 
+    let nexIdInitialValue = searchs.length > 0 
+    ? Math.max(...searchs.map(search => search.id)) + 1
+    : 1;
 
-    const handleInputChange = (e:ChangeEvent<HTMLInputElement>) => {
-      const {name, value} = e.target;
+    const nextId = useRef(nexIdInitialValue);
 
-      setSearchInput({
-        ...searchsInput,
-        [name]: value
-      })
-    }
+    // 검색어 추가
+    const addSearch = () => {
+      if (inputValue.trim() === '') return; 
 
-    const handleCreate = () => {
-      const newSearch = {
+      setSearchs([...searchs, {
         id: nextId.current,
-        title: searchsInput.title,
-        isCompleted: false
-      }
-      setSearchs(searchs.concat(newSearch));
+        text: inputValue,
+        completed: false
+      }]);
 
-      setSearchInput({
-        title: ""
-      })
-
+      setInputValue('');
       nextId.current += 1;
-    };
+    } 
 
-    const handleToggle = (id: number) => {
+    // 최근 검색어에 검색어 추가 명령어
+    const toggleSearch = (id: number) => {
       setSearchs(
-        searchs.map((search) =>
-          search.id === id ? {...search , isCompleted: !search.isCompleted} : search)
+        searchs.map(search => 
+          search.id === id 
+          ? { ...search, completed: !search.completed}
+          : search
+        )
       )
     }
-    
-    const handleRemove = (id: number) => {
-      setSearchs(searchs.filter((search)=> search.id !== id));
-    }
+    // 최근 검색어 삭제 명령어 
+    const delelteSearch =(id: number) => {
+      setSearchs(searchs.filter(search => search.id !== id));
+    } 
+
+    useEffect(() => {
+      localStorage.setItem('searchs', JSON.stringify(searchs));
+    }, [searchs]);
 
   return (
     <div>
-      <Search 
-        search={searchsInput}
-        onChange={handleInputChange}
-        onCreat={handleCreate}
+    <div>
+      <input 
+      type="text" 
+      value={inputValue}
+      placeholder='검색어를 입력해주세요.'
+      onChange={(e) => setInputValue(e.target.value)}
+      onKeyDown={(e) => (e.key === "Enter" ? addSearch() : null)}
       />
-
-      <SearchList 
-        searchs={searchs}
-        onRemove={handleRemove}
-        onToggle={handleToggle}
-      />
+    <button className='searchButton' onClick={addSearch}><SearchTwoToneIcon/></button>
     </div>
+    <div>
+    <SearchList searchs={searchs} toggleSearch={toggleSearch} deleteSearch={delelteSearch}/>
+    </div>
+    </div> 
   )
 }

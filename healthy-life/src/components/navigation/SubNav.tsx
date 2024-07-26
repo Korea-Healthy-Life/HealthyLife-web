@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import Luchbox from '../../views/allproduct/Luchbox'
+import Luchbox from '../../views/allproduct/j-lunchbox/Luchbox'
 import Snack from '../../views/allproduct/Snack'
-import Drink from '../../views/allproduct/Drink'
+import Drink from '../../views/allproduct/j-drink/Drink'
 import Salad from '../../views/allproduct/salad/Salad'
 import Vegan from '../../views/allproduct/Vegan'
-import LowerSugar from '../../views/allproduct/LowerSugar'
+import LowerSugar from '../../views/allproduct/j-lowersugar/LowerSugar'
 import SeaFood from '../../views/allproduct/SeaFood'
-import Nuts from '../../views/allproduct/nuts/Nuts'
+import Nuts from '../../views/allproduct/j-nuts/Nuts'
 import  '../../style/componentStyle/SubNav.css'
-import AllCheckinApp from '../../views/allproduct/checkin/AllCheckinApp'
+import AllCheckinApp from '../../views/allproduct/j-checkin/AllCheckinApp'
 
 export default function SubNav() {
   return (

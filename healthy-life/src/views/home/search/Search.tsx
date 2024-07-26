@@ -1,29 +1,22 @@
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import '../../../style/home/Search.css'
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import { Searchs } from './SearchApp';
 
 interface SearchProps {
-  search: Omit<Searchs, 'id' | 'isCompleted'>;
-  onCreat: ()=> void;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  search: Searchs;
+  toggleSearch: (id: number) => void;
+  deleteSearch: (id: number) => void;
 }
 
-export default function Search({search, onCreat, onChange}: SearchProps) {
-  const {title} = search;
+export default function Search({search, toggleSearch, deleteSearch}: SearchProps) {
+
   return (
-    <div className='search'>
-      <form className='searchForm'>
-      <input 
-      type="text" 
-      placeholder='검색어를 입력하세요.'
-      className='searchInput'
-      value={title}
-      onChange={onChange}
-      />
-      <button onClick={onCreat}><SearchTwoToneIcon/></button>
-      </form>
-      
-    </div>
+      <div>
+      <span 
+      onChange={()=> toggleSearch(search.id)}>
+        {search.text}
+      </span>
+      <button onClick={() => deleteSearch(search.id)}>X</button>
+      </div>
   )
 }
