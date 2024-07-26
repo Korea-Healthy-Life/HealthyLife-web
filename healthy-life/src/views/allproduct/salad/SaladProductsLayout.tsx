@@ -29,17 +29,49 @@ export const saladProducts: saladProduct[] = [
   {id: 16, name: 'product16', image: 'https://cdn.pixabay.com/photo/2023/07/26/16/43/food-8151625_640.jpg'},
   {id: 17, name: 'product17', image: 'https://cdn.pixabay.com/photo/2021/10/13/16/08/vegan-salad-6707015_640.jpg'},
   {id: 18, name: 'product18', image: 'https://cdn.pixabay.com/photo/2016/08/28/10/49/takeaway-1625652_1280.jpg'},
+  {id: 19, name: 'product19', image: 'https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg'},
+  {id: 20, name: 'product20', image: 'https://cdn.pixabay.com/photo/2015/05/20/18/35/salad-775949_1280.jpg'},
+  {id: 21, name: 'product21', image: 'https://cdn.pixabay.com/photo/2022/06/07/20/58/salad-7249259_1280.jpg'},
+  {id: 22, name: 'product22', image: 'https://cdn.pixabay.com/photo/2022/06/07/20/58/salad-7249259_1280.jpg'},
+  {id: 23, name: 'product23', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 24, name: 'product24', image: 'https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_640.jpg'},
+  {id: 25, name: 'product25', image: 'https://cdn.pixabay.com/photo/2015/01/03/18/19/salad-587669_640.jpg'},
+  {id: 26, name: 'product26', image: 'https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg'},
+  {id: 27, name: 'product27', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 28, name: 'product28', image: 'https://cdn.pixabay.com/photo/2015/01/03/18/19/salad-587669_640.jpg'},
+  {id: 29, name: 'product29', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 30, name: 'product30', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 31, name: 'product31', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 32, name: 'product32', image: 'https://cdn.pixabay.com/photo/2023/09/25/07/55/salad-8274421_640.jpg'},
+  {id: 33, name: 'product33', image: 'https://cdn.pixabay.com/photo/2019/12/11/16/20/parsley-4688651_640.jpg'},
+  {id: 34, name: 'product34', image: 'https://cdn.pixabay.com/photo/2023/07/26/16/43/food-8151625_640.jpg'},
+  {id: 35, name: 'product35', image: 'https://cdn.pixabay.com/photo/2021/10/13/16/08/vegan-salad-6707015_640.jpg'},
+  {id: 36, name: 'product36', image: 'https://cdn.pixabay.com/photo/2016/08/28/10/49/takeaway-1625652_1280.jpg'},
+  {id: 37, name: 'product37', image: 'https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg'},
+  {id: 38, name: 'product38', image: 'https://cdn.pixabay.com/photo/2015/05/20/18/35/salad-775949_1280.jpg'},
+  {id: 39, name: 'product39', image: 'https://cdn.pixabay.com/photo/2022/06/07/20/58/salad-7249259_1280.jpg'},
+  {id: 40, name: 'product40', image: 'https://cdn.pixabay.com/photo/2022/06/07/20/58/salad-7249259_1280.jpg'},
+  {id: 41, name: 'product41', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 42, name: 'product42', image: 'https://cdn.pixabay.com/photo/2017/09/16/19/21/salad-2756467_640.jpg'},
+  {id: 43, name: 'product43', image: 'https://cdn.pixabay.com/photo/2015/01/03/18/19/salad-587669_640.jpg'},
+  {id: 44, name: 'product44', image: 'https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg'},
+  {id: 45, name: 'product45', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 46, name: 'product46', image: 'https://cdn.pixabay.com/photo/2015/01/03/18/19/salad-587669_640.jpg'},
+  {id: 47, name: 'product47', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 48, name: 'product48', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 49, name: 'product49', image: 'https://cdn.pixabay.com/photo/2018/06/19/10/16/lollo-rosso-3484159_640.jpg'},
+  {id: 50, name: 'product50', image: 'https://cdn.pixabay.com/photo/2023/09/25/07/55/salad-8274421_640.jpg'},
 ]
 
 
 interface SaladProductFlexProps {
-  saladProducts: saladProduct[];
+  currentProducts: saladProduct[];
 }
 
-const SaladProductsLayout: React.FC<SaladProductFlexProps> = ({saladProducts})  => {
+const SaladProductsLayout: React.FC<SaladProductFlexProps> = ({currentProducts})  => {
   return(
     <div className='saladProductFlexBox'>
-      {saladProducts.map((saladproduct)=>(
+      {currentProducts.map((saladproduct)=>(
         <div className='saladProductFlexBoxChild' key={saladproduct.id}>
           <img src={saladproduct.image} alt={saladproduct.name} style={{ width: '100%', height: 'auto' }} />
           <h2>{saladproduct.name}</h2>
