@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import '../../../style/home/Checkin.css';
-import { ProductProps } from './AllCheckinApp';
+// import '../../../style/home/Checkin.css';
+import { ProductProps } from './RecommandApp';
 
 
-const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
+const RecommandList:React.FC<{ products: ProductProps[]}> = ({products})  => {
 
   return (
     <div className='checkinImage'>
@@ -18,4 +17,4 @@ const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
     </div>
   )
 }
-export default Checkin;
+export default RecommandList;

@@ -5,9 +5,10 @@ import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import KeyboardArrowUpTwoToneIcon from '@mui/icons-material/KeyboardArrowUpTwoTone';
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import SurveyApp from '../views/survey/SurveyApp';
 
 const Sidenavigator:React.FC = () => {
   const [activeSide, setActiveSide] = useState<string | null>(null);
@@ -40,7 +41,7 @@ const Sidenavigator:React.FC = () => {
         <li><Link to={'/wish'}><FavoriteTwoToneIcon/></Link></li>
         <li onClick={MoveToTop}><KeyboardArrowUpTwoToneIcon/></li>
         <li onClick={MoveToUnder}><KeyboardArrowDownTwoToneIcon/></li>
-        <li>체질<br />/기호</li>
+        <li><Link to={'/survey'}>체질<br />/기호</Link></li>
       <button
       className='closeIcon'
       onClick={handleCloseClick}
@@ -52,6 +53,10 @@ const Sidenavigator:React.FC = () => {
       className='pluseIcon' 
       onClick={() => handleMouseSpreadClick('side')}
       ><AddCircleOutlineIcon style={{fontSize: '40px'}} />
+
+      <Routes>
+        
+      </Routes>
       </button>
     </div>
   )
