@@ -31,6 +31,21 @@ export default function Salad() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
+    <div>
+      <h2>샐러드</h2>
+
+      {/* <ul>
+        <li><button></button></li>
+        <li><button></button></li>
+        <li><button></button></li>
+      </ul> */}
+
+      <select name='' id=''>
+        <option value="">조회순</option>
+        <option value="">가격높은순</option>
+        <option value="">가격낮은순</option>
+      </select>
+
     <div style={{padding: '16px'}}>
 
       <SaladProductsLayout currentProducts= {currentProducts}/>
@@ -40,6 +55,7 @@ export default function Salad() {
         paginate={paginate}
         saladProductsPerPage={saladProductsPerPage}
         />
+    </div>
 
 
     </div>

@@ -5,7 +5,7 @@ import BestItemLayout from './bestItemLayout';
 import { bestItemProducts } from './bestItemLayout';
 import '../../style/home/productList.css'
 
-export default function Vegan() {
+export default function BestItem() {
   const [currentPage, setCurrentPage] = useState(1);
   const bestItemProductsPerPage = 9;
   // const totalPages = Math.ceil(saladProducts.length/ saladProductsPerPage);
@@ -31,6 +31,15 @@ export default function Vegan() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
+    <div>
+      <h2>베스트상품</h2>
+
+      <select name="" id="">
+        <option value="">조회순</option>
+        <option value="">가격높은순</option>
+        <option value="">가격낮은순</option>
+      </select>
+      
     <div style={{padding: '16px'}}>
       <h2>BestItem</h2>
       <BestItemLayout currentProducts= {currentProducts}/>
@@ -42,6 +51,7 @@ export default function Vegan() {
         />
 
 
+    </div>
     </div>
   )
 }
