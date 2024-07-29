@@ -67,9 +67,9 @@ interface snackProductFlexProps {
 const SnackProductsLayout: React.FC<snackProductFlexProps> = ({currentProducts})  => {
   
   return (
-    <div className='saladProductFlexBox'>
+    <div className='snackProductFlexBox'>
     {currentProducts.map((snackProduct)=>(
-      <div className='saladProductFlexBoxChild' key={snackProduct.id}>
+      <div className='snackProductFlexBoxChild' key={snackProduct.id}>
         <img src={snackProduct.image} alt={snackProduct.name} style={{ width: '100%', height: 'auto' }} />
         <h2>{snackProduct.name}</h2>
       </div>
