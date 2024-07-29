@@ -23,8 +23,7 @@ const Navigation:React.FC = () => {
       onMouseLeave={handleMouseLeave}>
         <ul>
         <li
-        >
-          <Link to='/all'>전체상품</Link></li> 
+        >전체상품</li> 
         <li><Link to='/best'>BEST.ITEM</Link></li> 
         <li><Link to='/recommand'>체질추천상품</Link></li> 
         <li><Link to='/review' >전체후기</Link></li> 

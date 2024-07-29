@@ -1,21 +1,20 @@
 .chickenContainer {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   text-align: center;
-  width: 80%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .chickenContainer h2 {
   margin: 20px 0;
 }
 
-
 .checkinButtonList {
   display: flex;
   justify-content: space-around;
+  width: 300px;
   flex-direction: row;
-  width: 40%;
   margin: 0 auto;
   list-style: none;
   margin-bottom: 40px;
@@ -35,36 +34,38 @@
 }
 
 /* checkinList.css */
-.checkinImage {
-  flex: 1 1 calc(33.333% - 16px);
+.checkinImageList {
+  display: flex;
+  width: 900px;
   flex-direction: row;
+  align-items: flex-end;
   flex-wrap: wrap;
-  width: 90%;
   margin: 0 auto;
 }
 
-.checkinImageList {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.checkinImageList div  {
+.checkinImageList div {
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  list-style: none;
 }
 
 .checkinImageList img {
   list-style: none;
   width: 30%;
+  display: flex;
+  margin: 10px 15px;
+}
+
+.checkinImageList h4 {
+  display: flex;
+  align-items: center;
 }
 
 select {
-  position: absolute;
-  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: column;
   width: 100px;
   border-radius: 5px;
 }
@@ -79,6 +80,12 @@ option {
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
+}
+
+.checkinHoverButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

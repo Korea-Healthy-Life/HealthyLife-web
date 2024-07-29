@@ -16,6 +16,7 @@
   margin: 0 auto;
   font-size: 12px;
   list-style-type: none;
+  cursor: pointer;
 }
 
 a {
