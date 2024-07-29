@@ -9,10 +9,10 @@ const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
       <div className="checkinImageList">
       {products.map(product => (
         <div key={product.id}>
-        <div className='checkinHoverButton'>
+        <li className='checkinHoverButton'>
           <button>ADD</button>
           <button>WISH</button>
-        </div>
+        </li>
           <img src={product.image} alt={product.title} />
           <h4>{product.title}</h4>
           </div>

@@ -64,16 +64,14 @@ const AllCheckinApp: React.FC  = () => {
       <li><button>소고기</button></li>
     </ul>
 
+    <select name="" id="">
+      <option value="">조회순</option>
+      <option value="">가격 높은순</option>
+      <option value="">가격 낮은순</option>
+    </select> 
 
-    <div className='chickenSelect'>
-      <select name="" id="">
-        <option value="">조회순</option>
-        <option value="">가격 높은순</option>
-        <option value="">가격 낮은순</option>
-      </select> 
-
+    <div className='chickenList'>
       <Checkin products={currentProducts} />
-      
     </div>
     <Pagination 
     productPerPage={checkinPerPage}
