@@ -43,7 +43,7 @@ const products:ProductProps[] = [
 
 const RecommandApp: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [ProductPerPage] = useState<number>(16);
+  const [ProductPerPage] = useState<number>(9);
 
   const indexOfLastPost = currentPage * ProductPerPage;
   const indexOfFirstPost = indexOfLastPost - ProductPerPage;
