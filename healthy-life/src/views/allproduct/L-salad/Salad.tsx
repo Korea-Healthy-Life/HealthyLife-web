@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import SaladProductsLayout from './SaladProductsLayout';
 import Pagination from './Pagination';
 import { saladProducts } from './SaladProductsLayout';
-import '../../../style/home/salad.css'
+import '../../../style/home/productList.css'
 
 
 export default function Salad() {

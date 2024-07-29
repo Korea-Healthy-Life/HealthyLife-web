@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface seaFoodProduct{
+interface snackProduct{
   id: number;
   name: string;
   image: string;
 }
 
-export const seaFoodProducts: seaFoodProduct[] = [
+export const snackProducts: snackProduct[] = [
   {id: 1, name: 'product1', image: 'https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg'},
   {id: 2, name: 'product2', image: 'https://cdn.pixabay.com/photo/2015/05/20/18/35/salad-775949_1280.jpg'},
   {id: 3, name: 'product3', image: 'https://cdn.pixabay.com/photo/2022/06/07/20/58/salad-7249259_1280.jpg'},
@@ -60,18 +60,18 @@ export const seaFoodProducts: seaFoodProduct[] = [
 ]
 
 
-interface seaFoodProductFlexProps {
-  currentProducts: seaFoodProduct[];
+interface snackProductFlexProps {
+  currentProducts: snackProduct[];
 }
 
-const SeaFoodProductsLayout: React.FC<seaFoodProductFlexProps> = ({currentProducts})  => {
+const SnackProductsLayout: React.FC<snackProductFlexProps> = ({currentProducts})  => {
   
   return (
-    <div className='seaFoodProductFlexBox'>
-    {currentProducts.map((seaFoodProduct)=>(
-      <div className='seaFoodProductFlexBoxChild' key={seaFoodProduct.id}>
-        <img src={seaFoodProduct.image} alt={seaFoodProduct.name} style={{ width: '100%', height: 'auto' }} />
-        <h2>{seaFoodProduct.name}</h2>
+    <div className='snackProductFlexBox'>
+    {currentProducts.map((snackProduct)=>(
+      <div className='snackProductFlexBoxChild' key={snackProduct.id}>
+        <img src={snackProduct.image} alt={snackProduct.name} style={{ width: '100%', height: 'auto' }} />
+        <h2>{snackProduct.name}</h2>
       </div>
     ))}
 
@@ -79,4 +79,4 @@ const SeaFoodProductsLayout: React.FC<seaFoodProductFlexProps> = ({currentProduc
   )
 }
 
-export default SeaFoodProductsLayout
+export default SnackProductsLayout
