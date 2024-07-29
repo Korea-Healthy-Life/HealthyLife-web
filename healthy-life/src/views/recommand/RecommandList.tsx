@@ -1,16 +1,17 @@
-// import '../../../style/home/Checkin.css';
 import { ProductProps } from './RecommandApp';
+
+import '../../style/home/allProduct.css'
 
 
 const RecommandList:React.FC<{ products: ProductProps[]}> = ({products})  => {
 
   return (
-    <div className='checkinImage'>
-      <div className="checkinImageList">
+    <div className='allProductImage'>
+      <div className="allProductImageList">
       {products.map(product => (
         <div key={product.id}>
           <img src={product.image} alt={product.title} />
-          <p>{product.title}</p>
+          <h4>{product.title}</h4>
           </div>
       ))}
       </div>
