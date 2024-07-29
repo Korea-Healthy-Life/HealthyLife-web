@@ -44,7 +44,7 @@ const products:ProductProps[] = [
 
 const AllCheckinApp: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [checkinPerPage] = useState<number>(16);
+  const [checkinPerPage] = useState<number>(9);
 
   const indexOfLastPost = currentPage * checkinPerPage;
   const indexOfFirstPost = indexOfLastPost - checkinPerPage;
@@ -64,14 +64,16 @@ const AllCheckinApp: React.FC  = () => {
       <li><button>소고기</button></li>
     </ul>
 
-    <select name="" id="">
-      <option value="">조회순</option>
-      <option value="">가격 높은순</option>
-      <option value="">가격 낮은순</option>
-    </select> 
 
-    <div className='chickenList'>
+    <div className='chickenSelect'>
+      <select name="" id="">
+        <option value="">조회순</option>
+        <option value="">가격 높은순</option>
+        <option value="">가격 낮은순</option>
+      </select> 
+
       <Checkin products={currentProducts} />
+      
     </div>
     <Pagination 
     productPerPage={checkinPerPage}
