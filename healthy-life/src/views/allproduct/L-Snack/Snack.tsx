@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import SnackProductsLayout, { snackProducts } from './SnackProductsLayout';
 import Pagination from './Pagination';
+import '../../../style/home/productList.css'
 
 export default function Snack() {
   const [currentPage, setCurrentPage] = useState(1);

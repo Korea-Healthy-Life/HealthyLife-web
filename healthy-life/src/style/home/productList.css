@@ -1,0 +1,184 @@
+.saladProductFlexBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px ;
+  width: 60%;
+  margin-left: 20%;
+}
+
+
+
+.saladProductFlexBoxChild{
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 5px ;
+  margin-right: 5px ;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+
+.saladProductFlexBoxChild img{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.seaFoodProductFlexBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px ;
+  width: 60%;
+  margin-left: 20%;
+}
+
+
+
+.seaFoodProductFlexBoxChild{
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 5px ;
+  margin-right: 5px ;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+
+.seaFoodProductFlexBoxChild img{
+  margin: 0px;
+  padding: 0px;
+}
+
+.snackProductFlexBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px ;
+  width: 60%;
+  margin-left: 20%;
+}
+
+
+
+.snackProductFlexBoxChild{
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 5px ;
+  margin-right: 5px ;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+
+.snackProductFlexBoxChild img{
+  margin: 0px;
+  padding: 0px;
+}
+
+.veganProductFlexBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px ;
+  width: 60%;
+  margin-left: 20%;
+}
+
+
+
+.veganProductFlexBoxChild{
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 5px ;
+  margin-right: 5px ;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+
+.veganProductFlexBoxChild img{
+  margin: 0px;
+  padding: 0px;
+}
+
+.bestItemProductFlexBox{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px ;
+  width: 60%;
+  margin-left: 20%;
+}
+
+
+
+.bestItemProductFlexBoxChild{
+  flex: 1 1 calc(33.333% - 16px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 5px ;
+  margin-right: 5px ;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+
+.bestItemProductFlexBoxChild img{
+  margin: 0px;
+  padding: 0px;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 16px;
+
+}
+
+
+.pagination .pageItem{
+  margin: 0 5px;
+}
+
+
+.pagination .pageLink {
+  color: #007bff;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+.pagination .pageLink:hover {
+  background-color: #f8f8f8;
+  color: #0056b3;
+}
+
+
+.pagination .pageItem.active .pageLink {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+
+.pagination .pageItem button:focus {
+  outline: none;
+}

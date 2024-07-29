@@ -67,9 +67,9 @@ interface bestItemProductFlexProps {
 const BestItemLayout: React.FC<bestItemProductFlexProps> = ({currentProducts})  => {
   
   return (
-    <div className='veganProductFlexBox'>
+    <div className='bestItemProductFlexBox'>
     {currentProducts.map((bestItemProduct)=>(
-      <div className='veganProductFlexBoxChild' key={bestItemProduct.id}>
+      <div className='bestItemProductFlexBoxChild' key={bestItemProduct.id}>
         <img src={bestItemProduct.image} alt={bestItemProduct.name} style={{ width: '100%', height: 'auto' }} />
         <h2>{bestItemProduct.name}</h2>
       </div>

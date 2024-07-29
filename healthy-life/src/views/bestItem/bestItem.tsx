@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Pagination from './Pagination';
 import BestItemLayout from './bestItemLayout';
 import { bestItemProducts } from './bestItemLayout';
+import '../../style/home/productList.css'
 
 export default function Vegan() {
   const [currentPage, setCurrentPage] = useState(1);

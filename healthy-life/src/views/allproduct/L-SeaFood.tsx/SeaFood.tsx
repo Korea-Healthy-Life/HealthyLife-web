@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SeaFoodProductsLayout, { seaFoodProducts } from './SeaFoodProductsLayout';
 import Pagination from './Pagination';
+import '../../../style/home/productList.css'
 
 export default function Salad() {
   const [currentPage, setCurrentPage] = useState(1);
