@@ -7,7 +7,6 @@ import SearchApp from './search/SearchApp'
 export default function Home() {
   return (
     <div>
-      
         <MainApp />
         <SearchApp />
         <NewItem />

@@ -1,0 +1,84 @@
+.chickenContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.chickenContainer h2 {
+  margin: 20px 0;
+}
+
+
+.checkinButtonList {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 40%;
+  margin: 0 auto;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.checkinButtonList button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.checkinButtonList button:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #D7DDD2;
+}
+
+.checkinButtonList button:active {
+  color: #9b9b9b;
+}
+
+/* checkinList.css */
+.checkinImage {
+  flex: 1 1 calc(33.333% - 16px);
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.checkinImageList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.checkinImageList div  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.checkinImageList img {
+  list-style: none;
+  width: 30%;
+}
+
+select {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  border-radius: 5px;
+}
+
+option {
+  border-radius: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
