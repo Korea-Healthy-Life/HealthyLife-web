@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import Checkin from './Checkin'
-import '../../../style/home/Checkin.css'
-import Pagination from './Pagination';
+import RecommandList from './RecommandList';
+import Pagination from '../allproduct/j-checkin/Pagination';
 
 export interface ProductProps {
   id: number;
@@ -42,12 +41,12 @@ const products:ProductProps[] = [
   {id: 30, title: 'Produt 30', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
 ];
 
-const AllCheckinApp: React.FC  = () => {
+const RecommandApp: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [checkinPerPage] = useState<number>(16);
+  const [ProductPerPage] = useState<number>(16);
 
-  const indexOfLastPost = currentPage * checkinPerPage;
-  const indexOfFirstPost = indexOfLastPost - checkinPerPage;
+  const indexOfLastPost = currentPage * ProductPerPage;
+  const indexOfFirstPost = indexOfLastPost - ProductPerPage;
   const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
 
 
@@ -55,26 +54,13 @@ const AllCheckinApp: React.FC  = () => {
 
   return (
     <div className='chickenContainer'>
-      <h2>닭가슴살/육류</h2>
-      
-
-    <ul className='checkinButtonList'>
-      <li><button>닭가슴살</button></li>
-      <li><button>달걀</button></li>
-      <li><button>소고기</button></li>
-    </ul>
-
-    <select name="" id="">
-      <option value="">조회순</option>
-      <option value="">가격 높은순</option>
-      <option value="">가격 낮은순</option>
-    </select> 
+      <h2>체질추천상품</h2>
 
     <div className='chickenList'>
-      <Checkin products={currentProducts} />
+      <RecommandList products={currentProducts} />
     </div>
     <Pagination 
-    productPerPage={checkinPerPage}
+    productPerPage={ProductPerPage}
     totalProducts={products.length}
     paginate={paginate}
     currentPage={currentPage}
@@ -82,13 +68,11 @@ const AllCheckinApp: React.FC  = () => {
     </div>
   )
 }
-export default AllCheckinApp;
+export default RecommandApp;
 
 export interface PaginationProps {
-  checkinPerPage: number;
+  ProductPerPage: number;
   totalProducts: number;
   paginate: (pageNumber: number) => void;
   currentPage: number;
 }
-
-
