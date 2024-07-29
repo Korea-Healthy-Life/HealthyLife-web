@@ -1,12 +1,10 @@
 .chickenContainer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .chickenContainer h2 {
+  text-align: center;
   margin: 20px 0;
 }
 
@@ -36,30 +34,31 @@
 /* checkinList.css */
 .checkinImageList {
   display: flex;
-  width: 900px;
   flex-direction: row;
-  align-items: flex-end;
   flex-wrap: wrap;
-  margin: 0 auto;
+  
 }
 
 .checkinImageList div {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 30%;
+  margin-top: 20px;
+  margin-right: 2%;
 }
 
 .checkinImageList img {
   list-style: none;
-  width: 30%;
+  width: 100%;
   display: flex;
-  margin: 10px 15px;
+  margin:  0 auto;
 }
 
 .checkinImageList h4 {
   display: flex;
-  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 select {
