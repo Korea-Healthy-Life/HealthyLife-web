@@ -23,7 +23,15 @@ const MypageNav:React.FC = () => {
         <li><Link to='/mypage/membership'>등급별 혜택안내</Link></li> 
         </ul>
       </div>
-
+          <Routes>
+            {/* <Route path='/mypage/order' element={<OrderApp />}/>
+            <Route path='/mypage/review' element={<ReviewApp />}/>
+            <Route path='/mypage/wishlist' element={<WishApp />}/> */}
+            {/* <Route path='/mypage/current' element={< />}/>
+            <Route path='/mypage/coupon' element={< />}/>
+            <Route path='/mypage/mileage' element={< />}/>
+            <Route path='/mypage/membership' element={< />}/> */}
+          </Routes>
       <div >
       </div>
     </div>
