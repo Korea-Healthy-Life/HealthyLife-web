@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import '../../../style/home/Checkin.css';
+import '../../../style/home/allProduct.css'
 import { ProductProps } from './AllCheckinApp';
 
 
 const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
 
   return (
-      <div className="checkinImageList">
+      <div className="allProductImageList">
       {products.map(product => (
         <div key={product.id}>
-        <li className='checkinHoverButton'>
+        <div className='allProductHoverButton'>
           <button>ADD</button>
           <button>WISH</button>
-        </li>
+        </div>
           <img src={product.image} alt={product.title} />
           <h4>{product.title}</h4>
           </div>

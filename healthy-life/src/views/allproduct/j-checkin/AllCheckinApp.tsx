@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Checkin from './Checkin'
-import '../../../style/home/Checkin.css'
+import '../../../style/home/allProduct.css'
 import Pagination from './Pagination';
 
 export interface ProductProps {
@@ -54,11 +54,11 @@ const AllCheckinApp: React.FC  = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='chickenContainer'>
+    <div className='allProductContainer'>
       <h2>닭가슴살/육류</h2>
       
 
-    <ul className='checkinButtonList'>
+    <ul className='allProductButtonList'>
       <li><button>닭가슴살</button></li>
       <li><button>달걀</button></li>
       <li><button>소고기</button></li>
@@ -70,7 +70,7 @@ const AllCheckinApp: React.FC  = () => {
       <option value="">가격 낮은순</option>
     </select> 
 
-    <div className='chickenList'>
+    <div className='allProductList'>
       <Checkin products={currentProducts} />
     </div>
     <Pagination 

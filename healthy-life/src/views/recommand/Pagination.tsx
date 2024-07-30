@@ -1,4 +1,4 @@
-import '../../../style/home/Checkin.css'
+import '../../style/home/allProduct.ccs'
 
 export interface PaginationProps {
   productPerPage: number;
