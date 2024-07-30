@@ -27,7 +27,7 @@ function MypageMain() {
       <div className='mypageSuvContainer'>
         <h4>나의 주문처리현황</h4>
         <ul>
-          <li>0 <br /> 결제중</li>
+          <li>0 <br /> 결제</li>
           <li>&#62;</li>
           <li>0 <br /> 배송준비중
           </li>

@@ -23,6 +23,10 @@ img,button {
   margin-bottom: 10px;
 }
 
+.wishList p {
+  text-align: left;
+}
+
 .wishList button {
   background-color: #aaada7;
   border: none;
