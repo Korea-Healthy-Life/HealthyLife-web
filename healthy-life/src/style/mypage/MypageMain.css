@@ -1,0 +1,49 @@
+.mypageAllContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 50%;
+}
+
+.mypageMainContainer{
+  margin-bottom: 20px;
+}
+
+.mypageMainContainer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mypageMainContainer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.mypageMainContainer li {
+  font-size: 20px;
+}
+
+.mypageSuvContainer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  
+}
+
+.mypageSuvContainer {
+  position: absolute;
+  top: 45%;
+}
+
+
+
+@media (max-width: 600px) {
+  .mypageMainContainer li{
+    font-size: 15px;
+  }
+}

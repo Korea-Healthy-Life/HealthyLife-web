@@ -65,7 +65,7 @@ export default function SearchApp() {
     <div className='SearchAppInputDiv'>
       <input 
       className='SearchAppInput' 
-      type="text" 
+      type="search" 
       value={inputValue}
       placeholder='검색어를 입력해주세요.'
       onChange={(e) => setInputValue(e.target.value)}
