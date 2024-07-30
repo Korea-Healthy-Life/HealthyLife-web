@@ -67,11 +67,15 @@ interface veganProductFlexProps {
 const VeganProductsLayout: React.FC<veganProductFlexProps> = ({currentProducts})  => {
   
   return (
-    <div className='veganProductFlexBox'>
+    <div className='veganImageList'>
     {currentProducts.map((veganProduct)=>(
-      <div className='veganProductFlexBoxChild' key={veganProduct.id}>
-        <img src={veganProduct.image} alt={veganProduct.name} style={{ width: '100%', height: 'auto' }} />
-        <h2>{veganProduct.name}</h2>
+      <div key={veganProduct.id}>
+        <li className='veganHoverButton'>
+          <button>ADD</button>
+          <button>WISH</button>
+        </li>
+        <img src={veganProduct.image} alt={veganProduct.name} />
+        <h4>{veganProduct.name}</h4>
       </div>
     ))}
 
