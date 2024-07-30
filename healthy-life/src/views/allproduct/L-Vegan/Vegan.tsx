@@ -31,8 +31,15 @@ export default function Vegan() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className='veganContainer'>
       <h2>비건</h2>
+
+      <ul className='veganButtonList'>
+        <li><button>도시락</button></li>
+        <li><button>샐러드</button></li>
+        <li><button>비건 고기</button></li>
+        <li><button>간식</button></li>
+      </ul>
 
       <select name="" id="">
         <option value="">조회순</option>
@@ -41,9 +48,10 @@ export default function Vegan() {
       </select>
 
 
-    <div style={{padding: '16px'}}>
-
+    <div className='veganList'>
       <VeganProductsLayout currentProducts= {currentProducts}/>
+      </div>
+      
       <Pagination
         currentPage={currentPage}
         totalProducts={veganProducts.length}
@@ -52,7 +60,6 @@ export default function Vegan() {
         />
 
 
-    </div>
     </div>
   )
 }

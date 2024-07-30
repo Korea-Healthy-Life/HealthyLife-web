@@ -70,11 +70,15 @@ interface saladProductFlexProps {
 
 const SaladProductsLayout: React.FC<saladProductFlexProps> = ({currentProducts})  => {
   return(
-    <div className='saladProductFlexBox'>
+    <div className='saladImageList'>
       {currentProducts.map((saladproduct)=>(
-        <div className='saladProductFlexBoxChild' key={saladproduct.id}>
-          <img src={saladproduct.image} alt={saladproduct.name} style={{ width: '100%', height: 'auto' }} />
-          <h2>{saladproduct.name}</h2>
+        <div key={saladproduct.id}>
+          <li className='saladHoverButton'>
+            <button>ADD</button>
+            <button>WISH</button>
+          </li>
+          <img src={saladproduct.image} alt={saladproduct.name}/>
+          <h4>{saladproduct.name}</h4>
         </div>
       ))}
 
