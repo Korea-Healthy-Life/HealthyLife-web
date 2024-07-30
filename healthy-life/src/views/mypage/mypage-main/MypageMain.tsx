@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../../style/mypage/MypageMain.css'
-import MypageNav from './MypageNav'
 import PercentSharpIcon from '@mui/icons-material/PercentSharp';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import CardMembershipIcon from '@mui/icons-material/CardMembership';
@@ -38,13 +37,12 @@ function MypageMain() {
           <li>0 <br /> 배송완료
           </li>
         </ul>
-
       </div>
     </div>
-    <div className='oderListCotainer'>
-    <h4>주문내역</h4>
+    <div className='orderListCotainer'>
+      <h4>주문내역</h4>
       <ul className='orderList'>
-        <li></li>
+        <li>주문내역</li>
       </ul>
     </div>  
   </div>

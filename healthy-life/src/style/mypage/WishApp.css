@@ -1,0 +1,33 @@
+.whishListContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.wishList {
+  list-style: none; 
+  padding: 10px; 
+}
+
+.wishList li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+img,button {
+  margin-bottom: 10px;
+}
+
+.wishList button {
+  background-color: #aaada7;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
