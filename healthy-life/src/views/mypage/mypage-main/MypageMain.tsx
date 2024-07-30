@@ -1,6 +1,13 @@
 import React from 'react'
 import '../../../style/mypage/MypageMain.css'
 import MypageNav from './MypageNav'
+import PercentSharpIcon from '@mui/icons-material/PercentSharp';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import CardMembershipIcon from '@mui/icons-material/CardMembership';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+
 
 function MypageMain() {
   return (
@@ -9,32 +16,36 @@ function MypageMain() {
       <div className='mypageMainContainer'>
         <h2>마이 쇼핑</h2>
         <ul>
-          <li>회원이름</li>
-          <li>회원등급</li>
-          <li>멤버십</li>
-          <li>적립금</li>
-          <li>쿠폰 갯수</li>
-          <li>주문</li>
+          <li><AccountCircleIcon /><br />회원이름</li>
+          <li><MilitaryTechIcon /><br />회원등급</li>
+          <li><CardMembershipIcon /><br />멤버십</li>
+          <li><MonetizationOnIcon /><br /><span>0원</span><br />적립금</li>
+          <li><PercentSharpIcon /><br /><span>0개</span><br />쿠폰 </li>
+          <li><LocalShippingIcon /><br /><span>0개</span><br />주문</li>
         </ul>
       </div>
 
       <div className='mypageSuvContainer'>
         <h4>나의 주문처리현황</h4>
         <ul>
-          <li>0</li>
+          <li>0 <br /> 결제중</li>
           <li>&#62;</li>
-          <li>0</li>
+          <li>0 <br /> 배송준비중
+          </li>
           <li>&#62;</li>
-          <li>0</li>
+          <li>0 <br /> 배송중</li>
           <li>&#62;</li>
-          <li>0</li>
+          <li>0 <br /> 배송완료
+          </li>
         </ul>
+
       </div>
     </div>
-
+    <div className='oderListCotainer'>
     <h4>주문내역</h4>
-    <div>
-      주문내역
+      <ul className='orderList'>
+        <li></li>
+      </ul>
     </div>  
   </div>
   )
