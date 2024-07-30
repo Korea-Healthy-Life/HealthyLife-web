@@ -3,6 +3,7 @@ import '../../style/componentStyle/Navigaition.css'
 import SubNav from './SubNav';
 import { Link, Route, Routes } from 'react-router-dom';
 import RecommandApp from '../../views/recommand/RecommandApp';
+import Bmi from '../../views/bmi/Bmi';
 
 
 const Navigation:React.FC = () => {
@@ -41,6 +42,7 @@ const Navigation:React.FC = () => {
         </ul>
       <Routes>
         <Route path='/recommand' element={<RecommandApp />}/>
+        <Route path='/calculator' element={<Bmi />}/>
       </Routes>
       </div>
     </div>

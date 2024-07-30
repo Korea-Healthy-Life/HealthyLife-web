@@ -17,6 +17,7 @@ import Vegan from './views/allproduct/L-Vegan/Vegan';
 import LowerSugar from './views/allproduct/j-lowersugar/LowerSugar';
 import SeaFood from './views/allproduct/L-SeaFood.tsx/SeaFood';
 import Nuts from './views/allproduct/j-nuts/Nuts';
+import Bmi from './views/bmi/Bmi';
 
 function App() {
   return (
