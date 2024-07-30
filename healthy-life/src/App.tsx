@@ -17,6 +17,10 @@ import Vegan from './views/allproduct/L-Vegan/Vegan';
 import LowerSugar from './views/allproduct/j-lowersugar/LowerSugar';
 import SeaFood from './views/allproduct/L-SeaFood.tsx/SeaFood';
 import Nuts from './views/allproduct/j-nuts/Nuts';
+import MypageMain from './views/mypage/mypage-main/MypageMain';
+import OrderApp from './views/mypage/order/OrderApp';
+import ReviewApp from './views/mypage/review/ReviewApp';
+import WishApp from './views/mypage/wish/WishApp';
 function App() {
   return (
     <>
@@ -45,6 +49,10 @@ function App() {
         <Route path="/sea" element={<SeaFood />} />
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
+        <Route path='/mypage' element={<MypageMain/>}/> 
+      <Route path='/mypage/order' element={<OrderApp />}/> 
+      <Route path='/mypage/review' element={<ReviewApp />}/>
+      <Route path='/mypage/wishlist' element={<WishApp />}/>
     </Routes> 
     <Footer />
     </>
