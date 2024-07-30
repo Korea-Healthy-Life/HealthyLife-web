@@ -30,9 +30,15 @@ export default function Snack() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div>
-
+    <div className='snackContainer'>
       <h2>간식</h2>
+
+      <ul className='snackButtonList'>
+        <li><button>빵</button></li>
+        <li><button>과자</button></li>
+        <li><button>시리얼류</button></li>
+        <li><button>프로틴바</button></li>
+      </ul>
 
       <select name="" id="">
         <option value="">조회순</option>
@@ -40,9 +46,10 @@ export default function Snack() {
         <option value="">가격낮은순</option>
       </select>
       
-    <div style={{padding: '16px'}}>
-
+    <div className='snackList'>
       <SnackProductsLayout currentProducts= {currentProducts}/>
+      </div>
+
       <Pagination
         currentPage={currentPage}
         totalProducts={snackProducts.length}
@@ -51,7 +58,6 @@ export default function Snack() {
         />
 
 
-    </div>
     </div>
   )
 }

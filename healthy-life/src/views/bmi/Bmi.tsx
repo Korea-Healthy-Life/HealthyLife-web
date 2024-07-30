@@ -19,9 +19,11 @@ export default function Bmi() {
 
 
   const bmiCalculator = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
-    let bmi = weight / (height * height);
+    let m = height * 0.01;
+    let bmiheight = m * m;
+    let bmi = weight / bmiheight;
     
     if(18.5 > bmi){
     
@@ -52,17 +54,22 @@ export default function Bmi() {
       setResult(`올바른 수치를 입력하세요`)
     
     }
+
+    setHeight(0)
+    setWeight(0)
   }
 
   return (
     <div>
       <form className='bmiCalculator'>
-        <label className='weight'>몸무게(kg)</label>
-        <input type="number" className='weight' placeholder='몸무게를 입력하세요(kg)' value={weight} onChange={inputHandler1} />
         <br />
-        <label className='height'>신장(cm)</label>
-        <input type="number" className='height' value={height} placeholder='신장을 입력하세요(cm)' onChange={inputHandler2}/>
-
+        <label className='weightlabel' id='weight'>몸무게(kg)</label>
+        <input type="text" className='weight' placeholder='몸무게를 입력하세요(kg)' value={weight} onChange={inputHandler1} />
+        <br />
+        <br />
+        <label className='heightlabel' id='height'>신장(cm)</label>
+        <input type="text" className='height' value={height} placeholder='신장을 입력하세요(cm)' onChange={inputHandler2}/>
+        <br />
         <button className='calculatorButton' onClick={bmiCalculator}>Bmi 확인하기</button>
         <br />
         <br />

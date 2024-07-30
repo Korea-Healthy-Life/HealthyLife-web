@@ -31,8 +31,10 @@ export default function BestItem() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className='bestItemContainer'>
       <h2>베스트상품</h2>
+
+    
 
       <select name="" id="">
         <option value="">조회순</option>
@@ -40,9 +42,10 @@ export default function BestItem() {
         <option value="">가격낮은순</option>
       </select>
       
-    <div style={{padding: '16px'}}>
+    <div className='BestItemList'>
       <h2>BestItem</h2>
       <BestItemLayout currentProducts= {currentProducts}/>
+      </div>
       <Pagination
         currentPage={currentPage}
         totalProducts={bestItemProducts.length}
@@ -51,7 +54,6 @@ export default function BestItem() {
         />
 
 
-    </div>
     </div>
   )
 }
