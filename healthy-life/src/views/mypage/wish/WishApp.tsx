@@ -1,9 +1,9 @@
 import React from 'react'
 
-function wish() {
+function WishApp() {
   return (
     <div>wish</div>
   )
 }
 
-export default wish
+export default WishApp
