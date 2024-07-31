@@ -2,14 +2,13 @@ import React from 'react'
 import BasicTabs from './BasicTabs'
 import '../../../style/mypage/Order.css'
 
-function OrderApp() {
+function ReturnOrder() {
   return (
     <div className='orderContainer'>
-      <h4>나의 주문처리 현황</h4>
+      <h4>취소/반품</h4>
       <BasicTabs />
     </div>
   )
 }
 
-export default OrderApp
-
+export default ReturnOrder
