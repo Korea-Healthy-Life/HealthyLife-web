@@ -5,8 +5,8 @@ import { Link, Route, Routes } from 'react-router-dom';
 import RecommandApp from '../../views/recommand/RecommandApp';
 import Bmi from '../../views/bmi/Bmi';
 import JoinApp from '../../views/join/JoinApp';
-import MyPage from '../../views/mypage/MyPage';
-import MypageMain from '../../views/mypage/mypage-main/MypageMain';
+import MypageNav from '../../views/mypage/mypage-main/MypageNav';
+
 
 
 const Navigation:React.FC = () => {
@@ -49,8 +49,7 @@ const Navigation:React.FC = () => {
         <Route path='/recommand' element={<RecommandApp />}/>
         <Route path='/calculator' element={<Bmi />}/>
         <Route path='/join' element={<JoinApp />}/>        
-        <Route path='/mypage/*' element={<MyPage />}/>
-
+        <Route path='/mypage/*' element={<MypageNav/>}/>
       </Routes>
       </div>
     </div>

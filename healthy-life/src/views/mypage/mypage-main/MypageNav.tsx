@@ -1,14 +1,20 @@
 import React from 'react'
-import { Link, Route, Routes} from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 
 import '../../../style/mypage/MypageNav.css'
-import WishApp from '../wish/WishApp';
-import ReviewApp from '../review/ReviewApp';
+;
+import MypageMain from './MypageMain';
 import OrderApp from '../order/OrderApp';
+import ReviewApp from '../review/ReviewApp';
+import WishApp from '../wish/WishApp';
+import Userinformation from '../userInformation/Userinformation';
+import Benefit from '../cupon,reserves,benefit/Benefit';
+import Reserves from '../cupon,reserves,benefit/Reserves';
+import CurrentProduct from '../currentProducts/CurrentProduct';
 import MyPage from '../MyPage';
 
 const MypageNav:React.FC = () => {
-
+  
   return (
     <div>
       <div className='myPageNavBox'>
@@ -18,21 +24,12 @@ const MypageNav:React.FC = () => {
         <li><Link to='/mypage/review'>후기</Link></li> 
         <li><Link to='/mypage/wishlist'>위시리스트</Link></li> 
         <li><Link to='/mypage/current'>최근 상품목록</Link></li> 
-        <li><Link to='/mypage/coupon'>쿠폰 내역</Link></li> 
         <li><Link to='/mypage/mileage'>적립금 내역</Link></li> 
         <li><Link to='/mypage/membership'>등급별 혜택안내</Link></li> 
         </ul>
       </div>
-          <Routes>
-            {/* <Route path='/mypage/order' element={<OrderApp />}/>
-            <Route path='/mypage/review' element={<ReviewApp />}/>
-            <Route path='/mypage/wishlist' element={<WishApp />}/> */}
-            {/* <Route path='/mypage/current' element={< />}/>
-            <Route path='/mypage/coupon' element={< />}/>
-            <Route path='/mypage/mileage' element={< />}/>
-            <Route path='/mypage/membership' element={< />}/> */}
-          </Routes>
-      <div >
+      <div>
+
       </div>
     </div>
   )

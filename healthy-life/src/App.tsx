@@ -21,11 +21,12 @@ import MypageMain from './views/mypage/mypage-main/MypageMain';
 import OrderApp from './views/mypage/order/OrderApp';
 import ReviewApp from './views/mypage/review/ReviewApp';
 import WishApp from './views/mypage/wish/WishApp';
-import Userinformation from './views/mypage/userInformation/Userinformation';
+import CurrentProduct from './views/mypage/currentProducts/CurrentProduct';
 import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
 import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
-import Cupon from './views/mypage/cupon,reserves,benefit/Cupon';
-import CurrentProduct from './views/mypage/currentProducts/CurrentProduct';
+import Userinformation from './views/mypage/userInformation/Userinformation';
+import MyPage from './views/mypage/MyPage';
+
 function App() {
   return (
     <>
@@ -34,7 +35,7 @@ function App() {
     <Navigation /> 
     {/* <Home /> */}
     <Routes>
-    <Route path='/' element={<Home />} /> 
+    <Route path='' element={<Home />} /> 
     <Route path='/survey' element={<SurveyApp />} /> 
       {/* <span >닭가슴살/육류</span> */}
       <Route path="/checkin" element={<AllCheckinApp />} />
@@ -54,15 +55,17 @@ function App() {
         <Route path="/sea" element={<SeaFood />} />
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
-        <Route path='/mypage' element={<MypageMain/>}/> 
+
+        <Route path='/mypage/*' element={<MypageMain />}/> 
       <Route path='/mypage/order' element={<OrderApp />}/> 
       <Route path='/mypage/review' element={<ReviewApp />}/>
       <Route path='/mypage/wishlist' element={<WishApp />}/>
       <Route path='/mypage/current' element={<CurrentProduct />}/>
       <Route path='/mypage/mileage' element={<Reserves />}/>
-      <Route path='/mypage/coupon' element={<Cupon />}/>
+      {/* <Route path='/mypage/coupon' element={<Cupon />}/> */}
       <Route path='/mypage/membership' element={<Benefit />}/>
-      <Route path='/mypage/informationupdate' element={<Userinformation />}/>
+      <Route path='/mypage/userinformation' element={<Userinformation />}/>
+
     </Routes> 
     <Footer />
     </>

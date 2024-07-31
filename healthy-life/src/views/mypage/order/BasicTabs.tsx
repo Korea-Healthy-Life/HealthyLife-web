@@ -2,6 +2,10 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import Order from './Order';
+import OrderList from './OrderList';
+import Return from './Return';
+import ReturnOrderList from './ReturnOrderList';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -40,27 +44,23 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <div className='tabsContainer'>
+      <div>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="주문현황" {...a11yProps(0)} />
+          <Tab label="취소반품" {...a11yProps(1)} />
         </Tabs>
-      </Box>
+      </div>
       <CustomTabPanel value={value} index={0}>
       <div>
-        <div className='monthBtn'>
-          <button>1개월</button>
-          <button>6개월</button>
-          <button>12개월</button>
-        </div>
-        
+        <Order />
+        <OrderList />
       </div>
-          <button>조회</button>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        <Return />
+        <ReturnOrderList />
       </CustomTabPanel>
-    </Box>
+    </div>
   );
 }
