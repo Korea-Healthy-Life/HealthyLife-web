@@ -49,13 +49,6 @@ export default function Header() {
   <Link to={'/'}><LocalGroceryStoreIcon /></Link>
   
   </div>
-
-    <Routes>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/login/FindId' element={<FindId/>}/>
-      <Route path='/login/FindPassword' element={<FindPassword/>}/>
-    </Routes>
-
     </header>
   )
 }
