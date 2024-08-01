@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/componentStyle/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import { Link, Route, Routes } from 'react-router-dom';
 import Login from '../views/login/Login';
 import FindId from '../views/login/FindId';
