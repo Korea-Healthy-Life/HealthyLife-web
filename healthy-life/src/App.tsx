@@ -26,6 +26,7 @@ import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
 import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
 import Userinformation from './views/mypage/userInformation/Userinformation';
 import MyPage from './views/mypage/MyPage';
+import ReviewWrite from './views/mypage/review/ReviewWrite';
 
 function App() {
   return (
@@ -58,13 +59,14 @@ function App() {
 
         <Route path='/mypage/*' element={<MypageMain />}/> 
       <Route path='/mypage/order' element={<OrderApp />}/> 
-      <Route path='/mypage/review' element={<ReviewApp />}/>
+      <Route path='/mypage/review/*' element={<ReviewApp />}/>
       <Route path='/mypage/wishlist' element={<WishApp />}/>
       <Route path='/mypage/current' element={<CurrentProduct />}/>
       <Route path='/mypage/mileage' element={<Reserves />}/>
       {/* <Route path='/mypage/coupon' element={<Cupon />}/> */}
       <Route path='/mypage/membership' element={<Benefit />}/>
       <Route path='/mypage/userinformation' element={<Userinformation />}/>
+      <Route path='/mypage/review/write' element={<ReviewWrite />}/>
 
     </Routes> 
     <Footer />

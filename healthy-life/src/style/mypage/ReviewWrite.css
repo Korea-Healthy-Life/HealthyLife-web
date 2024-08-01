@@ -1,0 +1,66 @@
+.ReviewWriteContainer {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+.ReviewWriteContainer h2 {
+  text-align: center;
+}
+
+.ReviewStar {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.formContainer {
+  margin-top: 20px;
+}
+
+.ReviewWriteTitleDiv {
+
+}
+
+.ReviewWriteContentDiv {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ReviewWriteContent {
+  width: 90%;
+}
+
+.ReviewWriteContentDiv label {
+  font-size: 9px;
+}
+
+.ImgContainer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.ImgContainerDiv {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.ReviewWriteBtn {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.ReviewWriteBtn button {
+  width: 50px;
+  height: 35px;
+}
