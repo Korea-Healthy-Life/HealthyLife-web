@@ -6,23 +6,21 @@ import { Route, Routes } from 'react-router-dom'
 import OrderApp from './order/OrderApp'
 import ReviewApp from './review/ReviewApp'
 import WishApp from './wish/WishApp'
+import CurrentProduct from './currentProducts/CurrentProduct'
+import Reserves from './cupon,reserves,benefit/Reserves'
+// import Cupon from './cupon,reserves,benefit/Cupon'
+import Benefit from './cupon,reserves,benefit/Benefit'
+import Userinformation from './userInformation/Userinformation'
 
 
 
 function MyPage() {
   return (
     <div>
+      <MypageNav/>
       <MypageMain/>
-      <MypageNav />
       <Routes>
-      <Route path='/mypage' element={<MypageMain/>}/> 
-      <Route path='/mypage/order' element={<OrderApp />}/> 
-      <Route path='/mypage/review' element={<ReviewApp />}/>
-      <Route path='/mypage/wishlist' element={<WishApp />}/>
-      {/* <Route path='/mypage/current' element={< />}/>
-      <Route path='/mypage/coupon' element={< />}/>
-      <Route path='/mypage/mileage' element={< />}/>
-      <Route path='/mypage/membership' element={< />}/> */}
+      
       </Routes>
     </div>
   )

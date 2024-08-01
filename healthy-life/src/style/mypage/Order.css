@@ -1,0 +1,103 @@
+/* OrderApp.tsx */
+.orderContainer  {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Order.tsx */
+.orderSearchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.monthBtn {
+  display: flex;
+  gap: 20px;
+}
+
+.monthBtn button {
+  width: 150px;
+  background-color: #aaada7;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.monthBtn button:hover {
+  background-color: #929490;
+}
+
+.orderDate {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.orderDate input {
+  border: 1px solid #aaada7;
+  border-radius: 5px;
+}
+
+.searchBtn {
+  background-color: #aaada7;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100px;
+}
+
+/* OrderList.tsx */
+.orderUl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+  border-top: 1px solid #b1b1b1;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.orderLi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.orderLi img {
+  width: 15%;
+}
+
+.orderListBtn {
+  display: flex;
+  gap: 5px 2px;
+  width: 110px;
+  flex-wrap: wrap;
+}
+
+.orderListBtn button {
+  width: 50px;
+  background-color: #aaada7;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  margin: 0 auto;
+}
+
+.orderList {
+  border:  none;
+}

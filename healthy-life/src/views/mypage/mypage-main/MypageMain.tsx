@@ -6,11 +6,22 @@ import CardMembershipIcon from '@mui/icons-material/CardMembership';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import MypageNav from './MypageNav';
+import { Route, Routes } from 'react-router-dom';
+import OrderApp from '../order/OrderApp';
+import ReviewApp from '../review/ReviewApp';
+import WishApp from '../wish/WishApp';
+import Userinformation from '../userInformation/Userinformation';
+import Benefit from '../cupon,reserves,benefit/Benefit';
+import Reserves from '../cupon,reserves,benefit/Reserves';
+import CurrentProduct from '../currentProducts/CurrentProduct';
+
 
 
 function MypageMain() {
   return (
     <div>
+    <MypageNav />
     <div className='mypageAllContainer'>
       <div className='mypageMainContainer'>
         <h2>마이 쇼핑</h2>
@@ -41,10 +52,11 @@ function MypageMain() {
     </div>
     <div className='orderListCotainer'>
       <h4>주문내역</h4>
-      <ul className='orderList'>
+      <ul className='orderListUl'>
         <li>주문내역</li>
       </ul>
-    </div>  
+    </div> 
+    
   </div>
   )
 }
