@@ -4,6 +4,8 @@ import Pagination from './Pagination';
 import BestItemLayout from './bestItemLayout';
 import { bestItemProducts } from './bestItemLayout';
 import '../../style/home/allProduct.css';
+import '../../../style/home/productList.css';
+
 
 export default function BestItem() {
   const [currentPage, setCurrentPage] = useState(1);

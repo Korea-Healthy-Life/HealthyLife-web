@@ -1,4 +1,4 @@
-.productListContainer{
+/* .productListContainer{
   width: 60%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -103,15 +103,15 @@ option {
   align-items: center;
   margin: 0 auto;
 
-}
-
-
-/* .pagination .pageItem{
-  margin: 0 5px;
 } */
 
 
-/* .pagination .pageLink {
+.pagination .pageItem{
+  margin: 0 5px;
+}
+
+
+.pagination .pageLink {
   color: #007bff;
   text-decoration: none;
   border: 1px solid #ddd;
@@ -120,23 +120,23 @@ option {
   background-color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
-} */
+}
 
 
 
-/* .pagination .pageLink:hover {
+.pagination .pageLink:hover {
   background-color: #f8f8f8;
   color: #0056b3;
-} */
+}
 
 
-/* .pagination .pageItem.active .pageLink {
+.pagination .pageItem.active .pageLink {
   background-color: #007bff;
   color: white;
   border-color: #007bff;
-} */
+}
 
 
-/* .pagination .pageItem button:focus {
+.pagination .pageItem button:focus {
   outline: none;
-} */
+}
