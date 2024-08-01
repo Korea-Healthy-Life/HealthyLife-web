@@ -25,7 +25,6 @@ import CurrentProduct from './views/mypage/currentProducts/CurrentProduct';
 import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
 import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
 import Userinformation from './views/mypage/userInformation/Userinformation';
-import MyPage from './views/mypage/MyPage';
 import ReviewWrite from './views/mypage/review/ReviewWrite';
 import { Login } from '@mui/icons-material';
 import FindId from './views/login/FindId';
