@@ -23,7 +23,7 @@ const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, best
 
 
   return (
-    <nav>
+    
     <div className="pagination">
     {startPage > 1 && (
       <div className="pageItem">
@@ -47,7 +47,7 @@ const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, best
 
 
     </div>
-    </nav>
+  
   )
 }
 
