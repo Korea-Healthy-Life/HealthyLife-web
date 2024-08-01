@@ -4,7 +4,7 @@ import '../../../style/mypage/WishApp.css'
 function WishApp() {
   return (
     <div className='whishListContainer'>
-      <h4>위시리스트</h4>
+      <h2>위시리스트</h2>
       <ul className='wishList'>
         <li>
           <img src="https://cdn.pixabay.com/photo/2022/07/25/20/15/grilled-chicken-7344499_1280.jpg" alt="" width={100}/>
