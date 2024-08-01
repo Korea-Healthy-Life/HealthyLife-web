@@ -31,6 +31,8 @@ import { Login } from '@mui/icons-material';
 import FindId from './views/login/FindId';
 import FindPassword from './views/login/FindPassword';
 import ProductPage from './views/productpage/ProductPage';
+import Review from './views/productpage/revie/Review';
+import QNA from './views/productpage/qna/QNA';
 
 function App() {
   return (
@@ -62,20 +64,22 @@ function App() {
         <Route path="/nuts" element={<Nuts />} />
 
         <Route path='/mypage/*' element={<MypageMain />}/> 
-      <Route path='/mypage/order' element={<OrderApp />}/> 
-      <Route path='/mypage/review/*' element={<ReviewApp />}/>
-      <Route path='/mypage/wishlist' element={<WishApp />}/>
-      <Route path='/mypage/current' element={<CurrentProduct />}/>
-      <Route path='/mypage/mileage' element={<Reserves />}/>
-      {/* <Route path='/mypage/coupon' element={<Cupon />}/> */}
-      <Route path='/mypage/membership' element={<Benefit />}/>
-      <Route path='/mypage/userinformation' element={<Userinformation />}/>
-      <Route path='/mypage/review/write' element={<ReviewWrite />}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/login/FindId' element={<FindId/>}/>
-      <Route path='/login/FindPassword' element={<FindPassword/>}/>
-      <Route path='/productdetail' element={<ProductPage/>}/>
-    </Routes> 
+        <Route path='/mypage/order' element={<OrderApp />}/> 
+        <Route path='/mypage/review/*' element={<ReviewApp />}/>
+        <Route path='/mypage/wishlist' element={<WishApp />}/>
+        <Route path='/mypage/current' element={<CurrentProduct />}/>
+        <Route path='/mypage/mileage' element={<Reserves />}/>
+        {/* <Route path='/mypage/coupon' element={<Cupon />}/> */}
+        <Route path='/mypage/membership' element={<Benefit />}/>
+        <Route path='/mypage/userinformation' element={<Userinformation />}/>
+        <Route path='/mypage/review/write' element={<ReviewWrite />}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/login/FindId' element={<FindId/>}/>
+        <Route path='/login/FindPassword' element={<FindPassword/>}/>
+        <Route path='/productdetail' element={<ProductPage/>}/>
+        <Route path='/productdetail' element={<Review />}/>
+        <Route path='/productdetail' element={<QNA />}/>
+      </Routes> 
     <Footer />
     </>
   );
