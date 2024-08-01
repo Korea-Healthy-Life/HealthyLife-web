@@ -1,9 +1,10 @@
+import { Box, Button, InputAdornment } from '@mui/material';
 import React, { useState } from 'react'
-
+import TextField from '@mui/material/TextField';
 
 interface findIdData{
   name: string;
-  telephoneNumber: number | string
+  phone: number | string
 }
 
 
@@ -12,13 +13,13 @@ function FindId() {
 
   let initialValue: findIdData = {
     name: '',
-    telephoneNumber: ''
+    phone: ''
   };
 
   const [findId, setFindId] = useState<findIdData>(initialValue);
 
 
-  const {name, telephoneNumber} = findId;
+  const {name, phone} = findId;
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {name, value} = e.target;
@@ -34,24 +35,54 @@ function FindId() {
   const findIdButtonHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
-    !name || !telephoneNumber ? alert(`가입이 안 되었거나 회원정보가 맞지 않습니다`) : 
-    alert(`${name}님의 id는 {} 입니다`)
+    !name || !phone ? alert(`가입이 안 되었거나 회원정보가 맞지 않습니다`) : 
+    alert(`${name}님의 id는 {이준우} 입니다`)
   }
 
   return (
     <div>
-      <h1>아이디 찾기</h1>
-      <br />
-      <form >
 
-      <input type="text" placeholder= '이름 입력창'  value={name} name='name' onChange={inputHandler}/>
-      <input type="text" placeholder='전화번호 입력창' value={telephoneNumber} name='telephoneNumber' onChange={inputHandler}/>
+      <h1 style={{textAlign: 'center'}}>아이디 찾기</h1>
       <br />
-      <br />
-      <button>아이디 찾기 버튼</button>
+      
+      <Box>
 
+      
+      <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+      
+      <TextField
+        label="이름"
+        id='userName'
+        sx={{ m: 1, width: '25ch'}}
+        inputProps={{
+        startAdornment: <InputAdornment position='start'>이름</InputAdornment>
+        }}
+        value={name}
+        name='name'
+        onChange={inputHandler}
+      />
+      
+      <TextField
+      label="전화번호"
+      id='userPhone'
+      sx={{ m: 1, width: '25ch'}}
+      inputProps={{
+      startAdornment: <InputAdornment position='start'>전화번호</InputAdornment>
+      }}
+      value={phone}
+      name='phone'
+      onChange={inputHandler}
+      />
+      <Button variant='contained' onClick={findIdButtonHandler}>아이디 찾기 버튼</Button>
+      
       </form>
+
+
+      </Box>
+      <br />
+      <br />
     </div>
+    
   )
 }
 

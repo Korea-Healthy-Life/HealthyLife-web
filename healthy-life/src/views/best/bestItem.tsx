@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Pagination from './Pagination';
 import BestItemLayout from './bestItemLayout';
 import { bestItemProducts } from './bestItemLayout';
-import '../../style/home/productList.css'
+import '../../style/home/allProduct.css';
 
 export default function BestItem() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +31,7 @@ export default function BestItem() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='bestItemContainer'>
+    <div className='allProductContainer'>
       <h2>베스트상품</h2>
 
     
@@ -42,7 +42,7 @@ export default function BestItem() {
         <option value="">가격낮은순</option>
       </select>
       
-    <div className='BestItemList'>
+    <div className='allproductList'>
       <h2>BestItem</h2>
       <BestItemLayout currentProducts= {currentProducts}/>
       </div>

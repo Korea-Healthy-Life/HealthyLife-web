@@ -67,10 +67,10 @@ interface seaFoodProductFlexProps {
 const SeaFoodProductsLayout: React.FC<seaFoodProductFlexProps> = ({currentProducts})  => {
   
   return (
-    <div className='seaFoodImageList'>
+    <div className='allProductImageList'>
     {currentProducts.map((seaFoodProduct)=>(
       <div key={seaFoodProduct.id}>
-        <li className='seaFoodHoverButton'>
+        <li className='allProductHoverButton'>
           <button>ADD</button>
           <button>WISH</button>
         </li>

@@ -1,53 +1,74 @@
 import React, { useState } from 'react'
 import '../../style/bmi/bmiCalculator.css'
+import { Box, Button, InputAdornment, TextField } from '@mui/material';
+
+interface body {
+  weight: string | number;
+  height: string | number;
+}
 
 
 
+const initialValue: body = {
+  weight: '',
+  height: ''
+}
 
-export default function Bmi() {
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
+export default function Bmi(){
+  const [body, setBody] = useState<body>(initialValue);
   const [result, setResult] = useState('');
 
-  const inputHandler1 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setWeight(Number(e.target.value));
+  const {weight, height} = body;
+
+  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {name, value} = e.target;
+
+    setBody({
+      ...body,
+
+      [name]: value
+    }
+    )
   }
 
-  const inputHandler2 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setHeight(Number(e.target.value));
-  }
+  
 
 
   const bmiCalculator = (e: React.FormEvent) => {
     e.preventDefault(); 
 
-    let m = height * 0.01;
+    let m = Number(height) * 0.01;
     let bmiheight = m * m;
-    let bmi = weight / bmiheight;
+    let bmi = Number(weight) / bmiheight;
     
     if(18.5 > bmi){
     
-      setResult(`당신의 신체질량지수(BMI)는 ${bmi} (으로) 저체중입니다`)
+      setResult(`당신의 신체질량지수(BMI)는 ${bmi.toFixed(2)} (으로) 저체중입니다`)
+      
     
     } else if(18.5 <= bmi && bmi < 23){
     
-      setResult(`당신의 신체질량지수(BMI)는 ${bmi}(으로) 정상입니다`)
-    
+      setResult(`당신의 신체질량지수(BMI)는 ${bmi.toFixed(2)}(으로) 정상입니다`)
+      
+
     } else if(23 <= bmi && bmi < 25){
       
-      setResult(`당신의 신체질량지수(BMI)는 ${bmi}(으로) 경계성 비만입니다`) 
+      setResult(`당신의 신체질량지수(BMI)는 ${bmi.toFixed(2)}(으로) 경계성 비만입니다`) 
+      
     
     } else if(25 <= bmi && bmi < 30){
       
-      setResult(`당신의 신체질량지수(BMI)는 ${bmi}(으로) 비만입니다`) 
+      setResult(`당신의 신체질량지수(BMI)는 ${bmi.toFixed(2)}(으로) 비만입니다`) 
+      
     
     } else if(30 <= bmi && bmi < 35){
     
-      setResult(`당신의 신체질량지수(BMI)는 ${bmi}(으로) 고도비만입니다`) 
-    
+      setResult(`당신의 신체질량지수(BMI)는 ${bmi.toFixed(2)}(으로) 고도비만입니다`) 
+      
     } else if(35 <= bmi){
     
-      setResult(`당신의 신체질량지수(BMI)는 ${bmi}(으로) 중증 고도비만입니다`) 
+      setResult(`당신의 신체질량지수(BMI)는 ${bmi.toFixed(2)}(으로) 중증 고도비만입니다`) 
+      
     
     } else{
     
@@ -55,26 +76,49 @@ export default function Bmi() {
     
     }
 
-    setHeight(0)
-    setWeight(0)
+    setBody(initialValue)
   }
 
   return (
     <div>
-      <form className='bmiCalculator'>
+      <Box>
+
+      <form className='bmiCalculator' style={{display:'flex', flexWrap: 'wrap', justifyContent:'center'}}>
         <br />
-        <label className='weightlabel' id='weight'>몸무게(kg)</label>
-        <input type="text" className='weight' placeholder='몸무게를 입력하세요(kg)' value={weight} onChange={inputHandler1} />
+        <TextField
+          label="몸무게"
+          id="weight"
+          sx={{ m: 1, width: '25ch' }}
+          InputProps={{
+            startAdornment: <InputAdornment position="start">kg</InputAdornment>,
+          }}
+          variant="filled"
+          value={weight}
+          name='weight'
+          onChange={inputHandler}
+        />
+
+        <TextField
+          label="신장"
+          id="height"
+          sx={{ m: 1, width: '25ch' }}
+          InputProps={{
+            startAdornment: <InputAdornment position="start">cm</InputAdornment>,
+          }}
+          variant="filled"
+          value={height}
+          name='height'
+          onChange={inputHandler}
+        />
+        
+        <Button variant='outlined' onClick={bmiCalculator}>Bmi 확인하기</Button>
         <br />
         <br />
-        <label className='heightlabel' id='height'>신장(cm)</label>
-        <input type="text" className='height' value={height} placeholder='신장을 입력하세요(cm)' onChange={inputHandler2}/>
-        <br />
-        <button className='calculatorButton' onClick={bmiCalculator}>Bmi 확인하기</button>
-        <br />
-        <br />
-        <p>{result}</p>
       </form>
+        <br />
+        <p className='result' style={{textAlign: 'center', fontSize: '25px', fontWeight:'bold'}}>{result}</p>
+
+      </Box>
     </div>
 
 
