@@ -32,8 +32,7 @@ const Navigation:React.FC = () => {
         <li><Link to='/recommand'>체질추천상품</Link></li> 
         <li><Link to='/review' >전체후기</Link></li> 
         <li><Link to='/calculator'>체지방계산기</Link></li> 
-        <li><Link to='/join'>회원가입</Link></li> 
-        <li><Link to='/mypage/*'>mypage</Link></li> 
+        <li><Link to='/productdetail'>상품상세페이지</Link></li> 
         </ul>
       </div>
       <div 
