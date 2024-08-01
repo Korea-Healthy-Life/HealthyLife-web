@@ -3,11 +3,14 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/componentStyle/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
-
+import { Link, Route, Routes } from 'react-router-dom';
+import Login from '../views/login/Login';
+import FindId from '../views/login/FindId';
+import FindPassword from '../views/login/FindPassword';
 
 // classname = lowcamelcase로 작성
 // css => style 폴더안에
-//  App 건들지 말고 view/Home.tsx에 작성
+//  App 건들지 말고 view/Home.tsx에 작성i
 
 export default function Header() {
   const [search, setSearch] = useState<string>('');
@@ -24,15 +27,15 @@ export default function Header() {
     <header className='header'>
   
   <p className='button1'>
-    <a href="#">로그인|</a>
-    <a href="#">회원가입|</a>
-    <a href="#">주문조회|</a>
-    <a href="#">고객센터</a>
+    <Link to={'/login'}>로그인|</Link>
+    <Link to={'/join'}>회원가입|</Link>
+    <Link to={'/mypage/orderApp'}>주문조회|</Link>
+    <Link to={'/'}>고객센터</Link>
   </p>
       
     <br />
     
-    <p className= 'logo'><a href="#">Logo</a> </p>
+    <p className= 'logo'><Link to={'/'}>Logo</Link> </p>
           
     
 
@@ -42,10 +45,16 @@ export default function Header() {
   <input type="text" placeholder='제품검색' value={search} onChange={InputChangeHandler}/>
   
   </form>
-  <a href="#"><AccountCircle /></a>
-  <a href="#"><LocalGroceryStoreIcon /></a>
+  <Link to={'/mypage/*'}><AccountCircle /></Link>
+  <Link to={'/'}><LocalGroceryStoreIcon /></Link>
   
   </div>
+
+    <Routes>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/login/FindId' element={<FindId/>}/>
+      <Route path='/login/FindPassword' element={<FindPassword/>}/>
+    </Routes>
 
     </header>
   )
