@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../../../style/detailProductSlider/productSlider.css'
 
 interface productImages{
   images: string[]
@@ -26,37 +27,43 @@ const Product: React.FC<productImages> = ({images}) => {
 
   return (
     <div>
-      <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row'}}>
+      <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginLeft: '10%', marginRight: '10%'}}>
         
-        <div className='productImage'>
-          <img src='https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg' alt="상세페이지 상품 이미지" />
+        <div className='productImage' style={{padding: '0px', width: '75%'}}>
+          <img src='https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg' alt="상세페이지 상품 이미지" width={'50%'}  style={{margin: '0px'}} />
         </div>
 
 
-        <div className='productData'>
-          <p>상품명</p>        
-
-        <div>
-          <p>상품금액: 000</p>
-          <p>배송기간: </p>
+        <div className='productData' style={{margin: '0', width: '24%', display: 'flex', flexDirection: 'column'}}>
+          <h3 style={{backgroundColor: "#b5bbb0"}}>상품명</h3>        
+        <br />
+        <br />
+        <br />
+        <div style={{backgroundColor: "#b5bbb0"}}>
+          <h3>상품금액: 000</h3>
+          <h3>배송기간: ~~ </h3>
         </div>
-        
-        <select name="productOption" id="option">
+        <br />
+        <br />
+        <br />
+        <select name="productOption" id="option" style={{width: '100%' }}>
+          <option value="선택">옵션</option>
           <option value="1">1</option>
           <option value="2">2</option>
         </select>
-        
-        <div className='button'>
-          <button>장바구니</button>
-          <button>WISH</button>
-          <button>주문</button>
+        <br />
+        <br />
+        <div className='button' style={{display: 'flex', justifyContent: 'space-around'}}>
+          <button >장바구니</button>
+          <button >WISH</button>
+          <button >주문</button>
         </div>
 
         </div>
 
       </div>
-
-
+      <br />
+      <br />
 
 
       <div className='relatedItem'>
@@ -64,7 +71,7 @@ const Product: React.FC<productImages> = ({images}) => {
       <div className='relatedItemImagesContainer'>
         {visibleImages.map((image, index) => (
           <div key={index} className='relatedItemImage'>
-            <img src={image} alt={`slide ${index}`}/>
+            <img src={image} alt={`slide ${index}`} />
           </div>
         ))}
       </div>
