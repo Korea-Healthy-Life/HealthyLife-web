@@ -1,6 +1,6 @@
 import { ProductProps } from './AllReview';
 
-import '../../style/home/allProduct.css'
+import '../../style/home/AllReview.css'
 
 
 const AllProductList:React.FC<{ products: ProductProps []}> = ({products})  => {

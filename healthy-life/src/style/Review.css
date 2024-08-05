@@ -9,8 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #333; 
+  align-items: center; 
   padding: 5px;
   box-sizing: border-box;
 }
@@ -22,11 +21,11 @@
 .labelInput {
   display: flex;
   justify-content: space-around;
+  gap: 15px;
 }
 
 select {
-  display: flex;
-  width: 30px;
+  width: 50px;
   font-size: 10px;
 }
 
@@ -37,7 +36,10 @@ select {
 
 .labelInput label, input {
   font-size: 10px;
-  
+}
+
+.labelInput label {
+  margin-right: 5px;
 }
 
 .labelInput input {
@@ -49,9 +51,9 @@ select {
 .totalUl {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #333; 
   font-size: 10px;
-  width: 95%;
+  border-top: 1px solid #333; 
+  border-bottom: 1px solid #333; 
   margin: 0 auto;
 }
 
@@ -63,25 +65,21 @@ select {
   padding: 5px;
 }
 
-.totalLi {
-  list-style: none;
-  display: flex;
-  margin: 10px;
-}
 .reviewDetaiLi {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  border-bottom: 1px solid #333; 
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
 
 .reviewli {
   display: flex;
 }
 .reviewDetaiLi img {
-  width: 60px;
+  width: 80px;
 }
 
 .reviewImgSpanDiv {
@@ -100,3 +98,6 @@ select {
   margin: 0 auto;
 }
 
+.reviewImgSpanDiv pre {
+  margin-top: 10px;
+}

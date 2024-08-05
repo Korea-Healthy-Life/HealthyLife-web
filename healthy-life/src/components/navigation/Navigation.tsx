@@ -6,7 +6,6 @@ import RecommandApp from '../../views/recommand/RecommandApp';
 import Bmi from '../../views/bmi/Bmi';
 import JoinApp from '../../views/join/JoinApp';
 import MypageNav from '../../views/mypage/mypage-main/MypageNav';
-import Review from '../../views/productpage/revie/Review';
 import QNA from '../../views/productpage/qna/QNA';
 import CartAPP from '../../views/cart/CartAPP';
 
@@ -36,9 +35,6 @@ const Navigation:React.FC = () => {
         <li><Link to='/reviews' >전체후기</Link></li> 
         <li><Link to='/calculator'>체지방계산기</Link></li> 
         <li><Link to='/productdetail'>상품상세페이지</Link></li> 
-        <li><Link to='/review'>상품상세페이지 리뷰</Link></li> 
-        <li><Link to='/qna'>상품상세페이지 qna</Link></li> 
-        <li><Link to='/cart'>장바구니</Link></li> 
         </ul>
       </div>
       <div 
@@ -55,8 +51,6 @@ const Navigation:React.FC = () => {
         <Route path='/calculator' element={<Bmi />}/>
         <Route path='/join' element={<JoinApp />}/>        
         <Route path='/mypage/*' element={<MypageNav/>}/>
-        <Route path='/review' element={<Review/>}/>
-        <Route path='/qna' element={<QNA />}/>
         <Route path='/cart' element={<CartAPP />}/>
       </Routes>
       </div>

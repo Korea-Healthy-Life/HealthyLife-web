@@ -26,7 +26,7 @@ const ModalExample: React.FC = () => {
       >
         <div className='qnaModalTotal'>
         <h2>문의하기</h2>
-          <textarea/>
+          <textarea placeholder='문의 내용을입력하세요.'/>
         <div className='modalBtn'>
         <button onClick={closeModal} className="close-modal-button">취소하기</button>
         <button

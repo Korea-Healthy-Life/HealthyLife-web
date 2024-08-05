@@ -1,5 +1,5 @@
 .subNavBox ul {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -26,4 +26,5 @@ a {
   display: flex;
   background-color: #e9ece7;
   height: 60px;
+  z-index: 10;
 }

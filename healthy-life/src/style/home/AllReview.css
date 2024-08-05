@@ -1,5 +1,5 @@
 .allProductContainer {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -37,14 +37,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow: hidden;
 }
 
 .allProductImageList .reviewBox {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   height: 250px;
   border: 1px solid #eee;
   border-radius: 10px;
@@ -68,19 +67,6 @@ cursor: pointer;
   display: flex;
   margin: 0 auto;
   margin-bottom: 30px;
-}
-
-select {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-option {
-  border-radius: 5px;
 }
 
 .pagination {

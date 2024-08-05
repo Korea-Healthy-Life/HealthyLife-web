@@ -1,18 +1,17 @@
 .SearchAppInputDiv {
   display: flex;
-  align-items: ;
   justify-content: space-around;
   width: 36%;
   height: 30px;
   margin: 0 auto;
-  border: 5px solid #555f57;
+  border: 3px solid #555f57;
   border-radius: 20px;
   margin-top: 5%;
   margin-bottom: 20px;
 }
 
 .SearchAppInputDiv:active {
-  border: 5px solid #D7DDD2;
+  border: 3px solid #D7DDD2;
 }
 
 .SearchAppInput {
@@ -43,11 +42,11 @@
 
 @media (max-width: 500px) {
   .SearchAppInputDiv{
-    border: 4px solid #555f57;
+    border: 2px solid #555f57;
     height: 20px;
   }
   .SearchAppInputDiv:active{
-    border: 4px solid #D7DDD2;
+    border: 2px solid #D7DDD2;
   }
   .SearchAppInput{
     font-size: 10px;

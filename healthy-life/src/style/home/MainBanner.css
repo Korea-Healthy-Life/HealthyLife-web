@@ -1,33 +1,13 @@
-.banner01 {
-  width: 90%;
-  margin: 0 auto;
+
+.bannerDiv .images {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  
-}
-  
-.banner02 .images {
   width: 90%;
-  vertical-align: middle;
-  display: flex;
-}
-  
-.bannerImages {
-  display: flex;
-}
-
-.banner02 {
-  min-width: 100%;
-}
-
-.banner02 .images {
-  width: 90%;
-  vertical-align: middle;
+  height: 300px;
   margin: 0 auto;
 }
 
-.prevClick, .nextClick {
+/* .prevClick, .nextClick {
   cursor: pointer;
   padding: 16px;
   color: black;
@@ -39,7 +19,7 @@
 
 .nextClick {
   right: 0;
-}
+} */
 
 
 
