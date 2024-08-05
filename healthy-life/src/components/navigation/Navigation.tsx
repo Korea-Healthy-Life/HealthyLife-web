@@ -6,7 +6,6 @@ import RecommandApp from '../../views/recommand/RecommandApp';
 import Bmi from '../../views/bmi/Bmi';
 import JoinApp from '../../views/join/JoinApp';
 import MypageNav from '../../views/mypage/mypage-main/MypageNav';
-import QNA from '../../views/productpage/qna/QNA';
 import CartAPP from '../../views/cart/CartAPP';
 
 
@@ -30,11 +29,12 @@ const Navigation:React.FC = () => {
         <ul>
         <li
         ><Link to={'/all'}>전체상품</Link></li> 
-        <li><Link to='/best'>BEST.ITEM</Link></li> 
+        <li><Link to='/bestitem'>BEST.ITEM</Link></li> 
         <li><Link to='/recommand'>체질추천상품</Link></li> 
         <li><Link to='/reviews' >전체후기</Link></li> 
         <li><Link to='/calculator'>체지방계산기</Link></li> 
         <li><Link to='/productdetail'>상품상세페이지</Link></li> 
+        <li><Link to='/payment'>결제페이지</Link></li> 
         </ul>
       </div>
       <div 
