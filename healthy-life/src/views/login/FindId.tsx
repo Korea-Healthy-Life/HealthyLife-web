@@ -1,7 +1,8 @@
 import { Box, Button, InputAdornment } from '@mui/material';
 import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
-
+import "../../style/login/login.css"
+import ReactModal from 'react-modal';
 interface findIdData{
   name: string;
   phone: number | string
@@ -10,6 +11,8 @@ interface findIdData{
 
 
 function FindId() {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   let initialValue: findIdData = {
     name: '',
@@ -32,23 +35,31 @@ function FindId() {
   }
 
 
-  const findIdButtonHandler = (e: React.FormEvent) => {
+  const findIdModalHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
-    !name || !phone ? alert(`가입이 안 되었거나 회원정보가 맞지 않습니다`) : 
-    alert(`${name}님의 id는 {이준우} 입니다`)
+    setModalIsOpen(true);
+
+    setFindId({
+      name: '',
+      phone: ''
+    });
+  };
+
+
+  const closeModal = () => {
+    setModalIsOpen(false)
   }
-
   return (
-    <div>
+    <div className='findIdContainer'>
 
-      <h1 style={{textAlign: 'center'}}>아이디 찾기</h1>
+      <h1>아이디 찾기</h1>
       <br />
       
       <Box>
 
       
-      <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+      <form className='findIdForm'>
       
       <TextField
         label="이름"
@@ -73,10 +84,20 @@ function FindId() {
       name='phone'
       onChange={inputHandler}
       />
-      <Button variant='contained' onClick={findIdButtonHandler}>아이디 찾기 버튼</Button>
-      
+      <Button variant='contained' onClick={findIdModalHandler}>아이디 찾기 버튼</Button>
       </form>
 
+      <ReactModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className="modalContent"
+        overlayClassName="modalOverlay"
+      >
+
+      {!name || !phone ? '이름 또는 휴대폰 번호가 일치하지 않습니다' : "당신의 아이디는 healthly-life입니다"}
+      <button className='closeButton' onClick={closeModal}>닫힘</button>
+
+      </ReactModal>
 
       </Box>
       <br />

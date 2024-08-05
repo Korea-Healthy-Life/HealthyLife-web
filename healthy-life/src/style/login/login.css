@@ -1,0 +1,39 @@
+.loginContainer h1{
+  text-align: center;
+}
+
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.loginContainer p{
+  text-align: center;
+  font-size: 16px;
+}
+
+.findIdContainer h1{
+  text-align: center;
+}
+
+.findIdForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.findPasswordContainer h1{
+  text-align: center;
+}
+
+.findPasswordForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
