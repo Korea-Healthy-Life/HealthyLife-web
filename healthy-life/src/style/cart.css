@@ -25,6 +25,10 @@ padding: 0;
   border-radius: 5px;
 }
 
+.cartButton > button {
+  cursor: pointer;
+}
+
 .cartContainer > ul {
   display: flex;
   flex-direction: column;
@@ -94,4 +98,5 @@ padding: 0;
   height: 40px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }

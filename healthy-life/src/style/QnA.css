@@ -1,0 +1,34 @@
+.productQnaContainer {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleModalBtnDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qnaTotalUl {
+  list-style: none;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin: 10px 0px;
+}
+
+.qnaTotalLi {
+  list-style: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.pagination {
+  margin: 0 auto;
+}

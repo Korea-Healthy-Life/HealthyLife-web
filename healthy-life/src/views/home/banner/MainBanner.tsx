@@ -31,21 +31,21 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   }
   
   return (
-    <div className='banner01'>
-      <button className="prevClick" onClick={handlePrevClick}>
+    <div className='bannerContainer'>
+      {/* <button className="prevClick" onClick={handlePrevClick}>
         &#10094;
-      </button>
+      </button> */}
       <div className='bannerImages'>
         {visibleImages.map((image, index) => (
-          <div key={index} className='banner02'>
+          <div key={index} className='bannerDiv'>
             <img src={image} alt={`banner ${index}`} className="images"/>
           </div>
         ))}
       </div>
       <div>
-      <button className="nextClick" onClick={handleNextClick}>
+      {/* <button className="nextClick" onClick={handleNextClick}>
         &#10095;
-      </button>
+      </button> */}
       </div>
     </div>
   );
