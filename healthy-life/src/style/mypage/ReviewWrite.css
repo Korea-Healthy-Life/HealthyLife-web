@@ -4,7 +4,6 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   border: 1px solid #eee;
 }
 
@@ -15,6 +14,7 @@
 .ReviewStar {
   display: flex;
   gap: 10px;
+  margin: 0 auto;
   margin-top: 20px;
 }
 
@@ -23,7 +23,13 @@
 }
 
 .ReviewWriteTitleDiv {
+  display: flex;
+  align-items: center;
+}
 
+.ReviewWriteTitle {
+  width: 75%;
+  
 }
 
 .ReviewWriteContentDiv {
@@ -32,12 +38,22 @@
   align-items: flex-start;
 }
 
+.ReviewWriteContent label {
+  margin-right: 10px;
+}
+
 .ReviewWriteContent {
-  width: 90%;
+  width: 80%;
+  height: 200px;
+  resize: none;
+  border-radius: 5px;
 }
 
 .ReviewWriteContentDiv label {
-  font-size: 9px;
+  font-size: 10px;
+}
+.ReviewWriteTitleDiv label {
+  font-size: 10px;
 }
 
 .ImgContainer {
@@ -45,6 +61,7 @@
   gap: 10px;
   align-items: flex-start;
   margin-left: 30px;
+  margin-top: 10px;
 }
 
 .ImgContainerDiv {
@@ -63,4 +80,9 @@
 .ReviewWriteBtn button {
   width: 50px;
   height: 35px;
+}
+
+.ReviewWriteBtn {
+  margin: 0 auto;
+  margin-top: 30px;
 }
