@@ -1,7 +1,7 @@
 import React from 'react'
 import Product from './Product';
 import ProductTap from './ProductTap';
-
+import "../../../style/detailProductSlider/productSlider.css"
 
 const images = [
   'https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg',
