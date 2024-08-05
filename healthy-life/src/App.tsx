@@ -26,7 +26,6 @@ import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
 import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
 import Userinformation from './views/mypage/userInformation/Userinformation';
 import ReviewWrite from './views/mypage/review/ReviewWrite';
-import { Login } from '@mui/icons-material';
 import FindId from './views/login/FindId';
 import FindPassword from './views/login/FindPassword';
 import ProductPage from './views/productpage/ProductPage';
@@ -34,6 +33,11 @@ import Review from './views/productpage/review/Review';
 import QNA from './views/productpage/qna/QNA';
 import All from './views/allproduct/all/All';
 import AllReview from './views/allreview/AllReview';
+import LoginNav from './views/login/LoginNav';
+import SurveryListAllerge from './views/survey/SurveryListAllerge';
+import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
+import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
+import { Payment } from '@mui/icons-material';
 
 function App() {
   return (
@@ -46,6 +50,10 @@ function App() {
     <Route path='' element={<Home />} /> 
     <Route path='/all' element={<All />}/>
     <Route path='/survey' element={<SurveyApp />} /> 
+    <Route path='/survey/allerge' element={<SurveryListAllerge />} /> 
+    <Route path='/survey/diabetes' element={<SurveryListDiabetes />} /> 
+    <Route path='/survey/dietgoal' element={<SurveryListDietGoal />} /> 
+    {/* <Route path='/bestitem' element={<BestItem />} />  */}
       {/* <span >닭가슴살/육류</span> */}
       <Route path="/checkin" element={<AllCheckinApp />} />
         {/* <span>도시락</span> */}
@@ -75,7 +83,7 @@ function App() {
         <Route path='/mypage/membership' element={<Benefit />}/>
         <Route path='/mypage/userinformation' element={<Userinformation />}/>
         <Route path='/mypage/review/write' element={<ReviewWrite />}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/login' element={<LoginNav/>}/>
         <Route path='/login/FindId' element={<FindId/>}/>
         <Route path='/login/FindPassword' element={<FindPassword/>}/>
         <Route path='/productdetail' element={<ProductPage/>}/>
@@ -83,6 +91,7 @@ function App() {
         <Route path='/productdetail' element={<ReviewWrite />}/>
         <Route path='/productdetail' element={<QNA />}/>
         <Route path='/reviews' element={<AllReview />}/>
+        <Route path='/payment' element={<Payment />}/>
       </Routes> 
     <Footer />
     </>

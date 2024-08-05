@@ -50,6 +50,11 @@ p {
   text-align: right;
 }
 
+.footerTotalContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
 @media (max-width: 500px) {
   .footerContainer ul li{
     font-size: 9px;
