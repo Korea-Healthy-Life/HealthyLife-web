@@ -30,7 +30,7 @@ import { Login } from '@mui/icons-material';
 import FindId from './views/login/FindId';
 import FindPassword from './views/login/FindPassword';
 import ProductPage from './views/productpage/ProductPage';
-import Review from './views/productpage/revie/Review';
+import Review from './views/productpage/review/Review';
 import QNA from './views/productpage/qna/QNA';
 import All from './views/allproduct/all/All';
 import AllReview from './views/allreview/AllReview';
