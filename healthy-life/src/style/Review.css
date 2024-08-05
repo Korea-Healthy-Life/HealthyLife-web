@@ -1,31 +1,102 @@
 .productReviewContainer {
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #333; 
 }
 
 .titleSelctDiv {
   display: flex;
-  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #333; 
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.titleSelctDiv h5 {
+  margin-bottom: 10px;
 }
 
 .labelInput {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 select {
   display: flex;
+  width: 30px;
+  font-size: 10px;
 }
 
 .labelInput div {
   display: flex;
   align-items: flex-start;
 }
+
+.labelInput label, input {
+  font-size: 10px;
+  
+}
+
+.labelInput input {
+  width:100px;
+}
+
+/* reviewList */
+
+.totalUl {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333; 
+  font-size: 10px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.idDate{
+  margin-bottom: 10px;
+}
+
+.idDate pre {
+  padding: 5px;
+}
+
+.totalLi {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+}
+.reviewDetaiLi {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-bottom: 1px solid #333; 
+}
+
+.reviewli {
+  display: flex;
+}
+.reviewDetaiLi img {
+  width: 60px;
+}
+
+.reviewImgSpanDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.reviewStar {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination {
+  margin: 0 auto;
+}
+

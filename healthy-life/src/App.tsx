@@ -32,6 +32,8 @@ import FindPassword from './views/login/FindPassword';
 import ProductPage from './views/productpage/ProductPage';
 import Review from './views/productpage/revie/Review';
 import QNA from './views/productpage/qna/QNA';
+import All from './views/allproduct/all/All';
+import AllReview from './views/allreview/AllReview';
 
 function App() {
   return (
@@ -42,6 +44,7 @@ function App() {
     {/* <Home /> */}
     <Routes>
     <Route path='' element={<Home />} /> 
+    <Route path='/all' element={<All />}/>
     <Route path='/survey' element={<SurveyApp />} /> 
       {/* <span >닭가슴살/육류</span> */}
       <Route path="/checkin" element={<AllCheckinApp />} />
@@ -64,7 +67,7 @@ function App() {
 
         <Route path='/mypage/*' element={<MypageMain />}/> 
         <Route path='/mypage/order' element={<OrderApp />}/> 
-        <Route path='/mypage/review/*' element={<ReviewApp />}/>
+        <Route path='/mypage/reviews/*' element={<ReviewApp />}/>
         <Route path='/mypage/wishlist' element={<WishApp />}/>
         <Route path='/mypage/current' element={<CurrentProduct />}/>
         <Route path='/mypage/mileage' element={<Reserves />}/>
@@ -77,7 +80,9 @@ function App() {
         <Route path='/login/FindPassword' element={<FindPassword/>}/>
         <Route path='/productdetail' element={<ProductPage/>}/>
         <Route path='/productdetail' element={<Review />}/>
+        <Route path='/productdetail' element={<ReviewWrite />}/>
         <Route path='/productdetail' element={<QNA />}/>
+        <Route path='/reviews' element={<AllReview />}/>
       </Routes> 
     <Footer />
     </>
