@@ -37,8 +37,8 @@ import LoginNav from './views/login/LoginNav';
 import SurveryListAllerge from './views/survey/SurveryListAllerge';
 import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
-import { Payment } from '@mui/icons-material';
 import NonMember from './views/nonMemberOrder/NonMember';
+import Payment from './views/payment/Payment';
 
 function App() {
   return (
