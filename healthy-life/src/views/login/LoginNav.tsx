@@ -9,10 +9,6 @@ function LoginNav() {
   return (
     <div>
       <Login/>
-      <Routes>
-        <Route path='/login/FindId' element={<FindId/>}/>
-        <Route path='/login/FindPassword' element={<FindPassword/>}/>
-      </Routes>
     </div>
   )
 }

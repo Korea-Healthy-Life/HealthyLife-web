@@ -40,15 +40,16 @@ function FindId() {
 
     setModalIsOpen(true);
 
-    setFindId({
-      name: '',
-      phone: ''
-    });
+  
   };
 
 
   const closeModal = () => {
-    setModalIsOpen(false)
+    setModalIsOpen(false);
+    setFindId({
+      name: '',
+      phone: ''
+    });
   }
   return (
     <div className='findIdContainer'>
@@ -94,8 +95,8 @@ function FindId() {
         overlayClassName="modalOverlay"
       >
 
-      {!name || !phone ? '이름 또는 휴대폰 번호가 일치하지 않습니다' : "당신의 아이디는 healthly-life입니다"}
-      <button className='closeButton' onClick={closeModal}>닫힘</button>
+      {!name || !phone ? <div>이름 혹은 전화번호를 잘 못 입력하셨습니다</div>: <div>당신의 아이디는 healthy-life 입니다</div>}
+      <button className='closeModalButton' onClick={closeModal}>닫힘</button>
 
       </ReactModal>
 

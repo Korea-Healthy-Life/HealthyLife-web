@@ -39,16 +39,17 @@ function FindPassword() {
 
     setModalIsOpen(true);
 
-    setFindPassword({
-      id: '',
-      phone: ''
-    })
+    
   }
 
 
   const closeModal = () => {
 
     setModalIsOpen(false);
+    setFindPassword({
+      id: '',
+      phone: ''
+    });
   }
   return (
     <div className='findPasswordContainer'>
@@ -92,8 +93,8 @@ function FindPassword() {
       overlayClassName= "modalOverlay"
       >
 
-      {!id || !phone ? '아이디 혹은 비밀번호 틀렸습니다' : '재발급된 비밀번호는 "1234" 입니다'}
-
+      {!id || !phone ? <div>아이디 혹은 비밀번호를 잘 못 입력하셨습니다</div> : <div>재발급된 비밀번호는 1234입니다</div>}
+      <button className='closeModalButton' onClick={closeModal}> 닫힘</button>
       </ReactModal>
 
       </Box>

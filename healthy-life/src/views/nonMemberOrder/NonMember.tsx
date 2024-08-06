@@ -39,7 +39,7 @@ function NonMember() {
                 <div>
                   주문내역
                 </div>
-              <button onClick={closeModal} className='closeModalButton'>close modal</button>
+              <button onClick={closeModal} className='closeModalButton'>닫기</button>
             </div>
           </ReactModal>
         </div>
