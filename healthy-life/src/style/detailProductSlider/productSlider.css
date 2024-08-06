@@ -34,3 +34,25 @@
 }
 
 
+
+.cartModalContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.modalImages{
+  display: flex;
+  text-align: center;
+}
+
+
+.relatedModalImage img{
+  width: 65%;
+}

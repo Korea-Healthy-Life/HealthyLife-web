@@ -83,7 +83,7 @@ export default function Bmi(){
     <div>
       <Box>
 
-      <form className='bmiCalculator' style={{display:'flex', flexWrap: 'wrap', justifyContent:'center'}}>
+      <form className='bmiCalculator'>
         <br />
         <TextField
           label="몸무게"
@@ -116,7 +116,7 @@ export default function Bmi(){
         <br />
       </form>
         <br />
-        <p className='result' style={{textAlign: 'center', fontSize: '25px', fontWeight:'bold'}}>{result}</p>
+        <p className='result'>{result}</p>
 
       </Box>
     </div>

@@ -23,6 +23,8 @@ let  initialValue: userLogin = {
   password: ''
 }
 
+ReactModal.setAppElement('#root');
+
 function Login() {
   const [showPassword, setShowPassword] = React.useState(false);
   const [login, setLogin] = useState<userLogin>(initialValue);
@@ -53,22 +55,21 @@ function Login() {
 
     setModalIsOpen(true);
 
-    setLogin({
-      id: '',
-      password: ''
-    }
-    )
   } 
 
   const closeModal  =  () => {
     setModalIsOpen(false);
+    setLogin({
+      id: '',
+      password: ''
+    })
   }
   return (
     <div className='loginContainer'>
       <h1>로그인</h1>
       <br />  
       <br />  
-    <Box>
+    <Box sx={{border: '1px solid black'}}>
       <form className='loginForm'>
       <TextField
         label="아이디"
@@ -83,7 +84,7 @@ function Login() {
       />
 
       <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          <InputLabel htmlFor="outline-adornment-password">Password</InputLabel>
           <OutlinedInput
             id= "userPassword"
             type={showPassword ? 'text' : 'password'}
@@ -108,16 +109,19 @@ function Login() {
       <Button variant="contained" onClick={loginModalHandler}>로그인</Button>
       </form>
     
+      <div className='modalContainer'>
       <ReactModal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         className= "modalContent"
         overlayClassName="modalOverlay"
       >
-      {!id || !password ? '아이디 혹은 비밀번호를 입력하세요.' : '로그인되셨습니다.'}
+      {!id || !password ? <div>아이디 혹은 비밀번호를 입력하세요 </div> : <div>로그인되였습니다</div>}
       <button onClick={closeModal} className='closeModalButton'>닫기</button>
 
       </ReactModal>
+
+      </div>
     
       <br />
       
