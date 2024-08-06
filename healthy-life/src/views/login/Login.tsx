@@ -10,7 +10,8 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import OutlinedInput from '@mui/material/OutlinedInput'
 import Button from '@mui/material/Button';
-
+import "../../style/login/login.css"
+import ReactModal from 'react-modal';
 
 interface userLogin {
   id: string | number
@@ -22,9 +23,12 @@ let  initialValue: userLogin = {
   password: ''
 }
 
+ReactModal.setAppElement('#root');
+
 function Login() {
   const [showPassword, setShowPassword] = React.useState(false);
   const [login, setLogin] = useState<userLogin>(initialValue);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -46,24 +50,27 @@ function Login() {
   })
   }
 
-  const loginButtonHandler =  (e: React.FormEvent) =>  {
+  const loginModalHandler =  (e: React.FormEvent) =>  {
     e.preventDefault();
 
-    alert(!id || !password ? `아이디 혹은 비밀번호를 잘 못 입력하셨습니다` : `로그인되었습니다`);
+    setModalIsOpen(true);
 
+  } 
+
+  const closeModal  =  () => {
+    setModalIsOpen(false);
     setLogin({
       id: '',
       password: ''
-    }
-    )
-  } 
+    })
+  }
   return (
-    <div>
-      <h1 style={{textAlign: 'center'}}>로그인</h1>
+    <div className='loginContainer'>
+      <h1>로그인</h1>
       <br />  
       <br />  
-    <Box>
-      <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+    <Box sx={{border: '1px solid black'}}>
+      <form className='loginForm'>
       <TextField
         label="아이디"
         id='userId'
@@ -77,7 +84,7 @@ function Login() {
       />
 
       <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          <InputLabel htmlFor="outline-adornment-password">Password</InputLabel>
           <OutlinedInput
             id= "userPassword"
             type={showPassword ? 'text' : 'password'}
@@ -99,8 +106,22 @@ function Login() {
             name='password'
           />
         </FormControl>
-      <Button variant="contained" onClick={loginButtonHandler}>로그인</Button>
+      <Button variant="contained" onClick={loginModalHandler}>로그인</Button>
       </form>
+    
+      <div className='modalContainer'>
+      <ReactModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className= "modalContent"
+        overlayClassName="modalOverlay"
+      >
+      {!id || !password ? <div>아이디 혹은 비밀번호를 입력하세요 </div> : <div>로그인되였습니다</div>}
+      <button onClick={closeModal} className='closeModalButton'>닫기</button>
+
+      </ReactModal>
+
+      </div>
     
       <br />
       
@@ -121,6 +142,7 @@ function Login() {
     </div>
   )
 }
-      
+
+
 
 export default Login

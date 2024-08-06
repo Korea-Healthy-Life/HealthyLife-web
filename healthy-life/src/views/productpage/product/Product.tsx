@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import '../../../style/detailProductSlider/productSlider.css'
+import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 interface productImages{
   images: string[]
@@ -8,6 +10,7 @@ interface productImages{
 
 const Product: React.FC<productImages> = ({images}) => {
 
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
@@ -24,6 +27,13 @@ const Product: React.FC<productImages> = ({images}) => {
     visibleImages.push(...images.slice(0, 4 -visibleImages.length));
   }
 
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false)
+  }
 
   return (
     <div>
@@ -54,13 +64,55 @@ const Product: React.FC<productImages> = ({images}) => {
         <br />
         <br />
         <div className='button' style={{display: 'flex', justifyContent: 'space-around'}}>
-          <button >장바구니</button>
+          <button onClick={openModal} >장바구니</button>
           <button >WISH</button>
           <button >주문</button>
         </div>
 
         </div>
 
+
+        <ReactModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className="modalContent"
+        overlayClassName="modalOverlay"
+        >
+
+          <div className='modal'>
+            <h2>장바구니(모달창)</h2>
+              <br />
+              <br />
+              <br />
+          <div className='cartModalContainer'>
+            
+              <button className='prevButton' onClick={handlePrevClick}>&#10094;</button>
+            <div className='modalImages'>
+              {visibleImages.map((image, index) => (
+          <div key={index} className='relatedModalImage'>
+            <img src={image} alt={`slide ${index}`} />
+          </div>
+        ))}
+        <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
+            </div>
+          
+
+
+
+          </div>
+
+          <br />
+          <br />
+          
+          <div className='modalbuttonContainer' style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+          <button>바로주문</button>
+          <Link to={'/cart'}><button>장바구니 이동</button></Link>
+          <button onClick={closeModal}>쇼핑계속하기</button>
+          </div>
+          
+          </div>
+
+        </ReactModal>
       </div>
       <br />
       <br />

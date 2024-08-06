@@ -6,6 +6,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import Login from '../views/login/Login';
 import FindId from '../views/login/FindId';
 import FindPassword from '../views/login/FindPassword';
+import LoginNav from '../views/login/LoginNav';
 
 // classname = lowcamelcase로 작성
 // css => style 폴더안에
@@ -45,9 +46,12 @@ export default function Header() {
   
   </form>
   <Link to={'/mypage/*'}><AccountCircle /></Link>
-  <Link to={'/'}><LocalGroceryStoreIcon /></Link>
+  <Link to={'/cart'}><LocalGroceryStoreIcon /></Link>
   
   </div>
+
+
+  
     </header>
   )
 }

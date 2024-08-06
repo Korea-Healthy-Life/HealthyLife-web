@@ -1,6 +1,7 @@
 import { Box, Button, InputAdornment, TextField } from '@mui/material';
 import React, { useState } from 'react'
-
+import "../../style/login/login.css"
+import ReactModal from 'react-modal';
 
 interface findPasswordData{
   id: string | string;
@@ -9,6 +10,8 @@ interface findPasswordData{
 
 
 function FindPassword() {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
   let initialValue: findPasswordData = {
     id: '',
@@ -31,20 +34,30 @@ function FindPassword() {
   }
 
 
-  const findPasswordButtonHandler = (e: React.FormEvent) => {
+  const findPasswordModalHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
-    !id || !phone ?  alert(`가입이 안 되었거나 회원정보가 맞지 않습니다`) :
-    alert('재발급된 비밀번호는 1234입니다')
+    setModalIsOpen(true);
+
+    
   }
 
+
+  const closeModal = () => {
+
+    setModalIsOpen(false);
+    setFindPassword({
+      id: '',
+      phone: ''
+    });
+  }
   return (
-    <div>
-      <h1 style={{textAlign: 'center'}}>비밀번호 발급</h1>
+    <div className='findPasswordContainer'>
+      <h1>비밀번호 발급</h1>
       <br />
       <Box>
 
-      <form style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+      <form className='findPasswordForm'>
 
       <TextField 
       label="아이디"
@@ -69,9 +82,20 @@ function FindPassword() {
       name='phone'
       onChange={inputHandler}
       />
-      <Button variant='contained' onClick={findPasswordButtonHandler}>비밀번호 발급 버튼</Button>
+      <Button variant='contained' onClick={findPasswordModalHandler}>비밀번호 발급 버튼</Button>
 
       </form>
+
+      <ReactModal
+      isOpen={modalIsOpen}
+      onRequestClose={closeModal}
+      className= "modalContent"
+      overlayClassName= "modalOverlay"
+      >
+
+      {!id || !phone ? <div>아이디 혹은 비밀번호를 잘 못 입력하셨습니다</div> : <div>재발급된 비밀번호는 1234입니다</div>}
+      <button className='closeModalButton' onClick={closeModal}> 닫힘</button>
+      </ReactModal>
 
       </Box>
       <br />

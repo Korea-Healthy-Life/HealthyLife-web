@@ -1,5 +1,14 @@
+.bmiCalculator{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
 
 
 
-
-
+.result{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
