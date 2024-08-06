@@ -69,7 +69,7 @@ function Login() {
       <h1>로그인</h1>
       <br />  
       <br />  
-    <Box sx={{border: '1px solid black'}}>
+    <Box>
       <form className='loginForm'>
       <TextField
         label="아이디"
@@ -123,7 +123,7 @@ function Login() {
 
       </div>
     
-      <br />
+    
       
       <p style={{textAlign: 'center', fontSize: '16px'}}>
       <Link to={'/login/FindId'}>아이디 찾기 | </Link>

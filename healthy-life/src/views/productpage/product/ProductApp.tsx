@@ -17,7 +17,9 @@ export default function ProductApp() {
       <h2 style={{marginLeft: '22%'}}>연관상품</h2>
       <br />
       <Product images={images}/>
+      <br />
       <ProductTap/>
+      <br />
     </div>
   )
 }

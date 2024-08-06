@@ -65,8 +65,8 @@ const Product: React.FC<productImages> = ({images}) => {
         <br />
         <div className='button' style={{display: 'flex', justifyContent: 'space-around'}}>
           <button onClick={openModal} >장바구니</button>
-          <button >WISH</button>
-          <button >주문</button>
+          <Link to={'/myPage/wishlist'}><button >WISH</button></Link>
+          <Link to={'/payment'}><button >주문</button></Link>
         </div>
 
         </div>
@@ -105,7 +105,7 @@ const Product: React.FC<productImages> = ({images}) => {
           <br />
           
           <div className='modalbuttonContainer' style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
-          <button>바로주문</button>
+          <Link to={'/payment'}> <button>바로주문</button></Link>
           <Link to={'/cart'}><button>장바구니 이동</button></Link>
           <button onClick={closeModal}>쇼핑계속하기</button>
           </div>
