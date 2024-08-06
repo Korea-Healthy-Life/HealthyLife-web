@@ -57,7 +57,7 @@ function JoinApp() {
           생년월일
         </label>
         <div>
-          <input type="month" className="birthMonth" min={1} max={12}/>
+          <input type="month" className="birthMonth"/>
           <label>월</label>
           <input type="number" className="birthday" min={1} max={31}/>
         </div>
