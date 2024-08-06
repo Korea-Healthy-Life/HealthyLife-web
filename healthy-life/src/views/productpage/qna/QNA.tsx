@@ -16,14 +16,14 @@ function QNA() {
     <div>
       <ul className='qnaTotalUl'>
         <li className='qnaTotalLi'>
-            <span>답벼완료여부</span>
+            <p>답벼완료여부</p>
             <pre>리뷰 내용 ...... 끄젓끄젓 </pre>
-            <span>(id****) | (등록날짜)</span>
+            <p>(id****) | (등록날짜)</p>
         </li>
         <li className='qnaTotalLi'>
-            <span>답벼완료여부</span>
+            <p>답벼완료여부</p>
             <pre>리뷰 내용 ...... 끄젓끄젓 </pre>
-            <span>(id****) | (등록날짜)</span>
+            <p>(id****) | (등록날짜)</p>
         </li>
       </ul>
     </div>

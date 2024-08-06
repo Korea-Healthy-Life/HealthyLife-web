@@ -38,7 +38,7 @@ const Sidenavigator:React.FC = () => {
       <ul className='sideNav'>
         <li><Link to={'/crrent'}><AccessTimeTwoToneIcon/></Link></li>
         <li><Link to={'/cart'}><ShoppingBagTwoToneIcon/></Link></li>
-        <li><Link to={'/wish'}><FavoriteTwoToneIcon/></Link></li>
+        <li><Link to={'/mypage/wishlist'}><FavoriteTwoToneIcon/></Link></li>
         <li onClick={MoveToTop}><KeyboardArrowUpTwoToneIcon/></li>
         <li onClick={MoveToUnder}><KeyboardArrowDownTwoToneIcon/></li>
         <li><Link to={'/survey'}>체질<br />/기호</Link></li>

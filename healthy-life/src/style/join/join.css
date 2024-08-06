@@ -1,32 +1,72 @@
-.joinCtainer {
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.joinContainer {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.joinContainer > h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.joinContain {
+  padding: 30px;
+  background-color: #eee;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.joinUl li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.joinUl li > label {
+  flex: 1;
+}
+.joinUl li input, .userAddress {
+  flex: 3;
+  width: 263px;
+  height: 32px;
+}
+.joinUl li button {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.li07 {
+
+}
+
+.userPasswordUl li input{
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 50%;
-  margin-top: 50px;
+  width: 352px;
 }
 
-.joinCtainer form {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 10px;
-  background-color: #D7DDD2;
-  border-radius: 10px;
-  padding: 20px;
-  box-sizing: border-box;
+.li04 input {
+  width: 352px;
 }
 
-.joinCtainer > h2 {
-  text-align: center;
+.userSexContainer {
+  display: flex;
+  align-items: row;
+
 }
 
-.joinCtainer ul {
-  list-style: none;
-}
 
-.joinCtainer li {
-  width: 90%;
-}
+
+
+
 
 
 
