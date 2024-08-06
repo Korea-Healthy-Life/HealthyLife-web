@@ -38,6 +38,7 @@ import SurveryListAllerge from './views/survey/SurveryListAllerge';
 import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
 import { Payment } from '@mui/icons-material';
+import NonMember from './views/nonMemberOrder/NonMember';
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
         <Route path='/productdetail' element={<QNA />}/>
         <Route path='/reviews' element={<AllReview />}/>
         <Route path='/payment' element={<Payment />}/>
+        <Route path='/nonMember' element={<NonMember />}/>
       </Routes> 
     <Footer />
     </>

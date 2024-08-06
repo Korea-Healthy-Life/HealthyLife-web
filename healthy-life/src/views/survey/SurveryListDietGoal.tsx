@@ -16,7 +16,7 @@ export default function SurveryListDietGoal() {
       </ul>
 
       <div className='surveyBtn'>
-      <Link to={"/recommand"}><button className='surveyNextBtn'>결과보기</button></Link>
+      <Link to={"/recommand"}><button className='surveyNextBtn'>결과</button></Link>
       <br />
       <Link to={"/"}><button className='surveySkipBtn'>Skip</button></Link>
       </div>

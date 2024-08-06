@@ -21,9 +21,9 @@
 
 .qnaTotalLi {
   list-style: none;
-  list-style: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #eee;

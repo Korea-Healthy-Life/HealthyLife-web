@@ -45,7 +45,7 @@ const products:ProductProps[] = [
 
 const AllReview: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [ProductPerPage] = useState<number>(9);
+  const [ProductPerPage] = useState<number>(16);
 
   const indexOfLastPost = currentPage * ProductPerPage;
   const indexOfFirstPost = indexOfLastPost - ProductPerPage;
