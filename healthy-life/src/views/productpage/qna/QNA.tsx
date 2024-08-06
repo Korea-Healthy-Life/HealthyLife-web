@@ -1,7 +1,4 @@
 import React from 'react'
-import SearchIcon from '@mui/icons-material/Search';
-import { AccountCircle } from '@mui/icons-material';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
 import '../../../style/QnA.css'
 import { Pagination } from '@mui/material';
 import ModalExample from './modal/ModalExample';
