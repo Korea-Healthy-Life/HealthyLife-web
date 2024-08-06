@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'goorm-sans-bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .slider {
   display: flex;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   margin-top: 10px;
@@ -13,7 +19,7 @@
 }
 
 .sliderImage img {
-  width: 90%;
+  width: 70%;
 }
 
 .prev, .next {
@@ -30,11 +36,12 @@
 }
 
 .sliderContainer{
-  width: 80%;
+  width: 1000px;
   margin: 0 auto;
   margin-top: 60px;
 }
 .sliderContainer h3 {
+  font-family: 'goorm-sans-bold';
   display: flex;
   font-size: 20px;
   position: relative;

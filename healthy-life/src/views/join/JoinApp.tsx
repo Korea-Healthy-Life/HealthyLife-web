@@ -3,9 +3,9 @@ import '../../style/join/join.css'
 
 function JoinApp() {
   return (
-    <div className='joinCtainer'>
+    <div className='joinContainer'>
       <h2>회원가입</h2>
-      <form >
+      <div className='joinContain'>
       <ul className='joinUl'>
       <li className='li01'><label htmlFor='userId '>
         아이디
@@ -24,13 +24,14 @@ function JoinApp() {
       <label htmlFor='userPassword'>
         비밀번호
       </label>
-      <input type="password" id='userPassword' placeholder='비밀번호를 입력해주세요.'/>
-      </li>
-      <li className='li03'>
-      <label htmlFor='userPasswordCkeck'>
-        비밀번호 확인
-      </label>
-      <input type="password" id='userpPasswordCheck'placeholder='비밀번호를 입력해주세요.'/>
+        <ul className='userPasswordUl'>
+        <li>
+          <input type="password" id='userPassword' placeholder='비밀번호를 입력해주세요.'/>
+        </li>
+        <li>
+        <input type="password" id='userpPasswordCheck'placeholder='비밀번호를 확인해주세요.'/>
+        </li>
+        </ul>
       </li>
       <li className='li04'>
       <label htmlFor='userName'>
@@ -41,8 +42,8 @@ function JoinApp() {
       <li className='li05'>
       <label className='addressLabel'>
         주소
-      <textarea className='userAddress' placeholder='주소를 입력하세요.'/>
       </label>
+      <textarea className='userAddress' placeholder='주소를 입력하세요.'/>
       </li>
       <li className='li06'>
       <label htmlFor="phonNumber">
@@ -54,11 +55,13 @@ function JoinApp() {
       <li className='li07'>
         <label className="userBirth">
           생년월일
+        </label>
+        <div>
           <input type="month" className="birthMonth" min={1} max={12}/>
           <label>월</label>
           <input type="number" className="birthday" min={1} max={31}/>
+        </div>
           <label>일</label>
-        </label>
       </li>
       <li>
       <label htmlFor="userEmail">
@@ -84,7 +87,7 @@ function JoinApp() {
       </li>
       </ul>
       <button type='submit' className='joinButton'>회원가입</button>
-      </form>
+      </div>
 
     </div>
   )

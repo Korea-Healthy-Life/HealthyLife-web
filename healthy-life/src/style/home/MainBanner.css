@@ -2,24 +2,38 @@
 .bannerDiv .images {
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 1500px;
   height: 300px;
   margin: 0 auto;
 }
 
-/* .prevClick, .nextClick {
-  cursor: pointer;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 28px;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
+.sliderBtnDiv {
+  background-color: rgba(215, 221, 210, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60px;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  right: 215px;
+  top: 430px;
+  padding: 5px;
+  padding-top: 13px;
 }
 
-.nextClick {
-  right: 0;
-} */
+.prevClick, .nextClick, span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  z-index: 2;
+}
+
+
 
 
 

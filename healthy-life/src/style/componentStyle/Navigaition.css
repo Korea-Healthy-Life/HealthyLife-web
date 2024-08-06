@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'goorm-sans-bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 .mainNavBox {
   display: flex;
   align-items: center;
@@ -8,7 +16,8 @@
 }
 
 .mainNavBox ul {
-  width: 55%;
+  font-family: 'goorm-sans-bold';
+  width: 800px;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
