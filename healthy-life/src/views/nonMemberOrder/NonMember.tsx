@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactModal from 'react-modal';
-import "../../style/nonmember/nonmenberModal.css"
+import "../../style/nonmember/nonmemberModal.css"
 
 function NonMember() {
 
@@ -20,10 +20,13 @@ function NonMember() {
     setOrderNumber(e.target.value)
   }
   return (
-    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-        <h2>주문조회</h2>
-
-        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: '40%' , paddingRight: '40%'}}>
+        <br />
+        <br />
+        <h2 style={{textAlign: 'center'}}>주문조회</h2>
+        <br />
+        <br />
+        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: '5%', backgroundColor: '#b5bbb0', paddingTop: '40%', paddingBottom: '40%' }}>
           <input type="text"  placeholder='주문번호 입력' value={orderNumber} onChange={inputHandler}/>
           <button className='"openModalButton' onClick={openModal}>조회</button>
           
