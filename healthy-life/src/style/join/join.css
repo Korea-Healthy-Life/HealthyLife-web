@@ -40,6 +40,7 @@
 }
 .joinUl li button {
   flex: 1;
+  height: 32px;
   margin-left: 10px;
 }
 
@@ -62,6 +63,8 @@
   align-items: row;
 
 }
+
+.
 
 
 
