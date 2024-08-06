@@ -3,10 +3,11 @@ import '../style/componentStyle/footerStyle.css'
 export default function Footer() {
   return (
     <div className='container'>
+      <div className='footerTotalContainer'>
     <div className='footerContainer'>
       <h5>Healthy-life<br />company</h5>
       <div className='companyInformation'>
-      <ul >
+      <ul>
         <li><strong>COMPANY</strong>: 주식회사 Healthy-Life</li>
         <li><strong>CEO</strong>: --</li>
         <li><strong>PHONE</strong>: 070-3344-2212</li>
@@ -25,6 +26,7 @@ export default function Footer() {
       </div>
     </div>
     <p>COPYRIGHT (C) 2024 Healthy-Life ALL RIGHTS REVERVED /</p>
+    </div>
     </div>
   )
 }
