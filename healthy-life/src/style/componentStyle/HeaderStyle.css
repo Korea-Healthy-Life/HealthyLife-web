@@ -2,17 +2,17 @@
   margin-bottom: 0px;
 }
 
+.headerFlexBox{
+  display: flex;
+  flex-direction: column;
+}
 
 .button1 {
-  position: absolute;
-  right: 200px;
   color: black;
-    
+  margin-right: 15%;  
 }
 
-.button1 a {
-  color: black;
-}
+
 
 
 
@@ -31,14 +31,12 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin-right: 200px;
+  margin-right: 15%;
 }
 
 
 
-.button2 a {
-  color: black;
-}
+
 
 
 

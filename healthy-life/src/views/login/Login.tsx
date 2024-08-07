@@ -130,7 +130,7 @@ function Login() {
       <Link to={'/login/FindPassword'}>비밀번호 찾기</Link>
       <br />
       <br />
-      <a href='#'>비회원 구매</a>
+      <Link to={'/nonMember'}>비회원 구매</Link>
 
       </p>
 
