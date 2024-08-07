@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactModal from 'react-modal';
-import "../../style/nonmember/nonmenberModal.css"
+import "../../style/nonmember/nonmemberModal.css"
 
 function NonMember() {
 

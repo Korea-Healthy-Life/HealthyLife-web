@@ -1,28 +1,19 @@
 .allProductContainer {
-  width: 900px;
-  margin: 0 auto;
+  width: 800px;
+  margin: 0px auto;
   box-sizing: border-box;
 }
 
 .allProductContainer h2 {
   text-align: center;
-  margin: 20px 0;
-}
-
-.allProductButtonList {
-  display: flex;
-  justify-content: space-around;
-  width: 300px;
-  flex-direction: row;
-  margin: 0 auto;
-  list-style: none;
-  margin-bottom: 40px;
+  margin: 20px 0px;
 }
 
 .allProductButtonList button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
+
 .allProductButtonList button:hover {
   cursor: pointer;
   border-bottom: 3px solid #D7DDD2;
@@ -44,10 +35,9 @@
   display: flex;
   flex-direction: column;
   width: 20%;
-  height: 250px;
+  height: 200px;
   border: 1px solid #eee;
-  border-radius: 10px;
-  margin: 0 auto;
+  border-radius: 5px;
   margin-bottom: 30px;
   overflow: hidden;
 }
@@ -87,3 +77,11 @@ cursor: pointer;
 }
 
 
+.productInform pre {
+  padding: 5px;
+  font-size: 10px;
+}
+
+.allrevieprofile {
+  color: #9b9b9b;
+}

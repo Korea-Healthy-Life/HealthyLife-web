@@ -25,7 +25,8 @@ const Navigation:React.FC = () => {
     <div>
       <div className='mainNavBox'
       onMouseEnter={()=> handleMouseEnter('nav')}
-      onMouseLeave={handleMouseLeave}>
+      onMouseLeave={handleMouseLeave}
+      >
         <ul>
         <li
         ><Link to={'/all'}>전체상품</Link></li> 
@@ -40,12 +41,12 @@ const Navigation:React.FC = () => {
       <div 
       
       >
-        <ul className='subNav'>
-        <li onMouseEnter={()=> handleMouseEnter('nav')}
+        <div className='subNav'>
+        <div onMouseEnter={()=> handleMouseEnter('nav')}
         onMouseLeave={handleMouseLeave}>
         {activeMenu === 'nav' && (<SubNav />)}
-        </li>
-        </ul>
+        </div>
+        </div>
       <Routes>
         <Route path='/recommand' element={<RecommandApp />}/>
         <Route path='/calculator' element={<Bmi />}/>

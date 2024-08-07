@@ -45,8 +45,7 @@ function App() {
     <>
     <Sidenavigation />
     <Header />
-    <Navigation /> 
-    {/* <Home /> */}
+    <Navigation />
     <Routes>
     <Route path='' element={<Home />} /> 
     <Route path='/all' element={<All />}/>
@@ -76,7 +75,7 @@ function App() {
 
         <Route path='/mypage/*' element={<MypageMain />}/> 
         <Route path='/mypage/order' element={<OrderApp />}/> 
-        <Route path='/mypage/reviews/*' element={<ReviewApp />}/>
+        <Route path='/mypage/myreview' element={<ReviewApp />}/>
         <Route path='/mypage/wishlist' element={<WishApp />}/>
         <Route path='/mypage/current' element={<CurrentProduct />}/>
         <Route path='/mypage/mileage' element={<Reserves />}/>
