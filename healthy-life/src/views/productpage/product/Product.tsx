@@ -2,16 +2,53 @@ import React, { useState } from 'react'
 import '../../../style/detailProductSlider/productSlider.css'
 import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 interface productImages{
   images: string[]
 }
 
 
+
+const theme = createTheme({
+  components: {
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'gray',
+          },
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: 'gray',
+          '&.Mui-focused': {
+            color: 'gray',
+          },
+        },
+      },
+    },
+  },
+});
+
+
 const Product: React.FC<productImages> = ({images}) => {
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [option, setOption] = React.useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setOption(event.target.value as string);
+  }
 
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length -1 : prevIndex -1 ));
@@ -36,31 +73,51 @@ const Product: React.FC<productImages> = ({images}) => {
   }
 
   return (
-    <div>
-      <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginLeft: '10%', marginRight: '10%'}}>
+    <ThemeProvider theme={theme}>
+
+      <div style={{display: 'flex', flexWrap: 'wrap', marginLeft: '10%', marginRight: '10%'}}>
         
-        <div className='productImage' style={{padding: '0px', width: '75%'}}>
-          <img src='https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg' alt="상세페이지 상품 이미지" width={'50%'}  style={{margin: '0px'}} />
+        <div className='productImage' style={{padding: '0', width: '65%'}}>
+          <img src='https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg' alt="상세페이지 상품 이미지" 
+          width={'50%'}  style={{margin: '0px'}} />
         </div>
 
 
-        <div className='productData' style={{margin: '0', width: '24%', display: 'flex', flexDirection: 'column'}}>
-          <h3 style={{backgroundColor: "#b5bbb0"}}>상품명</h3>        
+
+
+
+
+
+
+        <div className='productData' style={{margin: '0', width: '35%', display: 'flex', flexDirection: 'column'}}>
+          <h3 style={{border: '4px solid gray', borderRadius: 20}}>상품명</h3>        
         <br />
         <br />
         <br />
-        <div style={{backgroundColor: "#b5bbb0"}}>
+        <div style={{border: '4px solid gray'}}>
           <h3>상품금액: 000</h3>
           <h3>배송기간: ~~ </h3>
         </div>
         <br />
         <br />
         <br />
-        <select name="productOption" id="option" style={{width: '100%' }}>
-          <option value="선택">옵션</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
+        <Box sx={{ minWidth: 100, margin: '1% 1% 1% 1%'}}>
+    <FormControl fullWidth>
+      <InputLabel id="demo-simple-select-label">-[필수] 옵션 -</InputLabel>
+      <Select
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        value={option}
+        label="option"
+        onChange={handleChange}
+      >
+        <MenuItem value={10}>1</MenuItem>
+        <MenuItem value={20}>2</MenuItem>
+        <MenuItem value={30}>3</MenuItem>
+        <MenuItem value={40}>4</MenuItem>
+      </Select>
+    </FormControl>
+  </Box>
         <br />
         <br />
         <div className='button' style={{display: 'flex', justifyContent: 'space-around'}}>
@@ -118,21 +175,11 @@ const Product: React.FC<productImages> = ({images}) => {
       <br />
 
 
-      <div className='relatedItem'>
-      <button className='prevButton' onClick={handlePrevClick}>&#10094;</button>
-      <div className='relatedItemImagesContainer'>
-        {visibleImages.map((image, index) => (
-          <div key={index} className='relatedItemImage'>
-            <img src={image} alt={`slide ${index}`} />
-          </div>
-        ))}
-      </div>
-        
-      <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
-      </div>
+      
+    </ThemeProvider>
 
 
-    </div>
+    
   )
 }
 

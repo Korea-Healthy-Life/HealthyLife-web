@@ -2,6 +2,7 @@ import React from 'react'
 import Product from './Product';
 import ProductTap from './ProductTap';
 import "../../../style/detailProductSlider/productSlider.css"
+import RelatedItemSlider from './RelatedItemSlider';
 
 const images = [
   'https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg',
@@ -14,11 +15,14 @@ const images = [
 export default function ProductApp() {
   return (
     <div>
-      <h2 style={{marginLeft: '22%'}}>연관상품</h2>
       <br />
       <Product images={images}/>
+      <RelatedItemSlider images={images}/>
+      <br />
       <br />
       <ProductTap/>
+      <br />
+      <br />
       <br />
     </div>
   )
