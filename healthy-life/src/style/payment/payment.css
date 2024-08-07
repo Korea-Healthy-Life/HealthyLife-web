@@ -1,0 +1,130 @@
+.paymentAllContainer{
+  padding-left: 20%;
+  padding-right: 20%
+}
+
+.paymentAllContainer h1{
+  margin-left: 7%
+}
+
+.paymentAllContainer div{
+  display: flex;
+  flex-direction: row;
+  justify-Content: space-around;
+}
+
+
+
+.pay1Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+}
+
+
+.deliveryAddress{
+  background-color: #b5bbb0;
+  border: 1px solid black;
+}
+
+.deliveryAddress h2{
+  background-color: darkgray;
+}
+
+
+.productInformation{
+  background-color: #b5bbb0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+
+.productInformation h2 {
+  background-color: darkgray;
+}
+
+.productInformation p {
+  text-align: end;
+  font-size: 25px;
+}
+
+.productImage{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productImage img{
+  padding: 1%;
+  width: 30%;
+}
+
+
+
+.deliveryRequest{
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  background-color: #b5bbb0;
+  border: 4px solid gray;
+  border-radius: 20;
+}
+
+
+.cuponPoint{
+  background-color: #b5bbb0;
+  border: 1px solid black;
+}
+
+.cuponPoint h2 {
+  background-color: darkgray;
+}
+
+
+.payMethod{
+  background-color: #b5bbb0;
+  border: 4px solid gray;
+  border-radius: 20;
+}
+
+
+.methodButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.methodButton button {
+  width: 30%;
+  height: 35px;
+  border-radius: 20;
+}
+
+
+.pay2Container{
+  background-color: #b5bbb0;
+  width: 30%;
+  height: 30%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+
+.pay2Container h2 {
+  background-color: darkgray;
+}
+
+
+.pay2Container button{
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  border-radius: 20;
+  margin-bottom: 2%;
+  color: white;
+}

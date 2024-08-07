@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/componentStyle/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import { Link, Route, Routes } from 'react-router-dom';
-import Login from '../views/login/Login';
-import FindId from '../views/login/FindId';
-import FindPassword from '../views/login/FindPassword';
-import LoginNav from '../views/login/LoginNav';
+import { Link } from 'react-router-dom';
+
 
 // classname = lowcamelcase로 작성
 // css => style 폴더안에
@@ -26,6 +23,8 @@ export default function Header() {
   return (
     <header className='header'>
   
+  <div className='headerFlexBox'>
+
   <p className='button1'>
     <Link to={'/login'}>로그인|</Link>
     <Link to={'/join'}>회원가입|</Link>
@@ -35,7 +34,9 @@ export default function Header() {
       
     <br />
     
+    <div>
     <p className= 'logo'><Link to={'/'}>Logo</Link> </p>
+    </div>
           
     
 
@@ -48,6 +49,9 @@ export default function Header() {
   <Link to={'/mypage/*'}><AccountCircle /></Link>
   <Link to={'/cart'}><LocalGroceryStoreIcon /></Link>
   
+  </div>
+
+
   </div>
 
 
