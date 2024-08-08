@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../../style/currentProduct/currentProduct.css'
 
 interface currentProduct{
   id: number;
@@ -23,20 +24,28 @@ function CurrentProduct() {
   
 
   return (
-    <div>
+    <div className='currentProductContainer'>
       <h2 style={{textAlign: 'center'}}>최근본 상품</h2>
     <br />
     
 
-    <div style={{display: 'flex', flexDirection: 'column', marginLeft: '43%'}}>
+    <div className='imagesFlexBox'>
       {productImages.map((productImage)=>(
         productImage.id <= 3 ? 
-        <div key={productImage.id}>
-          <img src={`${productImage.image}`} alt="이미지" width={'25%'} height={'25%'} />
+        <div className='imageBox' key={productImage.id}>
+          <img src={`${productImage.image}`} alt="이미지"  />
+          <div className='buttonFlexBox'>
+          <p>금액: </p>
+          <div className='buttonBox'>
           <button>장바구니</button>
           <button>삭제</button>
+          </div>
+
+          </div>
+          <hr />
         </div> : ''
-      ))}    
+      ))} 
+      
     </div>
     
     </div>
