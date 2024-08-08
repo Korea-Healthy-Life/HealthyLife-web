@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 
-.allProductContainer h2 {
+.allProductContainer > h2 {
   text-align: center;
   margin: 20px 0px;
 }
 
-.allProductButtonList button {
+.allProductButtonList > button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  cursor: pointer;
 }
 
-.allProductButtonList button:hover {
-  cursor: pointer;
+.allProductButtonList > button:hover {
   border-bottom: 3px solid #D7DDD2;
 }
 
@@ -42,14 +42,14 @@
   overflow: hidden;
 }
 
-.allProductImageList img {
+.allProductImageList > img {
   list-style: none;
   width: 100%;
   display: flex;
   margin:  0 auto;
 }
 
-.allProductImageList img:hover .allProductHoverButton {
+.allProductImageList > img:hover .allProductHoverButton {
 cursor: pointer;
 }
 
@@ -77,7 +77,7 @@ cursor: pointer;
 }
 
 
-.productInform pre {
+.productInform > pre {
   padding: 5px;
   font-size: 10px;
 }

@@ -12,7 +12,7 @@ function Review() {
       <div className='titleSelctDiv'>
       <h5>전체 후기</h5>
       <div className='labelInput'>
-      <select style={{width: '55px'}} name="" id="">
+      <select className='reviewSelect' style={{width: '55px'}} name="" id="">
         <option value="">최신순</option>
         <option value="">과거순</option>
       </select>

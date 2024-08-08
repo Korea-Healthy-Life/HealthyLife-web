@@ -4,13 +4,11 @@
   font-weight: 400;
   font-style: normal;
 }
-*{
-  padding: 0;
-  margin: 0;
-  font-family: 'Pretendard-Regular';
-}
+
+
 
 .joinContainer {
+  font-family: 'Pretendard-Regular';
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -24,7 +22,7 @@
 }
 
 .joinContain {
-  width: 400px;
+  width: 450px;
   padding: 30px;
   border: 2px solid #D7DDD2;
   /* background-color: #eee; */
@@ -39,7 +37,7 @@
   align-items: center;
   margin-bottom: 10px;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .joinUl li > label {
@@ -71,7 +69,7 @@
 }
 
 .joinButton {
-  width: 400px;
+  width: 450px;
   height: 45px;
   margin: 0 auto;
   border: none;
@@ -81,7 +79,6 @@
   margin-top: 10px;
   cursor: pointer;
 }
-
 
 .li07 {
   display: flex;
@@ -93,6 +90,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 264px;
 }
 
 .li08 {
@@ -110,7 +108,7 @@
 
 .checkBtn {
   display: flex;
-  width: 231px;
+  width: 264px;
 }
 
 

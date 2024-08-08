@@ -62,16 +62,19 @@ const AllCheckinApp: React.FC  = () => {
       <li><button>달걀</button></li>
       <li><button>소고기</button></li>
     </ul>
+      <div className='itemCotianer'>
+        <ul className='checkinSelect'>
+          <li value="">조회순</li>
+          <li>|</li>
+          <li value="">가격 높은순</li>
+          <li>|</li>
+          <li value="">가격 낮은순</li>
+        </ul> 
 
-    <select name="" id="">
-      <option value="">조회순</option>
-      <option value="">가격 높은순</option>
-      <option value="">가격 낮은순</option>
-    </select> 
-
-    <div className='allProductList'>
-      <Checkin products={currentProducts} />
+        <div className='allProductList'>
+          <Checkin products={currentProducts} />
     </div>
+      </div>
     <Pagination 
     productPerPage={checkinPerPage}
     totalProducts={products.length}
