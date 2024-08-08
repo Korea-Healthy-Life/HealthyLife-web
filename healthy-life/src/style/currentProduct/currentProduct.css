@@ -1,0 +1,49 @@
+.currentProductContainer h2{
+  text-align: center;
+}
+
+
+
+
+.imagesFlexBox{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  padding-top: 4%;
+  padding-left: 4%;
+}
+
+.imageBox{
+  padding-top: 3%;
+}
+
+
+.imageBox img{
+  width: 25%;
+  height: 25%;
+}
+
+
+
+.buttonFlexBox{
+  display: flex;
+  justify-content: space-around;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+
+.buttonBox button {
+  background-color: #aaada7;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-right: 10px;
+  padding: 5px;
+
+}
+
+
+.buttonBox button:hover{
+  background-color: gray;
+}

@@ -2,6 +2,7 @@ import { Box, Button, InputAdornment, TextField } from '@mui/material';
 import React, { useState } from 'react'
 import "../../style/login/login.css"
 import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 interface findPasswordData{
   id: string | string;
@@ -93,8 +94,17 @@ function FindPassword() {
       overlayClassName= "modalOverlay"
       >
 
-      {!id || !phone ? <div>아이디 혹은 비밀번호를 잘 못 입력하셨습니다</div> : <div>재발급된 비밀번호는 1234입니다</div>}
-      <button className='closeModalButton' onClick={closeModal}> 닫힘</button>
+      {!id || !phone ?
+      <div>아이디 혹은 비밀번호를 잘 못 입력하셨습니다
+        <br />
+        <button onClick={closeModal} className='closeModalButton'>닫힘</button>
+      </div> 
+      : 
+      <div>재발급된 비밀번호는 1234입니다
+        <br />
+        <Link to={'/'} onClick={closeModal}><button className='closeModalButton'>닫힘</button></Link>
+        </div>}
+      
       </ReactModal>
 
       </Box>
