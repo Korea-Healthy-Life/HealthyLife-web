@@ -7,8 +7,8 @@ const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
   return (
       <div className="allProductImageContainer">
       {products.map(product => (
-        <div key={product.id} className='checkinContain'>
-          <img src={product.image} alt={product.title}  className='checkinImage'/>
+        <div key={product.id} className='allProductContain'>
+          <img src={product.image} alt={product.title}  className='allProductImage'/>
           <h4>{product.title}</h4>
         <div className='allProductHoverButton'>
           <button>ADD</button>

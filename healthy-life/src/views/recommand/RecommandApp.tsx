@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import RecommandList from './RecommandList';
 import Pagination from '../allproduct/j-checkin/Pagination';
 
-import '../../style/home/allProduct.css'
+import '../../style/recommandList.css'
 
 export interface ProductProps {
   id: number;
@@ -55,17 +55,21 @@ const RecommandApp: React.FC  = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='allProductContainer'>
+    <div className='recommandContainer'>
       <h2 style={{marginBottom:"50px"}}>체질추천상품</h2>
 
-      <select name="" id="">
-        <option value="">조회순</option>
-        <option value="">가격 높은순</option>
-        <option value="">가격 낮은순</option>
-      </select> 
+    <div className='recommandItemContainer'>
+      <ul className='recommandSelect'>
+          <li value="">조회순</li>
+          <li>|</li>
+          <li value="">가격 높은순</li>
+          <li>|</li>
+          <li value="">가격 낮은순</li>
+        </ul>  
 
     <div className='allProductList'>
       <RecommandList products={currentProducts} />
+    </div>
     </div>
     <Pagination 
     productPerPage={ProductPerPage}
