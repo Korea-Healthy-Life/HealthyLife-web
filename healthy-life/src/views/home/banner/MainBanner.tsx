@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../../style/home/MainBanner.css'
+import { useFetcher } from 'react-router-dom';
 
 interface MainBannerProps {
   images: string[];
@@ -7,6 +8,7 @@ interface MainBannerProps {
 
 const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef<HTMLDivElement>(null); 
 
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -15,7 +17,7 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextClick();
@@ -31,14 +33,12 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   }
   
   return (
-    <div className='bannerContainer'>
       <div className='bannerImages'>
         {visibleImages.map((image, index) => (
           <div key={index} className='bannerDiv'>
-            <img src={image} alt={`banner ${index}`} className="images"/>
+            <img src={image} alt={`banner ${index}`} className="mainBannerImages"/>
           </div>
         ))}
-      </div>
       <div className='sliderBtnDiv'>
       <button className="prevClick" onClick={handlePrevClick}>
         &#10094;
@@ -47,7 +47,7 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
         &#10095;
       </button>
       </div>
-    </div>
+      </div>
   );
 };
 

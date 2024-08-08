@@ -25,7 +25,8 @@ const Navigation:React.FC = () => {
     <div>
       <div className='mainNavBox'
       onMouseEnter={()=> handleMouseEnter('nav')}
-      onMouseLeave={handleMouseLeave}>
+      onMouseLeave={handleMouseLeave}
+      >
         <ul>
         <li
         ><Link to={'/all'}>전체상품</Link></li> 
@@ -33,19 +34,19 @@ const Navigation:React.FC = () => {
         <li><Link to='/recommand'>체질추천상품</Link></li> 
         <li><Link to='/reviews' >전체후기</Link></li> 
         <li><Link to='/calculator'>체지방계산기</Link></li> 
-        <li><Link to='/productdetail'>상품상세페이지</Link></li> 
-        <li><Link to='/payment'>결제페이지</Link></li> 
+        {/* <li><Link to='/productdetail'>상품상세페이지</Link></li> 
+        <li><Link to='/payment'>결제페이지</Link></li>  */}
         </ul>
       </div>
       <div 
       
       >
-        <ul className='subNav'>
-        <li onMouseEnter={()=> handleMouseEnter('nav')}
+        <div className='subNav'>
+        <div onMouseEnter={()=> handleMouseEnter('nav')}
         onMouseLeave={handleMouseLeave}>
         {activeMenu === 'nav' && (<SubNav />)}
-        </li>
-        </ul>
+        </div>
+        </div>
       <Routes>
         <Route path='/recommand' element={<RecommandApp />}/>
         <Route path='/calculator' element={<Bmi />}/>

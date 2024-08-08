@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, Routes} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 import  '../../style/componentStyle/SubNav.css'
 
 export default function SubNav() {
   return (
     <div> 
-      <div className='subNavBox'>
+      <div className='subNavContainer'>
         <ul>
           <li><Link to='/checkin'>닭가슴살/육류</Link></li>
           <li><Link to='/lunchbox'>도시락</Link></li>

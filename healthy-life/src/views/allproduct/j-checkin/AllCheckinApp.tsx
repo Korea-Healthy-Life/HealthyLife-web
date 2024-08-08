@@ -10,8 +10,7 @@ export interface ProductProps {
 }
 
 const products:ProductProps[] = [
-  {id: 1, title: 'Product 1',image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
-  {id: 2, title: 'Produt 2', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  
   {id: 3, title: 'Produt 3', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 4, title: 'Produt 4', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 5, title: 'Produt 5', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
@@ -63,16 +62,19 @@ const AllCheckinApp: React.FC  = () => {
       <li><button>달걀</button></li>
       <li><button>소고기</button></li>
     </ul>
+      <div className='itemCotianer'>
+        <ul className='checkinSelect'>
+          <li value="">조회순</li>
+          <li>|</li>
+          <li value="">가격 높은순</li>
+          <li>|</li>
+          <li value="">가격 낮은순</li>
+        </ul> 
 
-    <select name="" id="">
-      <option value="">조회순</option>
-      <option value="">가격 높은순</option>
-      <option value="">가격 낮은순</option>
-    </select> 
-
-    <div className='allProductList'>
-      <Checkin products={currentProducts} />
+        <div className='allProductList'>
+          <Checkin products={currentProducts} />
     </div>
+      </div>
     <Pagination 
     productPerPage={checkinPerPage}
     totalProducts={products.length}
