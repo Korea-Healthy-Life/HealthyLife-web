@@ -34,7 +34,7 @@ export default function Header() {
 
     
 
-    <div className='buttonFlexBox'>
+    <div className='buttonFlexBox1'>
     <p className='button1'>
     <Link to={'/login'}>로그인</Link>
     |

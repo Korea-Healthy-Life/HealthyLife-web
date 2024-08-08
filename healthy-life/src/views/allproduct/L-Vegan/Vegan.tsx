@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { veganProducts } from './VeganProductsLayout';
 import Pagination from './Pagination';
 import VeganProductsLayout from './VeganProductsLayout';
-import '../../../style/home/allProduct.css';
 import '../../../style/home/productList.css';
 
 
@@ -33,10 +32,10 @@ export default function Vegan() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='allProductContainer'>
+    <div className='allProductContainer1'>
       <h2>비건</h2>
 
-      <ul className='allProductButtonList'>
+      <ul className='allProductButtonList1'>
         <li><button>도시락</button></li>
         <li><button>샐러드</button></li>
         <li><button>비건 고기</button></li>
@@ -50,7 +49,7 @@ export default function Vegan() {
       </select>
 
 
-    <div className='allProductList'>
+    <div className='allProductList1'>
       <VeganProductsLayout currentProducts= {currentProducts}/>
       </div>
       
