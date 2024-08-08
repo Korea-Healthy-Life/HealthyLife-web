@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import "../../style/login/login.css"
 import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 interface findIdData{
   name: string;
   phone: number | string
@@ -95,8 +96,17 @@ function FindId() {
         overlayClassName="modalOverlay"
       >
 
-      {!name || !phone ? <div>이름 혹은 전화번호를 잘 못 입력하셨습니다</div>: <div>당신의 아이디는 healthy-life 입니다</div>}
-      <button className='closeModalButton' onClick={closeModal}>닫힘</button>
+      {!name || !phone ? 
+      <div>이름 혹은 전화번호를 잘 못 입력하셨습니다
+        <br />
+        <button className='closeModalButton' onClick={closeModal}>닫힘</button>
+      </div>
+      :
+      <div>당신의 아이디는 healthy-life 입니다
+        <br />
+        <Link to={'/login'}  onClick={closeModal}><button className='closeModalButton'>닫힘</button></Link>
+        </div>}
+      
 
       </ReactModal>
 

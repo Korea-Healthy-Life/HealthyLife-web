@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import SeaFoodProductsLayout, { seaFoodProducts } from './SeaFoodProductsLayout';
 import Pagination from './Pagination';
-import '../../../style/home/productList.css'
 import '../../../style/home/productList.css';
 
 export default function Salad() {
@@ -30,10 +29,10 @@ export default function Salad() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='allProductContainer'>
+    <div className='allProductContainer1'>
     <h2>해산물</h2>
 
-    <ul className='allProductButtonList'>
+    <ul className='allProductButtonList1'>
       <li><button>고등어</button></li>
       <li><button>연어</button></li>
       <li><button>참치</button></li>
@@ -45,7 +44,7 @@ export default function Salad() {
       <option value="">가격낮은순</option>
     </select>
 
-    <div className='allProductList'>
+    <div className='allProductList1'>
       <SeaFoodProductsLayout currentProducts= {currentProducts}/>
       </div>
       <Pagination

@@ -1,25 +1,66 @@
 .header{
-  margin-bottom: 0px;
+  margin-bottom: 1%;
+  padding-right: 0;
+  height: 110px;
 }
 
 .headerFlexBox{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  margin: 0 auto ;
+  padding-right: 0;
 }
+
+
+
+.buttonFlexBox1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 125px;
+}
+
 
 .button1 {
-  color: black;
-  margin-right: 15%;  
+  width: 183px;
+  color: gray;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 
 
+.button2 {
+  width: 193px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 0;
+}
 
-.logo {
+.button2 input {
+  border: 1px solid black;
+  
+}
+
+.logo{
+  /* margin-right: 50%; */
+
+}
+
+
+.logo p{
   font-size: 40px;
-  margin-right: 69%;
+  
+  
 }
+
 
 
 .logo :hover{
@@ -27,22 +68,7 @@
 }
 
 
-.button2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-right: 15%;
-}
 
 
 
-
-
-
-
-.button2 input {
-  
-  border: 1px solid black;
-  size: 50%;
-}
 

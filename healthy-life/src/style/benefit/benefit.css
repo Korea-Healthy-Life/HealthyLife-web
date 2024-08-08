@@ -1,0 +1,25 @@
+.benefitContainer {
+  margin-left: 20%;
+
+}
+
+
+.benefitGuide{
+  border: 1px solid gray;
+}
+
+
+
+
+.benefitGuide div {
+  display: inline;
+
+}
+
+
+
+.grade{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}

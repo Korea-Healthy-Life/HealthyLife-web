@@ -116,8 +116,16 @@ function Login() {
         className= "modalContent"
         overlayClassName="modalOverlay"
       >
-      {!id || !password ? <div>아이디 혹은 비밀번호를 입력하세요 </div> : <div>로그인되였습니다</div>}
-      <button onClick={closeModal} className='closeModalButton'>닫기</button>
+      {!id || !password ?
+      <div>
+        아이디 혹은 비밀번호를 입력하세요 
+        <br />
+        <button onClick={closeModal} className='closeModalButton'>닫기</button>
+        </div> 
+        : 
+        <div>로그인되였습니다<br /> <br />
+        <Link to={'/'} onClick={closeModal}><button className='closeModalButton'>닫기</button></Link></div>}
+  
 
       </ReactModal>
 

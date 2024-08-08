@@ -1,0 +1,21 @@
+.reservesContainer{
+  margin-top: 10%;
+  margin-left: 40%;
+  margin-right: 20%;
+  width: 30%;
+  border: 1px solid gray;
+  
+}
+
+
+
+
+.reservesContainer h3 {
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+
+.reservesContainer p {
+  text-align: start;
+}

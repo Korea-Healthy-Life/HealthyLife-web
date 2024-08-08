@@ -23,20 +23,28 @@ export default function Header() {
   return (
     <header className='header'>
   
-  <div className='headerFlexBox'>
+    <div className='headerFlexBox'>
+    
+    <div className='logo'>
+      <br />
+    <p><Link to={'/'}>Logo</Link> </p>
+    </div>
 
-  <p className='button1'>
-    <Link to={'/login'}>로그인|</Link>
-    <Link to={'/join'}>회원가입|</Link>
-    <Link to={'/mypage/orderApp'}>주문조회|</Link>
-    <Link to={'/'}>고객센터</Link>
+
+
+    
+
+    <div className='buttonFlexBox1'>
+    <p className='button1'>
+    <Link to={'/login'}>로그인</Link>
+    |
+    <Link to={'/join'}>회원가입</Link>
+    |
+    <Link to={'/mypage/orderApp'}>주문조회</Link>
   </p>
       
     <br />
-    
-    <div>
-    <p className= 'logo'><Link to={'/'}>Logo</Link> </p>
-    </div>
+        
           
     
 
@@ -44,12 +52,13 @@ export default function Header() {
   <div className='button2'>
   <form action='submit' className='productSearch'>
   <input type="text" placeholder='제품검색' value={search} onChange={InputChangeHandler}/>
-  
   </form>
   <Link to={'/mypage/*'}><AccountCircle /></Link>
   <Link to={'/cart'}><LocalGroceryStoreIcon /></Link>
-  
   </div>
+
+    </div>
+
 
 
   </div>
