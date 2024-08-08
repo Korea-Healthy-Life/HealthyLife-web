@@ -5,15 +5,15 @@ import { ProductProps } from './AllCheckinApp';
 const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
 
   return (
-      <div className="allProductImageList">
+      <div className="allProductImageContainer">
       {products.map(product => (
-        <div key={product.id}>
+        <div key={product.id} className='checkinContain'>
+          <img src={product.image} alt={product.title}  className='checkinImage'/>
+          <h4>{product.title}</h4>
         <div className='allProductHoverButton'>
           <button>ADD</button>
           <button>WISH</button>
         </div>
-          <img src={product.image} alt={product.title} />
-          <h4>{product.title}</h4>
           </div>
       ))}
       </div>

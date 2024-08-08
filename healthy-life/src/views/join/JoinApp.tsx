@@ -63,7 +63,9 @@ function JoinApp() {
           생년월일
         </label>
         <div className='birthDiv'>
-          <input type="month" className="birthMonth"/>
+          <input type="text" className="birthMonth"/>
+          <label>년</label>
+          <input type="text" className="birthMonth"/>
           <label>월</label>
           <input type="number" className="birthday" min={1} max={31}/>
           <label>일</label>
@@ -73,7 +75,7 @@ function JoinApp() {
       <label htmlFor="userEmail">
         이메일
       </label>  
-      <input type="email" id='userEmail'/>
+      <input type="email" id='userEmail' placeholder='이메일을 입력해주세요.'/>
       </li>
       </ul>
       <div className='li08'>

@@ -17,7 +17,7 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextClick();
@@ -33,11 +33,10 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
   }
   
   return (
-    <div className='bannerContainer'>
       <div className='bannerImages'>
         {visibleImages.map((image, index) => (
           <div key={index} className='bannerDiv'>
-            <img src={image} alt={`banner ${index}`} className="images"/>
+            <img src={image} alt={`banner ${index}`} className="mainBannerImages"/>
           </div>
         ))}
       <div className='sliderBtnDiv'>
@@ -49,7 +48,6 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
       </button>
       </div>
       </div>
-    </div>
   );
 };
 
