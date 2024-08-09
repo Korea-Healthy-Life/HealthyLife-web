@@ -5,10 +5,9 @@ import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import KeyboardArrowUpTwoToneIcon from '@mui/icons-material/KeyboardArrowUpTwoTone';
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
-import { Link, Route, Routes } from 'react-router-dom';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import SurveyApp from '../views/survey/SurveyApp';
+import { Link, Routes } from 'react-router-dom';
+import EggIcon from '@mui/icons-material/Egg';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Sidenavigator:React.FC = () => {
   const [activeSide, setActiveSide] = useState<string | null>(null);
@@ -45,14 +44,14 @@ const Sidenavigator:React.FC = () => {
       <button
       className='closeIcon'
       onClick={handleCloseClick}
-      ><HighlightOffIcon style={{fontSize:'30px'}}/>
+      ><CloseIcon style={{fontSize:'30px'}}/>
       </button>
       </ul>
       }
       <button 
       className='pluseIcon' 
       onClick={() => handleMouseSpreadClick('side')}
-      ><AddCircleOutlineIcon style={{fontSize: '40px'}} />
+      ><EggIcon style={{fontSize: '40px'}} />
 
       <Routes>
         

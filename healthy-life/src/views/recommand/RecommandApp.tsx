@@ -45,7 +45,7 @@ const products:ProductProps[] = [
 
 const RecommandApp: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [ProductPerPage] = useState<number>(9);
+  const [ProductPerPage] = useState<number>(16);
 
   const indexOfLastPost = currentPage * ProductPerPage;
   const indexOfFirstPost = indexOfLastPost - ProductPerPage;
@@ -55,22 +55,22 @@ const RecommandApp: React.FC  = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='recommandContainer'>
+    <div className='allProductbBox'>
       <h2 style={{marginBottom:"50px"}}>체질추천상품</h2>
 
-    <div className='recommandItemContainer'>
-      <ul className='recommandSelect'>
-          <li value="">조회순</li>
+      <div className='itemCotianer'>
+        <ul className='allProductSelectBtn'>
+          <li value=""><button>조회순</button></li>
           <li>|</li>
-          <li value="">가격 높은순</li>
+          <li value=""><button>가격 높은순</button></li>
           <li>|</li>
-          <li value="">가격 낮은순</li>
-        </ul>  
+          <li value=""><button>가격 낮은순</button></li>
+        </ul> 
 
-    <div className='allProductList'>
-      <RecommandList products={currentProducts} />
-    </div>
-    </div>
+        <div className='allProductList'>
+          <RecommandList products={currentProducts} />
+        </div>
+      </div>
     <Pagination 
     productPerPage={ProductPerPage}
     totalProducts={products.length}

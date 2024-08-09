@@ -11,14 +11,14 @@
   width: 400px;
   height: 40px;
   margin: 0 auto;
-  border: 3px solid #555f57;
+  border: 3px solid #67C6E3;
   border-radius: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .SearchAppInputDiv:active {
-  border: 3px solid #D7DDD2;
+  border: 3px solid #DFF5FF;
 }
 
 .SearchAppInput {

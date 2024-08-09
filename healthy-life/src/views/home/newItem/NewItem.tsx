@@ -23,7 +23,9 @@ export default function NewItem() {
   ];
   return (
     <div className='sliderContainer'>
+      <div className='h3Container'>
       <h3>새로운 상품</h3>
+      </div>
       <MainSlider images={images}/>
     </div>
   )

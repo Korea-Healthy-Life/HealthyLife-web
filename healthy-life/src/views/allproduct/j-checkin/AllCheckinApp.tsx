@@ -39,11 +39,42 @@ const products:ProductProps[] = [
   {id: 28, title: 'Produt 28', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 29, title: 'Produt 29', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 30, title: 'Produt 30', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 31, title: 'Produt 31', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 32, title: 'Produt 32', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 33, title: 'Produt 33', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 34, title: 'Produt 34', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 35, title: 'Produt 35', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 36, title: 'Produt 36', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 37, title: 'Produt 37', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 38, title: 'Produt 38', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 39, title: 'Produt 39', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 40, title: 'Produt 40', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 41, title: 'Produt 41', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 42, title: 'Produt 42', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 43, title: 'Produt 43', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 44, title: 'Produt 44', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 45, title: 'Produt 45', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 46, title: 'Produt 46', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 47, title: 'Produt 47', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 48, title: 'Produt 48', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 49, title: 'Produt 49', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 50, title: 'Produt 50', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 51, title: 'Produt 51', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 52, title: 'Produt 52', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 53, title: 'Produt 53', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 54, title: 'Produt 54', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 55, title: 'Produt 55', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 56, title: 'Produt 56', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 57, title: 'Produt 57', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 58, title: 'Produt 58', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 59, title: 'Produt 59', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 60, title: 'Produt 60', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 61, title: 'Produt 61', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
 ];
 
 const AllCheckinApp: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [checkinPerPage] = useState<number>(9);
+  const [checkinPerPage] = useState<number>(16);
 
   const indexOfLastPost = currentPage * checkinPerPage;
   const indexOfFirstPost = indexOfLastPost - checkinPerPage;
@@ -53,27 +84,27 @@ const AllCheckinApp: React.FC  = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='allProductContainer'>
+    <div className='allProductbBox'>
       <h2>닭가슴살/육류</h2>
       
-
+  
     <ul className='allProductButtonList'>
       <li><button>닭가슴살</button></li>
       <li><button>달걀</button></li>
       <li><button>소고기</button></li>
     </ul>
       <div className='itemCotianer'>
-        <ul className='allProductSelect'>
-          <li value="">조회순</li>
+        <ul className='allProductSelectBtn'>
+          <li value=""><button>조회순</button></li>
           <li>|</li>
-          <li value="">가격 높은순</li>
+          <li value=""><button>가격 높은순</button></li>
           <li>|</li>
-          <li value="">가격 낮은순</li>
+          <li value=""><button>가격 낮은순</button></li>
         </ul> 
 
         <div className='allProductList'>
           <Checkin products={currentProducts} />
-    </div>
+        </div>
       </div>
     <Pagination 
     productPerPage={checkinPerPage}

@@ -1,7 +1,10 @@
 .allProductContainer {
-  width: 800px;
-  margin: 0px auto;
+  width: 900px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto;
 }
 
 .allProductContainer > h2 {
@@ -9,27 +12,15 @@
   margin: 20px 0px;
 }
 
-.allProductButtonList > button {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  cursor: pointer;
-}
 
-.allProductButtonList > button:hover {
-  border-bottom: 3px solid #D7DDD2;
-}
-
-.allProductButtonList button:active {
-  color: #9b9b9b;
-}
 
 /* List */
-
-
 .allProductImageList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .allProductImageList .reviewBox {
@@ -78,12 +69,5 @@ cursor: pointer;
   z-index: 10;
 }
 
-
-.productInform > pre {
-  padding: 5px;
-  font-size: 10px;
-}
-
-.allrevieprofile {
-  color: #9b9b9b;
-}
+/* 
+.productInform > pre */
