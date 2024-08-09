@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from 'react';
 
 
 interface saladProduct{
@@ -70,15 +69,15 @@ interface saladProductFlexProps {
 
 const SaladProductsLayout: React.FC<saladProductFlexProps> = ({currentProducts})  => {
   return(
-    <div className='allProductImageList'>
+    <div className='allProductImageContainer1'>
       {currentProducts.map((saladproduct)=>(
-        <div key={saladproduct.id}>
-          <div className='allProductHoverButton'>
+        <div key={saladproduct.id} className='productContain1'>
+          <img src={saladproduct.image} alt={saladproduct.name} className='productImage1'/>
+          <h4>{saladproduct.name}</h4>
+          <div className='allProductHoverButton1'>
             <button>ADD</button>
             <button>WISH</button>
           </div>
-          <img src={saladproduct.image} alt={saladproduct.name}/>
-          <h4>{saladproduct.name}</h4>
         </div>
       ))}
 

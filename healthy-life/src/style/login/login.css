@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.loginContainer {
+  margin-top: 5%;
+}
 
 .loginForm {
   display: flex;
@@ -20,6 +23,11 @@
   text-align: center;
 }
 
+.findIdContainer {
+  margin-top: 5%;
+}
+
+
 .findIdForm {
   display: flex;
   flex-direction: column;
@@ -29,6 +37,11 @@
 
 .findPasswordContainer h1{
   text-align: center;
+}
+
+
+.findPasswordContainer {
+  margin-top: 5%;
 }
 
 .findPasswordForm{

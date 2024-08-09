@@ -39,11 +39,15 @@ export default function Salad() {
         <li><button>드레싱</button></li>
       </ul> 
 
-      <select name='' id=''>
-        <option value="">조회순</option>
-        <option value="">가격높은순</option>
-        <option value="">가격낮은순</option>
-      </select>
+    <div className='itemContainer1'>
+      <ul className='itemSelect1'>
+        <li value="">조회순</li>
+        <li>|</li>
+        <li value="">가격높은순</li>
+        <li>|</li>
+        <li value="">가격낮은순</li>
+      </ul>
+    </div>
 
     <div className='allProductList1'>
       <SaladProductsLayout currentProducts= {currentProducts}/>
