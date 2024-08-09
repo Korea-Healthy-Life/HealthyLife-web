@@ -13,9 +13,11 @@
   height: 100%;
   position: fixed;
   right: 0;
-  background-color: #D7DDD2;
+  background-color: #DFF5FF
+  ;
   z-index: 100;
   padding-top: 10px;
+  box-shadow: 0px 3px 7px #a4a3a3;
 }
 
 
@@ -28,14 +30,14 @@
 
 .pluseIcon {
   position: fixed;
-  right: 0;
-  top: 75%;
+  right: 60px;
+  top: 50%;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  color: #717a6a;
+  color: #a4a3a3;
   z-index: 19;
+  transform: scale(-10px);
 }
-
 
 .sideNav li {
   padding: 5px;
@@ -48,6 +50,9 @@
 .closeIcon:hover, .pluseIcon:hover, .sideNav li:hover {
   color: #a4a3a3;
 }
+
+
+
 .sideNav ul {
   display: flex;
   flex-direction: column;

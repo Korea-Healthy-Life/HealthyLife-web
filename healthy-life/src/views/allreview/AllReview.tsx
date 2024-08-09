@@ -7,7 +7,7 @@ import AllReviewList from './AllReviewList';
 export interface ProductProps {
   id: number;
   title: string;
-  image: string
+  image: string;
   content: string;
 }
 

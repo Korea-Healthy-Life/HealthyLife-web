@@ -16,11 +16,11 @@ const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
 
   const closeModal = () => {
     setModalIsOpen(false);
-  };
+  };  
 
   
   return (
-    <div className='allProductImage'>
+    <div className='allProductImageContainer'>
       <div className="allProductImageList">
       {products.map(product => (
         <div onClick={openModal} className='reviewBox' key={product.id}>

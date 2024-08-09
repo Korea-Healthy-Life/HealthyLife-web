@@ -5,14 +5,14 @@
   font-style: normal;
 }
 
-.allProductbBox {
+.allProductbBox2 {
   width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 10px;
   font-family: 'goorm-sans-bold';
 }
 
@@ -72,7 +72,6 @@
   border-top: 3px solid #DFF5FF;
   border-bottom: 3px solid #DFF5FF;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 

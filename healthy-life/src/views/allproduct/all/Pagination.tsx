@@ -1,4 +1,4 @@
-// import '../../../style/home/allProduct.ccs'
+import '../../../style/home/Pagination.css'
 
 export interface PaginationProps {
   productPerPage: number;
@@ -21,28 +21,28 @@ const Pagination: React.FC<PaginationProps> = ({currentPage, totalProducts,produ
     }
 
 
-  return(
-    <div className="pagination">
-    {startPage > 1 && (
-      <div className="pageItem">
-      <button onClick={() => paginate(startPage -3)} className="pageLink">
-        Previous
-      </button>
-      </div>)}
-
-      {pageNumbers.map(number => (
-        <div key={number} className={`pageItem ${number === currentPage ? 'active' : ''}`}>
-          <button onClick={() => paginate(number)} className="pageLink">{number}</button>
-        </div>
-      ))}
-
-      {endPage < totalPages && (
-        <div className="pageItem">
-          <button onClick={() => paginate(endPage + 1)} className="pageLink">Next</button>
-
-        </div>
-      )}
-    </div>
-  );
-}
+    return(
+      <div className="productPagination">
+      {startPage > 1 && (
+        <div className="productPageItem">
+        <button onClick={() => paginate(startPage -3)} className="PageLinkdirection pageLink">
+          Previous
+        </button>
+        </div>)}
+  
+        {pageNumbers.map(number => (
+          <div key={number} className={`pageItem ${number === currentPage ? 'active' : ''}`}>
+            <button onClick={() => paginate(number)} className="productPageLink pageLink">{number}</button>
+          </div>
+        ))}
+  
+        {endPage < totalPages && (
+          <div className="pageItem">
+            <button onClick={() => paginate(endPage + 1)} className="PageLinkdirection pageLink">Next</button>
+  
+          </div>
+        )}
+      </div>
+    );
+  }
 export default Pagination;

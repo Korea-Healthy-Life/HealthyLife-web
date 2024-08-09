@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Pagination from './Pagination';
 
-import '../../../style/home/allProduct.css'
+import '../../../style/home/allProductMain.css'
+import Pagination from './Pagination';
 import AllProductList from './AllProductList';
 
 export interface ProductProps {
@@ -11,8 +11,7 @@ export interface ProductProps {
 }
 
 const products:ProductProps[] = [
-  {id: 1, title: 'Product 1',image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
-  {id: 2, title: 'Produt 2', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  
   {id: 3, title: 'Produt 3', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 4, title: 'Produt 4', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 5, title: 'Produt 5', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
@@ -41,34 +40,69 @@ const products:ProductProps[] = [
   {id: 28, title: 'Produt 28', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 29, title: 'Produt 29', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
   {id: 30, title: 'Produt 30', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 31, title: 'Produt 31', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 32, title: 'Produt 32', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 33, title: 'Produt 33', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 34, title: 'Produt 34', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 35, title: 'Produt 35', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 36, title: 'Produt 36', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 37, title: 'Produt 37', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 38, title: 'Produt 38', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 39, title: 'Produt 39', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 40, title: 'Produt 40', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 41, title: 'Produt 41', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 42, title: 'Produt 42', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 43, title: 'Produt 43', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 44, title: 'Produt 44', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 45, title: 'Produt 45', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 46, title: 'Produt 46', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 47, title: 'Produt 47', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 48, title: 'Produt 48', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 49, title: 'Produt 49', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 50, title: 'Produt 50', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 51, title: 'Produt 51', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 52, title: 'Produt 52', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 53, title: 'Produt 53', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 54, title: 'Produt 54', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 55, title: 'Produt 55', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 56, title: 'Produt 56', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 57, title: 'Produt 57', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 58, title: 'Produt 58', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 59, title: 'Produt 59', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 60, title: 'Produt 60', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
+  {id: 61, title: 'Produt 61', image: 'https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg'},
 ];
 
-const AllProduct: React.FC  = () => {
+const AllCheckinApp: React.FC  = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [ProductPerPage] = useState<number>(9);
+  const [checkinPerPage] = useState<number>(16);
 
-  const indexOfLastPost = currentPage * ProductPerPage;
-  const indexOfFirstPost = indexOfLastPost - ProductPerPage;
+  const indexOfLastPost = currentPage * checkinPerPage;
+  const indexOfFirstPost = indexOfLastPost - checkinPerPage;
   const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
 
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className='allProductContainer'>
-      <h2 style={{marginBottom:"50px"}}>전체상품</h2>
+    <div className='allProductbBox2'>
+      <h2 className='h2tag'>전체 상품</h2>
+    
+      <div className='itemCotianer'>
+        <ul className='allProductSelectBtn'>
+          <li value=""><button>조회순</button></li>
+          <li>|</li>
+          <li value=""><button>가격 높은순</button></li>
+          <li>|</li>
+          <li value=""><button>가격 낮은순</button></li>
+        </ul> 
 
-      <select name="" id="">
-        <option value="">조회순</option>
-        <option value="">가격 높은순</option>
-        <option value="">가격 낮은순</option>
-      </select> 
-
-    <div className='allProductList'>
-      <AllProductList products={currentProducts} />
-    </div>
+        <div className='allProductList'>
+          <AllProductList products={currentProducts} />
+        </div>
+      </div>
     <Pagination 
-    productPerPage={ProductPerPage}
+    productPerPage={checkinPerPage}
     totalProducts={products.length}
     paginate={paginate}
     currentPage={currentPage}
@@ -76,11 +110,13 @@ const AllProduct: React.FC  = () => {
     </div>
   )
 }
-export default AllProduct;
+export default AllCheckinApp;
 
 export interface PaginationProps {
-  ProductPerPage: number;
+  checkinPerPage: number;
   totalProducts: number;
   paginate: (pageNumber: number) => void;
   currentPage: number;
 }
+
+

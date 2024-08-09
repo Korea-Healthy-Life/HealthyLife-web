@@ -10,7 +10,8 @@ const Checkin:React.FC<{ products: ProductProps[]}> = ({products})  => {
         <div key={product.id} className='allProductContain'>
           <img src={product.image} alt={product.title}  className='allProductImage'/>
           <h4>{product.title}</h4>
-        <div className='allProductHoverButton'>
+          <p>price: 30000만원</p>
+        <div className='allProductHoverBtn'>
           <button>ADD</button>
           <button>WISH</button>
         </div>

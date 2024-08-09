@@ -1,5 +1,3 @@
-
-
 .bannerDiv .mainBannerImages {
   display: flex;
   align-items: center;
@@ -9,29 +7,48 @@
 }
 
 .sliderBtnDiv {
-  background-color: rgba(215, 221, 210, 0.5);
+  background-color: rgba(118, 118, 118, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 60px;
-  height: 20px;
+  width: 80px;
+  height: 15px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
   z-index: 3;
 }
 
-.prevClick, .nextClick {
+.prevClick, .nextClick, .centerBar {
   display: flex;
   align-items: center;
   cursor: pointer;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   z-index: 2;
 }
 
+.emptyBox {
+  width: 870px;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -40px;
+}
 
 
 
 
+@media (max-width: 500px)and(max-width: 700px) {
+  .emptyBox{
+    width: 400px;
+  }
+}
+@media (max-width: 700px) {
+  .emptyBox{
+    width: 450px;
+  }
+}
