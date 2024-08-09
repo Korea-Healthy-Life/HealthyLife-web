@@ -33,9 +33,9 @@ const TodayItem: React.FC<todayItemSliderProps> =({images}) => {
         ))}
       </div>
 
-      
+        <div>
         <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
-      
+        </div>
       
     </div>
   )

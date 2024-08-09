@@ -15,7 +15,7 @@ export default function BestItem(images: bestItemSliderProps )  {
 
 
     const handleNextClick = () => {
-      setCurrentIndex((prevIndex) => (prevIndex === images.images.length -1 ? 0: prevIndex +1));
+      setCurrentIndex((prevIndex) => (prevIndex === images.images.length -1 ? 0: prevIndex +1 ));
     }
 
 
@@ -36,9 +36,9 @@ export default function BestItem(images: bestItemSliderProps )  {
           </div>
         ))}
       </div>
-      
+      <div>
         <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
-      
+      </div>      
     </div>
   )
 }

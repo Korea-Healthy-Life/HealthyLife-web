@@ -102,7 +102,7 @@ function FindPassword() {
       : 
       <div>재발급된 비밀번호는 1234입니다
         <br />
-        <Link to={'/'} onClick={closeModal}><button className='closeModalButton'>닫힘</button></Link>
+        <Link to={'/login'} onClick={closeModal}><button className='closeModalButton'>닫힘</button></Link>
         </div>}
       
       </ReactModal>

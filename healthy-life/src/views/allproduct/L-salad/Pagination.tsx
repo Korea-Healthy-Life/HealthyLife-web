@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 interface paginationProps {
   currentPage: number;
   totalProducts: number;
