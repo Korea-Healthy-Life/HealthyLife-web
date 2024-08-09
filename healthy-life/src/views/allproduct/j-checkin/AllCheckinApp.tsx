@@ -63,7 +63,7 @@ const AllCheckinApp: React.FC  = () => {
       <li><button>소고기</button></li>
     </ul>
       <div className='itemCotianer'>
-        <ul className='checkinSelect'>
+        <ul className='allProductSelect'>
           <li value="">조회순</li>
           <li>|</li>
           <li value="">가격 높은순</li>
