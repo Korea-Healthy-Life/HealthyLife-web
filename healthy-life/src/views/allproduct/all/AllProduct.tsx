@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import '../../../style/home/allProductMain.css'
+import '../../../style/home/allProduct.css'
 import Pagination from './Pagination';
 import AllProductList from './AllProductList';
 
