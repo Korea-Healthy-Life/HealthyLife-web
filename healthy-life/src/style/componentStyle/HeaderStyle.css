@@ -2,6 +2,7 @@
   margin-bottom: 1%;
   padding-right: 0;
   height: 110px;
+  /* #C6DFAA */
 }
 
 .headerFlexBox{
@@ -46,7 +47,10 @@
 
 .button2 input {
   border: 1px solid black;
-  
+  height: 20px;
+  border-radius: 20px;
+  padding: 6px;
+  padding-left: 6px;
 }
 
 .logo{

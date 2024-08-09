@@ -13,15 +13,21 @@ function Benefit() {
 
   return (
     <div className='benefitContainer'>
+      <br />
+      <br />
       <h3>등급별 혜택 안내</h3>
+      <br />
       <br />
       
 
     <div className='benefitGuide'>
 
-      <div>
+      <div className='gradeContainer'>
         <br />
+
+        <div className='Icon'>
         <LooksOneIcon/>
+        </div>
 
         <div className='grade'>
         <p>자격조건 200만원 이상</p>
@@ -32,9 +38,13 @@ function Benefit() {
       <br />
       <hr />
 
-      <div>
+      <div className='gradeContainer'>
         <br />
+        
+        <div className='Icon'>
         <LooksTwoIcon/>
+        </div>
+        
 
         <div className='grade'>
         <p>자격조건: 100만원 이상</p>
@@ -45,9 +55,12 @@ function Benefit() {
       <br />
       <hr />
 
-      <div>
+      <div className='gradeContainer'>
         <br />
+
+        <div className='Icon'>
         <Looks3Icon/>
+        </div>
 
         <div className='grade'>
         <p>자격조건: 60만원 이상</p>
@@ -59,9 +72,12 @@ function Benefit() {
       <hr />
 
 
-      <div>
+      <div className='gradeContainer'>
         <br />
+
+        <div className='Icon'>
         <Looks4Icon/>
+        </div>
         
         <div className='grade'>
         <p>40만원이상</p>
@@ -73,9 +89,12 @@ function Benefit() {
       <hr />
 
 
-      <div>
+      <div className='gradeContainer'>
         <br />
+
+        <div className='Icon'>
         <Looks5Icon/>
+        </div>
         
         <div className='grade'>
         <p>20만원 이상</p>
@@ -87,9 +106,12 @@ function Benefit() {
       <hr />
 
 
-        <div>
+        <div className='gradeContainer'>
           <br />
+
+          <div className='Icon'>
           <Looks6Icon/>
+          </div>
           
           <div className='grade'>
           <p>20만원 미만</p>
