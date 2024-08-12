@@ -34,8 +34,8 @@ const Navigation:React.FC = () => {
         <li><Link to='/recommand'>체질추천상품</Link></li> 
         <li><Link to='/reviews' >전체후기</Link></li> 
         <li><Link to='/calculator'>체지방계산기</Link></li> 
-        {/* <li><Link to='/productdetail'>상품상세페이지</Link></li> 
-        <li><Link to='/payment'>결제페이지</Link></li>  */}
+        <li><Link to='/productdetail'>상품상세페이지</Link></li> 
+        <li><Link to='/payment'>결제페이지</Link></li> 
         </ul>
       </div>
       <div 

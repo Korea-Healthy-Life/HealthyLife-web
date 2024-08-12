@@ -106,7 +106,7 @@ function Login() {
             name='password'
           />
         </FormControl>
-      <Button variant="contained" onClick={loginModalHandler}>로그인</Button>
+      <button className='loginButton' onClick={loginModalHandler}>로그인</button>
       </form>
     
       <div className='modalContainer'>

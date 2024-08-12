@@ -83,7 +83,7 @@ function FindPassword() {
       name='phone'
       onChange={inputHandler}
       />
-      <Button variant='contained' onClick={findPasswordModalHandler}>비밀번호 발급 버튼</Button>
+      <button className='loginButton' onClick={findPasswordModalHandler}>발급받기</button>
 
       </form>
 

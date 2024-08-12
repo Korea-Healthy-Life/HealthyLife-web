@@ -25,6 +25,8 @@ function CurrentProduct() {
 
   return (
     <div className='currentProductContainer'>
+      <br />
+      <br />
       <h2 style={{textAlign: 'center'}}>최근본 상품</h2>
     <br />
     

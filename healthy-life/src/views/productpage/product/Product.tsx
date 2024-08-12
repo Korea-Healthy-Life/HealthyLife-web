@@ -37,14 +37,14 @@ const Product: React.FC<productImages> = ({images}) => {
 
   return (
     <div>
-      <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginLeft: '10%', marginRight: '10%'}}>
+      <div className='productDetailPage'>
         
-        <div className='productImage' style={{padding: '0px', width: '75%'}}>
-          <img src='https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg' alt="상세페이지 상품 이미지" width={'50%'}  style={{margin: '0px'}} />
+        <div className='productImage'>
+          <img src='https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg' alt="상세페이지 상품 이미지"/>
         </div>
 
 
-        <div className='productData' style={{margin: '0', width: '24%', display: 'flex', flexDirection: 'column'}}>
+        <div className='productData'>
           <h3>상품명</h3>        
         <br />
         <br />
@@ -56,14 +56,14 @@ const Product: React.FC<productImages> = ({images}) => {
         <br />
         <br />
         <br />
-        <select name="productOption" id="option" style={{width: '100%' }}>
+        <select name="productOption" id="option" >
           <option value="선택">옵션</option>
           <option value="1">1</option>
           <option value="2">2</option>
         </select>
         <br />
         <br />
-        <div className='button' style={{display: 'flex', justifyContent: 'space-around'}}>
+        <div className='productDetailbutton'>
           <button onClick={openModal} >장바구니</button>
           <Link to={'/myPage/wishlist'}><button >WISH</button></Link>
           <Link to={'/payment'}><button >주문</button></Link>
@@ -104,7 +104,7 @@ const Product: React.FC<productImages> = ({images}) => {
           <br />
           <br />
           
-          <div className='modalbuttonContainer' style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+          <div className='modalButtonContainer'>
           <Link to={'/payment'}> <button>바로주문</button></Link>
           <Link to={'/cart'}><button>장바구니 이동</button></Link>
           <button onClick={closeModal}>쇼핑계속하기</button>

@@ -81,6 +81,7 @@ export default function Bmi(){
 
   return (
     <div>
+      <button></button>
       <Box>
 
       <form className='bmiCalculator'>
@@ -110,8 +111,8 @@ export default function Bmi(){
           name='height'
           onChange={inputHandler}
         />
-        
-        <Button variant='outlined' onClick={bmiCalculator}>Bmi 확인하기</Button>
+        <br />
+        <button className='bmiButton' onClick={bmiCalculator}>결과 확인</button>
         <br />
         <br />
       </form>
