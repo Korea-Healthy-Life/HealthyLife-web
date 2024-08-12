@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../../style/QnA.css'
-import { Pagination } from '@mui/material';
 import ModalExample from './modal/ModalExample';
+import axios from 'axios';
+import Pagination from './Pagination';
 
-function QNA() {
+
+// interface PostProps {
+//   id: number;
+//   content: string;
+// }
+
+
+const QNA = () => {
+  // const [posts, setPosts] = useState<PostProps[]>([]);
+  // const [loading, setLoading] = useState<boolean>(false);
+  // const [currentPage, setCurrentPage] = useState<number>(1);
+  // const [postsPerPage] = useState<number>(5);
+
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     setLoading(true);
+  //     const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  //     setPosts(response.data);
+  //     setLoading(false);
+  //   }
+
+  //   fetchPosts();
+  // }, []);
+
+  // const indexOfLastPost = currentPage * postsPerPage;
+  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // // Change page
+  // const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+
   return (
     <div className='productQnaContainer'>
     <div className='titleModalBtnDiv'>
@@ -25,9 +57,14 @@ function QNA() {
       </ul>
     </div>
         <div className='pagination'>
-          <Pagination />
-        </div>
-  </div>
+        {/* <Pagination 
+    productPerPage={postsPerPage}
+    totalProducts={posts.length}
+    paginate={paginate}
+    currentPage={currentPage}
+    /> */}
+    </div>
+    </div>
   )
   }
 export default QNA

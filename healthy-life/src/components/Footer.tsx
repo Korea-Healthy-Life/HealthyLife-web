@@ -25,7 +25,7 @@ export default function Footer() {
         </ul>
       </div>
     </div>
-    <p>COPYRIGHT (C) 2024 Healthy-Life ALL RIGHTS REVERVED /</p>
+    <p className='copyRight'>COPYRIGHT (C) 2024 Healthy-Life ALL RIGHTS REVERVED /</p>
     </div>
     </div>
   )
