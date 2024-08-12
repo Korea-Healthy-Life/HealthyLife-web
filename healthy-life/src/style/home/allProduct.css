@@ -4,6 +4,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 
 .allProductbBox2 {
   width: 1000px;
@@ -25,6 +31,7 @@
   display: flex;
   justify-content: space-around;
   width: 300px;
+  height: 20px;
   flex-direction: row;
   margin: 0 auto;
   list-style: none;
@@ -41,7 +48,7 @@
 }
 
 .allProductButtonList button:active {
-  color: #67C6E3;
+  color: #1478FF;
 }
 
 .allProductSelectBtn {
@@ -58,6 +65,13 @@
 .allProductSelectBtn li > button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font-family: 'Pretendard-Regular';
+  font-size: 1rem;
+}
+
+.allProductSelectBtn li > button:active {
+  color: #1478FF;
 }
 
 .itemCotianer {
@@ -68,12 +82,16 @@
 }
 
 /* List */
-.allProductImageContainer {
+.reviewImageContainer {
   border-top: 3px solid #DFF5FF;
   border-bottom: 3px solid #DFF5FF;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.allProductImageList {
+  margin: 10px auto;
 }
 
 

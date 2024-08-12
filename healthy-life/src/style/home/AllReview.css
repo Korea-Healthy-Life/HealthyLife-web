@@ -1,10 +1,11 @@
 .allProductContainer {
-  width: 900px;
+  width: 1000px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
+  margin-top: 60px;
 }
 
 .allProductContainer > h2 {
@@ -12,27 +13,45 @@
   margin: 20px 0px;
 }
 
+.reviewP {
+  font-size: 11px;
+}
 
+.productInform {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
 
 /* List */
+.reviewImageContainer{
+  display: flex;
+  align-items: center;
+  border-top: 3px solid #DFF5FF;
+  border-bottom: 3px solid #DFF5FF;
+}
 .allProductImageList {
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 1000px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
-.allProductImageList .reviewBox {
+.allProductImageList > .reviewBox {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 200px;
+  width: 23%;
+  height: 250px;
   border: 1px solid #eee;
   border-radius: 5px;
-  margin-bottom: 30px;
   overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .allProductImageList > img {
@@ -42,8 +61,15 @@
   margin:  0 auto;
 }
 
-.allProductImageList > img:hover .allProductHoverButton {
-cursor: pointer;
+.productInform {
+  padding: 5px 10px;
+
+}
+
+.reveiwInfoDiv {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .allProductImageList h4 {
@@ -69,5 +95,35 @@ cursor: pointer;
   z-index: 10;
 }
 
-/* 
-.productInform > pre */
+.reveiwModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:  0 auto;
+}
+
+.modalImage {
+  width: 300px;
+}
+
+.reviewModalInfpo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.countInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.closeReviewModalBtn {
+  width: 150px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #67C6E3;
+  border: none;
+  color: white;
+}

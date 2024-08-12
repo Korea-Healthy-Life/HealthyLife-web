@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'goorm-sans-bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .modal-container {
     text-align: center;
     margin-top: 50px;
@@ -31,14 +38,20 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .close-modal-button {
+  .openModalBtn {
     margin-top: 20px;
     padding: 10px 15px;
     font-size: 10px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #D7DDD2;
+    background-color: #67C6E3;
+    color: #fff;
+    font-family: 'goorm-sans-bold';
+  }
+
+  .openModalBtn:hover {
+    background-color: #1478FF;
   }
 
   .commandModalBtn {
@@ -48,24 +61,37 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #D7DDD2;
+    background-color: #67C6E3;
   }
 
+  .qnaModalTotal > h2 {
+    margin-top: 20px;
+  }
+  
+  textarea {
+    width: 75%;
+    height: 180px;
+    resize: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
   .modalBtn {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
   }
   
-  textarea {
-    width: 80%;
-    height: 200px;
-    resize: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    padding: 20px;
+  .commandModalBtn {
+    font-family: 'goorm-sans-bold';
+    color: white;
+    width: 100px;
+  }
+
+  .commandModalBtn:hover {
+    background-color: #1478FF;
   }
 
   .qnaModalTotal {
@@ -74,12 +100,21 @@
     align-items: center;
   }
 
-  .footer {
-    margin-top: 20px;
-    text-align: left;
-    background-color: #D7DDD2;
+  .qnaFooter  {
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #dff5ff98;
+    margin-top: 30px;
+    border-radius: 5px;
   }
 
-  .footer > p {
-    text-align: left;
+  .qnaFooter > p {
+    font-size: 10px;
+    font-family: 'goorm-sans-bold';
+    font-weight: 100;
+    color: rgb(122, 122, 122);
+  }
+  
+  .qnaFooter > h5 {
+    color: rgb(122, 122, 122);
   }

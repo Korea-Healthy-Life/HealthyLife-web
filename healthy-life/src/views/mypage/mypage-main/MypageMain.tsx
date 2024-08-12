@@ -6,15 +6,12 @@ import CardMembershipIcon from '@mui/icons-material/CardMembership';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import MypageNav from './MypageNav';
 
 
 
 function MypageMain() {
   return (
-    <div >
-    
-    <div><MypageNav /></div>
+    <div>
 
     <div className='myPageConatiner'>
     <div className='mypageAllContainer'>
