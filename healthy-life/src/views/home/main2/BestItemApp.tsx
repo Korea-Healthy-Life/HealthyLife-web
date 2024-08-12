@@ -13,7 +13,9 @@ const images = ['https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_128
 export default function BestItemApp() {
   return (
     <div className='bestItem'>
+      <div className='h3bestItem'>
       <h3>Best.Item</h3>
+      </div>
       <BestItem images={images} />
     </div>
   )

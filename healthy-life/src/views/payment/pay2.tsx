@@ -5,19 +5,19 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 function Pay2() {
   return (
-    <div className='pay2Container' style={{width: '30%' ,height: '30%', marginRight: '4%', display: 'flex', flexDirection: 'column', border: '1px solid gray', paddingBottom: '0'}}>
-          <h3 style={{marginTop: '4%', marginLeft: '4%'}}>결제 정보</h3>
+    <div className='pay2Container'>
+          <h3>결제 정보</h3>
           <br />
-          <span style={{color: 'black', fontSize: '17px', marginTop: '4%', marginLeft: '4%'}}>상품금액</span>
-          <br />
-          <br />
-          <span style={{color: 'black', fontSize: '17px', marginTop: '4%', marginLeft: '4%'}}>할인 금액</span>
+          <span>상품금액</span>
           <br />
           <br />
-          <span style={{color: 'black', fontSize: '17px', marginTop: '4%', marginLeft: '4%'}}>배송비</span>
+          <span>할인 금액</span>
           <br />
           <br />
-          <span style={{color: 'black', fontSize: '17px', marginTop: '4%', marginLeft: '4%'}}>총 결제 금액</span>
+          <span>배송비</span>
+          <br />
+          <br />
+          <span>총 결제 금액</span>
           <br />
           <br />
           <div>
@@ -26,7 +26,7 @@ function Pay2() {
           </div>
           <br />
           <br />
-          <button style={{textAlign: 'center', backgroundColor: 'black', width: '100%', height: '40px', margin: '0', color: 'white'}}>
+          <button>
             결제하기
           </button>
         </div>

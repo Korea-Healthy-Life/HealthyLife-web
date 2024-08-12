@@ -29,13 +29,13 @@ const Banner: React.FC<bannerImage> = ({bannerImages})=> {
     <div className='bannerSlider'>
 
 
-      <button className='bannerPrevButton' onClick={handlePrevClick}>&#10094;</button>
+      <button className='bannerPrevButton1' onClick={handlePrevClick}>&#10094;</button>
       {visibleImages.map((image, index) => (
         <img className='bannerImagesljw' key={index} src={image} alt={`slide ${index}`}/>
       ))}
 
       
-      <button className='bannerNextButton' onClick={handleNextClick}>&#10095;</button>
+      <button className='bannerNextButton1' onClick={handleNextClick}>&#10095;</button>
   
 
     </div>

@@ -15,7 +15,9 @@ const images = [
 export default function TodayItemApp() {
   return (
     <div className='todayItem'>
+      <div className='h3TodayItem'>
       <h3>오늘의 아이템</h3>
+      </div>
       <TodayItem images={images}/>
     </div>
   )

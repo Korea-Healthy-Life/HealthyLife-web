@@ -86,7 +86,7 @@ function FindId() {
       name='phone'
       onChange={inputHandler}
       />
-      <Button variant='contained' onClick={findIdModalHandler}>아이디 찾기 버튼</Button>
+      <button className='loginButton' onClick={findIdModalHandler}>아이디 찾기</button>
       </form>
 
       <ReactModal

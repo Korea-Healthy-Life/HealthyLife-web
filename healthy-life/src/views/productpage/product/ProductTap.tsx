@@ -4,20 +4,20 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
 export default function ProductTap() {
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState('');
   const [rendering, setRendering] = React.useState('')
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
 
-    if(value === "one"){
+    if(value === "explain item"){
     setRendering( '상품설명페이지입니다.')
       
-    } else if (value === 'two'){ 
+    } else if (value === 'reveiw item'){ 
       setRendering('상품후기 페이지입니다')
 
-    } else if (value === 'three'){
-      setRendering('QNA페이지입니다.')
+    } else if (value === 'QnA'){
+      setRendering('QnA페이지입니다.')
     }
   };
 
@@ -30,9 +30,9 @@ export default function ProductTap() {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >
-        <Tab value="one" label="Item One" />
-        <Tab value="two" label="Item Two" />
-        <Tab value="three" label="Item Three" />
+        <Tab value="explain item" label="explain item" />
+        <Tab value="reveiw item" label="reveiw item" />
+        <Tab value="QnA" label="QnA" />
       </Tabs>
       <div>{rendering}</div>
     </Box>

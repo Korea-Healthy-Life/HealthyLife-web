@@ -18,13 +18,12 @@ const TodayItem: React.FC<todayItemSliderProps> =({images}) => {
   }
 
 
-  const visibleImages = images.slice(currentIndex, currentIndex + 4);
-  if(visibleImages.length < 4){
-    visibleImages.push(...images.slice(0, 4 -visibleImages.length));
+  const visibleImages = images.slice(currentIndex, currentIndex + 3);
+  if(visibleImages.length < 3){
+    visibleImages.push(...images.slice(0, 3 -visibleImages.length));
   }
   return (
     <div className='todayItemSlider'>
-        <button className='prevButton' onClick={handlePrevClick}>&#10094;</button>
       <div className='todayItemImagesContainer'>
         {visibleImages.map((image, index) => (
           <div key={index} className='todayItemImage'>
@@ -32,9 +31,9 @@ const TodayItem: React.FC<todayItemSliderProps> =({images}) => {
           </div>
         ))}
       </div>
-
-        <div>
-        <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
+        <div className='todayItemButtonContainer'>
+        <button className='prevButton1' onClick={handlePrevClick}>&#10094;</button>
+        <button className='nextButton1' onClick={handleNextClick}>&#10095;</button>
         </div>
       
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Pay1 from './pay1';
 import Pay2 from './pay2';
-
+import '../../style/payment/payment.css';
 
 
 
@@ -10,13 +10,13 @@ import Pay2 from './pay2';
 
 function Payment() {
   return (
-    <div className='paymentAllContainer' style={{paddingLeft: '20%' , paddingRight: '20%'}}>
+    <div className='allPaymentContainer'>
       <br />
       <br />
       <br />
-      <h1 style={{marginLeft:'7%'}}>주문 결제</h1>
+      <h1>주문 결제</h1>
       <br />
-      <div style={{display: 'flex', justifyContent: 'space-around'}}>
+      <div className='paymentContainer'>
       <Pay1 />
       <Pay2 />
       </div>

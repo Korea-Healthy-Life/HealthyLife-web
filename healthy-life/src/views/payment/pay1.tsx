@@ -47,11 +47,11 @@ function Pay1() {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className='pay1Container' style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '40%'}}>
+    <div className='pay1Container'>
 
 
-      <div className='deliveryAddress' style={{border: '1px solid gray'}}>
-        <h3 style={{marginLeft: '4%', marginTop: '4%'}}>배송지</h3>
+      <div className='deliveryAddress'>
+        <h3>배송지</h3>
       
       
       <Box
@@ -75,18 +75,18 @@ function Pay1() {
 
 
         <br />
-        <div className='productInformationContainer' style={{border: '1px solid gray', paddingTop: '4%', paddingLeft: '4%'}}>
+        <div className='productInformationContainer'>
           <h3>상품정보</h3>
           <br />
-        <div className='productInformation' style={{display: 'flex'}}>
+        <div className='productInformation'>
           <br />
         <br />
-        <img style={{width: '35%', height: '120px', borderBlockColor: 'gray', display: 'inline'}} src="https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg" alt="상품정보이미지1" />
-        <div className='productImage' style={{display: 'flex', flexDirection: 'column'}}>
-        <p style={{color: 'black', fontSize: '16px'}}>[냉동]데일리 블루베리 세트</p>
-        <p style={{color: 'gray', fontSize: '16px'}}>[옵션: 1상자(2kg)]</p>
-        <p style={{color: 'gray', fontSize: '16px'}}>수량:2개</p>
-        <p style={{fontSize: '25px'}}>45000원</p>
+        <img src="https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg" alt="상품정보이미지1" />
+        <div className='productImage'>
+        <p className='dailySet'>[냉동]데일리 블루베리 세트</p>
+        <p className='dailyOption'>[옵션: 1상자(2kg)]</p>
+        <p className='dailyMany'>수량:2개</p>
+        <p className='dailyPrice'>45000원</p>
           </div>
         </div>
         </div>
@@ -126,16 +126,16 @@ function Pay1() {
 
         <br />
 
-        <div className='cuptonPoint' style={{border: '1px solid gray', paddingTop: '4%', paddingLeft: '4%'}}>
+        <div className='cuponPoint'>
           <h3>쿠폰 / 포인트</h3>
           <br />
           <label id='usePoint'>포인트사용</label>
-            <input type="text" style={{height: '14%'}} /> 
+            <input type="text"/> 
             <button>전액사용</button>
             <br />
 
             <label id='useCupon'>쿠폰 사용</label>
-            <input type="text" style={{height: '14%'}} />
+            <input type="text" />
             <button>쿠폰사용</button>
         </div>
 
@@ -149,13 +149,13 @@ function Pay1() {
 
 
 
-        <div style={{border: '4px solid gray', borderRadius: 20, paddingTop: '4%', paddingLeft: '4%'}}>
+        <div className='paymentMethod'>
           <h3>결제방법 선택</h3>
           <br />
 
-        <div  style={{display: 'flex', justifyContent: 'space-around'}}>
-        <button style={{width: '30%', height: '35px', borderRadius: 20}}>카드결제</button> 
-        <button style={{width: '30%', height: '35px', borderRadius: 20}}>간편결제</button> 
+        <div className='MethodButtonBox'>
+        <button>카드결제</button> 
+        <button>간편결제</button> 
         </div>
 
         </div>
