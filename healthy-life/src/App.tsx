@@ -17,7 +17,6 @@ import Vegan from './views/allproduct/L-Vegan/Vegan';
 import LowerSugar from './views/allproduct/j-lowersugar/LowerSugar';
 import SeaFood from './views/allproduct/L-SeaFood.tsx/SeaFood';
 import Nuts from './views/allproduct/j-nuts/Nuts';
-import MypageMain from './views/mypage/mypage-main/MypageMain';
 import OrderApp from './views/mypage/order/OrderApp';
 import ReviewApp from './views/mypage/review/ReviewApp';
 import WishApp from './views/mypage/wish/WishApp';
@@ -39,6 +38,8 @@ import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
 import NonMember from './views/nonMemberOrder/NonMember';
 import Payment from './views/payment/Payment';
+import MyPage from './views/mypage/MyPage';
+import BestItem from './views/best/bestItem';
 
 function App() {
   return (
@@ -73,7 +74,7 @@ function App() {
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
 
-        <Route path='/mypage/*' element={<MypageMain />}/> 
+        <Route path='/mypage/*' element={<MyPage />}/> 
         <Route path='/mypage/order' element={<OrderApp />}/> 
         <Route path='/mypage/myreview' element={<ReviewApp />}/>
         <Route path='/mypage/wishlist' element={<WishApp />}/>
@@ -93,6 +94,7 @@ function App() {
         <Route path='/reviews' element={<AllReview />}/>
         <Route path='/payment' element={<Payment />}/>
         <Route path='/nonMember' element={<NonMember />}/>
+        <Route path='/bestitem' element={<BestItem />}/>
       </Routes> 
     <Footer />
     </>
