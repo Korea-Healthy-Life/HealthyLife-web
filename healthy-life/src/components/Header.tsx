@@ -53,8 +53,8 @@ export default function Header() {
   <form action='submit' className='productSearch'>
   <input type="text" placeholder='제품검색' value={search} onChange={InputChangeHandler}/>
   </form>
-  <Link to={'/mypage/*'}><AccountCircle /></Link>
-  <Link to={'/cart'}><LocalGroceryStoreIcon /></Link>
+  <Link className='button2Link' to={'/mypage/*'}><AccountCircle /></Link>
+  <Link className='button2Link' to={'/cart'}><LocalGroceryStoreIcon /></Link>
   </div>
 
     </div>

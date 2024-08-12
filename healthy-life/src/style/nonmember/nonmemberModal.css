@@ -5,11 +5,16 @@
   width: 100px;
   margin-left: 47%;
   margin-right: 47%;
-  border-radius: 20px;
+  border: none;
+  border-radius: 5px;
   background-color: #67C6E3;
   color: white;
 }
 
+
+.openModalButton:hover{
+  background-color: #1478FF;
+}
 
 .modalOverlay {
   position: fixed;
