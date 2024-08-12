@@ -19,25 +19,27 @@ export default function BestItem(images: bestItemSliderProps )  {
     }
 
 
-    const visibleImages = images.images.slice(currentIndex, currentIndex + 4);
-    if(visibleImages.length < 4) {
-      visibleImages.push(...images.images.slice(0, 4 - visibleImages.length));
+    const visibleImages = images.images.slice(currentIndex, currentIndex + 3);
+    if(visibleImages.length < 3) {
+      visibleImages.push(...images.images.slice(0, 3 - visibleImages.length));
     }
 
 
   return (
     <div className='bestItemSlider'>
-      <button className='prevButton' onClick={handlePrevClick}>&#10094;</button>
 
       <div className='bestItemImagesContainer'>
         {visibleImages.map((image, index) => (
           <div key={index} className='bestItemImage'>
             <img src={image} alt={`Slide ${index}`}  />
+            <h4>product</h4>
+            <p>price: 30000원</p>
           </div>
         ))}
       </div>
-      <div>
-        <button className='nextButton' onClick={handleNextClick}>&#10095;</button>
+      <div className='bestItemButtonContainer1'>
+        <button className='prevButton1' onClick={handlePrevClick}>&#10094;</button>
+        <button className='nextButton1' onClick={handleNextClick}>&#10095;</button>
       </div>      
     </div>
   )

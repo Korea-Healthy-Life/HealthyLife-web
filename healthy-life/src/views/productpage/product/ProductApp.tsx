@@ -2,6 +2,7 @@ import React from 'react'
 import Product from './Product';
 import ProductTap from './ProductTap';
 import "../../../style/detailProductSlider/productSlider.css"
+import "../../../style/product/product.css"
 import RelatedItemSlider from './RelatedItemSlider';
 
 const images = [
@@ -16,7 +17,9 @@ export default function ProductApp() {
   return (
     <div>
       <br />
+      <br />
       <Product images={images}/>
+      <br />
       <RelatedItemSlider images={images}/>
       <br />
       <br />

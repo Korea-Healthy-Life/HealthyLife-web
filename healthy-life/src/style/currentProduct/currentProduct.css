@@ -34,10 +34,10 @@
 
 
 .buttonBox button {
-  background-color: #aaada7;
-  border-radius: 5px;
-  border: none;
+  background-color: #67C6E3;
+  border-radius: 20px;
   color: white;
+  border: 1px soldi black;
   margin-right: 10px;
   padding: 5px;
 
@@ -45,5 +45,6 @@
 
 
 .buttonBox button:hover{
-  background-color: gray;
+  background-color: black;
+
 }

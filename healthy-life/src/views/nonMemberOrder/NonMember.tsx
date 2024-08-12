@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactModal from 'react-modal';
 import "../../style/nonmember/nonmemberModal.css"
-
+import "../../style/nonmember/nonMember.css"
 
 
 interface userData {
@@ -30,6 +30,8 @@ function NonMember() {
     e.preventDefault()
 
     setModalIsOpen(true);
+
+    setNonMemberOrder(initialValue);
   }
 
 
@@ -55,21 +57,20 @@ function NonMember() {
     <div className='nonMemberContainer'>
         <br />
         <br />
-        <h2 style={{textAlign: 'center'}}>주문조회</h2>
+        <h2>주문조회</h2>
         <br />
       
 
         <form>
-        <div className='nonMemberFormContainer' style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '300px', marginLeft: '40%'}}>
-          
-          <div className='nonMemberData' style={{display:'flex', flexDirection: 'column', justifyContent: 'center'}}>
+        <div className='nonMemberFormContainer'>
+          <div className='nonMemberData'>
           <p>주문자이름</p>
           <p>주문번호</p>
           <p>비회원주문 비밀번호</p>
           </div>
     
 
-        <div className='nonMemberInput' style={{display: 'flex', flexDirection:'column', justifyContent: 'center'}}>
+        <div className='nonMemberInput'>
           <input type="text" name='name'  value={name} onChange={inputHandler}/>
           <br />
           <input type="text" name='orderNumber' value={orderNumber} onChange={inputHandler}/>
@@ -82,7 +83,7 @@ function NonMember() {
         </div>
         </form>
         <br />
-          <button  className='"openModalButton' style={{width: '100px', marginLeft: '47%', marginRight: '47%', borderRadius: 20}} onClick={openModal}>조회</button>
+          <button  className="openModalButton" onClick={openModal}>조회</button>
           <br />
           
           <ReactModal
@@ -107,12 +108,12 @@ function NonMember() {
                     <br />
                     <h3>주문내역</h3>
                     <br />
-                    <div className='orderList' style={{display: 'flex', flexDirection: 'column', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+                    <div className='orderList'>
 
 
 
-                    <div className='orderListImages' style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '400px'}}>
-                        <img src="https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg" alt="비회원주문상품이미지1" style={{width: '100px'}} />
+                    <div className='orderListImages'>
+                        <img src="https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg" alt="비회원주문상품이미지1" />
                         <br />
                       <div>
                         <span>주문번호: {orderNumber}</span>
@@ -125,8 +126,8 @@ function NonMember() {
                     </div>
                       <br />
                       <br />
-                    <div className='orderListInformation' style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '400px'}}>
-                    <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/vegetables-1238252_1280.jpg" alt="비회원주문상품이미지2"  style={{width: '100px'}}/>
+                    <div className='orderListInformation'>
+                    <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/vegetables-1238252_1280.jpg" alt="비회원주문상품이미지2"/>
                     <br />
                     <div>
                       <span>주문번호: {orderNumber} </span>
