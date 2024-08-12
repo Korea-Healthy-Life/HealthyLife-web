@@ -68,12 +68,16 @@
 }
 
 /* List */
-.allProductImageContainer {
+.reviewImageContainer {
   border-top: 3px solid #DFF5FF;
   border-bottom: 3px solid #DFF5FF;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.allProductImageList {
+  margin: 10px auto;
 }
 
 

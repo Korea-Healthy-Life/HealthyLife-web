@@ -20,7 +20,7 @@ const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
 
   
   return (
-    <div className='allProductImageContainer'>
+    <div className='reviewImageContainer'>
       <div className="allProductImageList">
       {products.map(product => (
         <div onClick={openModal} className='reviewBox' key={product.id}>
