@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'goorm-sans-bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 .myPageNavBox{
   display: flex;
   flex-direction: column;
-  background-color: #e9ece7;
+  background-color: #DFF5FF;
   width: 110px;
   line-height: 40px;
   padding: 20px;
@@ -15,4 +23,6 @@
 
 .myPageNavBox ul {
   list-style: none;
+  font-family: 'goorm-sans-bold';
+  text-align: center;
 }
