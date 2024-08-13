@@ -20,9 +20,9 @@ function Pay2() {
           <span>총 결제 금액</span>
           <br />
           <br />
-          <div>
+          <div className='checkBoxFlexBox'>
           <Checkbox {...label}/>
-          <label htmlFor="agree">구매약관조건 동의</label>
+          <span>구매약관조건 동의</span>
           </div>
           <br />
           <br />

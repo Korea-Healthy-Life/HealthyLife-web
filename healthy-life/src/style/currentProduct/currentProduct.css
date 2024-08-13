@@ -1,5 +1,5 @@
 .currentProductContainer h2{
-  text-align: center;
+  margin-left: 750px;
 }
 
 
@@ -7,44 +7,35 @@
 
 .imagesFlexBox{
   display: flex;
-  flex-direction: column;
-  margin-left: 20%;
-  padding-top: 4%;
-  padding-left: 4%;
+  justify-content: space-around;
+  margin-left: 190px;
+  padding-top: 50px;
+  padding-left: 12px;
 }
 
 .imageBox{
-  padding-top: 3%;
+  width: 290px;
 }
 
 
 .imageBox img{
-  width: 25%;
-  height: 25%;
+  width: 285px;
+  height: 290px;
+  border-radius: 5px;
+}
+
+
+.imageBox p{
+  color: darkgray;
+  font-size: 16px;
 }
 
 
 
-.buttonFlexBox{
-  display: flex;
-  justify-content: space-around;
-  padding-left: 30%;
-  padding-right: 30%;
+.imageBox button{
+  background-color: white;
+  border: none;
 }
 
 
-.buttonBox button {
-  background-color: #67C6E3;
-  border-radius: 20px;
-  color: white;
-  border: 1px soldi black;
-  margin-right: 10px;
-  padding: 5px;
 
-}
-
-
-.buttonBox button:hover{
-  background-color: black;
-
-}

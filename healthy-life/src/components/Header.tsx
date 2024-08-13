@@ -37,9 +37,13 @@ export default function Header() {
     <div className='buttonFlexBox1'>
     <p className='button1'>
     <Link to={'/login'}>로그인</Link>
+
     |
+
     <Link to={'/join'}>회원가입</Link>
+    
     |
+    
     <Link to={'/mypage/orderApp'}>주문조회</Link>
   </p>
       

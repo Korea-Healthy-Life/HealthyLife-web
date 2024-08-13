@@ -14,7 +14,7 @@ export default function BestItemApp() {
   return (
     <div className='bestItem'>
       <div className='h3bestItem'>
-      <h3>Best.Item</h3>
+      <h3>인기상품</h3>
       </div>
       <BestItem images={images} />
     </div>

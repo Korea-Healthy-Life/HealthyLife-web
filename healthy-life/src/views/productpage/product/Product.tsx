@@ -4,7 +4,6 @@ import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
 
 interface productImages{
   images: string[]
@@ -66,6 +65,7 @@ const Product: React.FC<productImages> = ({images}) => {
         <h1>12,000원</h1>
         <br />
           <hr />
+          <br />
         <div className='deliveryMethod'>
           <p>배송방법</p>
           
@@ -74,7 +74,9 @@ const Product: React.FC<productImages> = ({images}) => {
             <p>일반배송 | 2500원  |  12000원 이상 무료 배송</p>
           </div> 
           </div>
+          <br />
         <hr />
+        <br />
         <div className='announcement'>
           <p>공지사항</p>
 
@@ -87,7 +89,7 @@ const Product: React.FC<productImages> = ({images}) => {
         <br />
         <hr />
         <br />
-        <span style={{color: 'gray', marginLeft: '8px'}}>옵션선택</span>
+        <span style={{color: 'gray'}}>옵션선택</span>
         <br />
         <select name="productOption" id="option" >
           <option value="선택">옵션</option>
@@ -98,9 +100,15 @@ const Product: React.FC<productImages> = ({images}) => {
         <p style={{fontSize: '16px'}}>총 상품 금액 <span  style={{fontSize: '32px', fontWeight: 'bold'}}>12,000</span>원</p>
         <br />
         <div className='productDetailbutton'>
+          
+          <div className='putinCartButton'>
           <button onClick={openModal} >장바구니</button>
           <Link to={'/myPage/wishlist'}><button >WISH</button></Link>
+          </div>
+          <br />
+          <div className='orderButton'>
           <Link to={'/payment'}><button >주문</button></Link>
+          </div>
         </div>
 
         </div>

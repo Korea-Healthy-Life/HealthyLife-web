@@ -1,26 +1,27 @@
 .prodcutDetailPageContainer{
-  
+  float: none;
 }
 
 
 .productDetailPage{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 180px;
+  margin-right: 180px;
 }
 
 
 .productImage{
   padding: 0;
-  width: 45%;
+  max-width: 500px;
+  min-width: 500px;
   margin-right: 3%;
 }
 
 
 .productImage img{
-  width: 500px;
+  max-width: 500px;
+  min-width: 500px;
   height: 470px;
   margin: 0px;
 }
@@ -28,14 +29,11 @@
 
 .productData{
   margin: 0;
-  width: 45%;
+  max-width: 500px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   margin-left: 3%;
-}
-
-.productData h1{
-  margin-left: 2%;
 }
 
 .productGuide{
@@ -64,6 +62,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-right: 144px;
 }
 
 .deliveryKind p {
@@ -88,6 +87,7 @@
 
 
 .announcement > p {
+  margin-top: 12px;
   font-size: 16px;
   color: gray;
 }
@@ -95,12 +95,16 @@
 .announcementContents{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+}
+
+.announcementContents p {
+  font-size: 12px;
 }
 
 
-
 .productOption{
-  width: 100%;
+  max-width: 500px;
   height: 50px;
 }
 
@@ -108,23 +112,59 @@
 
 .productDetailbutton{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
-.productDetailbutton button{
+.putinCartButton{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.putinCartButton button{
   background-color: #67C6E3;
   border: none;
   color: white;
   border-radius: 5px;
-  width: 70px;
-  height: 30px;
+  width: 130px;
+  height: 40px;
 }
 
-.productDetailbutton button:hover{
+
+.orderButton{
+  display: flex;
+  justify-content: center;
+}
+
+
+.orderButton button{
+  background-color: black;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 500px;
+  height: 40px;
+}
+
+
+
+.putinCartButton button:hover{
   background-color: #1478FF;
 
 }
+
+.orderButton button:hover{
+  background-color: darkgray;
+  color: black;
+}
+
+
+
+
+
+
 
 
 .modalButtonContainer{
@@ -139,7 +179,7 @@
   color: white;
   border: none;
   border-radius: 5px;
-  width: 110px;
+  min-width: 110px;
   height: 30px;
 }
 
