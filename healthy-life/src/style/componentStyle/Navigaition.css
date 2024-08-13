@@ -5,6 +5,9 @@
   font-style: normal;
 }
 
+.navContainer {
+  height: 100px
+}
 
 .mainNavBox {
   display: flex;

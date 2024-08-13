@@ -40,6 +40,11 @@ import NonMember from './views/nonMemberOrder/NonMember';
 import Payment from './views/payment/Payment';
 import MyPage from './views/mypage/MyPage';
 import BestItem from './views/best/bestItem';
+import RecommandApp from './views/recommand/RecommandApp';
+import Bmi from './views/bmi/Bmi';
+import JoinApp from './views/join/JoinApp';
+import CartAPP from './views/cart/CartAPP';
+import MypageNav from './views/mypage/mypage-main/MypageNav';
 
 function App() {
   return (
@@ -73,7 +78,7 @@ function App() {
         <Route path="/sea" element={<SeaFood />} />
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
-
+        
         <Route path='/mypage/*' element={<MyPage />}/> 
         <Route path='/mypage/order' element={<OrderApp />}/> 
         <Route path='/mypage/myreview' element={<ReviewApp />}/>
@@ -95,6 +100,10 @@ function App() {
         <Route path='/payment' element={<Payment />}/>
         <Route path='/nonMember' element={<NonMember />}/>
         <Route path='/bestitem' element={<BestItem />}/>
+        <Route path='/recommand' element={<RecommandApp />}/>
+        <Route path='/calculator' element={<Bmi />}/>
+        <Route path='/join' element={<JoinApp />}/>        
+        <Route path='/cart' element={<CartAPP />}/>
       </Routes> 
     <Footer />
     </>

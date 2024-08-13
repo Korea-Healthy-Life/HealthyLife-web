@@ -12,12 +12,11 @@
   height: 150px;
   overflow: hidden;
   margin: 0 auto;
-
 }
 
 .searchContainer ul {
   list-style: none;
-  width: 100%;
+  width: 1000px;
   color: #000;
   display: flex;
   justify-content: space-between;

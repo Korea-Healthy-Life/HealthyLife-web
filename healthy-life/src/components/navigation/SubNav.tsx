@@ -2,7 +2,7 @@ import React from 'react'
 import { Link} from 'react-router-dom'
 
 import  '../../style/componentStyle/SubNav.css'
-
+  
 export default function SubNav() {
   return (
     <div> 
