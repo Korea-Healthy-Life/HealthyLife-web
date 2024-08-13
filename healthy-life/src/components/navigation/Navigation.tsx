@@ -2,11 +2,7 @@ import React, { useState } from 'react'
 import '../../style/componentStyle/Navigaition.css'
 import SubNav from './SubNav';
 import { Link, Route, Routes } from 'react-router-dom';
-import RecommandApp from '../../views/recommand/RecommandApp';
-import Bmi from '../../views/bmi/Bmi';
-import JoinApp from '../../views/join/JoinApp';
 import MypageNav from '../../views/mypage/mypage-main/MypageNav';
-import CartAPP from '../../views/cart/CartAPP';
 
 
 
@@ -22,7 +18,7 @@ const Navigation:React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='navContainer'>
       <div className='mainNavBox'
       onMouseEnter={()=> handleMouseEnter('nav')}
       onMouseLeave={handleMouseLeave}
@@ -34,8 +30,6 @@ const Navigation:React.FC = () => {
         <li><Link to='/recommand'>체질추천상품</Link></li> 
         <li><Link to='/reviews' >전체후기</Link></li> 
         <li><Link to='/calculator'>체지방계산기</Link></li> 
-        <li><Link to='/productdetail'>상품상세페이지</Link></li> 
-        <li><Link to='/payment'>결제페이지</Link></li> 
         </ul>
       </div>
       <div 
@@ -47,14 +41,9 @@ const Navigation:React.FC = () => {
         {activeMenu === 'nav' && (<SubNav />)}
         </div>
         </div>
-      <Routes>
-        <Route path='/recommand' element={<RecommandApp />}/>
-        <Route path='/calculator' element={<Bmi />}/>
-        <Route path='/join' element={<JoinApp />}/>        
-        <Route path='/mypage/*' element={<MypageNav/>}/>
-        <Route path='/cart' element={<CartAPP />}/>
-      </Routes>
       </div>
+      <Routes>
+      </Routes>
     </div>
   )
 }

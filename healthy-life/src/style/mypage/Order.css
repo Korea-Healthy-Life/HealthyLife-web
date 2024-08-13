@@ -1,6 +1,6 @@
 /* OrderApp.tsx */
 .orderContainer  {
-  width: 50%;
+  width: 900px;
   margin: 0 auto;
   margin-top: 100px;
 }
@@ -20,23 +20,22 @@
 
 .monthBtn {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
-.monthBtn button {
+.monthBtn > button {
   width: 100px;
-  background-color: #aaada7;
+  background-color: #67C6E3;
   border: none;
-  margin-right: 10px;
   border-radius: 5px;
   padding: 5px;
-  color: white;
+  color: white;;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
 .monthBtn button:hover {
-  background-color: #929490;
+  background-color: #1478FF;
 }
 
 .orderDate {
@@ -46,12 +45,14 @@
 }
 
 .orderDate input {
-  border: 1px solid #aaada7;
+  border:1.5px solid #67C6E3;
   border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .searchBtn {
-  background-color: #aaada7;
+  background-color: #67C6E3;
   border: none;
   margin-right: 10px;
   border-radius: 5px;
@@ -71,8 +72,8 @@
   align-items: center;
   margin-top: 50px;
   overflow: hidden;
-  border-top: 1px solid #b1b1b1;
-  border-bottom: 1px solid #b1b1b1;
+  border-top: 2px solid #DFF5FF;
+  border-bottom: 2px solid #DFF5FF;
 }
 
 .orderLi {
@@ -96,7 +97,7 @@
 
 .orderListBtn button {
   width: 45px;
-  background-color: #aaada7;
+  background-color: #67C6E3;
   border: none;
   margin-right: 10px;
   border-radius: 5px;

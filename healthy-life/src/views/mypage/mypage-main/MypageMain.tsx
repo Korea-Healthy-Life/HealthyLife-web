@@ -12,7 +12,6 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 function MypageMain() {
   return (
     <div>
-
     <div className='myPageConatiner'>
     <div className='mypageAllContainer'>
       <div className='mypageMainContainer'>
