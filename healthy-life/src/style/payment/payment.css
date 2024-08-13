@@ -1,12 +1,12 @@
 .allPaymentContainer{
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 
 
 .allPaymentContainer h1 {
-  margin-left: 7%;
+  margin-left: 70px;
 }
 
 
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 40%;
+  width: 400px;
 }
 
 
@@ -49,34 +49,37 @@
 
 
 .deliveryAddress h3{
-  margin-left: 4%;
-  margin-top: 4%;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 
 .productInformationContainer{
   border: 1px solid gray;
-  padding-top: 4%;
-  padding-left: 4%;
+  padding-top: 9px;
+  padding-left: 9px;
 }
 
 
 .productInformation{
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 
 .productInformation img{
-  width: 35%;
+  width: 150px;
   height: 120px;
   border-block-color: gray;
   display: inline;
 }
 
 
-.productImage{
+.productImage1{
   display: flex;
   flex-direction: column;
+  width: 200px;
 }
 
 .dailySet{
@@ -101,8 +104,8 @@
 
 .cuponPoint{
   border: 1px solid gray;
-  padding-top: 4%;
-  padding-left: 4%;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .cuponPoint input {
@@ -114,15 +117,15 @@
 .paymentMethod{
   border: 4px solid gray;
   border-radius: 20px;
-  padding-top: 4%;
-  padding-left: 4%;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 
 .MethodButtonBox{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 4%;
+  margin-bottom: 20px;
 }
 
 
@@ -158,33 +161,42 @@
 
 
 .pay2Container{
-  width: 30%;
-  height: 30%;
-  margin-right: 4%;
+  width: 350px;
+  height: 495px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   border: 1px solid gray;
-  padding-bottom: 0;
 }
 
 
 .pay2Container h3{
-  margin-top: 4%;
-  margin-left: 4%;
+  margin-top: 13px;
+  margin-left: 13px;
 }
 
 
-.pay2Container span{
+.pay2Container >span{
   color: black;
   font-size: 17px;
-  margin-top: 4%;
-  margin-left: 4%;
+  margin-top: 13px;
+  margin-left: 13px;
+}
+
+
+.checkBoxFlexBox{
+  display: flex;
+  justify-content: start;
+}
+
+.checkBoxFlexBox span{
+  padding-top: 5px;
 }
 
 .pay2Container button {
   text-align: center;
   background-color: black;
-  width: 100%;
+  width: 350px;
   height: 40px;
   margin: 0;
   color: white;
@@ -192,6 +204,6 @@
 
 
 .pay2Container button:hover{
-  background-color: #67C6E3;
+  background-color: darkgray;
   color: black;
 }

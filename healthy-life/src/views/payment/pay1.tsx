@@ -58,7 +58,7 @@ function Pay1() {
       component="form"
       sx={{
         '& > :not(style)': { m: 1, width: '25ch' },
-        marginBottom: '2%',
+        marginBottom: '2%', marginLeft: '7px'
       }}
       noValidate
       autoComplete="off"
@@ -82,7 +82,7 @@ function Pay1() {
           <br />
         <br />
         <img src="https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg" alt="상품정보이미지1" />
-        <div className='productImage'>
+        <div className='productImage1'>
         <p className='dailySet'>[냉동]데일리 블루베리 세트</p>
         <p className='dailyOption'>[옵션: 1상자(2kg)]</p>
         <p className='dailyMany'>수량:2개</p>

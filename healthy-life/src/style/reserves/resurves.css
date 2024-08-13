@@ -1,8 +1,9 @@
 .reservesContainer{
-  margin-top: 10%;
-  margin-left: 40%;
-  margin-right: 20%;
-  width: 30%;
+  margin-top: 150px;
+  margin-left: 600px;
+  margin-right: 500px;
+  width: 450px;
+  height: 500px;
   border: 1px solid gray;
   
 }
@@ -18,4 +19,5 @@
 
 .reservesContainer p {
   text-align: start;
+  margin-left: 4px;
 }
