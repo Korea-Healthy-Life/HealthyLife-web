@@ -1,132 +1,189 @@
+font-face {
+  font-family: 'goorm-sans-bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 
-.allProductContainer1 {
-  width: 60%;
+.allProductBox2ljw {
+  width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  font-family: 'goorm-sans-bold';
 }
 
-.allProductContainer1 > h2 {
+.allProductBox2ljw > h2 {
   text-align: center;
-  margin: 20px 0;
 }
 
-.allProductButtonList1 {
+.allProductButtonListljw {
   display: flex;
   justify-content: space-around;
   width: 300px;
+  height: 20px;
   flex-direction: row;
   margin: 0 auto;
   list-style: none;
   margin-bottom: 40px;
 }
 
-.allProductButtonList1 button {
+.allProductButtonListljw button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
-.allProductButtonList1 button:hover {
+.allProductButtonListljw button:hover {
   cursor: pointer;
-  border-bottom: 3px solid #D7DDD2;
+  border-bottom: 3px solid #DFF5FF;
 }
 
-.allProductButtonList1 button:active {
-  color: #9b9b9b;
+.allProductButtonListljw button:active {
+  color: #1478FF;
 }
 
+.allProductSelectBtnljw {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 11px;
+  margin-bottom: 5px;
+  width: 220px;
+}
 
+.allProductSelectBtnljw li > button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font-family: 'Pretendard-Regular';
+  font-size: 1rem;
+}
 
-.itemCotianer1 {
+.allProductSelectBtnljw li > button:active {
+  color: #1478FF;
+}
+
+.itemCotianerljw {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: right;
 }
 
-
-.itemSelect1{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  width: 160px;
-  font-size: 11px;
-  margin-bottom: 5px;
-}
 /* List */
-.allProductImageContainer1 {
-  border-top: 1px solid #868686;
+.reviewImageContainerljw {
+  border-top: 3px solid #DFF5FF;
+  border-bottom: 3px solid #DFF5FF;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.productContain1{
+.allProductImageListljw {
+  margin: 10px auto;
+}
+
+
+
+.allProductContainljw {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
-  height: 300px;
+  width: 23%;
+  height: 250px;
   margin: 20px auto;
   border-radius: 5px;
-  border: 1px solid #868686;
   cursor: pointer;
+  text-align: center;
 }
 
-
-
-.productContainer1 > img {
-  list-style: none;
+.allProductImageljw {
   width: 100%;
+  border-radius: 8px;
 }
 
-
-
-
-.pagination1 {
+.allProductImageListljw > h4 {
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.allProductHoverBtnljw{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  top: -170px;
+  right: -70px;
+}
+
+.allProductHoverBtnljw > button {
+  padding: 5px;
+  border: none;
+  color: #1478FF;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-family: 'Pretendard-Regular';
+  font-weight: 600;
+}
+
+.allProductHoverBtnljw > button:hover {
+  background-color: #67C6E3;
+  color: #fff;
+}
+
+.paginationljw {
+  display: flex;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
+  width: 200px;
 }
 
 
-
-
-
-
-
-.pagination1 .pageItem1{
-  margin: 0 5px;
+.productPaginationljw {
+  display: flex;
+  gap: 6px;
+  margin-top: 15px;
 }
 
-
-.pagination1 .pageLink1 {
-  color: #007bff;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  padding: 10px 15px;
-  border-radius: 5px;
+.productPageLinkljw {
+  border: none;
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
   background-color: white;
+  border: 1px solid #eee;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
 
-
-
-.pagination1 .pageLink1:hover {
-  background-color: #f8f8f8;
-  color: #0056b3;
+.PageLinkdirectionljw{
+  border: none;
+  border-radius: 3px;
+  width: 70px;
+  height: 50px;
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #eee;
+  cursor: pointer;
 }
 
-
-.pagination1 .pageItem1.active .pageLink1 {
-  background-color: #007bff;
+.productPaginationljw .pageItemljw.active .productPageLinkljw {
+  background-color: #67C6E3;
   color: white;
-  border-color: #007bff;
-}
-
-
-.pagination1 .pageItem1 button:focus {
-  outline: none;
+  border-color: #67C6E3;
 }

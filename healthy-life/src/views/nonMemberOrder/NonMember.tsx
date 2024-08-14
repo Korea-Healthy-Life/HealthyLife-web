@@ -30,13 +30,12 @@ function NonMember() {
     e.preventDefault()
 
     setModalIsOpen(true);
-
-    setNonMemberOrder(initialValue);
   }
 
 
   const closeModal = () => {
     setModalIsOpen(false)
+    setNonMemberOrder(initialValue);
   }
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,7 +64,9 @@ function NonMember() {
         <div className='nonMemberFormContainer'>
           <div className='nonMemberData'>
           <p>주문자이름</p>
+          <br />
           <p>주문번호</p>
+          <br />
           <p>비회원주문 비밀번호</p>
           </div>
     

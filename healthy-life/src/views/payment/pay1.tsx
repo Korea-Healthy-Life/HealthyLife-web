@@ -101,7 +101,7 @@ function Pay1() {
     <div className='deliveryRequest'>
     <Box sx={{ minWidth: 100, margin: '1% 1% 1% 1%'}}>
     <FormControl fullWidth>
-      <InputLabel id="demo-simple-select-label">배송요청사항</InputLabel>
+      <InputLabel id="demo-simple-select-label">배숑요청사항</InputLabel>
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
@@ -129,14 +129,31 @@ function Pay1() {
         <div className='cuponPoint'>
           <h3>쿠폰 / 포인트</h3>
           <br />
-          <label id='usePoint'>포인트사용</label>
-            <input type="text"/> 
-            <button>전액사용</button>
-            <br />
 
-            <label id='useCupon'>쿠폰 사용</label>
-            <input type="text" />
+          <div className='cuponPointFlexBox'>
+
+            <div className='paymentUseFlexBox'>
+            
+              <div className='usePoint'>
+            <p>포인트사용</p>
+            <input type="text" name='usePoint'/> 
+              </div>
+
+            <div className='useCupon'>
+            <p>쿠폰 사용</p>
+            <input type="text" name='useCupon'/>
+            </div>
+            
+            </div>
+
+          
+            <div className='paymentUseButton' >
+            <button>전액사용</button>
             <button>쿠폰사용</button>
+            </div>
+        
+          </div>
+          
         </div>
 
         <br />

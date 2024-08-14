@@ -35,6 +35,7 @@
 
 
 
+
 .pay1Container{
   display: flex;
   flex-direction: column;
@@ -73,6 +74,7 @@
   height: 120px;
   border-block-color: gray;
   display: inline;
+  border-radius: 5px;
 }
 
 
@@ -80,6 +82,8 @@
   display: flex;
   flex-direction: column;
   width: 200px;
+  margin-left: 6px;
+  margin-right: 10px;
 }
 
 .dailySet{
@@ -106,13 +110,50 @@
   border: 1px solid gray;
   padding-top: 10px;
   padding-left: 10px;
+  height: 140px;
+  
 }
+
+
+.cuponPointFlexBox{
+  display: flex;
+  justify-content: space-around;
+}
+
+.paymentUseFlexBox{
+  width: 220px;
+}
+
+
+
+.paymentUseFlexBox p {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.usePoint{
+  display: flex;
+  justify-content: space-between;
+}
+
+.useCupon{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .cuponPoint input {
-  height: 14%;
   margin-bottom: 4%;
+  margin-top: 4%;
+
 }
 
+.paymentUseButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .paymentMethod{
   border: 4px solid gray;
@@ -206,4 +247,22 @@
 .pay2Container button:hover{
   background-color: darkgray;
   color: black;
+}
+
+
+.paymentModalFlexBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.paymentModalCloseButton{
+  cursor: pointer;
+  background-color: #67C6E3;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
