@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 
 interface saladProduct{
@@ -67,24 +69,104 @@ interface saladProductFlexProps {
   currentProducts: saladProduct[];
 }
 
+
+
+
 const SaladProductsLayout: React.FC<saladProductFlexProps> = ({currentProducts})  => {
+  const [activeBtn, setActiveBtn] = useState<string | null> (null);
+  const [modalOpen, setmodalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+
+    const handleMouseEnter = (btn: string) => {
+      setActiveBtn(btn);
+    };
+    const handleMouseLeave = () => {
+      setActiveBtn(null);
+    }
+    // 모달창 함수
+    const openModal = () => {
+      setmodalOpen(true);
+    }
+    const closeModal = () => {
+      setmodalOpen(false);
+    }
+    
+
+
+
+    const handlePrevClick = () => {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? currentProducts.length -1 : prevIndex -1))
+    }
+    const handleNextClick = () => {
+      setCurrentIndex((prevIndex) => (prevIndex === currentProducts.length -1 ? 0 : prevIndex + 1));
+    }
+
+    const visibleProducts = currentProducts.slice(currentIndex, currentIndex + 4); 
+    if(visibleProducts.length < 4) {
+        visibleProducts.push(...currentProducts.slice(0, 4 -visibleProducts.length));
+    }
+
   return(
-    <div className='allProductImageContainer1'>
+    <div className='allProductImageContainerljw'>
       {currentProducts.map((saladproduct)=>(
-        <div key={saladproduct.id} className='productContain1'>
-          <img src={saladproduct.image} alt={saladproduct.name} className='productImage1'/>
+        <div key={saladproduct.id} className='allProductContainljw'>
+          <Link to={'/productdetail'}>
+          <img src={saladproduct.image} alt={saladproduct.name} className='allProductImageljw'
+          onMouseEnter={()=> handleMouseEnter('btn')}
+          onMouseLeave={handleMouseLeave}
+          />
           <h4>{saladproduct.name}</h4>
-          <div className='allProductHoverButton1'>
-            <button>ADD</button>
-            <button>WISH</button>
+          <p>price: 30000원</p>
+          </Link>
+          <div
+          onMouseEnter={() => handleMouseEnter('btn')}
+          onMouseLeave={handleMouseLeave}>
+          {activeBtn === 'btn' &&(
+          <div className='allProductHoverBtnljw'>
+          <button>cart</button>
+          <button>WISH</button>
+          </div>
+          )}
           </div>
         </div>
       ))}
+<ReactModal
+isOpen={modalOpen}
+onRequestClose={closeModal}
+className="modalContianerCartljw"
+overlayClassName="modalOverlayljw"
+>
+<div className='modalljw'>
+      <h2>장바구니</h2>
+  <div className='modalContainerCartljw'>
+      <button className='prevButtonljw' 
+        onClick={handlePrevClick}>
+        &#10094;</button>
+      <div className='modalImagesljw'>
+        {visibleProducts.map((product) => 
+        <div key={product.id} className='relatedModalImageljw'>
+          <img src={product.image} alt={product.name} />
+          <p>{product.name}</p>
+        </div>
+        )}
+        <button className='nextButtonljw' onClick={handleNextClick}>
+          &#10095;
+        </button>
+      </div>
 
+      <div className='modalButtonContainerljw'>
+          <Link to={'/payment'}> <button>바로주문</button></Link>
+          <Link to={'/cart'}><button>장바구니 이동</button></Link>
+          <button onClick={closeModal}>쇼핑계속하기</button>
+      </div>
+  </div>
+</div>
+</ReactModal>
     </div>
-  )
-
   
+
+)  
 }
 
 

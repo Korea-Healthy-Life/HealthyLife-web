@@ -26,11 +26,14 @@ function Benefit() {
         <br />
 
         <div className='Icon'>
+          <br />
         <LooksOneIcon/>
         </div>
 
         <div className='grade'>
-        <p>자격조건 200만원 이상</p>
+          <br />
+        <p>자격조건 200만원 이상 구매</p>
+        <br />
         <p>15만 포인트 제공</p>
         </div>
 
@@ -42,12 +45,15 @@ function Benefit() {
         <br />
         
         <div className='Icon'>
+          <br />
         <LooksTwoIcon/>
         </div>
         
 
         <div className='grade'>
-        <p>자격조건: 100만원 이상</p>
+          <br />
+        <p>자격조건: 100만원 이상 구매</p>
+        <br />
         <p>12만 포인트 제공</p>
         </div>
       
@@ -59,11 +65,14 @@ function Benefit() {
         <br />
 
         <div className='Icon'>
+          <br />
         <Looks3Icon/>
         </div>
 
         <div className='grade'>
-        <p>자격조건: 60만원 이상</p>
+          <br />
+        <p>자격조건: 60만원 이상 구매</p>
+        <br />
         <p>10만 포인트 제공</p>
         </div>
 
@@ -76,11 +85,14 @@ function Benefit() {
         <br />
 
         <div className='Icon'>
+          <br />
         <Looks4Icon/>
         </div>
         
         <div className='grade'>
-        <p>40만원이상</p>
+          <br />
+        <p>40만원이상 구매</p>
+        <br />
         <p>7만 포인트 제공</p>
         </div>
         
@@ -93,11 +105,14 @@ function Benefit() {
         <br />
 
         <div className='Icon'>
+          <br />
         <Looks5Icon/>
         </div>
         
         <div className='grade'>
-        <p>20만원 이상</p>
+          <br />
+        <p className='cutLine'>20만원 이상 구매</p>
+        <br />
         <p>5만 포인트 제공</p>
         </div>
         
@@ -109,12 +124,16 @@ function Benefit() {
         <div className='gradeContainer'>
           <br />
 
-          <div className='Icon'>
+          <div className='Icon2'>
+            <br />
           <Looks6Icon/>
           </div>
           
           <div className='grade'>
-          <p>20만원 미만</p>
+            <br />
+            <br />
+          <p>20만원 미만 구매</p>
+          <br />
           </div>
 
         </div>

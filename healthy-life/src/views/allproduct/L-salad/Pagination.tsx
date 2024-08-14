@@ -24,23 +24,23 @@ const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, sala
 
   return(
     
-    <div className="pagination1">
+    <div className="productPaginationljw">
     {startPage > 1 && (
-      <div className="pageItem1">
-      <button onClick={() => paginate(startPage -3)} className="pageLink1">
+      <div className="productPageItemljw">
+      <button onClick={() => paginate(startPage -3)} className="PageLinkdirectionljw pageLinkljw">
         Previous
       </button>
       </div>)}
 
       {pageNumbers.map(number => (
-        <div key={number} className={`pageItem1 ${number === currentPage ? 'active' : ''}`}>
-          <button onClick={() => paginate(number)} className="pageLink1">{number}</button>
+        <div key={number} className={`pageItemljw ${number === currentPage ? 'active' : ''}`}>
+          <button onClick={() => paginate(number)} className="productPageLinkjw pageLinkljw">{number}</button>
         </div>
       ))}
 
       {endPage < totalPages && (
-        <div className="pageItem1">
-          <button onClick={() => paginate(startPage + 3)} className="pageLink1">Next</button>
+        <div className="pageItemljw">
+          <button onClick={() => paginate(startPage + 3)} className="PageLinkdirectionljw pageLinkljw">Next</button>
 
         </div>
       )}

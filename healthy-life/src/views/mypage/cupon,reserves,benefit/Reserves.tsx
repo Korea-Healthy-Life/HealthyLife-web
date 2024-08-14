@@ -24,6 +24,8 @@ function Reserves() {
       <br />
       <hr />
       <br />
+      <br />
+      <br />
       <p>환불예정 적립금</p>
       <br />
 
