@@ -5,7 +5,7 @@ import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import KeyboardArrowUpTwoToneIcon from '@mui/icons-material/KeyboardArrowUpTwoTone';
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
-import { Link, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EggIcon from '@mui/icons-material/Egg';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -52,10 +52,6 @@ const Sidenavigator:React.FC = () => {
       className='pluseIcon' 
       onClick={() => handleMouseSpreadClick('side')}
       ><EggIcon style={{fontSize: '40px'}} />
-
-      <Routes>
-        
-      </Routes>
       </button>
     </div>
   )

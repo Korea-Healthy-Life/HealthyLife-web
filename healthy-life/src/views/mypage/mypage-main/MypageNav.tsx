@@ -1,13 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes} from 'react-router-dom';
 
 import '../../../style/mypage/MypageNav.css'
-;
+
+
 
 const MypageNav:React.FC = () => {
   
   return (
-    <div>
+    <div className='mypagNavContainer'>
       <div className='myPageNavBox'>
         <ul>
         <li><Link to='/mypage/userinformation'>내 정보</Link></li> 
@@ -18,9 +19,6 @@ const MypageNav:React.FC = () => {
         <li><Link to='/mypage/mileage'>적립금 내역</Link></li> 
         <li><Link to='/mypage/membership'>등급별 혜택</Link></li> 
         </ul>
-      </div>
-      <div>
-
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Checkin from './Checkin'
+import Chicken from './Chicken'
 import '../../../style/home/allProduct.css'
 import Pagination from './Pagination';
 
@@ -103,7 +103,7 @@ const AllCheckinApp: React.FC  = () => {
         </ul> 
 
         <div className='allProductList'>
-          <Checkin products={currentProducts} />
+          <Chicken products={currentProducts} />
         </div>
       </div>
     <Pagination 
