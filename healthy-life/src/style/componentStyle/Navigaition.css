@@ -5,9 +5,7 @@
   font-style: normal;
 }
 
-.navContainer {
-  height: 100px
-}
+
 
 .mainNavBox {
   display: flex;
@@ -17,7 +15,6 @@
   background-color: #fff;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  z-index: 30;
 }
 
 .mainNavBox ul {
@@ -47,8 +44,9 @@ a:hover {
 
 }
 
-.subNav {
-  z-index: 20px;
+.subNavDiv {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 @media (max-width: 500px) {

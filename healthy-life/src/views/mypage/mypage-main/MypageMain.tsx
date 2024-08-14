@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../../style/mypage/MypageMain.css'
 import PercentSharpIcon from '@mui/icons-material/PercentSharp';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
@@ -10,6 +10,11 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 
 function MypageMain() {
+  const [currentPage, setCurrentPage] = useState<number>(0);
+  const [productPerpage] = useState<number>(16)
+
+
+
   return (
     <div>
     <div className='myPageConatiner'>
