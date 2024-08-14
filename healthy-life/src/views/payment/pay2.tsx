@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Checkbox from '@mui/material/Checkbox';
+import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 function Pay2() {
+  const[isOpen, setIsOpen] = useState<boolean>(false)
+
+
+  const openModal = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <div className='pay2Container'>
           <h3>결제 정보</h3>
@@ -26,9 +39,22 @@ function Pay2() {
           </div>
           <br />
           <br />
-          <button>
-            결제하기
-          </button>
+          <button onClick={openModal}>결제하기</button>
+          <ReactModal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          className='modalContent'
+          overlayClassName='modalOverlay'
+          >
+            <div className='paymentModalFlexBox'>
+              <br />
+              <br />
+            <h2>결제가 완료되었습니다.</h2>
+            <br />
+            <br />
+            <Link to={'/'} ><button onClick={closeModal}className='paymentModalCloseButton'>닫기</button></Link>
+            </div>
+          </ReactModal>
         </div>
 
 
