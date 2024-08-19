@@ -19,7 +19,8 @@ function Pay2() {
 
   return (
     <div className='pay2Container'>
-          <h3>결제 정보</h3>
+      <div className='payInformation'>
+      <h3>결제 정보</h3>
           <br />
           <span>상품금액</span>
           <br />
@@ -40,6 +41,8 @@ function Pay2() {
           <br />
           <br />
           <button onClick={openModal}>결제하기</button>
+      </div>
+          
           <ReactModal
           isOpen={isOpen}
           onRequestClose={closeModal}

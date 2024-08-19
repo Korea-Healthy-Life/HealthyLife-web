@@ -64,11 +64,6 @@
   font-size: 10px;
 }
 
-.logo{
-  /* margin-right: 50%; */
-
-}
-
 
 .logo p{
   font-size: 40px;
@@ -81,9 +76,4 @@
 .logo :hover{
   color: black;
 }
-
-
-
-
-
 

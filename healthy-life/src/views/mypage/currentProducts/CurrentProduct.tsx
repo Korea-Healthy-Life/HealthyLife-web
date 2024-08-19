@@ -65,13 +65,11 @@ function CurrentProduct() {
   return (
     <div className='currentProductContainer'>
       <br />
-      <br />
-      <h2>최근본 상품</h2>
-    <br />
+      <h2>최근 본 상품</h2>
     
 
     <div className='imagesFlexBox'>
-
+      <br />
       <div className='imageBox'>
       <img src="https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068217_1280.jpg" alt="최근본상품이미지1" />
       <br />

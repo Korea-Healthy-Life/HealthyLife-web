@@ -1,7 +1,14 @@
-.currentProductContainer h2{
-  text-align: center;
+.currentProductContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+
+.currentProductContainer > h2{
+  text-align: center;
+}
 
 
 
@@ -12,6 +19,7 @@
   padding-top: 50px;
   padding-left: 12px;
   margin-right: 85px;
+  width: 1400px;
 
 }
 

@@ -58,9 +58,13 @@ const Product: React.FC<productImages> = ({images}) => {
         <Box
       sx={{
         '& > legend': { mt: 4 },
+        display: 'flex',
+        justifyContent: 'start'
       }}
     >
     <Rating name="read-only" value={value} readOnly />
+    <p style={{color: 'gray', marginLeft: '5px'}}>4.2</p>
+    <p style={{marginLeft: '5px'}}>(62)</p>
     </Box>
         <h1>12,000원</h1>
         <br />

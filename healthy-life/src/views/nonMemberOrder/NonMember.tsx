@@ -59,15 +59,14 @@ function NonMember() {
         <h2>주문조회</h2>
         <br />
       
-
-        <form>
+        <form className='nonMemberForm'>
         <div className='nonMemberFormContainer'>
           <div className='nonMemberData'>
-          <p>주문자이름</p>
+          <p>주문자이름 *</p>
           <br />
-          <p>주문번호</p>
+          <p>주문번호 *</p>
           <br />
-          <p>비회원주문 비밀번호</p>
+          <p>비회원주문 비밀번호 *</p>
           </div>
     
 
@@ -84,7 +83,11 @@ function NonMember() {
         </div>
         </form>
         <br />
-          <button  className="openModalButton" onClick={openModal}>조회</button>
+
+        <div className='nonMemberButton'>
+        <button  className="openModalButton" onClick={openModal}>조회</button>
+        </div>
+        
           <br />
           
           <ReactModal

@@ -6,6 +6,7 @@ import Looks3Icon from '@mui/icons-material/Looks3';
 import Looks4Icon from '@mui/icons-material/Looks4';
 import Looks5Icon from '@mui/icons-material/Looks5';
 import Looks6Icon from '@mui/icons-material/Looks6';
+import { start } from 'repl';
 
 
 
@@ -15,7 +16,7 @@ function Benefit() {
     <div className='benefitContainer'>
       <br />
       <br />
-      <h3>등급별 혜택 안내</h3>
+      <h3 style={{textAlign: 'start', marginLeft: '170px'}}>등급별 혜택 안내</h3>
       <br />
       <br />
       
@@ -32,9 +33,9 @@ function Benefit() {
 
         <div className='grade'>
           <br />
-        <p>자격조건 200만원 이상 구매</p>
+        <p>자격조건: 200만원 이상 구매</p>
         <br />
-        <p>15만 포인트 제공</p>
+        <p>혜택: 15만 포인트 제공</p>
         </div>
 
         </div>
@@ -54,7 +55,7 @@ function Benefit() {
           <br />
         <p>자격조건: 100만원 이상 구매</p>
         <br />
-        <p>12만 포인트 제공</p>
+        <p>혜택: 12만 포인트 제공</p>
         </div>
       
       </div>
@@ -73,7 +74,7 @@ function Benefit() {
           <br />
         <p>자격조건: 60만원 이상 구매</p>
         <br />
-        <p>10만 포인트 제공</p>
+        <p>혜택: 10만 포인트 제공</p>
         </div>
 
       </div>
@@ -91,9 +92,9 @@ function Benefit() {
         
         <div className='grade'>
           <br />
-        <p>40만원이상 구매</p>
+        <p>자격조건: 40만원이상 구매</p>
         <br />
-        <p>7만 포인트 제공</p>
+        <p>혜택: 7만 포인트 제공</p>
         </div>
         
         </div>
@@ -111,9 +112,9 @@ function Benefit() {
         
         <div className='grade'>
           <br />
-        <p className='cutLine'>20만원 이상 구매</p>
+        <p className='cutLine'>자격조건: 20만원 이상 구매</p>
         <br />
-        <p>5만 포인트 제공</p>
+        <p>혜택: 5만 포인트 제공</p>
         </div>
         
         </div>
@@ -132,7 +133,7 @@ function Benefit() {
           <div className='grade'>
             <br />
             <br />
-          <p>20만원 미만 구매</p>
+          <p>20만원 미만 구매시</p>
           <br />
           </div>
 

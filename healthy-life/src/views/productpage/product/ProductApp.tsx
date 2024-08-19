@@ -15,7 +15,7 @@ const images = [
 
 export default function ProductApp() {
   return (
-    <div>
+    <div className='productContainer'>
       <br />
       <br />
       <Product images={images}/>
