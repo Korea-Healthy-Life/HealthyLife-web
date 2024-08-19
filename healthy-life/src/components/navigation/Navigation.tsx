@@ -3,6 +3,8 @@ import '../../style/componentStyle/Navigaition.css'
 import SubNav from './SubNav';
 import { Link, Route, Routes } from 'react-router-dom';
 import MypageNav from '../../views/mypage/mypage-main/MypageNav';
+import MyPage from '../../views/mypage/MyPage';
+
 
 
 
@@ -35,14 +37,15 @@ const Navigation:React.FC = () => {
       <div 
       
       >
-        <div className='subNav'>
+      
         <div onMouseEnter={()=> handleMouseEnter('nav')}
-        onMouseLeave={handleMouseLeave}>
+        onMouseLeave={handleMouseLeave}
+        className='subNavDiv'>
         {activeMenu === 'nav' && (<SubNav />)}
-        </div>
         </div>
       </div>
       <Routes>
+      {/* <Route path='/mypage/' element={<MypageNav/>}/> */}
       </Routes>
     </div>
   )

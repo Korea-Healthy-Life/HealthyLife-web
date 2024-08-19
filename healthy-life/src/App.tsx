@@ -38,13 +38,15 @@ import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
 import NonMember from './views/nonMemberOrder/NonMember';
 import Payment from './views/payment/Payment';
-import MyPage from './views/mypage/MyPage';
 import BestItem from './views/best/bestItem';
 import RecommandApp from './views/recommand/RecommandApp';
 import Bmi from './views/bmi/Bmi';
 import JoinApp from './views/join/JoinApp';
 import CartAPP from './views/cart/CartAPP';
 import MypageNav from './views/mypage/mypage-main/MypageNav';
+import MypageMain from './views/mypage/mypage-main/MypageMain';
+import MyPage from './views/mypage/MyPage';
+import Cupon from './views/mypage/cupon,reserves,benefit/Cupon';
 
 function App() {
   return (
@@ -78,17 +80,19 @@ function App() {
         <Route path="/sea" element={<SeaFood />} />
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
-        
-        <Route path='/mypage/*' element={<MyPage />}/> 
+
+        <Route path='/mypage/' element={<MypageNav/>}/>
+        <Route path='/mypage/' element={<MypageMain />}/>
         <Route path='/mypage/order' element={<OrderApp />}/> 
         <Route path='/mypage/myreview' element={<ReviewApp />}/>
         <Route path='/mypage/wishlist' element={<WishApp />}/>
         <Route path='/mypage/current' element={<CurrentProduct />}/>
         <Route path='/mypage/mileage' element={<Reserves />}/>
-        {/* <Route path='/mypage/coupon' element={<Cupon />}/> */}
+        <Route path='/mypage/coupon' element={<Cupon />}/>
         <Route path='/mypage/membership' element={<Benefit />}/>
         <Route path='/mypage/userinformation' element={<Userinformation />}/>
         <Route path='/mypage/review/write' element={<ReviewWrite />}/>
+
         <Route path='/login' element={<LoginNav/>}/>
         <Route path='/login/FindId' element={<FindId/>}/>
         <Route path='/login/FindPassword' element={<FindPassword/>}/>
