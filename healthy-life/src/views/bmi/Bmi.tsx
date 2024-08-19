@@ -81,7 +81,9 @@ export default function Bmi(){
 
   return (
     <div>
-      <button></button>
+      <br />
+      <br />
+      <br />
       <Box>
 
       <form className='bmiCalculator'>
