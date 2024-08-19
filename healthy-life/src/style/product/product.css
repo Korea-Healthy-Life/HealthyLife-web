@@ -1,3 +1,11 @@
+.productContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .prodcutDetailPageContainer{
   float: none;
 }
