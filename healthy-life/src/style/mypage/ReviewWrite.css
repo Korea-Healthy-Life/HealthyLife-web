@@ -1,10 +1,21 @@
+@font-face {
+  font-family: 'goorm-sans-bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 .ReviewWriteContainer {
   margin: 0 auto;
   margin-top: 100px;
-  width: 50%;
+  width: 600px;
   display: flex;
   flex-direction: column;
-  border: 1px solid #eee;
+  align-items: center;
+  border: 1px solid #67C6E3;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .ReviewWriteContainer h2 {
@@ -25,21 +36,24 @@
 .ReviewWriteTitleDiv {
   display: flex;
   align-items: center;
+  font-size: 15px;
+  border: 1px solid #67C6E3;
+  width: 500px;
 }
 
 .ReviewWriteTitle {
-  width: 75%;
-  
+  width: 500px;
 }
 
 .ReviewWriteContentDiv {
   margin-top: 10px;
   display: flex;
   align-items: flex-start;
+  width: 500px;
 }
 
-.ReviewWriteContent label {
-  margin-right: 10px;
+input[type="file"] {
+  
 }
 
 .ReviewWriteContent {
@@ -49,17 +63,12 @@
   border-radius: 5px;
 }
 
-.ReviewWriteContentDiv label {
-  font-size: 10px;
-}
-.ReviewWriteTitleDiv label {
-  font-size: 10px;
-}
 
 .ImgContainer {
   display: flex;
   gap: 10px;
-  align-items: flex-start;
+  align-items: flex-end;
+  justify-content: flex-start;
   margin-left: 30px;
   margin-top: 10px;
 }
@@ -70,6 +79,8 @@
   border: 1px solid #eee;
   margin-top: 10px;
 }
+
+
 
 .ReviewWriteBtn {
   margin-top: 10px;
@@ -85,4 +96,14 @@
 .ReviewWriteBtn {
   margin: 0 auto;
   margin-top: 30px;
+}
+
+.ReviewWriteBtn > button {
+  width: 180px;
+  height: 40px;
+  background-color: #67C6E3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'goorm-sans-bold';
 }

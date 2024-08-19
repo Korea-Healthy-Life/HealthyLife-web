@@ -6,6 +6,8 @@ import CardMembershipIcon from '@mui/icons-material/CardMembership';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import { Route, Routes } from 'react-router-dom';
+import MypageNav from './MypageNav';
 
 
 
@@ -53,6 +55,9 @@ function MypageMain() {
       </ul>
     </div> 
     </div>
+    <Routes>
+      <Route path='/mypage/*' element={<MypageNav/>}/>
+    </Routes>
   </div>
   )
 }

@@ -11,8 +11,9 @@
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  width: 25%;
+  width: 400px;
   margin: 0 auto;
+  margin-top: 60px;
 }
 
 .surveyContainer h3 {
@@ -82,4 +83,17 @@
   margin: 10px 0;
   padding: 10px 20px;
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .surveyContainer li{
+    font-size: 10px;
+    width: 200px;
+  }
+  .mypageSuvContainer li{
+    font-size: 10px;
+    width: 50%;
+  }
+
+  
 }

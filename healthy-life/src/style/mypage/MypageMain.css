@@ -12,12 +12,12 @@
   font-style: normal;
 }
 
-
 .myPageConatiner {
   width: 800px;
   margin: 0 auto;
   margin-top: 60px;
   font-family: 'goorm-sans-bold';
+  position: relative;
 }
 
 .mypageAllContainer{
