@@ -4,6 +4,15 @@ import SubNav from './SubNav';
 import { Link, Route, Routes } from 'react-router-dom';
 import MypageNav from '../../views/mypage/mypage-main/MypageNav';
 import MyPage from '../../views/mypage/MyPage';
+import OrderApp from '../../views/mypage/order/OrderApp';
+import ReviewApp from '../../views/mypage/review/ReviewApp';
+import WishApp from '../../views/mypage/wish/WishApp';
+import Userinformation from '../../views/mypage/userInformation/Userinformation';
+import Cupon from '../../views/mypage/cupon,reserves,benefit/Cupon';
+import Reserves from '../../views/mypage/cupon,reserves,benefit/Reserves';
+import CurrentProduct from '../../views/mypage/currentProducts/CurrentProduct';
+import ReviewWrite from '../../views/mypage/review/ReviewWrite';
+import Benefit from '../../views/mypage/cupon,reserves,benefit/Benefit';
 
 
 
@@ -45,7 +54,7 @@ const Navigation:React.FC = () => {
         </div>
       </div>
       <Routes>
-      {/* <Route path='/mypage/' element={<MypageNav/>}/> */}
+      <Route path='/mypage/*' element={<MypageNav/>}/>
       </Routes>
     </div>
   )
