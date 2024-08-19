@@ -27,7 +27,7 @@ export default function Header() {
     
     <div className='logo'>
       <br />
-    <p><Link to={'/'}>Logo</Link></p>
+    <p><Link to={'/'}>Logo</Link> </p>
     </div>
 
 

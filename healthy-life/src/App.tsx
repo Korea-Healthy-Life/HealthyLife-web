@@ -81,9 +81,8 @@ function App() {
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
 
-        <Route path='/mypage/' element={<MypageNav/>}/>
-        <Route path='/mypage/' element={<MypageMain />}/>
-        <Route path='/mypage/order' element={<OrderApp />}/> 
+        <Route path='/mypage/' element={<MypageMain/>}/>
+        <Route path='/mypage/orderApp' element={<OrderApp />}/> 
         <Route path='/mypage/myreview' element={<ReviewApp />}/>
         <Route path='/mypage/wishlist' element={<WishApp />}/>
         <Route path='/mypage/current' element={<CurrentProduct />}/>

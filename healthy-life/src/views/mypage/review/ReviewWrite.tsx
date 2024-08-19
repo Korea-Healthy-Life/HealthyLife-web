@@ -27,6 +27,10 @@ function ReviewWrite() {
           <div className='ImgContainerDiv'></div>
           <div className='ImgContainerDiv'></div>
           <div className='ImgContainerDiv'></div>
+          <div class>
+          <input type="file" className='fileBtn'/>
+
+          </div>
         </div>
           <div className='ReviewWriteBtn'>
             <button>등록</button>
