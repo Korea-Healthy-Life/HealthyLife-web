@@ -13,7 +13,7 @@ export default function Header() {
   const [search, setSearch] = useState<string>('');
 
   const InputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value)
+    setSearch(e.target.value);
   }
 
 

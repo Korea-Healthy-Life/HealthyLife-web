@@ -123,7 +123,7 @@ function Login() {
         <button onClick={closeModal} className='closeModalButton'>닫기</button>
         </div> 
         : 
-        <div>로그인되였습니다<br /> <br />
+        <div>로그인되셨습니다<br /> <br />
         <Link to={'/'} onClick={closeModal}><button className='closeModalButton'>닫기</button></Link></div>}
   
 
