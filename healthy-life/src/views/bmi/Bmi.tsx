@@ -81,8 +81,7 @@ export default function Bmi(){
 
   return (
     <div>
-      <br />
-      <br />
+      <h1 style={{marginTop: '75px', textAlign: 'center'}}>체제방 계산기</h1>
       <br />
       <Box>
 
@@ -91,7 +90,7 @@ export default function Bmi(){
         <TextField
           label="몸무게"
           id="weight"
-          sx={{ m: 1, width: '25ch' }}
+          sx={{ m: 1, width: '40ch' }}
           InputProps={{
             startAdornment: <InputAdornment position="start">kg</InputAdornment>,
           }}
@@ -104,7 +103,7 @@ export default function Bmi(){
         <TextField
           label="신장"
           id="height"
-          sx={{ m: 1, width: '25ch' }}
+          sx={{ m: 1, width: '40ch' }}
           InputProps={{
             startAdornment: <InputAdornment position="start">cm</InputAdornment>,
           }}
@@ -113,6 +112,7 @@ export default function Bmi(){
           name='height'
           onChange={inputHandler}
         />
+        <br />
         <br />
         <button className='bmiButton' onClick={bmiCalculator}>결과 확인</button>
         <br />

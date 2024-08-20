@@ -1,23 +1,77 @@
-.reservesContainer{
-  margin-top: 150px;
-  margin-left: 600px;
-  margin-right: 500px;
-  width: 450px;
-  height: 500px;
-  border: 1px solid gray;
+.reservesHead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
   
 }
 
 
-
-
-.reservesContainer h3 {
-  margin-top: 7px;
-  margin-left: 7px;
+.reservesHead h2{
+  margin-right: 6px;
 }
 
 
-.reservesContainer p {
-  text-align: start;
-  margin-left: 4px;
+.viewPoint{
+  display: flex;
+  flex-direction: column;
+  width: 870px;
+  height: 150px;
+  margin-right: 6px;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+
+.tabBox{
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid gray;
+  width: 840px;
+}
+
+.date{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+
+}
+
+.context{
+  margin-left: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.payOrDeducted{
+  margin-left: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.changePoint{
+  margin-left: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.expirationPeriod{
+  margin-left: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.showUseReserves{
+  margin-top: 100px; 
+  display: flex;
+  justify-content: center;
+}
+
+
+.showUseReserves p{
+  font-size: 16px;
+  color: gray;
 }

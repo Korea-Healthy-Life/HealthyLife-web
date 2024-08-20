@@ -3,11 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 100px;
+  margin-top: 70px;
 }
 
 
 .currentProductContainer > h2{
-  text-align: center;
+    margin-right: 50px;
 }
 
 
@@ -15,29 +17,27 @@
 .imagesFlexBox{
   display: flex;
   justify-content: space-around;
-  margin-left: 85px;
   padding-top: 50px;
-  padding-left: 12px;
   margin-right: 85px;
-  width: 1400px;
+  width: 980px;
 
 }
 
 .imageBox{
-  width: 290px;
+  width: 200px;
 }
 
 
 .imageBox img{
-  width: 285px;
-  height: 290px;
+  width: 200px;
+  height: 225px;
   border-radius: 5px;
 }
 
 
 .imageBox p{
   color: darkgray;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 
