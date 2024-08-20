@@ -47,6 +47,7 @@ import MypageNav from './views/mypage/mypage-main/MypageNav';
 import MypageMain from './views/mypage/mypage-main/MypageMain';
 import MyPage from './views/mypage/MyPage';
 import Cupon from './views/mypage/cupon,reserves,benefit/Cupon';
+import SaladApp from './views/allproduct/L-salad/SaladApp';
 
 function App() {
   return (
