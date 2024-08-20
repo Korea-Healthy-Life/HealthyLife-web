@@ -6,7 +6,7 @@ import KeyboardArrowUpTwoToneIcon from '@mui/icons-material/KeyboardArrowUpTwoTo
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
 import { Link } from 'react-router-dom';
-import EggIcon from '@mui/icons-material/Egg';
+import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 
 const Sidenavigator:React.FC = () => {
@@ -35,7 +35,7 @@ const Sidenavigator:React.FC = () => {
       
       {activeSide === 'side' && 
       <ul className='sideNav'>
-        <li><Link to={'/crrent'}><AccessTimeTwoToneIcon/></Link></li>
+        <li><Link to={'/mypage/current'}><AccessTimeTwoToneIcon/></Link></li>
         <li><Link to={'/cart'}><ShoppingBagTwoToneIcon/></Link></li>
         <li><Link to={'/mypage/wishlist'}><FavoriteTwoToneIcon/></Link></li>
         <li onClick={MoveToTop}><KeyboardArrowUpTwoToneIcon/></li>
@@ -49,9 +49,9 @@ const Sidenavigator:React.FC = () => {
       </ul>
       }
       <button 
-      className='pluseIcon' 
+      className='KitchenOutlinedIcon' 
       onClick={() => handleMouseSpreadClick('side')}
-      ><EggIcon style={{fontSize: '40px'}} />
+      ><KitchenOutlinedIcon style={{fontSize: '40px'}} />
       </button>
     </div>
   )

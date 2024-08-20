@@ -27,15 +27,20 @@
   
 }
 
-.pluseIcon {
+.KitchenOutlinedIcon {
   position: fixed;
   right: 60px;
   top: 50%;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  color: #a4a3a3;
+  color: #67C6E3;
   z-index: 19;
-  transform: scale(-10px);
+}
+
+.KitchenOutlinedIcon:active {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: #1478FF;
 }
 
 .sideNav li {
@@ -46,8 +51,9 @@
   font-weight: bold;
 }
 
-.closeIcon:hover, .pluseIcon:hover, .sideNav li:hover {
-  color: #a4a3a3;
+.closeIcon:hover, .sideNav li:hover {
+  color: #8e8e8e;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 

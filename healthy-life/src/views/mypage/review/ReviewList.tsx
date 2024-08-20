@@ -9,7 +9,7 @@ function ReviewList() {
       <div className='reviewList'>
         <ul>
           <li>
-            <img src="https://cdn.pixabay.com/photo/2024/02/11/13/33/kumquats-8566508_1280.jpg" alt="" />
+            <img src="https://cdn.pixabay.com/photo/2024/02/11/13/33/kumquats-8566508_1280.jpg" alt="" className='reviewImage'/>
             <h5>상품명</h5>
             <p>후기제목</p>
           </li>

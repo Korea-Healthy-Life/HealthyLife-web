@@ -5,17 +5,19 @@
   font-style: normal;
 }
 
-
 .ReviewWriteContainer {
   margin: 0 auto;
-  margin-top: 100px;
-  width: 600px;
+  margin-top: 60px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #67C6E3;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.ReviewWriteTitleDiv {
+
 }
 
 .ReviewWriteContainer h2 {
@@ -36,51 +38,71 @@
 .ReviewWriteTitleDiv {
   display: flex;
   align-items: center;
-  font-size: 15px;
+  justify-content: space-between;
   border: 1px solid #67C6E3;
   width: 500px;
+  height: 35px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
+
+.titleLine {
+  font-size: 17px;
+  color: #67C6E3;
+}
+
+.ReviewWriteTitleDiv > label {
+  font-size: 13px;
+}
+
 
 .ReviewWriteTitle {
-  width: 500px;
+  width: 400px;
+  border: none;
+  height: 20px;
+  outline: none;
+  font-size: 12dpx;
 }
 
-.ReviewWriteContentDiv {
-  margin-top: 10px;
-  display: flex;
-  align-items: flex-start;
-  width: 500px;
-}
 
-input[type="file"] {
-  
+
+.filebox label {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #999999;
+  cursor: pointer;
+  height: 40px;
+  margin-left: 10px;
 }
 
 .ReviewWriteContent {
-  width: 80%;
+  width: 500px;
   height: 200px;
   resize: none;
   border-radius: 5px;
+  border: 1px solid #67C6E3;
+  box-sizing: border-box;
 }
 
 
 .ImgContainer {
+  width: 500px;
   display: flex;
   gap: 10px;
   align-items: flex-end;
   justify-content: flex-start;
-  margin-left: 30px;
   margin-top: 10px;
 }
 
 .ImgContainerDiv {
   width: 70px;
   height: 70px;
-  border: 1px solid #eee;
+  border: 1px solid #c1c1c1;
   margin-top: 10px;
 }
-
-
 
 .ReviewWriteBtn {
   margin-top: 10px;
@@ -98,7 +120,7 @@ input[type="file"] {
   margin-top: 30px;
 }
 
-.ReviewWriteBtn > button {
+.ReviewWriteBtn .reviewWritebtn {
   width: 180px;
   height: 40px;
   background-color: #67C6E3;
@@ -106,4 +128,30 @@ input[type="file"] {
   border-radius: 5px;
   color: white;
   font-family: 'goorm-sans-bold';
+  cursor: pointer;
+}
+
+.fileBox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+}
+
+.fileBox input[type="file"] {  /* 파일 필드 숨기기 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
 }

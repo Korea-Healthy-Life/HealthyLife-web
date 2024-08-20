@@ -11,10 +11,10 @@ function OrderList() {
           <h5>상품이름</h5>
           <p>상품 옵션</p>
           <div className='orderListBtn'>
-            <button>취소</button>
-            <button>교환</button>
-            <button>반품</button>
-            <button>확정</button>
+            <button className='orderBtn'>취소</button>
+            <button className='orderBtn'>교환</button>
+            <button className='orderBtn'>반품</button>
+            <button className='orderBtn'>확정</button>
           </div>
       </li>
       </ul>

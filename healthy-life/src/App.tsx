@@ -47,6 +47,7 @@ import MypageNav from './views/mypage/mypage-main/MypageNav';
 import MypageMain from './views/mypage/mypage-main/MypageMain';
 import MyPage from './views/mypage/MyPage';
 import Cupon from './views/mypage/cupon,reserves,benefit/Cupon';
+import SaladApp from './views/allproduct/L-salad/SaladApp';
 
 function App() {
   return (
@@ -71,7 +72,7 @@ function App() {
         {/* <span>음료</span> */}
         <Route path="/drink" element={<Drink />} />
         {/* <span>샐러드</span> */}
-        <Route path="/salad" element={<Salad />} />
+        <Route path="/salad" element={<SaladApp />} />
         {/* <span>비건</span> */}
         <Route path="/vegan" element={<Vegan />} />
         {/* <span>저당</span> */}
@@ -91,7 +92,7 @@ function App() {
         <Route path='/mypage/membership' element={<Benefit />}/>
         <Route path='/mypage/userinformation' element={<Userinformation />}/>
         <Route path='/mypage/review/write' element={<ReviewWrite />}/>
-
+  
         <Route path='/login' element={<LoginNav/>}/>
         <Route path='/login/FindId' element={<FindId/>}/>
         <Route path='/login/FindPassword' element={<FindPassword/>}/>

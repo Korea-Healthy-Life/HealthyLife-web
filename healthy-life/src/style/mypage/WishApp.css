@@ -4,7 +4,7 @@
   width: 50%;
   margin: 0 auto;
   margin-top: 110px;
-}
+}  
 
 .wishList {
   list-style: none; 
@@ -25,7 +25,7 @@
   border-bottom: 1px solid #b1b1b1;
 }
 
-img, .wishBtn {
+.wishImg, .wishBtn {
   margin-bottom: 10px;
 }
 

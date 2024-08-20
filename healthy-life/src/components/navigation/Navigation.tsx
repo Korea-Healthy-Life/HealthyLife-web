@@ -3,16 +3,15 @@ import '../../style/componentStyle/Navigaition.css'
 import SubNav from './SubNav';
 import { Link, Route, Routes } from 'react-router-dom';
 import MypageNav from '../../views/mypage/mypage-main/MypageNav';
-import MyPage from '../../views/mypage/MyPage';
 import OrderApp from '../../views/mypage/order/OrderApp';
 import ReviewApp from '../../views/mypage/review/ReviewApp';
 import WishApp from '../../views/mypage/wish/WishApp';
-import Userinformation from '../../views/mypage/userInformation/Userinformation';
-import Cupon from '../../views/mypage/cupon,reserves,benefit/Cupon';
-import Reserves from '../../views/mypage/cupon,reserves,benefit/Reserves';
 import CurrentProduct from '../../views/mypage/currentProducts/CurrentProduct';
-import ReviewWrite from '../../views/mypage/review/ReviewWrite';
+import Reserves from '../../views/mypage/cupon,reserves,benefit/Reserves';
+import Cupon from '../../views/mypage/cupon,reserves,benefit/Cupon';
 import Benefit from '../../views/mypage/cupon,reserves,benefit/Benefit';
+import Userinformation from '../../views/mypage/userInformation/Userinformation';
+import ReviewWrite from '../../views/mypage/review/ReviewWrite';
 
 
 
@@ -44,7 +43,6 @@ const Navigation:React.FC = () => {
         </ul>
       </div>
       <div 
-      
       >
       
         <div onMouseEnter={()=> handleMouseEnter('nav')}
@@ -53,7 +51,7 @@ const Navigation:React.FC = () => {
         {activeMenu === 'nav' && (<SubNav />)}
         </div>
       </div>
-      <Routes>
+      <Routes>  
       <Route path='/mypage/*' element={<MypageNav/>}/>
       </Routes>
     </div>
