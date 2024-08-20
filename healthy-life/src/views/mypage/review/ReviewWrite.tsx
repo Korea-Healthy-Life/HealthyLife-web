@@ -1,6 +1,7 @@
 import React from 'react'
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import '../../../style/mypage/ReviewWrite.css'
+import { Link } from 'react-router-dom';
 
 function ReviewWrite() {
   return (
@@ -13,28 +14,26 @@ function ReviewWrite() {
           <StarBorderIcon />
           <StarBorderIcon />
         </div>
-        <form action="" className='formContainer'>
+        <form className='formContainer'>
         <div className='ReviewWriteTitleDiv'>
-        <label htmlFor="">제목</label>       
+        <label htmlFor="">제목</label> 
+        <span className='titleLine'>|</span>    
         <input type="text" className='ReviewWriteTitle'/>
         </div>
-        <div className='ReviewWriteContentDiv'> 
-          <label htmlFor="">내용</label>
-          <textarea className='ReviewWriteContent'/>
-        </div>
+          <textarea className='ReviewWriteContent' placeholder='내용을 입력해주세요.'/>
         </form>
         <div className='ImgContainer'>
           <div className='ImgContainerDiv'></div>
           <div className='ImgContainerDiv'></div>
           <div className='ImgContainerDiv'></div>
-          <div class>
-          <input type="file" className='fileBtn'/>
-
+          <div className='fileBox'>
+            <label htmlFor="">업로드</label>
+            <input type="file" className='fileInpout'/>
           </div>
         </div>
           <div className='ReviewWriteBtn'>
-            <button>등록</button>
-            <button>취소</button>
+            <Link to={'/mypage/myreview'}><button className='reviewWritebtn'>등록</button></Link>
+            <Link to={'/mypage/myreview'}><button className='reviewWritebtn'>취소</button></Link>
           </div>
     </div>
   )

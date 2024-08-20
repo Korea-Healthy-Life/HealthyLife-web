@@ -1,7 +1,8 @@
 import React from 'react'
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import CloseIcon from '@mui/icons-material/Close';
 
 import '../../style/cart.css'
+import { Link } from 'react-router-dom';
 
 // interface CartProps {
 //   id: number;
@@ -20,28 +21,37 @@ const CartAPP = () => {
           <button>모두선택</button>
           <button>모두해제</button>
         </div>
-          <ul>
-            <li>
+          <ul className='cartList'>
+            <li className='cartLi'>
               <input type="checkbox" className='cartCheckbox'/>
-              <img src="https://cdn.pixabay.com/photo/2024/04/08/16/11/ai-generated-8683863_1280.jpg" alt="" />
+              <img src="https://cdn.pixabay.com/photo/2024/04/08/16/11/ai-generated-8683863_1280.jpg" alt="" className='cartImage'/>
               <h4>상품이름</h4>
               <p>상품옵션</p>
               <input type="number" min={1} className='productAmount'/>
               <p>금액</p>
-              <span className='deleteBtn'><HighlightOffIcon /></span>
+              <span className='deleteBtn'><CloseIcon /></span>
             </li>
           </ul>
 
           <div className='totalContainer'>
-            <ul>
-              <li>전체 상품 금액: </li>
-              <li>배송비: </li>
-              <li>전체 비용: </li>
+            <ul className='totalContainerUl'>
+              <li className='totalPrice'>
+                <p>전체 상품 금액</p> 
+                <p className='wonPrice'><span>10,000</span> 원</p>
+              </li>
+              <li className='deliveryFee'>
+                <p>배송비</p>
+                <p className='wonPrice'><span>10,000</span> 원</p>
+              </li>
+              <li className='totalPrice'>
+                <p>총 결제금액</p> 
+                <p className='wonPrice'><span>10,000</span> 원</p>
+              </li>
             </ul>
           </div>
           <div className='processBtn'>
-            <button>계속쇼핑하기</button>
-            <button>결제하기</button>
+            <button className='processButton'>계속쇼핑하기</button>
+            <Link to={'/payment'}><button className='processButton'>결제하기</button></Link>
           </div>
       </div>
     </div>

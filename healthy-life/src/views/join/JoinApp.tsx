@@ -12,7 +12,7 @@ function JoinApp() {
         아이디
       </label>
       <div className='checkBtn'>
-      <input type="text" id='userId' placeholder='아이디를 입력해주세요.'/>
+      <input type="text" className='userId inputclass' placeholder='아이디를 입력해주세요.'/>
       <button className='joinBtn'>중복확인</button>
       </div>
       </li>
@@ -21,7 +21,7 @@ function JoinApp() {
         닉네임
       </label>
       <div className='checkBtn'>
-      <input type="text" id='userNickname' placeholder='닉네임을 입려해주세요.'/>
+      <input type="text" className='userNickname inputclass' placeholder='닉네임을 입려해주세요.'/>
       <button className='joinBtn'>중복확인</button>
       </div>
       </li>
@@ -29,53 +29,47 @@ function JoinApp() {
       <label htmlFor='userPassword'>
         비밀번호
       </label>
-          <input type="password" id='userPassword' placeholder='비밀번호를 입력해주세요.'/>
+          <input type="password" className='userPassword inputclass' placeholder='비밀번호를 입력해주세요.'/>
       </li>
       <li className='li03'>
       <label htmlFor='userPassword'>
         비밀번호 확인
       </label>
-        <input type="password" id='userpPasswordCheck'placeholder='비밀번호를 확인해주세요.'/>
+        <input type="password" className='userpPasswordCheck inputclass'placeholder='비밀번호를 확인해주세요.'/>
       </li>
       <li className='li04'>
       <label htmlFor='userName'>
         이름
       </label>
-      <input className='inputName' type="text" id='userName' placeholder='이름을 입력해주세요.'/>
+      <input className='inputName inputclass' type="text" id='userName' placeholder='이름을 입력해주세요.'/>
       </li>
       <li className='li05'>
       <label className='addressLabel'>
         주소
       </label>
-      <input className='userAddress' placeholder='주소를 입력하세요.'/>
+      <input className='userAddress inputclass' placeholder='주소를 입력하세요.'/>
       </li>
       <li className='li06'>
       <label htmlFor="phonNumber">
         휴대전화번호
       </label>
       <div className='checkBtn'>
-      <input type="tel" id='phonNumber' placeholder='전화번호를 입력하세요.' className='joinBtn'/>
-      <button >인증번호 받기</button>
+      <input type="tel" id='phonNumber' placeholder='전화번호를 입력하세요.' className='inputclass'/>
+      <button className='joinBtn'>인증번호 받기</button>
       </div>
       </li>
       <li className='li07'>
         <label className="userBirth">
           생년월일
         </label>
-        <div className='birthDiv'>
-          <input type="text" className="birthMonth"/>
-          <label>년</label>
-          <input type="text" className="birthMonth"/>
-          <label>월</label>
-          <input type="number" className="birthday" min={1} max={31}/>
-          <label>일</label>
-        </div>
+        <input type="text" className="birthDiv inputclass" placeholder='생년월일: YYMMDD'/>
+
       </li>
       <li>
       <label htmlFor="userEmail">
         이메일
       </label>  
-      <input type="email" id='userEmail' placeholder='이메일을 입력해주세요.'/>
+      <input type="email" className='inputclass' placeholder='이메일을 입력해주세요.'/>
       </li>
       </ul>
       <div className='li08'>
