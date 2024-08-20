@@ -11,9 +11,9 @@ function ReviewApp() {
           <h4>작성할 후기</h4>
           <ul className='reviewAppList'>
             <li>
-              <img src="https://cdn.pixabay.com/photo/2024/02/11/13/33/kumquats-8566508_1280.jpg" alt="" />
+              <img src="https://cdn.pixabay.com/photo/2024/02/11/13/33/kumquats-8566508_1280.jpg" alt="" className='reveiwAppImage'/>
               <h5>상품명</h5>
-              <button className='reviewRightBtn'><Link to={'/mypage/review/write'}>후기작성</Link></button>
+              <Link to={'/mypage/review/write'}><button className='reviewWrightBtn'>후기작성</button></Link>
             </li>
           </ul>
         </div>

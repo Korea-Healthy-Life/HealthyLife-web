@@ -91,7 +91,7 @@ function App() {
         <Route path='/mypage/membership' element={<Benefit />}/>
         <Route path='/mypage/userinformation' element={<Userinformation />}/>
         <Route path='/mypage/review/write' element={<ReviewWrite />}/>
-
+  
         <Route path='/login' element={<LoginNav/>}/>
         <Route path='/login/FindId' element={<FindId/>}/>
         <Route path='/login/FindPassword' element={<FindPassword/>}/>
