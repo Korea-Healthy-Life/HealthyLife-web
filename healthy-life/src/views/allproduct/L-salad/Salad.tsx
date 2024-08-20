@@ -1,65 +1,115 @@
 import React, { useState } from 'react'
-import SaladProductsLayout from './SaladProductsLayout';
-import Pagination from './Pagination';
-import { saladProducts } from './SaladProductsLayout';
+import { saladProduct } from './SaladApp';
 import '../../../style/home/productList.css';
+import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
+
+const Salad: React.FC<{ products: saladProduct[] }> = ({ products }) => {
+  const [activeProduct, setActiveProduct] = useState<number | null>(null);
+  const [modalOpen, setmodalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
 
-export default function Salad() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const saladProductsPerPage = 9;
-  // const totalPages = Math.ceil(saladProducts.length/ saladProductsPerPage);
 
-  // const handlePrevious = () =>  {
-  //   setCurrentPage((prevPage) => Math.max(prevPage -1, 1));
-    
-  // };
-  const indexOfLastProduct = currentPage * saladProductsPerPage;
+// 버튼호버 함수
+const handleMouseEnter = (index: number) => {
+  setActiveProduct(index);
+};
+const handleMouseLeave = () => {
+  setActiveProduct(null);
+};
+// 모달창 함수
+const openModal = () => {
+  setmodalOpen(true);
+};
+const closeModal = () => {
+  setmodalOpen(false);
+};
 
-  const indexOfFirstProduct = indexOfLastProduct - saladProductsPerPage;
-  const currentProducts= saladProducts.slice(indexOfFirstProduct, indexOfLastProduct);
-  
+// 방향 버튼
+const handlePrevClick = () => {
+  setCurrentIndex((prevIndex) =>
+    prevIndex === 0 ? products.length - 1 : prevIndex - 1
+  );
+};
+const handleNextClick = () => {
+  setCurrentIndex((prevIndex) =>
+    prevIndex === products.length - 1 ? 0 : prevIndex + 1
+  );
+};
 
-  // const handleNext = () => {
-  //   setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages ));
-  // };
-
-  // const startIndex = (currentPage -1) * saladProductsPerPage;
-  // const selectedProducts = saladProducts.slice(startIndex, startIndex + saladProductsPerPage);
-
-
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
-  return (
-    <div className='allProductBoxljw'>
-      <h2>샐러드</h2>
-
-      <ul className='allProductButtonListljw'>
-        <li><button>샐러드</button></li>
-        <li><button>드레싱</button></li>
-      </ul> 
-
-    <div className='itemContainerljw'>
-      <ul className='allProductSelectBtnljw'>
-        <li value="">조회순</li>
-        <li>|</li>
-        <li value="">가격높은순</li>
-        <li>|</li>
-        <li value="">가격낮은순</li>
-      </ul>
-    </div>
-
-    <div className='allProductListljw'>
-      <SaladProductsLayout currentProducts= {currentProducts}/>
-      </div>
-      <Pagination
-        currentPage={currentPage}
-        totalProducts={saladProducts.length}
-        paginate={paginate}
-        saladProductsPerPage={saladProductsPerPage}
-        />
-
-
-    </div>
-  )
+const visibleProducts = products.slice(currentIndex, currentIndex + 4);
+if (visibleProducts.length < 4) {
+  visibleProducts.push(...products.slice(0, 4 - visibleProducts.length));
 }
+
+return (
+  <div className="allProductImageContainer1">
+    {products.map((product, index) => (
+      <div key={product.id} className="allProductContain1">
+        <Link to={"/productdetail1"}>
+          <img
+            src={product.image}
+            alt={product.name}
+            className="allProductImage1"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          />
+          <h4>{product.name}</h4>
+          <p>price: 30000만원</p>
+        </Link>
+        <div
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+        >
+          {activeProduct === index && (
+            <div className="allProductHoverBtn1">
+              <button onClick={openModal}>cart</button>
+              <button>WISH</button>
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+
+    <ReactModal
+      isOpen={modalOpen}
+      onRequestClose={closeModal}
+      className="modalContianerCart1"
+      overlayClassName="modalOverlay1"
+    >
+      <div className="modal">
+        <h2>장바구니</h2>
+        <div className="modalContainerCart1">
+          <button className="prevButton" onClick={handlePrevClick}>
+            &#10094;
+          </button>
+          <div className="modalImages1">
+            {visibleProducts.map((product) => (
+              <div key={product.id} className="relatedModalImage1">
+                <img src={product.image} alt={product.name} />
+                <p>{product.name}</p>
+              </div>
+            ))}
+            <button className="nextButton" onClick={handleNextClick}>
+              &#10095;
+            </button>
+          </div>
+
+          <div className="modalButtonContainer1">
+            <Link to={"/payment"}>
+              {" "}
+              <button>바로주문</button>
+            </Link>
+            <Link to={"/cart"}>
+              <button>장바구니 이동</button>
+            </Link>
+            <button onClick={closeModal}>쇼핑계속하기</button>
+          </div>
+        </div>
+      </div>
+    </ReactModal>
+  </div>
+);
+};
+export default Salad;
