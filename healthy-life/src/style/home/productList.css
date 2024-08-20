@@ -11,7 +11,7 @@ font-face {
   font-style: normal;
 }
 
-.allProductBox2ljw {
+.allProductBox1 {
   width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -22,11 +22,11 @@ font-face {
   font-family: 'goorm-sans-bold';
 }
 
-.allProductBox2ljw > h2 {
+.allProductBox1 > h2 {
   text-align: center;
 }
 
-.allProductButtonListljw {
+.allProductButtonList1 {
   display: flex;
   justify-content: space-around;
   width: 300px;
@@ -37,20 +37,20 @@ font-face {
   margin-bottom: 40px;
 }
 
-.allProductButtonListljw button {
+.allProductButtonList1 button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
-.allProductButtonListljw button:hover {
+.allProductButtonList1 button:hover {
   cursor: pointer;
   border-bottom: 3px solid #DFF5FF;
 }
 
-.allProductButtonListljw button:active {
+.allProductButtonList1 button:active {
   color: #1478FF;
 }
 
-.allProductSelectBtnljw {
+.allProductSelectBtn1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,7 +61,7 @@ font-face {
   width: 220px;
 }
 
-.allProductSelectBtnljw li > button {
+.allProductSelectBtn1 li > button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
@@ -69,11 +69,11 @@ font-face {
   font-size: 1rem;
 }
 
-.allProductSelectBtnljw li > button:active {
+.allProductSelectBtn1 li > button:active {
   color: #1478FF;
 }
 
-.itemCotianerljw {
+.itemContainer1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -81,21 +81,11 @@ font-face {
 }
 
 /* List */
-.reviewImageContainerljw {
-  border-top: 3px solid #DFF5FF;
-  border-bottom: 3px solid #DFF5FF;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.allProductImageListljw {
-  margin: 10px auto;
-}
 
 
 
-.allProductContainljw {
+
+.allProductContain1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,18 +98,13 @@ font-face {
   text-align: center;
 }
 
-.allProductImageljw {
+.allProductImage1 {
   width: 100%;
   border-radius: 8px;
 }
 
-.allProductImageListljw > h4 {
-  display: flex;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
 
-.allProductHoverBtnljw{
+.allProductHoverBtn1{
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -128,7 +113,7 @@ font-face {
   right: -70px;
 }
 
-.allProductHoverBtnljw > button {
+.allProductHoverBtn1 > button {
   padding: 5px;
   border: none;
   color: #1478FF;
@@ -139,28 +124,20 @@ font-face {
   font-weight: 600;
 }
 
-.allProductHoverBtnljw > button:hover {
+.allProductHoverBtn1 > button:hover {
   background-color: #67C6E3;
   color: #fff;
 }
 
-.paginationljw {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto;
-  width: 200px;
-}
 
 
-.productPaginationljw {
+.productPagination1 {
   display: flex;
   gap: 6px;
   margin-top: 15px;
 }
 
-.productPageLinkljw {
+.productPageLink1 {
   border: none;
   border-radius: 3px;
   width: 50px;
@@ -171,7 +148,7 @@ font-face {
   cursor: pointer;
 }
 
-.PageLinkdirectionljw{
+.PageLinkdirection1{
   border: none;
   border-radius: 3px;
   width: 70px;
@@ -182,8 +159,75 @@ font-face {
   cursor: pointer;
 }
 
-.productPaginationljw .pageItemljw.active .productPageLinkljw {
+.productPagination1 .pageItem1.active .PageLink1 {
   background-color: #67C6E3;
   color: white;
   border-color: #67C6E3;
+}
+
+
+
+
+
+
+
+
+
+
+.modalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modalContainerCart{
+  position: relative;
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 279px;
+}
+
+
+.modalButtonContainer1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.modalButtonContainer1 > button{
+  background-color: #67C6E3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 110px;
+  height: 30px;
+}
+
+
+.modalButtonContainer1 button:hover{
+  background-color: #1478FF;
+}
+
+
+.modalImages1{
+  display: flex;
+  text-align: center;
+}
+
+
+.relatedModalImage1 img{
+  width: 65%;
 }

@@ -6,7 +6,7 @@ import Looks3Icon from '@mui/icons-material/Looks3';
 import Looks4Icon from '@mui/icons-material/Looks4';
 import Looks5Icon from '@mui/icons-material/Looks5';
 import Looks6Icon from '@mui/icons-material/Looks6';
-import { start } from 'repl';
+
 
 
 
@@ -16,7 +16,7 @@ function Benefit() {
     <div className='benefitContainer'>
       <br />
       <br />
-      <h3 style={{textAlign: 'start', marginLeft: '170px'}}>등급별 혜택 안내</h3>
+      <h3 style={{textAlign: 'start', marginLeft: '165px'}}>등급별 혜택 안내</h3>
       <br />
       <br />
       
