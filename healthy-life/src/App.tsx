@@ -71,7 +71,7 @@ function App() {
         {/* <span>음료</span> */}
         <Route path="/drink" element={<Drink />} />
         {/* <span>샐러드</span> */}
-        <Route path="/salad" element={<Salad />} />
+        <Route path="/salad" element={<SaladApp />} />
         {/* <span>비건</span> */}
         <Route path="/vegan" element={<Vegan />} />
         {/* <span>저당</span> */}
