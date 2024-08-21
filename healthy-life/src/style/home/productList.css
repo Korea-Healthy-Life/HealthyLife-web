@@ -11,30 +11,70 @@ font-face {
   font-style: normal;
 }
 
-.allProductBox1 {
+.allProductbBox1 {
   width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 90px;
   font-family: 'goorm-sans-bold';
 }
 
-.allProductBox1 > h2 {
+.allProductbBox1 > h2 {
   text-align: center;
 }
 
-.allProductButtonList1 {
+/* salad페이지, seaFood페이지, snack페이지, vegan페이지 각각 버튼리스트 코드 여기서부터 */
+.saladButtonList {
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+  height: 20px;
+  flex-direction: row;
+  margin-left: 25px;
+  list-style: none;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+
+.seaFoodButtonList{
   display: flex;
   justify-content: space-around;
   width: 300px;
   height: 20px;
   flex-direction: row;
-  margin: 0 auto;
+  margin-left: 13px;
   list-style: none;
   margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+
+.snackButtonList{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  height: 20px;
+  flex-direction: row;
+  list-style: none;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+
+.veganButtonList{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  height: 20px;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 12px;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .allProductButtonList1 button {
@@ -50,6 +90,8 @@ font-face {
   color: #1478FF;
 }
 
+/* 여기까지 */
+
 .allProductSelectBtn1 {
   display: flex;
   flex-direction: row;
@@ -60,6 +102,10 @@ font-face {
   margin-bottom: 5px;
   width: 220px;
 }
+
+
+
+
 
 .allProductSelectBtn1 li > button {
   border: none;
@@ -73,16 +119,23 @@ font-face {
   color: #1478FF;
 }
 
-.itemContainer1 {
+.itemContianer1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: right;
 }
 
-/* List */
 
 
+
+
+.allProductImageContainer1 {
+  border-top: 3px solid #DFF5FF;
+  border-bottom: 3px solid #DFF5FF;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 .allProductContain1 {
@@ -159,7 +212,7 @@ font-face {
   cursor: pointer;
 }
 
-.productPagination1 .pageItem1.active .PageLink1 {
+.productPagination1 .pageItem1.active1 .PageLink1 {
   background-color: #67C6E3;
   color: white;
   border-color: #67C6E3;
@@ -174,7 +227,7 @@ font-face {
 
 
 
-.modalOverlay{
+.modalOverlay1{
   position: fixed;
   top: 0;
   left: 0;
@@ -187,8 +240,11 @@ font-face {
 }
 
 
-.modalContainerCart{
+
+.modalContainerCart1{
+  border: 1px solid black;
   position: relative;
+  justify-content: space-around;
   background: white;
   padding: 20px;
   max-width: 500px;
@@ -197,17 +253,24 @@ font-face {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 500px;
   height: 279px;
+
 }
 
-
-.modalButtonContainer1{
+.modalFlexBox{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.modalButtonContainer1{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-.modalButtonContainer1 > button{
+}
+
+
+.modalButtonContainer1  button{
   background-color: #67C6E3;
   color: white;
   border: none;
@@ -221,13 +284,33 @@ font-face {
   background-color: #1478FF;
 }
 
+.prevButton1, .nextButton1{
+  display: flex;
+  cursor: pointer;
+  width: auto;
+  padding: 10px;
+  margin-top: -8px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  user-select: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 
 .modalImages1{
   display: flex;
+  border: 1px solid black;
   text-align: center;
+}
+
+.relatedModalImage1{
+  height: 60px;
 }
 
 
 .relatedModalImage1 img{
-  width: 65%;
+  width: 80px;
+  height: 60px;
 }
