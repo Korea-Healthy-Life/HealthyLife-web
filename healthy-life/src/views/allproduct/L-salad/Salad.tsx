@@ -47,7 +47,7 @@ return (
   <div className="allProductImageContainer1">
     {products.map((product, index) => (
       <div key={product.id} className="allProductContain1">
-        <Link to={"/productdetail1"}>
+        <Link to={"/productdetail"}>
           <img
             src={product.image}
             alt={product.name}
@@ -78,24 +78,26 @@ return (
       className="modalContianerCart1"
       overlayClassName="modalOverlay1"
     >
-      <div className="modal">
+      <div className="modal1">
         <h2>장바구니</h2>
+          <div className="modalImages1">
         <div className="modalContainerCart1">
-          <button className="prevButton" onClick={handlePrevClick}>
+          <div className='modalFlexBox'>
+          <button className="prevButton1" onClick={handlePrevClick}>
             &#10094;
           </button>
-          <div className="modalImages1">
             {visibleProducts.map((product) => (
               <div key={product.id} className="relatedModalImage1">
                 <img src={product.image} alt={product.name} />
                 <p>{product.name}</p>
               </div>
             ))}
-            <button className="nextButton" onClick={handleNextClick}>
+            <button className="nextButton1" onClick={handleNextClick}>
               &#10095;
             </button>
           </div>
-
+          
+            
           <div className="modalButtonContainer1">
             <Link to={"/payment"}>
               {" "}
@@ -106,6 +108,8 @@ return (
             </Link>
             <button onClick={closeModal}>쇼핑계속하기</button>
           </div>
+          </div>
+
         </div>
       </div>
     </ReactModal>

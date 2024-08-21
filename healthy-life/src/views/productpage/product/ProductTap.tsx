@@ -44,10 +44,32 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%', textAlign: 'center'}}>
       <Box sx={{borderColor: 'divider',}}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered 
-          sx={{ justifyContent: 'center' }}>
-          <Tab label="상품설명" {...a11yProps(0)} />
-          <Tab label="상품리뷰" {...a11yProps(1)} />
-          <Tab label="QnA" {...a11yProps(2)} />
+          sx={{ justifyContent: 'center' }}
+          TabIndicatorProps={{ style: { display: 'none' } }}>
+          <Tab label="상품설명" {...a11yProps(0)}  sx={{
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
+                '&.Mui-selected': {
+                  color: 'inherit', 
+                },
+              }} />
+          <Tab label="상품리뷰" {...a11yProps(1)}   sx={{
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
+                '&.Mui-selected': {
+                  color: 'inherit', 
+                },
+              }}/>
+          <Tab label="QnA" {...a11yProps(2)}  sx={{
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
+                '&.Mui-selected': {
+                  color: 'inherit', 
+                },
+              }} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

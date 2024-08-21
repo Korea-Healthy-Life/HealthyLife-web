@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import '../../../style/home/productList.css';
+
 
 interface paginationProps {
   currentPage: number;
@@ -8,47 +10,47 @@ interface paginationProps {
 
 }
 
+const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, snackProductsPerPage, paginate}) =>{
+    const pageNumbers = [];
+    const totalPages  = Math.ceil(totalProducts / snackProductsPerPage);
+    const maxPageGroup = Math.ceil(currentPage / 3);
+    const currentPageGroup = Math.ceil(currentPage / 3);
+    const startPage = (currentPageGroup - 1) * 3 + 1;
+    const endPage = Math.min(currentPageGroup * 3, totalPages);
 
-const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, snackProductsPerPage, paginate}) => {
-  const pageNumbers = [];
-  const totalPages  = Math.ceil(totalProducts / snackProductsPerPage);
-  const maxPageGroup = Math.ceil(currentPage / 3);
-  const currentPageGroup = Math.ceil(currentPage / 3);
-  const startPage = (currentPageGroup - 1) * 3 + 1;
-  const endPage = Math.min(currentPageGroup * 3, totalPages);
-
-  for (let i = startPage; i <= endPage; i++){
-    pageNumbers.push(i);
-  }
+    for (let i = startPage; i <= endPage; i++){
+      pageNumbers.push(i);
+    }
 
 
-  return (
-    
-    <div className="pagination1">
+  return(
+    <div className="productPagination1">
     {startPage > 1 && (
-      <div className="pageItem1">
-      <button onClick={() => paginate(startPage -3)} className="pageLink1">
+      <div className="productPageItem1">
+      <button onClick={() => paginate(startPage -3)} className="PageLinkdirection1 pageLink1">
         Previous
       </button>
       </div>)}
 
       {pageNumbers.map(number => (
-        <div key={number} className={`pageItem1 ${number === currentPage ? 'active' : ''}`}>
-          <button onClick={() => paginate(number)} className="pageLink1">{number}</button>
+        <div key={number} className={`pageItem1 ${number === currentPage ? 'active1' : ''}`}>
+          <button onClick={() => paginate(number)} className="productPageLink1 pageLink1">{number}</button>
         </div>
       ))}
 
       {endPage < totalPages && (
         <div className="pageItem1">
-          <button onClick={() => paginate(startPage + 3)} className="pageLink1">Next</button>
+          <button onClick={() => paginate(startPage + 3)} className="PageLinkdirection1 pageLink1">Next</button>
 
         </div>
       )}
 
 
     </div>
-  
   )
+
 }
 
-export default Pagination
+
+
+export default Pagination;
