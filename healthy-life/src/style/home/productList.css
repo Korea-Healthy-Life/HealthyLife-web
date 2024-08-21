@@ -127,6 +127,13 @@ font-face {
 }
 
 
+.bestItemContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: right;
+  margin-top: 50px;
+}
 
 
 
@@ -212,7 +219,7 @@ font-face {
   cursor: pointer;
 }
 
-.productPagination1 .pageItem1.active1 .PageLink1 {
+.productPagination1 .pageItem1.active .pageLink1 {
   background-color: #67C6E3;
   color: white;
   border-color: #67C6E3;

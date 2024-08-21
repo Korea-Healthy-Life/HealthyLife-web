@@ -33,7 +33,7 @@ const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, sala
       </div>)}
 
       {pageNumbers.map(number => (
-        <div key={number} className={`pageItem1 ${number === currentPage ? 'active1' : ''}`}>
+        <div key={number} className={`pageItem1 ${number === currentPage ? 'active' : ''}`}>
           <button onClick={() => paginate(number)} className="productPageLink1 pageLink1">{number}</button>
         </div>
       ))}

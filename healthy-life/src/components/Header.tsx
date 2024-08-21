@@ -45,6 +45,9 @@ export default function Header() {
     |
     
     <Link to={'/mypage/orderApp'}>주문조회</Link>
+
+    |
+    <Link to={'/myPage'}>마이페이지</Link>
   </p>
       
     <br />

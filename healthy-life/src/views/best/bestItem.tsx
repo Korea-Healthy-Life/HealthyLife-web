@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../../style/home/productList.css'
+import '../../style/home/productList.css'
 import Pagination from './Pagination';
 import BestItemLayout from './BestItemLayout';
 
@@ -78,10 +78,10 @@ const BestItem: React.FC = () => {
 
   return (
     <div className="allProductbBox1">
-      <h2>비건</h2>
+      <h2>베스트 아이템</h2>
 
 
-      <div className="itemContianer1">
+      <div className="bestItemContainer">
         <ul className="allProductSelectBtn1">
           <li value="">
             <button>조회순</button>
