@@ -1,17 +1,7 @@
 import React, { useState } from 'react'
 import '../../style/componentStyle/Navigaition.css'
 import SubNav from './SubNav';
-import { Link, Route, Routes } from 'react-router-dom';
-import MypageNav from '../../views/mypage/mypage-main/MypageNav';
-import OrderApp from '../../views/mypage/order/OrderApp';
-import ReviewApp from '../../views/mypage/review/ReviewApp';
-import WishApp from '../../views/mypage/wish/WishApp';
-import CurrentProduct from '../../views/mypage/currentProducts/CurrentProduct';
-import Reserves from '../../views/mypage/cupon,reserves,benefit/Reserves';
-import Cupon from '../../views/mypage/cupon,reserves,benefit/Cupon';
-import Benefit from '../../views/mypage/cupon,reserves,benefit/Benefit';
-import Userinformation from '../../views/mypage/userInformation/Userinformation';
-import ReviewWrite from '../../views/mypage/review/ReviewWrite';
+import { Link } from 'react-router-dom';
 
 
 
@@ -51,9 +41,6 @@ const Navigation:React.FC = () => {
         {activeMenu === 'nav' && (<SubNav />)}
         </div>
       </div>
-      <Routes>  
-      <Route path='/mypage/*' element={<MypageNav/>}/>
-      </Routes>
     </div>
   )
 }

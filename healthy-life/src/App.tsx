@@ -12,18 +12,10 @@ import AllCheckinApp from './views/allproduct/j-checkin/AllCheckinApp';
 import Luchbox from './views/allproduct/j-lunchbox/Luchbox';
 import Snack from './views/allproduct/L-Snack/Snack';
 import Drink from './views/allproduct/j-drink/Drink';
-import Salad from './views/allproduct/L-salad/Salad';
 import Vegan from './views/allproduct/L-Vegan/Vegan';
 import LowerSugar from './views/allproduct/j-lowersugar/LowerSugar';
 import SeaFood from './views/allproduct/L-SeaFood.tsx/SeaFood';
 import Nuts from './views/allproduct/j-nuts/Nuts';
-import OrderApp from './views/mypage/order/OrderApp';
-import ReviewApp from './views/mypage/review/ReviewApp';
-import WishApp from './views/mypage/wish/WishApp';
-import CurrentProduct from './views/mypage/currentProducts/CurrentProduct';
-import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
-import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
-import Userinformation from './views/mypage/userInformation/Userinformation';
 import ReviewWrite from './views/mypage/review/ReviewWrite';
 import FindId from './views/login/FindId';
 import FindPassword from './views/login/FindPassword';
@@ -38,16 +30,24 @@ import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
 import NonMember from './views/nonMemberOrder/NonMember';
 import Payment from './views/payment/Payment';
-import BestItem from './views/best/bestItem';
+import BestItem from './views/best/BestItem';
 import RecommandApp from './views/recommand/RecommandApp';
 import Bmi from './views/bmi/Bmi';
 import JoinApp from './views/join/JoinApp';
 import CartAPP from './views/cart/CartAPP';
-import MypageNav from './views/mypage/mypage-main/MypageNav';
-import MypageMain from './views/mypage/mypage-main/MypageMain';
-import MyPage from './views/mypage/MyPage';
+import MypageMain from './views/mypage/MyPageMain';
 import Cupon from './views/mypage/cupon,reserves,benefit/Cupon';
 import SaladApp from './views/allproduct/L-salad/SaladApp';
+import MypageNav from './views/mypage/mypage-main/MypageNav';
+import Mypage from './views/mypage/mypage-main/Mypage';
+import OrderApp from './views/mypage/order/OrderApp';
+import ReviewApp from './views/mypage/review/ReviewApp';
+import WishApp from './views/mypage/wish/WishApp';
+import CurrentProduct from './views/mypage/currentProducts/CurrentProduct';
+import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
+import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
+import Userinformation from './views/mypage/userInformation/Userinformation';
+import MyPageMain from './views/mypage/MyPageMain';
 
 function App() {
   return (
@@ -62,7 +62,7 @@ function App() {
     <Route path='/survey/allerge' element={<SurveryListAllerge />} /> 
     <Route path='/survey/diabetes' element={<SurveryListDiabetes />} /> 
     <Route path='/survey/dietgoal' element={<SurveryListDietGoal />} /> 
-    {/* <Route path='/bestitem' element={<BestItem />} />  */}
+
       {/* <span >닭가슴살/육류</span> */}
       <Route path="/checkin" element={<AllCheckinApp />} />
         {/* <span>도시락</span> */}
@@ -82,17 +82,9 @@ function App() {
         {/* <span>견과류</span> */}
         <Route path="/nuts" element={<Nuts />} />
 
-        <Route path='/mypage/' element={<MypageMain/>}/>
-        <Route path='/mypage/orderApp' element={<OrderApp />}/> 
-        <Route path='/mypage/myreview' element={<ReviewApp />}/>
-        <Route path='/mypage/wishlist' element={<WishApp />}/>
-        <Route path='/mypage/current' element={<CurrentProduct />}/>
-        <Route path='/mypage/mileage' element={<Reserves />}/>
-        <Route path='/mypage/coupon' element={<Cupon />}/>
-        <Route path='/mypage/membership' element={<Benefit />}/>
-        <Route path='/mypage/userinformation' element={<Userinformation />}/>
-        <Route path='/mypage/review/write' element={<ReviewWrite />}/>
-  
+        {/* 마이페이지 */}
+        <Route path='/mypage/*' element={<MyPageMain/>}/>
+
         <Route path='/login' element={<LoginNav/>}/>
         <Route path='/login/FindId' element={<FindId/>}/>
         <Route path='/login/FindPassword' element={<FindPassword/>}/>
