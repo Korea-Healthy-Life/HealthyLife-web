@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../../style/home/productList.css';
 
 
 interface paginationProps {
@@ -32,7 +33,7 @@ const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, sala
       </div>)}
 
       {pageNumbers.map(number => (
-        <div key={number} className={`pageItem1 ${number === currentPage ? 'active' : ''}`}>
+        <div key={number} className={`pageItem1 ${number === currentPage ? 'active1' : ''}`}>
           <button onClick={() => paginate(number)} className="productPageLink1 pageLink1">{number}</button>
         </div>
       ))}

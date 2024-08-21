@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ReactModal from 'react-modal';
-import { Link } from 'react-router-dom';
 import Salad from './Salad';
 import '../../../style/home/productList.css'
 import Pagination from './Pagination';
@@ -70,30 +68,30 @@ export const saladProducts: saladProduct[] = [
 
 const SaladApp: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [checkinPerPage] = useState<number>(16);
+  const [saladPerPage] = useState<number>(16);
 
-  const indexOfLastPost = currentPage * checkinPerPage;
-  const indexOfFirstPost = indexOfLastPost - checkinPerPage;
+  const indexOfLastPost = currentPage * saladPerPage;
+  const indexOfFirstPost = indexOfLastPost - saladPerPage;
   const currentProducts = saladProducts.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
     <div className="allProductbBox1">
-      <h2>닭가슴살/육류</h2>
+      <h2>샐러드</h2>
 
-      <ul className="allProductButtonList1">
+      <ul className="allProductButtonList1 saladButtonList">
         <li>
-          <button>닭가슴살</button>
+          <button>닭가슴살 샐러드</button>
         </li>
         <li>
-          <button>달걀</button>
+          <button>연어 샐러드</button>
         </li>
         <li>
-          <button>소고기</button>
+          <button>큐브스테이크 샐러드</button>
         </li>
       </ul>
-      <div className="itemCotianer1">
+      <div className="itemContianer1">
         <ul className="allProductSelectBtn1">
           <li value="">
             <button>조회순</button>
@@ -113,7 +111,7 @@ const SaladApp: React.FC = () => {
         </div>
       </div>
       <Pagination
-        saladProductsPerPage={checkinPerPage}
+        saladProductsPerPage={saladPerPage}
         totalProducts={saladProducts.length}
         paginate={paginate}
         currentPage={currentPage}
@@ -124,7 +122,7 @@ const SaladApp: React.FC = () => {
 export default SaladApp;
 
 export interface PaginationProps {
-  checkinPerPage: number;
+  saladPerPage: number;
   totalProducts: number;
   paginate: (pageNumber: number) => void;
   currentPage: number;
