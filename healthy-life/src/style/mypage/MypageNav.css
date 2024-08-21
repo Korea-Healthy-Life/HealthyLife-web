@@ -8,26 +8,40 @@
 
 .mypagNavContainer {
   margin: 0 auto;
-  margin-top: 100px;
-  margin-left: 10%;
+  margin-top: 10px;
   display: flex;
   align-items: center;
+}
+
+.myPageNavDiv {
+  background-color: #DFF5FF;
+  width: 110px;
+  line-height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  height: 580px;
 }
 
 .myPageNavBox{
   display: flex;
   flex-direction: column;
-  background-color: #DFF5FF;
-  width: 110px;
-  line-height: 40px;
-  padding: 20px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 11px;
-}
-  
-.myPageNavBox ul {
+  gap: 1px;
   list-style: none;
   font-family: 'goorm-sans-bold';
-  text-align: center;
+  height: 450px;
 }
+
+.myPageNavBox > li {
+  color: #666;
+}
+.mypageNavTitle {
+  font-size: 12px;
+}
+
+.mypageNavLine {
+  width: 90px;
+  border: 1px solid #cfcfcf;
+  margin: 10px 0px;
+}
+
