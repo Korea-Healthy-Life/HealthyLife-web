@@ -30,7 +30,7 @@ import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
 import NonMember from './views/nonMemberOrder/NonMember';
 import Payment from './views/payment/Payment';
-// import BestItem from './views/best/BestItem';
+import BestItem from './views/best/BestItem';
 import RecommandApp from './views/recommand/RecommandApp';
 import Bmi from './views/bmi/Bmi';
 import JoinApp from './views/join/JoinApp';
@@ -96,7 +96,7 @@ function App() {
         <Route path='/reviews' element={<AllReview />}/>
         <Route path='/payment' element={<Payment />}/>
         <Route path='/nonMember' element={<NonMember />}/>
-        {/* <Route path='/bestitem' element={<BestItem />}/> */}
+        <Route path='/bestitem' element={<BestItem />}/>
         <Route path='/recommand' element={<RecommandApp />}/>
         <Route path='/calculator' element={<Bmi />}/>
         <Route path='/join' element={<JoinApp />}/>        
