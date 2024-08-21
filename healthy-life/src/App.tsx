@@ -62,7 +62,7 @@ function App() {
     <Route path='/survey/allerge' element={<SurveryListAllerge />} /> 
     <Route path='/survey/diabetes' element={<SurveryListDiabetes />} /> 
     <Route path='/survey/dietgoal' element={<SurveryListDietGoal />} /> 
-    {/* <Route path='/bestitem' element={<BestItem />} />  */}
+
       {/* <span >닭가슴살/육류</span> */}
       <Route path="/checkin" element={<AllCheckinApp />} />
         {/* <span>도시락</span> */}
@@ -84,7 +84,6 @@ function App() {
 
         {/* 마이페이지 */}
         <Route path='/mypage/*' element={<MyPageMain/>}/>
-        {/* <Route path='/mypage/*' element={<MypageNav/>}/> */}
 
         <Route path='/login' element={<LoginNav/>}/>
         <Route path='/login/FindId' element={<FindId/>}/>

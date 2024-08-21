@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../style/mypage/mypage.css'
-import MypageMain from './mypage-main/Mypage'
 import { Route, Routes } from 'react-router-dom'
 import MypageNav from './mypage-main/MypageNav'
 import OrderApp from './order/OrderApp'
