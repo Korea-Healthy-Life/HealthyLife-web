@@ -124,7 +124,7 @@
   flex-direction: column;
   gap: 15px;
   position: relative;
-  top: -170px;
+  top: -150px;
   right: -70px;
 }
 
@@ -134,7 +134,7 @@
   color: #1478FF;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: 'Pretendard-Regular';
   font-weight: 600;
 }
