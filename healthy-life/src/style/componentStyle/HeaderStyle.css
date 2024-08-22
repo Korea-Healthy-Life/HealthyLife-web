@@ -29,7 +29,7 @@
 
 
 .button1 {
-  width: 220px;
+  width: 350px;
   color: gray;
   margin-right: 0;
   display: flex;
@@ -45,7 +45,7 @@
   display: flex;
   text-align: center;
   justify-content: space-between;
-  margin-right: 5%;
+  margin-right: 2%;
 }
 
 

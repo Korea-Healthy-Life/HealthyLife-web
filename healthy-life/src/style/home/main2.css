@@ -20,19 +20,20 @@
   text-align: center;
 }
 
-.bestItemImage > img{
+.bestItemImageMap  img{
   width: 70%;
   border-radius: 8px;
 }
 
 
-.bestItemImage {
+
+.bestItemImageMap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.prevButton1, .nextButton1 {
+.mainPrevButton, .mainNextButton {
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -94,7 +95,7 @@
 }
 
 
-.todayItemImage > img{
+.todayItemImage  img{
   width: 70%;
   border-radius: 8px;
 }

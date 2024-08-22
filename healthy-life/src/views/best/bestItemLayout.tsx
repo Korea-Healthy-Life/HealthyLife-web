@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../style/home/productList.css';
+import '../../style/home/productList.css'
 import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { bestItemProduct } from './BestItem';
