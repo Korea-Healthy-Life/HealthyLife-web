@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../style/home/productList.css'
 import Pagination from './Pagination';
-import BestItemLayout from './BestItemLayout';
+import BestItemLayout from './bestItemLayout';
 
 
 
@@ -102,7 +102,7 @@ const BestItem: React.FC = () => {
         </div>
       </div>
       <Pagination
-        bestItemProductsPerPage={bestItemPerPage}
+        bestItemPerPage={bestItemPerPage}
         totalProducts={bestItemProducts.length}
         paginate={paginate}
         currentPage={currentPage}
@@ -113,7 +113,7 @@ const BestItem: React.FC = () => {
 export default BestItem;
 
 export interface PaginationProps {
-  BestItemPerPage: number;
+  bestItemPerPage: number;
   totalProducts: number;
   paginate: (pageNumber: number) => void;
   currentPage: number;
