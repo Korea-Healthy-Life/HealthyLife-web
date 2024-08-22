@@ -3,20 +3,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
-  
+  margin-top: 20px;
+  margin-right: 88px;
+  margin-bottom: -60px;
+
 }
 
 
 .reservesHead h2{
-  margin-right: 6px;
+  margin-right: 725px;
 }
 
 
 .viewPoint{
   display: flex;
   flex-direction: column;
-  width: 870px;
+  width: 790px;
   height: 150px;
   margin-right: 6px;
   align-items: center;
@@ -29,7 +31,7 @@
   padding-left: 15px;
   padding-right: 15px;
   border-bottom: 1px solid gray;
-  width: 840px;
+  width: 760px;
 }
 
 .date{
@@ -40,26 +42,26 @@
 }
 
 .context{
-  margin-left: 180px;
+  margin-left: 160px;
   margin-top: 10px;
   margin-bottom: 10px;
 
 }
 
 .payOrDeducted{
-  margin-left: 180px;
+  margin-left: 160px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .changePoint{
-  margin-left: 80px;
+  margin-left: 60px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .expirationPeriod{
-  margin-left: 80px;
+  margin-left: 60px;
   margin-top: 10px;
   margin-bottom: 10px;
 }

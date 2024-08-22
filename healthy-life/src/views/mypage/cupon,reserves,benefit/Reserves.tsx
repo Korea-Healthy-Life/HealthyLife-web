@@ -60,7 +60,7 @@ function Reserves() {
       <br />
       <br />
 
-      <Box sx={{ width: '870px', height: '400px' }}>
+      <Box sx={{ width: '790px', height: '400px' }}>
       <Box sx={{ borderBottom: 3, borderColor: 'GrayText' }}>
         <Tabs value={value}
               onChange={handleChange} aria-label="basic tabs example"

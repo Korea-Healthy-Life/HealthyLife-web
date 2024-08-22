@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import '../../style/home/productList.css'
 import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
-import { bestItemProduct } from './BestItem';
+import { bestItemProduct } from './bestItem';
+
+
+
 
 const BestItemLayout: React.FC<{ products: bestItemProduct[] }> = ({ products }) => {
-  const [activeProduct, setActiveProduct] = useState<number | null>(null);
+  const [activeProduct, setActiveProduct] = useState<number | null>(null)
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -116,4 +119,5 @@ return (
   </div>
 );
 };
+
 export default BestItemLayout;

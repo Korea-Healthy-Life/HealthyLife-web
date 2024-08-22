@@ -1,14 +1,15 @@
-.benefitContainer{
-  margin-left: 500px;
-  margin-top: 30px;
 
+
+.benefitContainer{
+margin-top: 20px;
 }
 
 
 .benefitGuide{
   border: 1px solid gray;
   width: 480px;
-  height: 50%;
+  height: 92%;
+  margin-right: 400px;
 }
 
 
