@@ -6,6 +6,7 @@ import Order from './Order';
 import OrderList from './OrderList';
 import Return from './Return';
 import ReturnOrderList from './ReturnOrderList';
+import { backdropClasses } from '@mui/material';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -46,9 +47,31 @@ export default function BasicTabs() {
   return (
     <div className='tabsContainer'>
       <div>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="주문현황" {...a11yProps(0)} />
-          <Tab label="취소반품" {...a11yProps(1)} />
+        <Tabs value={value} 
+        onChange={handleChange} 
+        aria-label="basic tabs example"
+        TabIndicatorProps={{ style: { display: 'none' } }}
+        >
+          <Tab label="주문현황" {...a11yProps(0)} 
+          sx={{
+            '&:hover': {
+              backgroundColor: 'transparent',
+            },
+            '&.Mui-selected': {
+              color: 'inherit', 
+            },
+          }}
+          />
+          <Tab label="취소반품" {...a11yProps(1)} 
+          sx={{
+            '&:hover': {
+              backgroundColor: 'transparent',
+            },
+            '&.Mui-selected': {
+              color: 'inherit', 
+            },
+          }}
+          />
         </Tabs>
       </div>
       <CustomTabPanel value={value} index={0}>

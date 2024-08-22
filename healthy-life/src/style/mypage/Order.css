@@ -72,8 +72,8 @@
   align-items: center;
   margin-top: 50px;
   overflow: hidden;
-  border-top: 2px solid #DFF5FF;
-  border-bottom: 2px solid #DFF5FF;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
 .orderLi {
