@@ -5,14 +5,14 @@ import '../../style/home/productList.css'
 interface paginationProps {
   currentPage: number;
   totalProducts: number;
-  bestItemProductsPerPage: number;
+  bestItemPerPage: number;
   paginate: (pageNumber: number) => void;
 
 }
 
-const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, bestItemProductsPerPage, paginate}) =>{
+const Pagination: React.FC<paginationProps> = ({currentPage, totalProducts, bestItemPerPage, paginate}) =>{
     const pageNumbers = [];
-    const totalPages  = Math.ceil(totalProducts / bestItemProductsPerPage);
+    const totalPages  = Math.ceil(totalProducts / bestItemPerPage);
     const maxPageGroup = Math.ceil(currentPage / 3);
     const currentPageGroup = Math.ceil(currentPage / 3);
     const startPage = (currentPageGroup - 1) * 3 + 1;
