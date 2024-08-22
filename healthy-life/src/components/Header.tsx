@@ -3,11 +3,14 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/componentStyle/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import { Link } from 'react-router-dom';
-
+import Logo  from "../assets/images/KakaoTalk_20240822_203008371.png"
 
 // classname = lowcamelcase로 작성
 // css => style 폴더안에
 //  App 건들지 말고 view/Home.tsx에 작성i
+
+
+
 
 export default function Header() {
   const [search, setSearch] = useState<string>('');
@@ -27,7 +30,9 @@ export default function Header() {
     
     <div className='logo'>
       <br />
-    <p><Link to={'/'}>Logo</Link> </p>
+    <Link to={'/'}>
+      <img className='realLogo' src={Logo} alt="로고" />
+    </Link>
     </div>
 
 
