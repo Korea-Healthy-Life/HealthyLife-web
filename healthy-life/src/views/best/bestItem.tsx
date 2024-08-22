@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import '../../../style/home/productList.css'
+import '../../style/home/productList.css'
 import Pagination from './Pagination';
 import BestItemLayout from './BestItemLayout';
 

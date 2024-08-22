@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../../../style/home/productList.css';
+import '../../style/home/productList.css';
 
 
 interface paginationProps {
