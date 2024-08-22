@@ -78,8 +78,9 @@ const MainBanner: React.FC<MainBannerProps> = ({ images }) => {
             className="mainBannerImages"
           />
           <div className="emptyBox">
-            <div className="bannerSlide"></div>
+            {/* <div className="bannerSlide">
             <img src={images[0]} alt="Slide 0" />
+            </div> */}
             <div className="sliderBtnDiv">
               <button className="prevClick" onClick={handlePrevClick}>
                 &#10094;

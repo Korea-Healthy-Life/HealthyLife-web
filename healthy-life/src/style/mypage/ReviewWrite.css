@@ -145,7 +145,7 @@
   border-radius: .25em;
 }
 
-.fileBox input[type="file"] {  /* 파일 필드 숨기기 */
+.fileBox input[type="file"] {  
   position: absolute;
   width: 1px;
   height: 1px;
