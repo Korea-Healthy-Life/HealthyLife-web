@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 10px;
+  transition: opacity 1s ease-in-out;
 }
 
 .sideNav {
@@ -18,7 +19,6 @@
   padding-top: 10px;
   box-shadow: 0px 3px 7px #a4a3a3;
 }
-
 
 .closeIcon {
   border: none;
@@ -37,7 +37,7 @@
   z-index: 19;
 }
 
-.KitchenOutlinedIcon:active {
+.KitchenOutlinedIcon:hover {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   color: #1478FF;
