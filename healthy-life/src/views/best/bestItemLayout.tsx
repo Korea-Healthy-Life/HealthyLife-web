@@ -4,6 +4,7 @@ import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { bestItemProduct } from './BestItem';
 
+
 const BestItemLayout: React.FC<{ products: bestItemProduct[] }> = ({ products }) => {
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
@@ -116,4 +117,5 @@ return (
   </div>
 );
 };
+
 export default BestItemLayout;

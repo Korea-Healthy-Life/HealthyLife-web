@@ -4,6 +4,7 @@ import Pagination from './Pagination';
 import BestItemLayout from './BestItemLayout';
 
 
+
 export interface bestItemProduct{
   id: number;
   name: string;
@@ -68,7 +69,7 @@ export const bestItemProducts: bestItemProduct[] = [
 
 const BestItem: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [bestItemPerPage] = useState<number>(16);
+  const [bestItemPerPage, setBestItemPerPage] = useState<number>(16);
 
   const indexOfLastPost = currentPage * bestItemPerPage;
   const indexOfFirstPost = indexOfLastPost - bestItemPerPage;

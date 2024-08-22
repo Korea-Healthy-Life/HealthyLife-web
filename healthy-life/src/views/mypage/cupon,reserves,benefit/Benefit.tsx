@@ -14,10 +14,7 @@ function Benefit() {
 
   return (
     <div className='benefitContainer'>
-      <br />
-      <br />
-      <h3 style={{textAlign: 'start', marginLeft: '165px'}}>등급별 혜택 안내</h3>
-      <br />
+      <h2 style={{textAlign: 'start'}}>등급별 혜택 안내</h2>
       <br />
       
 
@@ -142,6 +139,7 @@ function Benefit() {
 
     </div>
 
+      
     </div>
   )
   

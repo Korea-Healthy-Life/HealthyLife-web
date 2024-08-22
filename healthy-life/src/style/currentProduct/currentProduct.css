@@ -3,13 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
-  margin-top: 70px;
+  margin-left: 50px;
+  margin-top: 40px;
+  border: 1px solid black;
 }
 
 
 .currentProductContainer > h2{
-    margin-right: 50px;
+    margin-right: 840px;
 }
 
 
@@ -20,11 +21,13 @@
   padding-top: 50px;
   margin-right: 85px;
   width: 980px;
-
+  padding: 0 auto;
+  border: 1px solid black;
 }
 
 .imageBox{
   width: 200px;
+  border: 1px solid;
 }
 
 
