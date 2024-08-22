@@ -30,23 +30,13 @@ import SurveryListDiabetes from './views/survey/SurveryListDiabetes';
 import SurveryListDietGoal from './views/survey/SurveryListDietGoal';
 import NonMember from './views/nonMemberOrder/NonMember';
 import Payment from './views/payment/Payment';
-import BestItem from './views/best/BestItem';
+import BestItem from './views/best/bestItem';
 import RecommandApp from './views/recommand/RecommandApp';
 import Bmi from './views/bmi/Bmi';
 import JoinApp from './views/join/JoinApp';
 import CartAPP from './views/cart/CartAPP';
-import MypageMain from './views/mypage/MyPageMain';
-import Cupon from './views/mypage/cupon,reserves,benefit/Cupon';
 import SaladApp from './views/allproduct/L-salad/SaladApp';
-import MypageNav from './views/mypage/mypage-main/MypageNav';
-import Mypage from './views/mypage/mypage-main/Mypage';
-import OrderApp from './views/mypage/order/OrderApp';
-import ReviewApp from './views/mypage/review/ReviewApp';
-import WishApp from './views/mypage/wish/WishApp';
-import CurrentProduct from './views/mypage/currentProducts/CurrentProduct';
-import Reserves from './views/mypage/cupon,reserves,benefit/Reserves';
-import Benefit from './views/mypage/cupon,reserves,benefit/Benefit';
-import Userinformation from './views/mypage/userInformation/Userinformation';
+
 import MyPageMain from './views/mypage/MyPageMain';
 
 function App() {
