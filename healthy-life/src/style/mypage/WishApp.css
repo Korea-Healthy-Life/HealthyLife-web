@@ -1,9 +1,9 @@
 .whishListContainer {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 110px;
+  width: 770px;
+  /* margin: 0 auto; */
+  margin-top: 10px;
 }  
 
 .wishList {
