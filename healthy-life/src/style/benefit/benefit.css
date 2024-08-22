@@ -1,16 +1,13 @@
 
 
 .benefitContainer{
-margin-top: 20px;
-}
-
-
-.benefitGuide{
   border: 1px solid gray;
-  width: 480px;
-  height: 92%;
-  margin-right: 400px;
+  width: 800px;
+  height: 660px;
 }
+
+
+
 
 
 
@@ -19,8 +16,8 @@ margin-top: 20px;
 
 .gradeContainer{
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-around;
+
 }
 
 
@@ -29,8 +26,7 @@ margin-top: 20px;
 .grade{
   display: flex;
   flex-direction: column;
-  width: 45%;
-  margin-left: 200px;
+  width: 26%;
   
 }
 
@@ -49,5 +45,5 @@ margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 25px;
 }
-

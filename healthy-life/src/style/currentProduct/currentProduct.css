@@ -1,16 +1,13 @@
 .currentProductContainer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 50px;
-  margin-top: 40px;
-  border: 1px solid black;
+  width: 800px;
+  margin-right: 60px;
 }
 
 
 .currentProductContainer > h2{
-    margin-right: 840px;
+  margin-left: 20px;
 }
 
 
@@ -18,22 +15,18 @@
 .imagesFlexBox{
   display: flex;
   justify-content: space-around;
-  padding-top: 50px;
-  margin-right: 85px;
-  width: 980px;
-  padding: 0 auto;
-  border: 1px solid black;
+  width: 800px;
+
 }
 
 .imageBox{
-  width: 200px;
-  border: 1px solid;
+  width: 150px;
 }
 
 
 .imageBox img{
-  width: 200px;
-  height: 225px;
+  width: 150px;
+  height: 175px;
   border-radius: 5px;
 }
 
