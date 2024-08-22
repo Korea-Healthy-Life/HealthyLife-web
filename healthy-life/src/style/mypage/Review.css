@@ -15,9 +15,8 @@
 
 
 .reviewContainer {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
-  margin-top: 60px;
 }
 
 .reviewContainer h2{
@@ -40,8 +39,8 @@
   align-items: center;
   margin-top: 10px;
   overflow: hidden;
-  border-top: 1px solid #67C6E3;
-  border-bottom: 1px solid #67C6E3;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 .reviewAppList li {
@@ -79,13 +78,17 @@
   align-items: center;
   margin-top: 10px;
   overflow: hidden;
-  border-top: 1px solid #67C6E3;
-  border-bottom: 1px solid #67C6E3;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;;
 }
 
 .reviewListContainer > h4 {
   margin-top: 30px;
   font-family: 'Pretendard-Regular';
+}
+
+.reviewWritebtn:hover {
+  background-color: #1478FF;
 }
 
 .reviewList li {
