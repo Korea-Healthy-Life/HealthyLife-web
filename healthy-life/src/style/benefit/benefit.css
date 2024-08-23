@@ -11,7 +11,12 @@
 }
 
 
-
+.benefitGuide{
+  border: 1px solid gray;
+  width: 480px;
+  height: 92%;
+  margin-right: 400px;
+}
 
 
 
