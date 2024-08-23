@@ -1,6 +1,8 @@
 import React from 'react'
 import BestItem from './BestItem'
 import '../../../style/home/main2.css'
+import '../../../style/home/productList.css'
+
 
 
 const images = ['https://cdn.pixabay.com/photo/2017/08/25/11/10/plum-2679782_1280.jpg',
