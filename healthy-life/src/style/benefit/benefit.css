@@ -1,7 +1,13 @@
+.head{
+  margin-right: 225px;
+}
+
 
 
 .benefitContainer{
-margin-top: 20px;
+  border: 1px solid #67C6E3;
+  width: 500px;
+  height: 424px;
 }
 
 
@@ -20,6 +26,8 @@ margin-top: 20px;
 .gradeContainer{
   display: flex;
   justify-content: space-between;
+  height: 70px;
+  border-bottom: 1px solid #67C6E3;
   
 }
 
@@ -30,8 +38,6 @@ margin-top: 20px;
   display: flex;
   flex-direction: column;
   width: 45%;
-  margin-left: 200px;
-  
 }
 
 
@@ -40,6 +46,7 @@ margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 15px;
   
 }
 
@@ -49,5 +56,5 @@ margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 15px;
 }
-

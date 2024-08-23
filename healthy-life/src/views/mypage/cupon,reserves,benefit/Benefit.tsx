@@ -14,7 +14,8 @@ function Benefit() {
 
   return (
     <div className='head'>
-  
+    <h2>등급별 혜택</h2>
+    <br />
     <div className='benefitContainer'>
       
 
@@ -25,15 +26,14 @@ function Benefit() {
         </div>
 
         <div className='grade'>
-          <br />
+          
         <p>자격조건: 200만원 이상 구매</p>
         <br />
         <p>혜택: 15만 포인트 제공</p>
-        <br />
         </div>
 
         </div>
-      <hr />
+      
 
       <div className='gradeContainer'>
         
@@ -43,15 +43,14 @@ function Benefit() {
         
 
         <div className='grade'>
-          <br />
+          
         <p>자격조건: 100만원 이상 구매</p>
         <br />
         <p>혜택: 12만 포인트 제공</p>
-        <br />
         </div>
       
       </div>
-      <hr />
+    
 
       <div className='gradeContainer'>
 
@@ -60,15 +59,14 @@ function Benefit() {
         </div>
 
         <div className='grade'>
-          <br />
+          
         <p>자격조건: 60만원 이상 구매</p>
         <br />
         <p>혜택: 10만 포인트 제공</p>
-        <br />
         </div>
 
       </div>
-      <hr />
+      
 
 
       <div className='gradeContainer'>
@@ -79,15 +77,14 @@ function Benefit() {
         </div>
         
         <div className='grade'>
-          <br />
+          
         <p>자격조건: 40만원이상 구매</p>
         <br />
         <p>혜택: 7만 포인트 제공</p>
-        <br />
         </div>
         
         </div>
-      <hr />
+      
 
 
       <div className='gradeContainer'>
@@ -97,16 +94,15 @@ function Benefit() {
         </div>
         
         <div className='grade'>
-        <br />
+        
         <p className='cutLine'>자격조건: 20만원 이상 구매</p>
         <br />
         <p>혜택: 5만 포인트 제공</p>
-        <br />
         </div>
         
         </div>
-      <hr />
-
+      
+      
 
         <div className='gradeContainer'>
 
@@ -116,10 +112,9 @@ function Benefit() {
           </div>
           
           <div className='grade'>
-          <br />
-          <br />
+            <br />
           <p>20만원 미만 구매시</p>
-          <br />
+  
           </div>
 
         </div>
