@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../../../style/home/main2.css'
 import { Link } from 'react-router-dom';
 import ReactModal from 'react-modal';
-
+import '../../../style/home/productList.css'
 interface todayItemSliderProps{
   images: string[]
 }
@@ -83,7 +83,7 @@ const TodayItem: React.FC<todayItemSliderProps> =({images}) => {
       className="modalContainerCart1"
       overlayClassName="modalOverlay1"
       >
- <div className="modal1">
+      <div className="modal1">
         <h2>장바구니</h2>
           <div className="modalImages1">
         <div className="modalContainerCart1">

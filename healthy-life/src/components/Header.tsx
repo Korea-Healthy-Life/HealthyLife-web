@@ -3,7 +3,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import '../style/componentStyle/HeaderStyle.css'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import { Link } from 'react-router-dom';
-// import Logo  from "../assets/images/KakaoTalk_20240822_203008371.png"
+import Logo from '../assets/images/KakaoTalk_20240822_203008371.png'
 
 // classname = lowcamelcase로 작성
 // css => style 폴더안에
@@ -31,7 +31,7 @@ export default function Header() {
     <div className='logo'>
       <br />
     <Link to={'/'}>
-      <img className='realLogo' src="../../" alt="로고" />
+      <img className='realLogo' src={Logo} alt="로고" />
     </Link>
     </div>
 
