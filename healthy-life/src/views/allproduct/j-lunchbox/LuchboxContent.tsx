@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "../../../style/home/allProduct.css";
-import { ProductProps } from "./AllChickenApp";
+import { ProductProps } from "./Lunchbox";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
 import "../../../style/modal/cartModal.css";
 
-const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
+const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,8 +54,8 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             />
-            <h4>{product.title}</h4>
-            <p>price: 30000원</p>
+            <h4 className="productTitile">{product.title}</h4>
+            <p className="productPrice">{product.price}</p>
           </Link>
           <div
             onMouseEnter={() => handleMouseEnter(index)}
@@ -111,4 +111,4 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
     </div>
   );
 };
-export default Chicken;
+export default LunchboxContent;

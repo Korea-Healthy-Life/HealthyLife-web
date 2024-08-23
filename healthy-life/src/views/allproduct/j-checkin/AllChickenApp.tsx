@@ -366,7 +366,7 @@ const products: ProductProps[] = [
   },
 ];
 
-const AllCheckinApp: React.FC = () => {
+const AllChickenApp: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [checkinPerPage] = useState<number>(16);
 
@@ -419,7 +419,7 @@ const AllCheckinApp: React.FC = () => {
     </div>
   );
 };
-export default AllCheckinApp;
+export default AllChickenApp;
 
 export interface PaginationProps {
   checkinPerPage: number;

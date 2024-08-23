@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 import Sidenavigation from './components/Sidenavigation';
 import Home from './views/home/Home';
 import SurveyApp from './views/survey/SurveyApp';
-import AllCheckinApp from './views/allproduct/j-checkin/AllCheckinApp';
-import Luchbox from './views/allproduct/j-lunchbox/Luchbox';
+import AllCheckinApp from './views/allproduct/j-checkin/AllChickenApp';
+import Luchbox from './views/allproduct/j-lunchbox/Lunchbox';
 import Snack from './views/allproduct/L-Snack/Snack';
 import Drink from './views/allproduct/j-drink/Drink';
 import Vegan from './views/allproduct/L-Vegan/Vegan';
@@ -38,6 +38,8 @@ import CartAPP from './views/cart/CartAPP';
 import SaladApp from './views/allproduct/L-salad/SaladApp';
 
 import MyPageMain from './views/mypage/MyPageMain';
+import LowersugarContent from './views/allproduct/j-lowersugar/LowersugarContent';
+import Lowersugar from './views/allproduct/j-lowersugar/LowerSugar';
 
 function App() {
   return (
@@ -66,7 +68,7 @@ function App() {
         {/* <span>비건</span> */}
         <Route path="/vegan" element={<Vegan />} />
         {/* <span>저당</span> */}
-        <Route path="/lowersugar" element={<LowerSugar />} />
+        <Route path="/lowersugar" element={<Lowersugar />} />
         {/* <span>해산물</span> */}
         <Route path="/sea" element={<SeaFood />} />
         {/* <span>견과류</span> */}
