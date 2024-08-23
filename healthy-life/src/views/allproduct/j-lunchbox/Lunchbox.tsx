@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../../style/home/allProduct.css";
 import Pagination from "./Pagination";
-import AllProductList from "./AllProductList";
+import LunchboxContent from "./LuchboxContent";
 
 export interface ProductProps {
   id: number;
@@ -440,7 +440,7 @@ const products: ProductProps[] = [
   },
 ];
 
-const AllProduct: React.FC = () => {
+const Lunchbox: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [checkinPerPage] = useState<number>(16);
 
@@ -481,7 +481,7 @@ const AllProduct: React.FC = () => {
         </ul>
 
         <div className="allProductList">
-          <AllProductList products={currentProducts} />
+          <LunchboxContent products={currentProducts} />
         </div>
       </div>
       <Pagination
@@ -493,7 +493,7 @@ const AllProduct: React.FC = () => {
     </div>
   );
 };
-export default AllProduct;
+export default Lunchbox;
 
 export interface PaginationProps {
   checkinPerPage: number;

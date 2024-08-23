@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "../../../style/home/allProduct.css";
-import { ProductProps } from "./AllChickenApp";
+import { ProductProps } from "./Nuts";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
 import "../../../style/modal/cartModal.css";
 
-const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
+const NutsContent: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -111,4 +111,4 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
     </div>
   );
 };
-export default Chicken;
+export default NutsContent;

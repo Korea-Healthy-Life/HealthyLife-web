@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 60px; */
   font-family: 'goorm-sans-bold';
 }
 
@@ -44,6 +43,7 @@
 .allProductButtonList button:hover {
   cursor: pointer;
   border-bottom: 3px solid #DFF5FF;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .allProductButtonList button:active {
