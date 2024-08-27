@@ -451,9 +451,9 @@ function ReturnOrderList() {
 
         {products.map(product => (
         <li className='orderLi'>
-          <img src={'/'} alt="" />
-          <h5>상품이름</h5>
-          <p>상품 옵션</p>
+          <img src={product.image} alt={product.title} />
+          <h5>{product.title}</h5>
+          <p>{product.price}</p>
           <div className='orderListBtn'>
             <button>취소</button>
           </div>

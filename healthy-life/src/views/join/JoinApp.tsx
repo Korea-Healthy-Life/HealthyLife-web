@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../style/join/join.css'
 import Term from './Term'
 
 function JoinApp() {
+  const [allAgree, setAllAgree] = useState<boolean>(false);
+
+
+  const handleAllAgree = () => {
+    setAllAgree(true)
+  }
+  const joinBtnAlr = () =>{
+    alert("회원가입이 완료되었습니다.");
+  }
+
   return (
     <div className='joinContainer'>
       <h2>회원가입</h2>
@@ -12,7 +22,8 @@ function JoinApp() {
         아이디
       </label>
       <div className='checkBtn'>
-      <input type="text" className='userId inputclass' placeholder='아이디를 입력해주세요.'/>
+      <input type="text" className='userId inputclass' placeholder='아이디를 입력해주세요.' minLength={5}
+      maxLength={10}/>
       <button className='joinBtn'>중복확인</button>
       </div>
       </li>
@@ -29,13 +40,16 @@ function JoinApp() {
       <label htmlFor='userPassword'>
         비밀번호
       </label>
-          <input type="password" className='userPassword inputclass' placeholder='비밀번호를 입력해주세요.'/>
+          <input type="password" className='userPassword inputclass' placeholder='비밀번호를 입력해주세요.'
+          minLength={8}
+          maxLength={16}/>
       </li>
       <li className='li03'>
       <label htmlFor='userPassword'>
         비밀번호 확인
       </label>
-        <input type="password" className='userpPasswordCheck inputclass'placeholder='비밀번호를 확인해주세요.'/>
+        <input type="password" className='userpPasswordCheck inputclass'placeholder='비밀번호를 확인해주세요.' minLength={8}
+        maxLength={16}/>
       </li>
       <li className='li04'>
       <label htmlFor='userName'>
@@ -54,15 +68,15 @@ function JoinApp() {
         휴대전화번호
       </label>
       <div className='checkBtn'>
-      <input type="tel" id='phonNumber' placeholder='전화번호를 입력하세요.' className='inputclass'/>
-      <button className='joinBtn'>인증번호 받기</button>
+      <input type="tel" id='phonNumber' placeholder='전화번호를 입력하세요.' className='inputclass'  maxLength={11}/>
+      <button className='joinBtn' type='submit'>인증번호 받기</button>
       </div>
       </li>
       <li className='li07'>
         <label className="userBirth">
           생년월일
         </label>
-        <input type="text" className="birthDiv inputclass" placeholder='생년월일: YYMMDD'/>
+        <input type="text" className="birthDiv inputclass" placeholder='생년월일: YYMMDD'maxLength={6}/>
 
       </li>
       <li>
@@ -89,7 +103,7 @@ function JoinApp() {
       </div>
         <Term />
       </div>
-      <button type='submit' className='joinButton'>회원가입</button>
+      <button type='submit' className='joinButton' onClick={joinBtnAlr}>회원가입</button>
     </div>
   )
 }

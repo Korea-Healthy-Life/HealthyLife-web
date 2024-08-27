@@ -1,8 +1,8 @@
 import React from 'react'
 
 import MainBanner from './MainBanner';
-import banner01 from '../../../assets/images/banner01.jpg'
-import banner02 from '../../../assets/images/banner02.jpg'
+import banner01 from '../../../assets/images/flat-food.jpg'
+import banner02 from '../../../assets/images/hand.jpg'
 
 export default function MainApp() {
   const images = [

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../../style/home/allProduct.css";
 import { ProductProps } from "./Lunchbox";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import ReactModal from "react-modal";
 import "../../../style/modal/cartModal.css";
 
@@ -9,6 +9,9 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const [tagFilter, setTagFilter] = useSearchParams();
+
   
   // 버튼호버 함수
   const handleMouseEnter = (index: number) => {
@@ -36,6 +39,10 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
       prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
+  const filter = tagFilter.get('tag') || '';
+
+  const filteredProducts = products.filter(product => 
+    filter === '' || product.tag === filter);
 
   const visibleProducts = products.slice(currentIndex, currentIndex + 4);
   if (visibleProducts.length < 4) {
@@ -63,7 +70,34 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
           >
             {activeProduct === index && (
               <div className="allProductHoverBtn">
-                <button onClick={openModal}>cart</button>
+                <button onClick={openModal}>CART</button>
+                <button>WISH</button>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+
+      {filteredProducts.map((product,index) => (
+        <div>
+          <Link to={"/productdetail"}>
+            <img
+              src={product.image}
+              alt={product.title}
+              className="allProductImage"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            />
+            <h4 className="productTitile">{product.title}</h4>
+            <p className="productPrice">{product.price}</p>
+          </Link>
+          <div
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {activeProduct === index && (
+              <div className="allProductHoverBtn">
+                <button onClick={openModal}>CART</button>
                 <button>WISH</button>
               </div>
             )}

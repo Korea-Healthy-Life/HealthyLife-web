@@ -9,11 +9,9 @@ import Sidenavigation from './components/Sidenavigation';
 import Home from './views/home/Home';
 import SurveyApp from './views/survey/SurveyApp';
 import AllCheckinApp from './views/allproduct/j-checkin/AllChickenApp';
-import Luchbox from './views/allproduct/j-lunchbox/Lunchbox';
 import Snack from './views/allproduct/L-Snack/Snack';
 import Drink from './views/allproduct/j-drink/Drink';
 import Vegan from './views/allproduct/L-Vegan/Vegan';
-import LowerSugar from './views/allproduct/j-lowersugar/LowerSugar';
 import SeaFood from './views/allproduct/L-SeaFood.tsx/SeaFood';
 import Nuts from './views/allproduct/j-nuts/Nuts';
 import ReviewWrite from './views/mypage/review/ReviewWrite';
@@ -38,8 +36,8 @@ import CartAPP from './views/cart/CartAPP';
 import SaladApp from './views/allproduct/L-salad/SaladApp';
 
 import MyPageMain from './views/mypage/MyPageMain';
-import LowersugarContent from './views/allproduct/j-lowersugar/LowersugarContent';
 import Lowersugar from './views/allproduct/j-lowersugar/LowerSugar';
+import Lunchbox from './views/allproduct/j-lunchbox/Lunchbox';
 
 function App() {
   return (
@@ -58,7 +56,7 @@ function App() {
       {/* <span >닭가슴살/육류</span> */}
       <Route path="/checkin" element={<AllCheckinApp />} />
         {/* <span>도시락</span> */}
-        <Route path="/lunchbox" element={<Luchbox />} />
+        <Route path="/lunchbox" element={<Lunchbox />} />
         {/* <span>간식</span> */}
         <Route path="/snack" element={<Snack />} />
         {/* <span>음료</span> */}

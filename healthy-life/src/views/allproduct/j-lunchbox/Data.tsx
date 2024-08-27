@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import "../../../style/home/allProduct.css";
-import Pagination from "./Pagination";
-import AllProductList from "./AllProductList";
 
 export interface ProductProps {
   id: number;
   title: string;
   image: string;
   price: string;
+  tag: string;
 }
 
 const products: ProductProps[] = [
@@ -17,6 +14,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "20000원",
+    tag: '볶음밥'
   },
   {
     id: 2,
@@ -24,6 +22,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "20000원",
+    tag: '볶음밥'
   },
   {
     id: 3,
@@ -31,6 +30,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "20000원",
+    tag: '볶음밥'
   },
   {
     id: 4,
@@ -38,6 +38,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "30000원",
+    tag: '볶음밥'
   },
   {
     id: 5,
@@ -45,6 +46,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "29,000원",
+    tag: '볶음밥'
   },
   {
     id: 6,
@@ -52,6 +54,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "25,000원",
+    tag: '볶음밥'
   },
   {
     id: 7,
@@ -59,6 +62,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "25,000원",
+    tag: '주먹밥'
   },
   {
     id: 8,
@@ -66,6 +70,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "25,000원",
+    tag: '주먹밥'
   },
   {
     id: 9,
@@ -73,6 +78,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "25,000원",
+    tag: '주먹밥'
   },
   {
     id: 10,
@@ -80,6 +86,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "25,500원",
+    tag: '주먹밥'
   },
   {
     id: 11,
@@ -87,6 +94,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "6000원",
+    tag: '주먹밥'
   },
   {
     id: 12,
@@ -94,6 +102,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 13,
@@ -101,6 +110,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 14,
@@ -108,6 +118,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 15,
@@ -115,6 +126,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "13,500원",
+    tag: '즉석밥'
   },
   {
     id: 16,
@@ -122,6 +134,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 17,
@@ -129,6 +142,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 18,
@@ -136,6 +150,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 19,
@@ -143,6 +158,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 20,
@@ -150,6 +166,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 21,
@@ -157,6 +174,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 22,
@@ -164,6 +182,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 23,
@@ -171,6 +190,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '즉석밥'
   },
   {
     id: 24,
@@ -178,6 +198,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '주먹밥'
   },
   {
     id: 25,
@@ -185,6 +206,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '주먹밥'
   },
   {
     id: 26,
@@ -192,6 +214,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '주먹밥'
   },
   {
     id: 27,
@@ -199,6 +222,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '주먹밥'
   },
   {
     id: 28,
@@ -206,6 +230,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '볶음밥'
   },
   {
     id: 29,
@@ -213,6 +238,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8000원",
+    tag: '볶음밥'
   },
   {
     id: 30,
@@ -220,6 +246,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "8,000원",
+    tag: '볶음밥'
   },
   {
     id: 31,
@@ -227,6 +254,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "10,900원",
+    tag: '볶음밥'
   },
   {
     id: 32,
@@ -234,6 +262,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "10,900원",
+    tag: '볶음밥'
   },
   {
     id: 33,
@@ -241,6 +270,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "10,900원",
+    tag: '볶음밥'
   },
   {
     id: 34,
@@ -248,6 +278,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "10,900원",
+    tag: '볶음밥'
   },
   {
     id: 35,
@@ -255,6 +286,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "10,900원",
+    tag: '볶음밥'
   },
   {
     id: 36,
@@ -262,6 +294,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "10,900원",
+    tag: '볶음밥'
   },
   {
     id: 37,
@@ -269,6 +302,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '볶음밥'
   },
   {
     id: 38,
@@ -276,6 +310,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '볶음밥'
   },
   {
     id: 39,
@@ -283,6 +318,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '주먹밥'
   },
   {
     id: 40,
@@ -290,6 +326,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '주먹밥'
   },
   {
     id: 41,
@@ -297,6 +334,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '주먹밥'
   },
   {
     id: 42,
@@ -304,6 +342,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '볶음밥'
   },
   {
     id: 43,
@@ -311,6 +350,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "31,000원",
+    tag: '즉석밥'
   },
   {
     id: 44,
@@ -318,6 +358,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "41,000원",
+    tag: '즉석밥'
   },
   {
     id: 45,
@@ -325,6 +366,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '즉석밥'
   },
   {
     id: 46,
@@ -332,6 +374,8 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "39,900원",
+    tag: '볶음밥'
+
   },
   {
     id: 47,
@@ -339,6 +383,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "32,000원",
+    tag: '볶음밥'
   },
   {
     id: 48,
@@ -346,6 +391,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '즉석밥'
   },
   {
     id: 49,
@@ -353,6 +399,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '즉석밥'
   },
   {
     id: 50,
@@ -360,6 +407,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '즉석밥'
   },
   {
     id: 51,
@@ -367,6 +415,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '즉석밥'
   },
   {
     id: 52,
@@ -374,6 +423,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '즉석밥'
   },
   {
     id: 53,
@@ -381,6 +431,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "15,000원",
+    tag: '즉석밥'
   },
   {
     id: 54,
@@ -388,6 +439,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "21,000원",
+    tag: '즉석밥'
   },
   {
     id: 55,
@@ -395,6 +447,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "13,500원",
+    tag: '주먹밥'
   },
   {
     id: 56,
@@ -402,6 +455,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "13,500원",
+    tag: '주먹밥'
   },
   {
     id: 57,
@@ -409,6 +463,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '주먹밥'
   },
   {
     id: 58,
@@ -416,6 +471,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,500원",
+    tag: '주먹밥'
   },
   {
     id: 59,
@@ -423,6 +479,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "11,000원",
+    tag: '주먹밥'
   },
   {
     id: 60,
@@ -430,65 +487,7 @@ const products: ProductProps[] = [
     image:
       "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
     price: "13,000원",
+    tag: '주먹밥'
   },
-  {
-    id: 61,
-    title: "Produt 61",
-    image:
-      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
-    price: "12,500원",
-  },
+
 ];
-
-const AllProduct: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [checkinPerPage] = useState<number>(16);
-
-  const indexOfLastPost = currentPage * checkinPerPage;
-  const indexOfFirstPost = indexOfLastPost - checkinPerPage;
-  const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
-
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
-  return (
-    <div className="allProductbBox">
-      <h2>전체 상품</h2>
-
-      <ul className="allProductButtonList">
-      </ul>
-      <div className="itemCotianer">
-        <ul className="allProductSelectBtn">
-          <li value="">
-            <button>조회순</button>
-          </li>
-          <li>|</li>
-          <li value="">
-            <button>가격 높은순</button>
-          </li>
-          <li>|</li>
-          <li value="">
-            <button>가격 낮은순</button>
-          </li>
-        </ul>
-
-        <div className="allProductList">
-          <AllProductList products={currentProducts} />
-        </div>
-      </div>
-      <Pagination
-        productPerPage={checkinPerPage}
-        totalProducts={products.length}
-        paginate={paginate}
-        currentPage={currentPage}
-      />
-    </div>
-  );
-};
-export default AllProduct;
-
-export interface PaginationProps {
-  checkinPerPage: number;
-  totalProducts: number;
-  paginate: (pageNumber: number) => void;
-  currentPage: number;
-}

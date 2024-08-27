@@ -7,6 +7,7 @@ const MypageNav: React.FC = () => {
   return (
     <div className="mypagNavContainer">
       <div className="myPageNavDiv">
+          <span className="mypageTitle">마이 페이지</span>
         <ul className="myPageNavBox">
           <li className="mypageNavTitle">주문관리</li>
           <li>
