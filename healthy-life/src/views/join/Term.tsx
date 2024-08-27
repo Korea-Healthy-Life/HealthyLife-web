@@ -1,23 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../style/join/term.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { userInfo } from 'os';
 
 function Term() {
   const [activeMore1, setActiveMore1] = useState<string | null>(null);
-  const [activeMore2, setActiveMore2] = useState<string | null>(null);
   const [changeBtn, setChangeBtn] = useState<string | string>(String);
+  const [allAgree, setAllAgree] = useState<boolean>(false);
+  const [checkList, setCheckList] = useState<string[]>([]);
+
+  const handleAllAgree = (e:React.ChangeEvent<HTMLInputElement>) => {
+  e.target.checked ?
+    setCheckList(["userAgree", "userInfoAgree", "allAgree"])
+    : setCheckList([]);
+  }
+  const check = (e:React.ChangeEvent<HTMLInputElement>) => {
+    e.target.checked
+    ? setCheckList([...checkList, e.target.name])
+    : setCheckList(checkList.filter((choice) => choice !== e.target.name));
+  }
   const handleClick1 = (menu: string) => {
     setActiveMore1(menu);
   };
   const handelCloseClick1 = () => {
     setActiveMore1(null);
-  }
-  const handleClick2 = (menu: string) => {
-    setActiveMore2(menu);
-  };
-  const handelCloseClick2 = () => {
-    setActiveMore2(null);
   }
 
   // 버튼 바꾸는 명령어
@@ -32,8 +39,13 @@ function Term() {
             <h5>약관동의</h5>
           <li className='totalAgree'>
             <div className='labelInputDiv Agree'>
-            <label  htmlFor="">전체 동의</label>
-            <input type="checkbox" name="" id="" />
+            <label >전체 동의</label>
+            <input 
+            type="checkbox" 
+            name="allAgree"
+            onChange={handleAllAgree}
+            checked={checkList.length === 3 ? true : false}
+            />
             </div>
           </li>
 
@@ -42,11 +54,17 @@ function Term() {
               <div className='labelInputContainer'>
                 <div className='labelInputDiv'>
                 <label htmlFor="">이용약관 동의</label>
-                <input type="checkbox" />
+                <input 
+                type="checkbox"
+                name='userAgree'
+                onChange={check}
+                checked={checkList.includes("userAgree")}
+                />
                 </div>
                 <button 
                 className='moreBtn'
-                onClick={() => handleClick1('<ExpandMoreIcon />')}
+                onClick={() => handleClick1('<ExpandMoreIcon />')
+                }
                 ><ExpandMoreIcon /></button>
                 <button 
                 className='moreBtn'
@@ -67,18 +85,23 @@ function Term() {
               <div className='labelInputContainer'>
               <div className='labelInputDiv'>
               <label htmlFor="">개인정보 수집 및 이용 동의</label>
-              <input type="checkbox" />
+              <input 
+              type="checkbox" 
+              name='userInfoAgree' 
+              onChange={check}
+              checked={checkList.includes("userInfoAgree") ? true : false}
+              />
               </div>
                 <button
                 className='moreBtn'
-                onClick={() => handleClick2('<ExpandMoreIcon />')}
+                onClick={() => handleClick1('<ExpandMoreIcon />')}
                 ><ExpandMoreIcon /></button>
                 <button 
                 className='moreBtn'
-                onClick={handelCloseClick2}
+                onClick={handelCloseClick1}
                 ><KeyboardArrowUpIcon  /></button>
               </div>
-              {activeMore2 === '<ExpandMoreIcon />' &&
+              {activeMore1 === '<ExpandMoreIcon />' &&
               <div className='contractContent'>
               개인정보처리방침<br /><br />
                 1. 총칙<br />
