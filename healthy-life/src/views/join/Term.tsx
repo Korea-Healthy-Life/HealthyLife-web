@@ -6,9 +6,12 @@ import { userInfo } from 'os';
 
 function Term() {
   const [activeMore1, setActiveMore1] = useState<string | null>(null);
-  const [changeBtn, setChangeBtn] = useState<string | string>(String);
-  const [allAgree, setAllAgree] = useState<boolean>(false);
+  const [activeMore2, setActiveMore2] = useState<string | null>(null);
   const [checkList, setCheckList] = useState<string[]>([]);
+  // on.off 버튼
+  const [button, setButton] = useState(false);
+
+  const [iconChange, setIconChange] = useState(<ExpandMoreIcon/>);
 
   const handleAllAgree = (e:React.ChangeEvent<HTMLInputElement>) => {
   e.target.checked ?
@@ -20,18 +23,21 @@ function Term() {
     ? setCheckList([...checkList, e.target.name])
     : setCheckList(checkList.filter((choice) => choice !== e.target.name));
   }
+
   const handleClick1 = (menu: string) => {
     setActiveMore1(menu);
+    // 버튼 바꾸는 함수
   };
+
   const handelCloseClick1 = () => {
     setActiveMore1(null);
   }
-
-  // 버튼 바꾸는 명령어
-  const handelChangeBtn = (button : string) => {
-    setChangeBtn(button);
+  const handleClick2 = (menu: string) => {
+    setActiveMore2(menu);
+  };
+  const handelCloseClick2 = () => {
+    setActiveMore2(null);
   }
-
 
   return (
     <div>
@@ -63,13 +69,13 @@ function Term() {
                 </div>
                 <button 
                 className='moreBtn'
-                onClick={() => handleClick1('<ExpandMoreIcon />')
-                }
+                onClick={() => handleClick1('<ExpandMoreIcon />')}
                 ><ExpandMoreIcon /></button>
                 <button 
                 className='moreBtn'
                 onClick={handelCloseClick1}
-                ><KeyboardArrowUpIcon /></button>
+                ><KeyboardArrowUpIcon />
+                </button>
                 
               </div>
               {activeMore1 === '<ExpandMoreIcon />' && 
@@ -92,16 +98,20 @@ function Term() {
               checked={checkList.includes("userInfoAgree") ? true : false}
               />
               </div>
-                <button
-                className='moreBtn'
-                onClick={() => handleClick1('<ExpandMoreIcon />')}
-                ><ExpandMoreIcon /></button>
-                <button 
-                className='moreBtn'
-                onClick={handelCloseClick1}
-                ><KeyboardArrowUpIcon  /></button>
+                {/* {isDown ? (
+                  <button 
+                  className='moreBtn'
+                  onClick={() => handleClick2('<ExpandMoreIcon />')}
+                  ><ExpandMoreIcon /></button>
+
+                ): (
+                  <button 
+                  className='moreBtn'
+                  onClick={handelCloseClick2}
+                  ><KeyboardArrowUpIcon  /></button>
+                )} */}
               </div>
-              {activeMore1 === '<ExpandMoreIcon />' &&
+              {activeMore2 === '<ExpandMoreIcon />' &&
               <div className='contractContent'>
               개인정보처리방침<br /><br />
                 1. 총칙<br />

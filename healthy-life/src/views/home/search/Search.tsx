@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../../style/home/Search.css'
 import { Searchs } from './SearchApp';
 import CloseIcon from '@mui/icons-material/Close';
@@ -11,13 +11,19 @@ interface SearchProps {
 
 export default function Search({search, toggleSearch, deleteSearch}: SearchProps) {
 
+  const [searchWord, setSearchWord] = useState<string | null>();
+
+  const printWord = () => {
+    
+  }
+
   return (
       <div className='currentsearchList'>
       <span 
       onChange={()=> toggleSearch(search.id)}>
         {search.text}
       </span>
-      <button onClick={() => deleteSearch(search.id)}><CloseIcon /></button>
+      <button className='searchDeleteBtn' onClick={() => deleteSearch(search.id)}><CloseIcon style={{fontSize:'14'}} /></button>
       </div>
   )
 }

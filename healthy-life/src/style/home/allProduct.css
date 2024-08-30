@@ -11,7 +11,7 @@
   font-style: normal;
 }
 
-.allProductbBox2 {
+.allProductbBoxContainer {
   width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -21,7 +21,7 @@
   font-family: 'goorm-sans-bold';
 }
 
-.allProductbBox2 > h2 {
+.allProductbBoxContainer > h2 {
   text-align: center;
 }
 
@@ -111,7 +111,7 @@
 
 .allProductImage {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .allProductImageList > h4 {

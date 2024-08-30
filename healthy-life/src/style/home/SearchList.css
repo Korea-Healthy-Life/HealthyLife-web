@@ -14,23 +14,35 @@
 .searchContainer {
   display: flex;
   justify-content: space-around;
-  width: 400px;
-  height: 150px;
+  width: 350px;
+  height: 160px;
   overflow: hidden;
   margin: 0 auto;
+  margin-top: 15px;
 }
 
-.searchContainer ul {
+.searchContainer > ul {
   list-style: none;
-  width: 1000px;
+  width: 190px;
   color: #000;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.searchContainer ul > li {
+  list-style: none;
+  width: 150px;
+  font-size: 14px;
+  margin-top: 5px;
+  flex-direction: row;
+  align-items: center;
+  ;
 }
 
 .line {
-  height: 150px;
+  height: 165px;
   border: 1.5px solid #67C6E3;
   border-radius: 10px;
 }
@@ -39,7 +51,6 @@
   font-family: 'Pretendard-Regular';
   text-align: center;
   width: 200px;
-
 }
 
 .popularSearch {

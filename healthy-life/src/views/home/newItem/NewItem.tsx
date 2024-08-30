@@ -1,33 +1,91 @@
 import React from 'react'
-import MainSlider from './NewItemSlider';
-import product01 from '../../../assets/images/product01.jpg';
-import product02 from '../../../assets/images/product02.jpg';
-import product03 from '../../../assets/images/product03.jpg';
-import product04 from '../../../assets/images/product04.jpg';
-import product05 from '../../../assets/images/product05.jpg';
-import product06 from '../../../assets/images/product06.jpg';
-import product07 from '../../../assets/images/product07.jpg';
-import product08 from '../../../assets/images/product08.jpg';
-import '../../../style/home/main1.css';
+import NewItemSlider from './NewItemSlider'
+import '../../../style/home/main1.css'
+export interface ProductProps {
+  id: number;
+  title: string;
+  image: string;
+  price: string;
+  tag: string;
+}
 
-export default function NewItem() {
-  const images = [
-    product01,
-    product05,
-    product08,
-    product02,
-    product06,
-    product03,
-    product07,
-    product04,
-  ];
+const products: ProductProps[] = [
+  {
+    id: 1,
+    title: "Produt 1",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "20000원",
+    tag: '볶음밥'
+  },
+  {
+    id: 2,
+    title: "Produt 2",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "20000원",
+    tag: '볶음밥'
+  },
+  {
+    id: 3,
+    title: "Produt 3",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "20000원",
+    tag: '볶음밥'
+  },
+  {
+    id: 4,
+    title: "Produt 4",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "30000원",
+    tag: '볶음밥'
+  },
+  {
+    id: 5,
+    title: "Produt 5",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "29,000원",
+    tag: '볶음밥'
+  },
+  {
+    id: 6,
+    title: "Produt 6",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "25,000원",
+    tag: '볶음밥'
+  },
+  {
+    id: 7,
+    title: "Produt 7",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "25,000원",
+    tag: '주먹밥'
+  },
+  {
+    id: 8,
+    title: "Produt 8",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg",
+    price: "25,000원",
+    tag: '주먹밥'
+  }
+]
+
+
+  const NewItem: React.FC = () => {
   return (
     <div className='sliderContainer'>
       <div className='h3Container'>
       <h3>새로운 상품</h3>
       </div>
-      <MainSlider images={images}/>
+      <NewItemSlider products={products}  />
     </div>
   )
 }
 
+export default NewItem;

@@ -4,18 +4,21 @@ import '../../style/home/AllReview.css'
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 
-
-
-
 const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
+  const [reviews, setReviews] = useState<ProductProps | null>(null);
+  
+  const openModal = (id: number) => {
+    const product = products.find(product => product.id === id);
+    if (product) {
+      setReviews(product);
+      setModalIsOpen(true);
+    }
   };
-
+  
   const closeModal = () => {
     setModalIsOpen(false);
+    setReviews(null);
   };  
 
   
@@ -23,13 +26,13 @@ const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
     <div className='reviewImageContainer'>
       <div className="allProductImageList">
       {products.map(product => (
-        <div onClick={openModal} className='reviewBox' key={product.id}>
+        <div onClick={() => openModal(product.id)} className='reviewBox' key={product.id}>
           <img src={product.image} alt={product.title} />
           <div className='productInform'>
           <h5>{product.title}</h5>
           <div className='reveiwInfoDiv'>
           <span className='allrevieprofile'><AccountCircleIcon/></span>
-          <p className='reviewP'>아이디 . 업로드 날짜</p>
+          <p className='reviewP'>{product.id} . {product.date}</p>
           </div>
           <div className='reviewContent'>
           <pre>{product.content}</pre>
@@ -37,6 +40,7 @@ const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
           </div>
           </div>
       ))}
+
       <ReactModal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -45,18 +49,26 @@ const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
         >
       <h2>후기</h2>
       <div className='reveiwModal'>
-          <img src='https://cdn.pixabay.com/photo/2017/08/17/19/40/ukrainian-dill-potatoes-2652561_1280.jpg' alt="" className='modalImage' />
-          <div className='reviewModalInfpo'>
-            <h5>사품명</h5>
+        {reviews ? (
+          <div>
+            <img 
+            src={reviews.image} 
+            alt={reviews.title} 
+            className='modalImage'/>
+            <div className='reviewModalInfpo'>
+            <h5>{reviews.title}</h5>
             <div className='countInfo'>
             <AccountCircleIcon/> 
-            <p>아이디 . 업로드 날짜</p>
+            <p> {reviews.id} | {reviews.date} </p>
             </div>
-            <pre>리뷰상세 내용 다른 상품들 마다 다양하게 들어간다.</pre>
+            <pre>{reviews.content}</pre>
           </div>
-        <button onClick={closeModal} className="closeReviewModalBtn">Close Modal</button>
+          </div>
+        ) : (
+          <p>Loading Post</p>
+        )}
+      <button onClick={closeModal} className="closeReviewModalBtn">후기 닫기</button>
       </div>
-
       </ReactModal>
       </div>
     </div>

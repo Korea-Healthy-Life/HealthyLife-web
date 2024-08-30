@@ -19,8 +19,8 @@
 
 
 @media (max-width: 800px) {
-  li{
-    font-size: 8px;
+  .subNavContainer > ul > li{
+    font-size: 9px;
   }
 }
 

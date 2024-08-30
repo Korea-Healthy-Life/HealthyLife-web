@@ -451,7 +451,7 @@ const AllProduct: React.FC = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="allProductbBox">
+    <div className="allProductbBoxContainer">
       <h2>전체 상품</h2>
 
       <ul className="allProductButtonList">
