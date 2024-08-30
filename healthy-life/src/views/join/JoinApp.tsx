@@ -59,6 +59,103 @@ function JoinApp() {
       // setUserGender('');
   }
 
+  const [error, setError] = useState<Partial<InFormData>>({});
+
+  const handleSingUpSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    let tempErrors: Partial<InFormData> = {};
+
+    let isValid = true;
+
+    if (!userId) {
+      tempErrors.userId = '아이디를 입력하세요.';
+      isValid = false;
+    }
+    if (!userName) {
+      tempErrors.userName = '이름을 입력하세요.';
+      isValid = false;
+    }
+    if (!userNickName) {
+      tempErrors.userNickName = '닉네임을 입력하세요.';
+      isValid = false;
+    }
+    if (!userPassword) {
+      tempErrors.userPassword = '비밀번호를 입력하세요.';
+      isValid = false;
+    }
+    if (userPassword !== userRePassword) {
+      tempErrors.userRePassword = '비밀번호가 일치하지 않습니다.';
+      isValid = false;
+    }
+    if (!userRePassword) {
+      tempErrors.userRePassword = '비밀번호를 확인하세요.';
+      isValid = false;
+    }
+    if (!userEmail) {
+      tempErrors.userEmail = '이메일을 입력하세요.';
+      isValid = false;
+    }
+    if (!userPhone) {
+      tempErrors.userPhone = '휴대폰번호를 입력하세요.';
+      isValid = false;
+    }
+    if (!userBirth) {
+      tempErrors.userBirth = '생년월일을 입력하세요.';
+      isValid = false;
+    }
+    if (!userAddress) {
+      tempErrors.userAddress = '주소를 입력하세요.';
+      isValid = false;
+    }
+    // if (!userGender) {
+    //   tempErrors.userGender = '성별을 선택해주세요.';
+    //   isValid = false;
+    // }
+
+    setError(tempErrors);
+
+    if (isValid) {
+      console.log('회원가입 데이터: ', userInfo);
+      alert(`회원가입을 축하합니다. ${userId}님`);
+      const newUser = {
+        id: nextId.current,
+        userId,
+        userNickName,
+        userPassword,
+        userRePassword,
+        userName,
+        userEmail,
+        userPhone,
+        userBirth,
+        userAddress,
+        // userGender,
+      };
+
+      setUserInfo([...userInfo, newUser]);
+
+      setUserId('');
+      setUserNickName('');
+      setUserPassword('');
+      setUserRePassword('');
+      setUserName('');
+      setUserEmail('');
+      setUserPhone('');
+      setUserBirth('');
+      setUserAddress('');
+      // setUserGender('');
+    }
+  };
+
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+
+    setUserInfo({
+      ...userInfo,
+      [name]: value,
+    });
+  };
 
 
   return (
