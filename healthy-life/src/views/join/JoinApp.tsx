@@ -1,111 +1,223 @@
-import React, { useState } from 'react'
-import '../../style/join/join.css'
-import Term from './Term'
+import React, { useEffect, useRef, useState } from 'react';
+import '../../style/join/join.css';
+import Term from './Term';
+import { InFormData } from '../../types';
+import axios from 'axios';
+
+
 
 function JoinApp() {
-  const [allAgree, setAllAgree] = useState<boolean>(false);
+  const [userInfo, setUserInfo] = useState<InFormData[]>([]);
+  // const [id, setId] = useState<number>(0);
+  const [userId, setUserId] = useState<string>('');
+  const [userNickName, setUserNickName] = useState<string>('');
+  const [userPassword, setUserPassword] = useState<string>('');
+  const [userRePassword, setUserRePassword] = useState<string>('');
+  const [userName, setUserName] = useState<string>('');
+  const [userEmail, setUserEmail] = useState<string>('');
+  const [userPhone, setUserPhone] = useState<string>('');
+  const [userBirth, setUserBirth] = useState<string>('');
+  const [userAddress, setUserAddress] = useState<string>('');
+  // const [userGender, setUserGender] = useState<string>('');
+  // const [selecedtItem,setSelectItem] = useState<InFormData | null>(null);
+  
+  const nextId = useRef(0);
+
+  const fetchItems = async () => {
+    const response = await axios.get('http://localhost:3001/userInfo');
+    setUserInfo(response.data);
+  }
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const handleCreate = async () => {
+    const response = await axios.post('http://localhost:3001/userInfo',{
+      id: nextId.current,
+      userId,
+      userNickName,
+      userPassword,
+      userRePassword,
+      userName,
+      userEmail,
+      userPhone,
+      userBirth,
+      userAddress,
+      // userGender,
+    });
+    setUserInfo([...userInfo, response.data]);
+      setUserId('');
+      setUserNickName('');
+      setUserPassword('');
+      setUserRePassword('');
+      setUserName('');
+      setUserEmail('');
+      setUserPhone('');
+      setUserBirth('');
+      setUserAddress('');
+      // setUserGender('');
+  }
 
 
-  const handleAllAgree = () => {
-    setAllAgree(true)
-  }
-  const joinBtnAlr = () =>{
-    alert("회원가입이 완료되었습니다.");
-  }
 
   return (
-    <div className='joinContainer'>
+    <div className="joinContainer">
       <h2>회원가입</h2>
-      <div className='joinContain'>
-      <ul className='joinUl'>
-      <li className='li01'><label htmlFor='userId '>
-        아이디
-      </label>
-      <div className='checkBtn'>
-      <input type="text" className='userId inputclass' placeholder='아이디를 입력해주세요.' minLength={5}
-      maxLength={10}/>
-      <button className='joinBtn'>중복확인</button>
-      </div>
-      </li>
-      <li className='li02'>
-      <label htmlFor='userNickname'>
-        닉네임
-      </label>
-      <div className='checkBtn'>
-      <input type="text" className='userNickname inputclass' placeholder='닉네임을 입려해주세요.'/>
-      <button className='joinBtn'>중복확인</button>
-      </div>
-      </li>
-      <li className='li03'>
-      <label htmlFor='userPassword'>
-        비밀번호
-      </label>
-          <input type="password" className='userPassword inputclass' placeholder='비밀번호를 입력해주세요.'
-          minLength={8}
-          maxLength={16}/>
-      </li>
-      <li className='li03'>
-      <label htmlFor='userPassword'>
-        비밀번호 확인
-      </label>
-        <input type="password" className='userpPasswordCheck inputclass'placeholder='비밀번호를 확인해주세요.' minLength={8}
-        maxLength={16}/>
-      </li>
-      <li className='li04'>
-      <label htmlFor='userName'>
-        이름
-      </label>
-      <input className='inputName inputclass' type="text" id='userName' placeholder='이름을 입력해주세요.'/>
-      </li>
-      <li className='li05'>
-      <label className='addressLabel'>
-        주소
-      </label>
-      <input className='userAddress inputclass' placeholder='주소를 입력하세요.'/>
-      </li>
-      <li className='li06'>
-      <label htmlFor="phonNumber">
-        휴대전화번호
-      </label>
-      <div className='checkBtn'>
-      <input type="tel" id='phonNumber' placeholder='전화번호를 입력하세요.' className='inputclass'  maxLength={11}/>
-      <button className='joinBtn' type='submit'>인증번호 받기</button>
-      </div>
-      </li>
-      <li className='li07'>
-        <label className="userBirth">
-          생년월일
-        </label>
-        <input type="text" className="birthDiv inputclass" placeholder='생년월일: YYMMDD'maxLength={6}/>
-
-      </li>
-      <li>
-      <label htmlFor="userEmail">
-        이메일
-      </label>  
-      <input type="email" className='inputclass' placeholder='이메일을 입력해주세요.'/>
-      </li>
-      </ul>
-      <div className='li08'>
-      <label className='gender' htmlFor="userSex">
-        성별
-      </label>
-      <div className='genderDiv'>
-      <label className='usergender'>
-        남
-      </label>
-      <input type="radio" name='usergender'/>
-      <label>
-        여
-      </label>
-      <input type="radio" name='usergender'/>
-      </div>
-      </div>
-        <Term />
-      </div>
-      <button type='submit' className='joinButton' onClick={joinBtnAlr}>회원가입</button>
+      <form>
+        <div className="joinContain">
+          <ul className="joinUl">
+            <li className="li01">
+              <label htmlFor="userId">아이디</label>
+              <div className="checkBtn">
+                <input
+                  type="text"
+                  name="userId"
+                  className="userId inputclass"
+                  placeholder="아이디를 입력해주세요."
+                  minLength={5}
+                  maxLength={10}
+                  onChange={(e) => setUserId(e.target.value)}
+                  value={userId}
+                />
+                <button className="joinBtn">중복확인</button>
+              </div>
+            </li>
+            <li className="li02">
+              <label htmlFor="userNickName">닉네임</label>
+              <div className="checkBtn">
+                <input
+                  type="text"
+                  name="userNickName"
+                  className="userNickName inputclass"
+                  placeholder="닉네임을 입력해주세요."
+                  value={userNickName}
+                  onChange={(e) => setUserNickName(e.target.value)}
+                />
+                <button className="joinBtn">중복확인</button>
+              </div>
+            </li>
+            <li className="li03">
+              <label htmlFor="userPassword">비밀번호</label>
+              <input
+                type="password"
+                name="userPassword"
+                className="userPassword inputclass"
+                placeholder="비밀번호를 입력해주세요."
+                minLength={8}
+                maxLength={16}
+                value={userPassword}
+                onChange={(e) => setUserPassword(e.target.value)}
+              />
+            </li>
+            <li className="li03">
+              <label htmlFor="userRePassword">비밀번호 확인</label>
+              <input
+                type="password"
+                name="userRePassword"
+                className="userRePasswordCheck inputclass"
+                placeholder="비밀번호를 확인해주세요."
+                minLength={8}
+                maxLength={16}
+                value={userRePassword}
+                onChange={(e) => setUserRePassword(e.target.value)}
+              />
+            </li>
+            <li className="li04">
+              <label htmlFor="userName">이름</label>
+              <input
+                className="inputName inputclass"
+                type="text"
+                id="userName"
+                name="userName"
+                placeholder="이름을 입력해주세요."
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+            </li>
+            <li className="li05">
+              <label htmlFor="userAddress">주소</label>
+              <input
+                className="userAddress inputclass"
+                name="userAddress"
+                placeholder="주소를 입력하세요."
+                value={userAddress}
+                onChange={(e) => setUserAddress(e.target.value)}
+              />
+            </li>
+            <li className="li06">
+              <label htmlFor="userPhone">휴대전화번호</label>
+              <div className="checkBtn">
+                <input
+                  type="tel"
+                  id="userPhone"
+                  name="userPhone"
+                  placeholder="전화번호를 입력하세요."
+                  className="inputclass"
+                  maxLength={11}
+                  value={userPhone}
+                  onChange={(e) => setUserPhone(e.target.value)}
+                />
+                <button className="joinBtn" type="button">
+                  인증번호 받기
+                </button>
+              </div>
+            </li>
+            <li className="li07">
+              <label htmlFor="userBirth">생년월일</label>
+              <input
+                type="text"
+                className="birthDiv inputclass"
+                name="userBirth"
+                placeholder="생년월일: YYMMDD"
+                maxLength={6}
+                value={userBirth}
+                onChange={(e) => setUserBirth(e.target.value)}
+              />
+            </li>
+            <li>
+              <label htmlFor="userEmail">이메일</label>
+              <input
+                type="email"
+                name="userEmail"
+                className="inputclass"
+                placeholder="이메일을 입력해주세요."
+                value={userEmail}
+                onChange={(e) => setUserEmail(e.target.value)}
+              />
+            </li>
+          </ul>
+          <div className="li08">
+            <label className="gender" htmlFor="userSex">
+              성별
+            </label>
+            <div className="genderDiv">
+              <label className="usergender">남</label>
+              <input 
+              type="radio" 
+              name="usergender" 
+              value="남" 
+              />
+              <label>여</label>
+              <input 
+              type="radio" 
+              name="usergender" 
+              value="여" 
+              />
+            </div>
+          </div>
+          <Term />
+        </div>
+        <button 
+        type="submit" 
+        className="joinButton"
+        onClick={handleCreate}
+        >
+          회원가입
+        </button>
+      </form>
     </div>
-  )
+  );
 }
 
-export default JoinApp
+export default JoinApp;

@@ -55,7 +55,7 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
               onMouseLeave={handleMouseLeave}
             />
             <h4>{product.title}</h4>
-            <p>price: 30000원</p>
+            <p>price: 30,000원</p>
           </Link>
           <div
             onMouseEnter={() => handleMouseEnter(index)}

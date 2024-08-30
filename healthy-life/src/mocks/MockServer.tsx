@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { Item } from '../types';
+// import { Item } from '../types';
 import axios from 'axios';
 
 function MockServer() {
-  const [itmes, setItems] = useState<Item[]>([]);
+  // const [itmes, setItems] = useState<Item[]>([]);
 
-  const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+  // const [selectedItem, setSelectedItem] = useState<Item | null>(null);
 
-  // ! 데이터 가져오기(fetch)
-  const fetchItem = async() => {
-    const reponse = await axios.get('http://localhost:3001/items');
-    setItems(reponse.data);
-  }
+  // // ! 데이터 가져오기(fetch)
+  // const fetchItem = async() => {
+  //   const reponse = await axios.get('http://localhost:3001/items');
+  //   setItems(reponse.data);
+  // }
 
-  useEffect(() => {
-    fetchItem();
-  }, []);
+  // useEffect(() => {
+  //   fetchItem();
+  // }, []);
 
 
   return (
