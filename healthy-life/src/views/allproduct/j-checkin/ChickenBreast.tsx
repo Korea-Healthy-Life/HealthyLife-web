@@ -1,50 +1,74 @@
-import { useState } from "react";
-import "../../../style/home/allProduct.css";
-import { Link } from "react-router-dom";
-import ReactModal from "react-modal";
-import "../../../style/modal/cartModal.css";
-import { ProductProps } from "../../../types";
+import React, { useEffect, useState } from 'react'
+import { ProductProps } from '../../../types'
+import axios from 'axios';
+import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 
-const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
+const ChickenBreast: React.FC<{ products:ProductProps[] }> = ({products}) => {
+  const [chickenBreast, setChickenBreast] = useState<ProductProps[]>([]);
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+
+ // 버튼호버 함수
+const handleMouseEnter = (index: number) => {
+  setActiveProduct(index);
+};
+const handleMouseLeave = () => {
+  setActiveProduct(null);
+};
+// 모달창 함수
+const openModal = () => {
+  setmodalOpen(true);
+};
+const closeModal = () => {
+  setmodalOpen(false);
+};
+
+// 방향 버튼
+const handlePrevClick = () => {
+  setCurrentIndex((prevIndex) =>
+    prevIndex === 0 ? products.length - 1 : prevIndex - 1
+  );
+};
+const handleNextClick = () => {
+  setCurrentIndex((prevIndex) =>
+    prevIndex === products.length - 1 ? 0 : prevIndex + 1
+  );
+};
+
+const visibleProducts = products.slice(currentIndex, currentIndex + 4);
+if (visibleProducts.length < 4) {
+  visibleProducts.push(...products.slice(0, 4 - visibleProducts.length));
+}
+
+  useEffect(() => {
+
+    const fetchProduct = async () => {
+      try {
+        
+        const response = await axios.get(`http://localhost:3001/ProductChicken`);
+
   
-  // 버튼호버 함수
-  const handleMouseEnter = (index: number) => {
-    setActiveProduct(index);
-  };
-  const handleMouseLeave = () => {
-    setActiveProduct(null);
-  };
-  // 모달창 함수
-  const openModal = () => {
-    setmodalOpen(true);
-  };
-  const closeModal = () => {
-    setmodalOpen(false);
-  };
+        const data = response.data.filter((product: ProductProps) => 
+          product.tag.includes('닭가슴살')
+        );
 
-  // 방향 버튼
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? products.length - 1 : prevIndex - 1
-    );
-  };
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === products.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+        setChickenBreast(data);
 
-  const visibleProducts = products.slice(currentIndex, currentIndex + 4);
-  if (visibleProducts.length < 4) {
-    visibleProducts.push(...products.slice(0, 4 - visibleProducts.length));
-  }
+      } catch(e){
+        
+      }
+    }
+    fetchProduct();
+  }, [])
 
   return (
-    <div className="allProductImageContainer">
-      {products.map((product, index) => (
+    <div>
+
+<div className="allProductImageContainer">
+      {chickenBreast.map((product, index) => (
         <div key={product.id} className="allProductContain">
           <Link to={"/productdetail"}>
             <img
@@ -55,10 +79,8 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
               onMouseLeave={handleMouseLeave}
             />
             <div className="productLine"></div>
-            <div className="productContent">
             <h4>{product.title}</h4>
             <p>{product.price}원</p>
-            </div>
           </Link>
           <div
             onMouseEnter={() => handleMouseEnter(index)}
@@ -66,7 +88,7 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
           >
             {activeProduct === index && (
               <div className="allProductHoverBtn">
-                <button onClick={openModal}>CART</button>
+                <button onClick={openModal}>cart</button>
                 <button>WISH</button>
               </div>
             )}
@@ -112,6 +134,8 @@ const Chicken: React.FC<{ products: ProductProps[] }> = ({ products }) => {
         </div>
       </ReactModal>
     </div>
+    </div>
   );
 };
-export default Chicken;
+
+export default ChickenBreast

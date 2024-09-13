@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import BasicTabs from './BasicTabs'
 import '../../../style/mypage/Order.css'
-import { ProductProps } from '../../allproduct/j-checkin/AllChickenApp';
-
-
 
 function ReturnOrder() {
   

@@ -8,7 +8,6 @@ import axios from 'axios';
 
 function JoinApp() {
   const [userInfo, setUserInfo] = useState<InFormData[]>([]);
-  // const [id, setId] = useState<number>(0);
   const [userId, setUserId] = useState<string>('');
   const [userNickName, setUserNickName] = useState<string>('');
   const [userPassword, setUserPassword] = useState<string>('');
@@ -18,8 +17,16 @@ function JoinApp() {
   const [userPhone, setUserPhone] = useState<string>('');
   const [userBirth, setUserBirth] = useState<string>('');
   const [userAddress, setUserAddress] = useState<string>('');
-  // const [userGender, setUserGender] = useState<string>('');
-  // const [selecedtItem,setSelectItem] = useState<InFormData | null>(null);
+  const [userGender, setUserGender] = useState<string>('');
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+
+  //모달창 온/오프
+  const openModal = () => {
+    setModalOpen(true);
+  }
+  const closeModal = () => {
+    setModalOpen(false);
+  }
   
   const nextId = useRef(0);
 
@@ -44,27 +51,43 @@ function JoinApp() {
       userPhone,
       userBirth,
       userAddress,
-      // userGender,
+      userGender,
     });
     setUserInfo([...userInfo, response.data]);
-      setUserId('');
-      setUserNickName('');
-      setUserPassword('');
-      setUserRePassword('');
-      setUserName('');
-      setUserEmail('');
-      setUserPhone('');
-      setUserBirth('');
-      setUserAddress('');
-      // setUserGender('');
+
+    nextId.current += 1;
   }
 
-  const [error, setError] = useState<Partial<InFormData>>({});
+  const [errors, setErrors] = useState<InFormData>({
+    id: nextId.current,
+    userId: '',
+    userNickName: '',
+    userPassword: '',
+    userRePassword: '',
+    userName: '',
+    userEmail: '',
+    userPhone: '',
+    userBirth: '',
+    userAddress: '',
+    userGender: ''
+  });
 
   const handleSingUpSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    let tempErrors: Partial<InFormData> = {};
+    let tempErrors = {
+      id:nextId.current,
+      userId: '',
+      userNickName: '',
+      userPassword: '',
+      userRePassword: '',
+      userName: '',
+      userEmail: '',
+      userPhone: '',
+      userBirth: '',
+      userAddress: '',
+      userGender: ''
+    };
 
     let isValid = true;
 
@@ -108,42 +131,16 @@ function JoinApp() {
       tempErrors.userAddress = '주소를 입력하세요.';
       isValid = false;
     }
-    // if (!userGender) {
-    //   tempErrors.userGender = '성별을 선택해주세요.';
-    //   isValid = false;
-    // }
+    if (!userGender) {
+      tempErrors.userGender = '성별을 선택해주세요.';
+      isValid = false;
+    }
 
-    setError(tempErrors);
+    setErrors(tempErrors);
 
     if (isValid) {
       console.log('회원가입 데이터: ', userInfo);
       alert(`회원가입을 축하합니다. ${userId}님`);
-      const newUser = {
-        id: nextId.current,
-        userId,
-        userNickName,
-        userPassword,
-        userRePassword,
-        userName,
-        userEmail,
-        userPhone,
-        userBirth,
-        userAddress,
-        // userGender,
-      };
-
-      setUserInfo([...userInfo, newUser]);
-
-      setUserId('');
-      setUserNickName('');
-      setUserPassword('');
-      setUserRePassword('');
-      setUserName('');
-      setUserEmail('');
-      setUserPhone('');
-      setUserBirth('');
-      setUserAddress('');
-      // setUserGender('');
     }
   };
 
@@ -161,7 +158,7 @@ function JoinApp() {
   return (
     <div className="joinContainer">
       <h2>회원가입</h2>
-      <form>
+      <form onSubmit={handleSingUpSubmit}>
         <div className="joinContain">
           <ul className="joinUl">
             <li className="li01">
@@ -176,10 +173,12 @@ function JoinApp() {
                   maxLength={10}
                   onChange={(e) => setUserId(e.target.value)}
                   value={userId}
+                  
                 />
                 <button className="joinBtn">중복확인</button>
               </div>
             </li>
+            <li><p>{errors.userId}</p></li>
             <li className="li02">
               <label htmlFor="userNickName">닉네임</label>
               <div className="checkBtn">
@@ -194,6 +193,7 @@ function JoinApp() {
                 <button className="joinBtn">중복확인</button>
               </div>
             </li>
+            <li><p>{errors.userNickName}</p></li>
             <li className="li03">
               <label htmlFor="userPassword">비밀번호</label>
               <input
@@ -207,6 +207,7 @@ function JoinApp() {
                 onChange={(e) => setUserPassword(e.target.value)}
               />
             </li>
+            <li><p>{errors.userPassword}</p></li>
             <li className="li03">
               <label htmlFor="userRePassword">비밀번호 확인</label>
               <input
@@ -220,6 +221,7 @@ function JoinApp() {
                 onChange={(e) => setUserRePassword(e.target.value)}
               />
             </li>
+            <li><p>{errors.userRePassword}</p></li>
             <li className="li04">
               <label htmlFor="userName">이름</label>
               <input
@@ -232,6 +234,7 @@ function JoinApp() {
                 onChange={(e) => setUserName(e.target.value)}
               />
             </li>
+            <li><p>{errors.userName}</p></li>
             <li className="li05">
               <label htmlFor="userAddress">주소</label>
               <input
@@ -241,7 +244,9 @@ function JoinApp() {
                 value={userAddress}
                 onChange={(e) => setUserAddress(e.target.value)}
               />
+              
             </li>
+            <li><p>{errors.userAddress}</p></li>
             <li className="li06">
               <label htmlFor="userPhone">휴대전화번호</label>
               <div className="checkBtn">
@@ -260,6 +265,7 @@ function JoinApp() {
                 </button>
               </div>
             </li>
+            <li><p>{errors.userPhone}</p></li>
             <li className="li07">
               <label htmlFor="userBirth">생년월일</label>
               <input
@@ -272,6 +278,7 @@ function JoinApp() {
                 onChange={(e) => setUserBirth(e.target.value)}
               />
             </li>
+            <li><p>{errors.userBirth}</p></li>
             <li>
               <label htmlFor="userEmail">이메일</label>
               <input
@@ -283,6 +290,7 @@ function JoinApp() {
                 onChange={(e) => setUserEmail(e.target.value)}
               />
             </li>
+            <li><p>{errors.userEmail}</p></li>
           </ul>
           <div className="li08">
             <label className="gender" htmlFor="userSex">
@@ -294,14 +302,17 @@ function JoinApp() {
               type="radio" 
               name="usergender" 
               value="남" 
+              onChange={(e) => setUserGender(e.target.value)}
               />
               <label>여</label>
               <input 
               type="radio" 
               name="usergender" 
               value="여" 
+              onChange={(e) => setUserGender(e.target.value)}
               />
             </div>
+            <p>{errors.userGender}</p>
           </div>
           <Term />
         </div>

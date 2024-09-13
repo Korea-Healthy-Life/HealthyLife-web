@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "../../../style/home/allProduct.css";
-import { ProductProps } from "./Lunchbox";
 import { Link, useSearchParams } from "react-router-dom";
 import ReactModal from "react-modal";
 import "../../../style/modal/cartModal.css";
+import { ProductProps } from "../../../types";
 
 const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
@@ -11,7 +11,7 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const [tagFilter, setTagFilter] = useSearchParams();
-
+  
   
   // 버튼호버 함수
   const handleMouseEnter = (index: number) => {
@@ -39,7 +39,8 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
       prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
-  const filter = tagFilter.get('tag') || '';
+
+  const filter = tagFilter.get('tag') || [];
 
   const filteredProducts = products.filter(product => 
     filter === '' || product.tag === filter);

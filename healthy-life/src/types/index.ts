@@ -9,7 +9,7 @@ export type InFormData = {
   userPhone: string;
   userBirth: string;
   userAddress: string;
-  // userGender: string;
+  userGender: string;
 }
 export interface ProductProps {
   id: number;
@@ -17,4 +17,13 @@ export interface ProductProps {
   image: string;
   content: string;
   date: string;
+}
+
+export interface ProductProps {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+  tag: string[];
+  view: number;
 }
