@@ -5,8 +5,7 @@ import Pagination from "./Pagination";
 import axios from "axios";
 import { ProductProps } from "../../../types";
 import { Link, Route, Routes } from "react-router-dom";
-import ChickenBreast from "./ChickenBreast";
-import Category from "./Category";
+
 
 
 const AllChickenApp: React.FC = () => {
