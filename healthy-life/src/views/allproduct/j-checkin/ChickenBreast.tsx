@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { ProductProps } from '../../../types'
+import { ProductDetail } from '../../../types'
 import axios from 'axios';
 import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 
-const ChickenBreast: React.FC<{ products:ProductProps[] }> = ({products}) => {
-  const [chickenBreast, setChickenBreast] = useState<ProductProps[]>([]);
+const ChickenBreast: React.FC<{ products:ProductDetail[] }> = ({products}) => {
+  const [chickenBreast, setChickenBreast] = useState<ProductDetail[]>([]);
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,8 +51,8 @@ if (visibleProducts.length < 4) {
         const response = await axios.get(`http://localhost:3001/ProductChicken`);
 
   
-        const data = response.data.filter((product: ProductProps) => 
-          product.tag.includes('닭가슴살')
+        const data = response.data.filter((product: ProductDetail) => 
+          product.category.includes('닭가슴살')
         );
 
         setChickenBreast(data);
@@ -69,17 +69,17 @@ if (visibleProducts.length < 4) {
 
 <div className="allProductImageContainer">
       {chickenBreast.map((product, index) => (
-        <div key={product.id} className="allProductContain">
+        <div key={product.productId} className="allProductContain">
           <Link to={"/productdetail"}>
             <img
-              src={product.image}
-              alt={product.title}
+              src={product.imageUrl}
+              alt={product.name}
               className="allProductImage"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             />
             <div className="productLine"></div>
-            <h4>{product.title}</h4>
+            <h4>{product.name}</h4>
             <p>{product.price}원</p>
           </Link>
           <div
@@ -110,9 +110,9 @@ if (visibleProducts.length < 4) {
             </button>
             <div className="modalImages">
               {visibleProducts.map((product) => (
-                <div key={product.id} className="relatedModalImage">
-                  <img src={product.image} alt={product.title} />
-                  <p>{product.title}</p>
+                <div key={product.productId} className="relatedModalImage">
+                  <img src={product.imageUrl} alt={product.name} />
+                  <p>{product.name}</p>
                 </div>
               ))}
               <button className="nextButton" onClick={handleNextClick}>

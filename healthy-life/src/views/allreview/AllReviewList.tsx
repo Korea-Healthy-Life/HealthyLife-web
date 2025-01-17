@@ -4,7 +4,7 @@ import '../../style/home/AllReview.css'
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 
-const AllProductList:React.FC<{ products: ProductProps []}> =({products})  => {
+const AllProductList =(products:ProductProps[])  => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [reviews, setReviews] = useState<ProductProps | null>(null);
   

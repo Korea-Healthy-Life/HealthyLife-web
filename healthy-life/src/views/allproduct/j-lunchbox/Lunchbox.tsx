@@ -3,21 +3,21 @@ import "../../../style/home/allProduct.css";
 import Pagination from "./Pagination";
 import LunchboxContent from "./LuchboxContent";
 import { useSearchParams } from "react-router-dom";
-import { ProductProps } from "../../../types";
+import { ProductDetail } from "../../../types";
 import axios from "axios";
 
 
-const Lunchbox:React.FC<{products: ProductProps[]}> = () => {
+const Lunchbox:React.FC<{products: ProductDetail[]}> = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [checkinPerPage] = useState<number>(16);
-  const [products, setProducts] = useState<ProductProps[]>([]); 
+  const [products, setProducts] = useState<ProductDetail[]>([]); 
   const [tagFilter, setTagFilter] = useSearchParams();
   //카테고리
-  const filter = tagFilter.get('tag') || '';
+  const filter = tagFilter.get('category') || '';
 
   const fetchUsers = async () => {
     try {
-        const response = await axios.get(`http://localhost:3001/Productlunchbox`);
+        const response = await axios.get(`http://localhost:3001/productList`);
       
       const data = response.data;
 

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../../../style/home/Pagination.css'
 
 export interface PaginationProps {
@@ -5,16 +6,15 @@ export interface PaginationProps {
   totalProducts: number;
   paginate: (pageNumber: number) => void;
   currentPage: number;
-  
 }
 
 const Pagination: React.FC<PaginationProps> = ({currentPage, totalProducts,productPerPage, paginate}) =>{
-    const pageNumbers = [];
-    const totalPages  = Math.ceil(totalProducts / productPerPage);
-    const maxPageGroup = Math.ceil(currentPage / 3);
-    const currentPageGroup = Math.ceil(currentPage / 3);
-    const startPage = (currentPageGroup - 1) * 3 + 1;
-    const endPage = Math.min(currentPageGroup * 3, totalPages);
+  const pageNumbers = [];
+  const totalPages  = Math.ceil(totalProducts / productPerPage);
+  const maxPageGroup = Math.ceil(currentPage / 3);
+  const currentPageGroup = Math.ceil(currentPage / 3);
+  const startPage = (currentPageGroup - 1) * 3 + 1;
+  const endPage = Math.min(currentPageGroup * 3, totalPages);
 
     for (let i = startPage; i <= endPage; i++){
       pageNumbers.push(i);
