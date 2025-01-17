@@ -2,6 +2,8 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import Review from '../review/Review';
+import QNA from '../qna/QNA';
 
 
 interface TabPanelProps {
@@ -76,10 +78,10 @@ export default function BasicTabs() {
         상품설명 페이지
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        상품리뷰 페이지
+        <Review />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        QnA페이지
+        <QNA />
       </CustomTabPanel>
     </Box>
   );

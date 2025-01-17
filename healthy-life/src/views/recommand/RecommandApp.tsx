@@ -59,7 +59,7 @@ const RecommandApp: React.FC  = () => {
       <h2 style={{marginBottom:"50px"}}>체질추천상품</h2>
 
       <div className='itemCotianer'>
-        <ul className='allProductSelectBtn'>
+        <ul className='allProductSelectButton'>
           <li value=""><button>조회순</button></li>
           <li>|</li>
           <li value=""><button>가격 높은순</button></li>

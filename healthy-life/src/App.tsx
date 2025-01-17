@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Sidenavigation from './components/Sidenavigation';
 import Home from './views/home/Home';
 import SurveyApp from './views/survey/SurveyApp';
-import AllCheckinApp from './views/allproduct/j-checkin/AllChickenApp';
+import AllChickenApp from './views/allproduct/j-checkin/AllChickenApp';
 import Snack from './views/allproduct/L-Snack/Snack';
 import Drink from './views/allproduct/j-drink/Drink';
 import Vegan from './views/allproduct/L-Vegan/Vegan';
@@ -54,9 +54,9 @@ function App() {
     <Route path='/survey/dietgoal' element={<SurveryListDietGoal />} /> 
 
       {/* <span >닭가슴살/육류</span> */}
-      <Route path="/checkin" element={<AllCheckinApp />} />
+      <Route path="/chicken/*" element={<AllChickenApp />} />
         {/* <span>도시락</span> */}
-        <Route path="/lunchbox" element={<Lunchbox />} />
+        <Route path="/lunchbox" element={<Lunchbox products={[]} />} />
         {/* <span>간식</span> */}
         <Route path="/snack" element={<Snack />} />
         {/* <span>음료</span> */}
