@@ -7,8 +7,6 @@ function ProductPage() {
   return (
     <div>
       <ProductApp />
-      <Review />
-      <QNA/>
     </div>
   )
 }

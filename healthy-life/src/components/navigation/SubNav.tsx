@@ -8,7 +8,7 @@ export default function SubNav() {
     <div> 
       <div className='subNavContainer'>
         <ul>
-          <li><Link to='/checkin'>닭가슴살/육류</Link></li>
+          <li><Link to='/chicken'>닭가슴살/육류</Link></li>
           <li><Link to='/lunchbox'>도시락</Link></li>
           <li><Link to='/snack'>간식</Link></li>
           <li><Link to='/drink'>음료</Link></li>

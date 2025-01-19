@@ -51,7 +51,6 @@ const AllReview: React.FC  = () => {
 
   const indexOfLastPost = currentPage * ProductPerPage;
   const indexOfFirstPost = indexOfLastPost - ProductPerPage;
-  const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
 
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -61,7 +60,7 @@ const AllReview: React.FC  = () => {
       <h2 style={{marginBottom:"50px"}}>고객 전체 후기</h2>
 
     <div className='allProductList'>
-      <AllReviewList products={currentProducts} />
+      {/* <AllReviewList products={currentProducts} /> */}
     </div>
     <Pagination 
     productPerPage={ProductPerPage}

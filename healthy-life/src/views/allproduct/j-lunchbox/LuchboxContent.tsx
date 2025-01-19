@@ -1,17 +1,17 @@
 import { useState } from "react";
 import "../../../style/home/allProduct.css";
-import { ProductProps } from "./Lunchbox";
 import { Link, useSearchParams } from "react-router-dom";
 import ReactModal from "react-modal";
 import "../../../style/modal/cartModal.css";
+import { ProductDetail } from "../../../types";
 
-const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) => {
+const LunchboxContent: React.FC<{ products: ProductDetail[] }> = ({ products }) => {
   const [activeProduct, setActiveProduct] = useState<number | null>(null);
   const [modalOpen, setmodalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const [tagFilter, setTagFilter] = useSearchParams();
-
+  
   
   // 버튼호버 함수
   const handleMouseEnter = (index: number) => {
@@ -39,10 +39,11 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
       prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
-  const filter = tagFilter.get('tag') || '';
+
+  const filter = tagFilter.get('tag') || [];
 
   const filteredProducts = products.filter(product => 
-    filter === '' || product.tag === filter);
+    filter === '' || product.category === filter);
 
   const visibleProducts = products.slice(currentIndex, currentIndex + 4);
   if (visibleProducts.length < 4) {
@@ -52,16 +53,16 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
   return (
     <div className="allProductImageContainer">
       {products.map((product, index) => (
-        <div key={product.id} className="allProductContain">
+        <div key={product.productId} className="allProductContain">
           <Link to={"/productdetail"}>
             <img
-              src={product.image}
-              alt={product.title}
+              src={product.imageUrl}
+              alt={product.name}
               className="allProductImage"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             />
-            <h4 className="productTitile">{product.title}</h4>
+            <h4 className="productTitile">{product.name}</h4>
             <p className="productPrice">{product.price}</p>
           </Link>
           <div
@@ -82,13 +83,13 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
         <div>
           <Link to={"/productdetail"}>
             <img
-              src={product.image}
-              alt={product.title}
+              src={product.imageUrl}
+              alt={product.name}
               className="allProductImage"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             />
-            <h4 className="productTitile">{product.title}</h4>
+            <h4 className="productTitile">{product.name}</h4>
             <p className="productPrice">{product.price}</p>
           </Link>
           <div
@@ -119,9 +120,9 @@ const LunchboxContent: React.FC<{ products: ProductProps[] }> = ({ products }) =
             </button>
             <div className="modalImages">
               {visibleProducts.map((product) => (
-                <div key={product.id} className="relatedModalImage">
-                  <img src={product.image} alt={product.title} />
-                  <p>{product.title}</p>
+                <div key={product.productId} className="relatedModalImage">
+                  <img src={product.imageUrl} alt={product.name} />
+                  <p>{product.name}</p>
                 </div>
               ))}
               <button className="nextButton" onClick={handleNextClick}>

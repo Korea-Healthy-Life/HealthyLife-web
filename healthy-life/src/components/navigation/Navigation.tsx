@@ -32,9 +32,7 @@ const Navigation:React.FC = () => {
         <li><Link to='/calculator'>체지방계산기</Link></li> 
         </ul>
       </div>
-      <div 
-      >
-      
+      <div>      
         <div onMouseEnter={()=> handleMouseEnter('nav')}
         onMouseLeave={handleMouseLeave}
         className='subNavDiv'>
