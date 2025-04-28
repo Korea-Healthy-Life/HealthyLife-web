@@ -3,8 +3,8 @@ export type InFormData = {
   username: string; // 사용자 아이디
   userNickName: string;
   userPassword: string;
-  userRePassword: string; //비번번 확인인
-  name: string; // 이름름
+  userRePassword: string; //비번 확인인
+  name: string; // 이름
   userEmail: string;
   userPhone: string;
   userBirth: Date;
@@ -93,7 +93,8 @@ export interface ProductDetail {
   recommendCount: number; //찜 수량
 }
 
-//찜 기능 (복합키 사용을 해야하나?)
+// 찜 기능 (복합키 사용을 해야하나?) -> 1 대 1 대응 이라면 복합키 쓰는게 좋을듯
+// 근데 이거 어디다 쓰는거에요?
 export interface Recommendation {
   recommendationId: number;
   productId: number;
@@ -137,16 +138,17 @@ export interface OrderPayMent {
   username: string; 
   paymentMethod: paymentMethodType; //결제방법 
   paymentStatus: paymentStatusType; //결제상태
-  paymentData: Date; // 결제날짜
-  pointUser: number; // 포인트
+  paymentDate: Date; // 결제날짜
+  pointUser: number; // 포인트 // POINT로 바꾸는건 어떨까?
   totalPayment: number; // 총 금액
 }
 
-export type paymentMethodType = 
+//원래는 둘다 정규화 하는게 맞지만 ^ㅜ
+export type paymentMethodType =  // ENUM 으로 대체
 | "CreditCard" //카드 결제
-| "Points"; // 포인트트
+| "Points"; // 포인트
 
-export type paymentStatusType = 
+export type paymentStatusType =  // ENUM 으로 대체
 | "Completed" 
 | "Failed" 
 | "Refunded";
@@ -178,15 +180,14 @@ export interface Wishlist {
   addedAt: string; // 위시리스트에 추가된 시간
 }
 
-export interface QNA {
+export interface QnA {
   qnaId: number;
   userId: number;
-  username: string;
+  username: string; // ResponseDto?
   qnaTitle: string;
   qnaContent: string;
-  qnaDate: Date;
+  qnaDate: Date; // 무엇에대한 날? 생성일? CreateAt인가요?
 }
-
 
 // --------------- dto
 export interface UserLogin {

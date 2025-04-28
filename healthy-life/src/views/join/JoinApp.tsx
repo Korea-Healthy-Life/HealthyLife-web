@@ -4,8 +4,6 @@ import Term from './Term';
 import { InFormData } from '../../types';
 import axios from 'axios';
 
-
-
 function JoinApp() {
   const [userInfo, setUserInfo] = useState<InFormData[]>([]);
   const [userId, setUserId] = useState<string>('');
